@@ -21,8 +21,8 @@
 \date{May 2015}
 \blurb{ Bacherlor's Thesis in Mechatronics \vspace{1em} \\
 \begin{tabular}{ll} 
-Supervisor: &  \\
-Examiner: Daniel Frede & Martin Edin Grimheden \\ 
+Supervisor: Daniel Frede (Is this correct?)&  \\
+Examiner:Martin Edin Grimheden \\ 
 Approved: & TBA 2015-month-day
 \end{tabular} }
 \trita{TRITA xxx yyyy-nn}
@@ -41,12 +41,21 @@ Approved: & TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-The thesis is written in English and it has both a Swedish and an English \textit{Abstract} page. An English thesis has English \textit{Cover} and \textit{Title} pages. This template, which has no bookmarks or other automation features, defines the layout of a bachelor thesis in Machine Design (MF123X) or Industrial Engineering (MF105X).  The chapter structure that is presented here is just an example.
-The abstract is maximum one page long. The abstract page is followed by a blank page. The preceding title page, which preferably contains an illustrative picture, is also followed by a blank page. All chapters start at the top of a right hand page, i.e. a page with an odd number.
+Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. ?This thesis is about implementing automated control and balance a simple construction using a reaction wheel commonly used in satellites? 
+\\ To be filled in:
+\\Problem ( 
+\\Approach (On the premiss of constructing a small box shaped robot "Items" with desired properties were chosen....)
+\\Results ( Hopefully something that looks cool ) 
+\\ Conclusion
+\\ \\
+(The thesis is written in English and it has both a Swedish and an English \textit{Abstract} page. An English thesis has English \textit{Cover} and \textit{Title} pages. This template, which has no bookmarks or other automation features, defines the layout of a bachelor thesis in Machine Design (MF123X) or Industrial Engineering (MF105X).  The chapter structure that is presented here is just an example.
+The abstract is maximum one page long. The abstract page is followed by a blank page. The preceding title page, which preferably contains an illustrative picture, is also followed by a blank page. All chapters start at the top of a right hand page, i.e. a page with an odd number.)
 \end{abstract}
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
+Som abstract fast på engeöska
+\\
 Examensarbetet skrivs på engelska och har alltid både en svensk och en engelsk sammanfattningssida. Denna skrivmall, som inte har ``bookmarks'' eller några avancerade ``features'', definierar layouten för ett examensarbete i Maskinteknik (MF123X) eller Industriell ekonomi (MF105X).
 I detta kapitel sammanfattas examensarbetet. Sammanfattningens omfattning är högst en sida. Sammanfattningen åtföljs av en blank sida. Den föregående titelsidan, som lämpligen också innehåller en illustrativ bild, följs också av en blank sida. Alla kapitel börjar längst upp på en högersida, dvs på ett udda sidonummer.
 \end{foreignabstract}
@@ -55,7 +64,7 @@ I detta kapitel sammanfattas examensarbetet. Sammanfattningens omfattning är hög
 \addcontentsline{toc}{chapter}{Preface}
 Detta är rätt ställe att tacka för hjälp, råd, samarbete och inspiration för det presenterade projektet. Detta kapitel är valfritt. 
 Förordet avslutas lämpligtvis med de båda raderna Namn och Plats, månad och år. \\ \\
-
+% Here goes credits to Daniel Frede, Staffan, Assarna som tog sig tid, eventuella maskiner som inte strulat
 \begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
 
 
@@ -87,6 +96,12 @@ CAD			& Computer Aided Design \\
 CAE			& Computer Aided Engineering\\
 PLM			& Product Lifecycle Management\\
 PWM			& Pulse With Modulation\\
+L			& Lagrange ( fixa) \\
+$\theta$		& Kubvinkel \\
+$\phi$		& flywheelangle \\
+Q och q		& Lagrange operator \\
+$E_k	$		& Kinetic energy \\
+$E_p$		& Potential Energy \\
 $\ldots$		& $\ldots$ 
 \end{tabular}
 \cleardoublepage
@@ -162,6 +177,21 @@ Den metod eller de metoder, som huvudsakligen används för att angripa den uppgif
 \section{Problem Formulation}
 Beskriv din problemställning för demonstratorn.
 
+\section{Where does this go?}
+To create a state-space model the physical model has to be translated to a mathematical model. To do this, \emph{Euler-Lagrange} equations is used where a system in motion can be described by:
+\begin{equation}
+Q_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\partial L}{\partial q_i}\right)
+\end{equation}
+
+In this case the cube angular momentum (Rätt ordval?) is counteracted by the flywheel and the system can be then be written as follows
+
+%\begin{equation}
+\begin{align}
+M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\left(\frac{\partial L}{\partial \theta}\right) \\
+-M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)-\left(\frac{\partial L}{\partial \phi}\right)
+\end{align}
+%\end{equation}
+Whereas $\theta$ represents the angle of the cube and $\phi$ is the position of the flywheel.  MER KOMMER MEN NU TAR JAG FREDAG, ITS FRIDAY
 \section{Software}
 Beskriv hur din mjukvara fungerar. Använd bl.a. flödesscheman för att åskådliggöra programmets struktur.
 
