@@ -11,6 +11,7 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{breakcites}
 \usepackage{pdfpages}
+\newcommand{\textunderscript}[1]{$_{\text{#1}}$}
 
 
 %\usepackage{appendix} 
@@ -82,10 +83,29 @@ Förordet avslutas lämpligtvis med de båda raderna Namn och Plats, månad och år. 
 
 \section*{Symbols}
 \noindent{}\begin{tabular}{@{}p{2.5cm}l}
-\textbf{Symbols} 	& \textbf{Description} \vspace{.5em} \\
+\textbf{Symbol} 	& \textbf{Description} \vspace{.5em} \\
 $E$ 		& Elasticity module (Pa) \\
 $r$		& Radius (m) \\
 $t$		& Thickness (m) \\
+L			& Lagrange ( fixa) \\
+$\theta$		& Kubvinkel \\
+$\phi$		& flywheelangle \\
+Q och q		& Lagrange operator \\
+$E_k	$		& Kinetic energy \\
+$E_p$		& Potential Energy \\
+$I_c$		& Inertia of the cube\\
+$I_f$		& Inertia of the flywheel\\
+$M_c$		& Total mass of the cube \\
+$i$			& Current\\
+$K_t$		& Torque constant\\
+%$_{E\{emf}}$	& Induced voltage? \\
+
+E\textunderscript{emf} 	& Induced voltage \\
+K\textunderscript{emf} 	& Induced voltage constant ??? \\
+
+U			& Voltage over motor ?\\
+$R_m	$		& Motor resitance \\
+$\eta_m$		& Motor efficiency\\	
 $\ldots$	& $\ldots$ 
 \end{tabular}
 
@@ -96,12 +116,7 @@ CAD			& Computer Aided Design \\
 CAE			& Computer Aided Engineering\\
 PLM			& Product Lifecycle Management\\
 PWM			& Pulse With Modulation\\
-L			& Lagrange ( fixa) \\
-$\theta$		& Kubvinkel \\
-$\phi$		& flywheelangle \\
-Q och q		& Lagrange operator \\
-$E_k	$		& Kinetic energy \\
-$E_p$		& Potential Energy \\
+	
 $\ldots$		& $\ldots$ 
 \end{tabular}
 \cleardoublepage
@@ -170,14 +185,15 @@ Den metod eller de metoder, som huvudsakligen används för att angripa den uppgif
 
 \chapter{Theory}
 \emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
-
+\\ Här måste det köttas på mycket inför tisdag 9/3
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
 
-\section{Problem Formulation}
-Beskriv din problemställning för demonstratorn.
 
-\section{Where does this go?}
+\section{Problem Formulation}
+Beskriv din problemställning för demonstratorn.\\
+Create ze cube, balance it, go home
+\section{State space model}
 To create a state-space model the physical model has to be translated to a mathematical model. To do this, \emph{Euler-Lagrange} equations is used where a system in motion can be described by:
 \begin{equation}
 Q_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\partial L}{\partial q_i}\right)
@@ -186,20 +202,94 @@ Q_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\
 In this case the cube angular momentum (Rätt ordval?) is counteracted by the flywheel and the system can be then be written as follows
 
 %\begin{equation}
-\begin{align}
-M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\left(\frac{\partial L}{\partial \theta}\right) \\
+\begin{equation} \label{eq:positiveL}
+M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\left(\frac{\partial L}{\partial \theta}\right)
+\end{equation}
+\begin{equation} \label{eq:negativeL}
 -M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)-\left(\frac{\partial L}{\partial \phi}\right)
+\end{equation}
+
+
+
+Whereas $\theta$ represents the angle of the cube and $\phi$ is the position of the flywheel. \\
+The Lagrange equation is derived from the difference in kinetic energy and potential energy of the cube
+\begin{equation} \label{eq:Lagrange}
+L = E_k - E_p
+\end{equation}
+
+\begin{align}
+E_k = \frac{I_c \cdot \dot{\theta^2}}{2} + \frac{I_f \cdot \dot{\phi^2} }{2} \\
+E_p = \frac{M_c \cdot g \cdot l \cdot \cos \theta}{\sqrt{2}} 
 \end{align}
-%\end{equation}
-Whereas $\theta$ represents the angle of the cube and $\phi$ is the position of the flywheel.  MER KOMMER MEN NU TAR JAG FREDAG, ITS FRIDAY
+Equation \eqref{eq:negativeL} and \eqref{eq:positiveL} with \eqref{eq:Lagrange} gives
+\begin{equation} \label{eq:negativeL2}
+I_k \cdot \ddot{\theta} - \frac{M_c \cdot g \cdot l \cdot \sin \theta }{\sqrt{2}}  = -M_a
+\end{equation}
+\begin{equation} \label{eq:postiveL2}
+I_s \cdot \ddot{\phi} = M_a
+\end{equation}
+It is now plain to see that (Jävligt slentriant skrivet) $M_a$ is the torque (utövat ??) needed by the flywheel which is wielded by the motor torque $\tau$, it can be described by a relation between a motor constant and the current flowing through the motor.
+\begin{equation}
+\tau = K_t \cdot i_m
+\end{equation}
+The current can be described by the voltage (över motorn?)
+\begin{equation}
+\tau = K_t \cdot \frac{U-E_{\text{emf}} }{R_m}
+\end{equation}
+The induced voltage is related to the 'random constant´and the rotor rotation
+\begin{align}
+E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r} \\
+\phi_r = \dot{\phi} - \dot{\theta} 
+\end{align}
+\begin{equation} \label{eq:tau}
+\tau = \frac{K_t}{R_m} U - \frac{K_t K_{\text{emf}} }{R_m} \dot{\phi} + \frac{K_t K_{\text{emf}} }{R_m} \dot{\theta}
+\end{equation}
+The torque on the (hur fan blir det här bra ? ) flywheel can then be described with the efficiency of the motor
+\begin{equation} \label{eq:eff}
+M_a = \tau \cdot \eta_m
+\end{equation}
+Based on equation \eqref{eq:negativeL}, \eqref{eq:positiveL} and \eqref{eq:eff} the system can be described by
+\begin{align} 
+\ddot{\theta} = -\frac{K_t \eta_m}{R_m I_c} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\theta} + \frac{Mt g l }{\sqrt{2} I_c} \sin \theta \label{thetadotdot}
+\\
+\ddot{\phi} = \frac{K_t \eta_m}{R_m I_f} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} \dot{\theta} 
+\label{phidotdot}
+\end{align} 
+
+based on equations \eqref{thetadotdot} and \eqref{phidotdot} the system can be described with a state space model with a states $x^T = [\theta, \dot{\theta}, \dot{\phi}$]. The system is hence described by
+\begin{equation}
+\dot{x} = Ax + Bu
+\end{equation} 
+where \\
+\begin{center}
+$A =\begin{bmatrix}
+0 & 1 & 0 \\
+\frac{Mt g l }{\sqrt{2} I_c} & - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} & \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \\ 
+0 & \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} & -\frac{K_t K_{\text{emf}} \eta_m}{R_m I_f}
+\end{bmatrix}$
+
+$B = \begin{bmatrix}
+0 \\ 
+-\frac{K_t \eta_m}{R_m I_c} \\
+\frac{K_t \eta_m}{R_m I_f}
+\end{bmatrix} $
+\end{center}
+
+
 \section{Software}
 Beskriv hur din mjukvara fungerar. Använd bl.a. flödesscheman för att åskådliggöra programmets struktur.
 
 \section{Electronics}
 Beskriv din elektroniska konstruktion. Använd figurer och förenklade blockschema. Motivera dina lösningar.
+\\ Sensors
+\\ Motor
+\\ arduino
+\\ Motor control
+
 
 \section{Hardware}
 Beskriv din mekaniska konstruktion (om du har någon)
+\\ Basic construction
 
 \section{Results}
 Beskriv resultatet.
