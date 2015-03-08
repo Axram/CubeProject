@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  7 MAR 2015 12:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  8 MAR 2015 13:43
 entering extended mode
 **Bachelors_Thesis.tex
 (C:\Users\Alexander\Documents\GitHub\CubeProject\Thesis\Bachelors_Thesis.tex
@@ -1104,13 +1104,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--71
 ]
 No file Bachelors_Thesis.ind.
 (C:\Users\Alexander\Documents\GitHub\CubeProject\Thesis\Bachelors_Thesis.toc
+[9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 30.
-
-Underfull \vbox (badness 1147) has occurred while \output is active []
-
- [9])
-[10]
+(Font)              <12> on input line 34.
+) [10]
 Overfull \hbox (1.33226pt too wide) in paragraph at lines 116--116
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
@@ -1120,112 +1117,132 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 116--116
 
 ] [12
 
-] <KTH_ITM_logo.png, id=194, 101.6598pt x 98.769pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+<KTH_ITM_logo.png, id=214, 101.6598pt x 98.769pt>
 File: KTH_ITM_logo.png Graphic file (type png)
-
-<use KTH_ITM_logo.png>
-Package pdftex.def Info: KTH_ITM_logo.png used on input line 140.
+ <use KTH_ITM_logo.png>
+Package pdftex.def Info: KTH_ITM_logo.png used on input line 147.
 (pdftex.def)             Requested size: 101.65955pt x 98.76874pt.
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 166.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 173.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-[1
+) [1
 
 
- <C:/Users/Alexander/Documents/GitHub/CubeProject/Thesis/KTH_ITM_logo.png>]
+]
 
-LaTeX Warning: Citation `Angell1999' on page 2 undefined on input line 178.
-
-
-LaTeX Warning: Citation `DeBorst2012' on page 2 undefined on input line 178.
+LaTeX Warning: Citation `Angell1999' on page 2 undefined on input line 185.
 
 
-LaTeX Warning: Citation `VanWezel2001' on page 2 undefined on input line 178.
+LaTeX Warning: Citation `DeBorst2012' on page 2 undefined on input line 185.
 
 
-LaTeX Warning: Citation `Angell1999' on page 2 undefined on input line 178.
+LaTeX Warning: Citation `VanWezel2001' on page 2 undefined on input line 185.
 
 
-LaTeX Warning: Citation `DeBorst2012' on page 2 undefined on input line 178.
+LaTeX Warning: Citation `Angell1999' on page 2 undefined on input line 185.
 
 
-LaTeX Warning: Citation `Eppinger2001' on page 2 undefined on input line 178.
+LaTeX Warning: Citation `DeBorst2012' on page 2 undefined on input line 185.
+
+
+LaTeX Warning: Citation `Eppinger2001' on page 2 undefined on input line 185.
 
 
 LaTeX Warning: Citation `StandishGroup1994' on page 2 undefined on input line 1
-78.
+85.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
-[2] [3] [4
+[2 <C:/Users/Alexander/Documents/GitHub/CubeProject/Thesis/KTH_ITM_logo.png>]
+[3] [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 204--206
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-[5] [6
-
-] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
-[8] [9] [10
+[7
 
-] [11] [12
+] [8
+
+] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
+
+ []
+
+[10] [11] [12
+
+] [13] [14
 
 ]
-Overfull \hbox (8.65875pt too wide) in paragraph at lines 331--332
+Overfull \hbox (8.65875pt too wide) in paragraph at lines 346--347
 \T1/lmr/m/it/10.95 I detta kapi-tel ges rek-om-men-da-tioner for mera de-tal-je
 r-ade lös-ningar och/eller framtida
  []
 
-[13] [14
+[15] [16
 
 ]
 No file Bachelors_Thesis.bbl.
-[15
+[17
 
 
-] [16
+] [18
 
-] [17] [18
+] [19] [20
 
-] [19
+] [21
 
 ]
 \tf@toc=\write5
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
 
 (C:\Users\Alexander\Documents\GitHub\CubeProject\Thesis\Bachelors_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 358.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
-Package rerunfilecheck Info: File `Bachelors_Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B3A7781D210A0431835211B8E8F0FB6C;1421.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 373.
 
+
+Package rerunfilecheck Warning: File `Bachelors_Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Bachelors_Thesis.out':
+(rerunfilecheck)             Before: C493EF30EB0ECF3072DBD23A5C2A7E09;1654
+(rerunfilecheck)             After:  5AF5C3151156B212FFD491F1CCA85A01;1664.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 373.
  ) 
 Here is how much of TeX's memory you used:
- 10260 strings out of 493921
- 143288 string characters out of 3147270
+ 10270 strings out of 493921
+ 143394 string characters out of 3147270
  260605 words of memory out of 3000000
- 13304 multiletter control sequences out of 15000+200000
+ 13308 multiletter control sequences out of 15000+200000
  96887 words of font info for 62 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 37i,13n,39p,605b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,13n,39p,718b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
@@ -1245,9 +1262,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX 2
 blic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssdc1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Bachelors_Thesis.pdf (31 pages, 423647 bytes).
+Output written on Bachelors_Thesis.pdf (33 pages, 429998 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
- 214 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

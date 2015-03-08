@@ -130,10 +130,17 @@ $\ldots$		& $\ldots$
 \chapter{Introduction}
 Beskriv bakgrund, syfte, avgränsning för det utförda examensarbetet, samt även de  metod(-er)som använts för att lösa uppgiften. Skriv exempelvis: Detta kapitel beskriver bakgrund, syfte, avgränsning och metod för det utförda examensarbetet.
 
+This chapter decribes the backgroud,pupose, scope, and method of the theisis. 
 \section{Background}
-Bla bla bla
+Balancing a inverted pendulum can be a challenging task. It requires knoledge of closed loop control systems and their stability, electronics and... 
 
 \section{Purpose}
+
+(instert RQ here)"What improvements can be made to the control system to better cope with an applied external force to the cube"  \\
+
+\noindent{}The purpose was to examine what affected the stability of the mechanical system, (speciellt) the control system. Many parameters goes in to the state space control system and their affect on the mechanical system behaviour is not trivial. The purpose was to detirmine if some of the parameters had an extra importance and if the conclutions were applicable on other mechanical systems. Sample frequency and clock frequency were other parametesr which where to be examined aswell. Also the results were to be contributed to the open source comunity. All results is availible online, open source (referens till MIT licens här), on GitHub (ref till github länk)(summer 2015).\\  
+
+
 Figurer i avhandlingen skall centreras och figurtexten skrivs centrerat. Figurerna numereras Fig. \ref{fig:kth_logo}, Fig. 1.2, och så vidare. 
 \begin{figure}[htbp]
 \begin{center}
@@ -183,21 +190,29 @@ Beskriv, med utgångspunkt i den bakgrund som presenterats i föregående avsnit
 \section{Scope}
 Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
 
-\section{Method}
-Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.//
+The scope were to examine the parameters, of a state space controller and other electronical desitions, affect on the behaviour of a balancing "1-DOF" inverted pendulum.
+\chapter{Method}
+Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
 
-The engineering tast was devided into smaller problems (In med punktlista?)
+The engineering tast was devided into smaller problems (In med punktlista?). (Behandlede) seperatly to later asseble the entire system. The choosen subproblems where: 
 \begin{itemize}
 \item Construction
 \item Motor Control
 \item Sensor Reading
 \item System Control
 \end{itemize}
-%Contruction
-%Motor Control
-%Sensor reading
-%System Control
 
+\section{Contruction}
+The main contruction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes abillity to balance. The problem where (uppställt) with Newtionial mechanics.
+ 
+\section{Motor and Motor Control}
+The motors nominal and stall torque are very important for the system blaha
+  
+\section{Sensor Reading}
+The IMU's parameters and filtering of the signals
+
+\section{System Control}
+The choosen conrol methot where state space. The problem in to linareise and discretise with good enough precition.
 
 
 \chapter{Theory}
@@ -213,6 +228,7 @@ Allso creating transversal movement using only the reaction wheels is a recent t
 \section{Problem Formulation}
 Beskriv din problemställning för demonstratorn.\\
 Create ze cube, balance it, go home
+The engineering problem where to build a cube that, using a reaction wheel, could balance on it-s edge.
 \section{State space model}
 To create a state-space model the physical model has to be translated to a mathematical model. To do this, \emph{Euler-Lagrange} equations is used where a system in motion can be described by:
 \begin{equation}
@@ -309,7 +325,6 @@ Beskriv din elektroniska konstruktion. Använd figurer och förenklade blocksche
 
 \section{Hardware}
 Beskriv din mekaniska konstruktion (om du har någon)
-Testar att ändra direckt i GitHub
 The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other componets are mounted on the motor-body side of the cube.
 \\ Basic construction
 
@@ -334,7 +349,7 @@ Bla bla bla
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 \section{Future work}
-An extention of the project would be balancing the cube not only in it's edbe but it's corner. To achieve this multiple reaction wheels must be used and a more complicated control system due to changes in moment of inertia caused by angular velocities in the other reaction wheels.
+An extention of the project would be balancing the cube not only in it's edge but it's corner. To achieve this multiple reaction wheels must be used and a more complicated control system due to changes in moment of inertia caused by angular velocities in the other reaction wheels.
 
 %\bibliography
 \cleardoublepage
