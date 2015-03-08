@@ -6,6 +6,7 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
 \BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 7
 \BOOKMARK [1][-]{section.1.2}{Purpose}{chapter.1}% 8
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.1.3}{T\344nk p\345}{chapter.1}% 9
 \BOOKMARK [1][-]{section.1.4}{Scope}{chapter.1}% 10
 \BOOKMARK [1][-]{section.1.5}{Method}{chapter.1}% 11
@@ -25,3 +26,27 @@
 \BOOKMARK [1][-]{section.5.2}{Future work}{chapter.5}% 25
 \BOOKMARK [0][-]{appendix.A}{Additional information}{}% 26
 \BOOKMARK [0][-]{appendix.B}{Proofs}{}% 27
+=======
+\BOOKMARK [1][-]{section.1.3}{Scope}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Method}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Contruction}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Motor and Motor Control}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Sensor Reading}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{System Control}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Theory}{}% 15
+\BOOKMARK [0][-]{chapter.4}{Demonstrator}{}% 16
+\BOOKMARK [1][-]{section.4.1}{Problem Formulation}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.2}{State space model}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.3}{Software}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.4}{Electronics}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.5}{Hardware}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.6}{Results}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 26
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 28
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 29
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 30
+>>>>>>> origin/master

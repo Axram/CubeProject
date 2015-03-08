@@ -17,8 +17,8 @@
 
 
 %\usepackage{appendix} 
-\title{English title of the thesis}
-%\subtitle{Subtitle of the thesis in English}
+\title{Rad Cube}
+\subtitle{Control of reaction wheel balanced inverted pendulum}
 \foreigntitle{Rapporttitel på svenska}
 \author{Mikael Sjöstedt \\ Alexander Ramm}
 \date{May 2015}
@@ -57,7 +57,7 @@ The abstract is maximum one page long. The abstract page is followed by a blank 
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
-Som abstract fast på engeöska
+Som abstract fast på engelska
 \\
 Examensarbetet skrivs på engelska och har alltid både en svensk och en engelsk sammanfattningssida. Denna skrivmall, som inte har ``bookmarks'' eller några avancerade ``features'', definierar layouten för ett examensarbete i Maskinteknik (MF123X) eller Industriell ekonomi (MF105X).
 I detta kapitel sammanfattas examensarbetet. Sammanfattningens omfattning är högst en sida. Sammanfattningen åtföljs av en blank sida. Den föregående titelsidan, som lämpligen också innehåller en illustrativ bild, följs också av en blank sida. Alla kapitel börjar längst upp på en högersida, dvs på ett udda sidonummer.
@@ -131,11 +131,24 @@ $\ldots$		& $\ldots$
 \chapter{Introduction}
 Beskriv bakgrund, syfte, avgränsning för det utförda examensarbetet, samt även de  metod(-er)som använts för att lösa uppgiften. Skriv exempelvis: Detta kapitel beskriver bakgrund, syfte, avgränsning och metod för det utförda examensarbetet.
 
+This chapter decribes the backgroud,pupose, scope, and method of the theisis. 
 \section{Background}
+<<<<<<< HEAD
 Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production( http://www.reuters.com/article/2015/01/15/technavio-research-idUSnBw155173a+100+BSW20150115, should refer to the source but cant gain access...). This growth has made automated control available in our every-day life in products lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters. The process 
 \section{Purpose}
 The purpose of this paper 
 \section{Tänk på}
+=======
+Balancing a inverted pendulum can be a challenging task. It requires knoledge of closed loop control systems and their stability, electronics and... 
+
+\section{Purpose}
+
+(instert RQ here)"What improvements can be made to the control system to better cope with an applied external force to the cube"  \\
+
+\noindent{}The purpose was to examine what affected the stability of the mechanical system, (speciellt) the control system. Many parameters goes in to the state space control system and their affect on the mechanical system behaviour is not trivial. The purpose was to detirmine if some of the parameters had an extra importance and if the conclutions were applicable on other mechanical systems. Sample frequency and clock frequency were other parametesr which where to be examined aswell. Also the results were to be contributed to the open source comunity. All results is availible online, open source (referens till MIT licens här), on GitHub (ref till github länk)(summer 2015).\\  
+
+
+>>>>>>> origin/master
 Figurer i avhandlingen skall centreras och figurtexten skrivs centrerat. Figurerna numereras Fig. \ref{fig:kth_logo}, Fig. 1.2, och så vidare. 
 \begin{figure}[htbp]
 \begin{center}
@@ -188,6 +201,7 @@ Research questions in här \\
 How can the controller be improved to handle a bigger impulse and what conclusions can be derived from that. 
 Eller typ How to design a controller that can withstand a certain impulse, how to make it faster, conclusions? 
 
+<<<<<<< HEAD
 \section{Method}
 Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.
 \\
@@ -199,22 +213,57 @@ The main goal of this project build a structure which remain stable in an unstab
 \item "Make them all play in the same kindergarten"
 \item Final assembly
 \end{itemize} 
+=======
+The scope were to examine the parameters, of a state space controller and other electronical desitions, affect on the behaviour of a balancing "1-DOF" inverted pendulum.
+\chapter{Method}
+Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
+
+The engineering tast was devided into smaller problems (In med punktlista?). (Behandlede) seperatly to later asseble the entire system. The choosen subproblems where: 
+\begin{itemize}
+\item Construction
+\item Motor Control
+\item Sensor Reading
+\item System Control
+\end{itemize}
+
+\section{Contruction}
+The main contruction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes abillity to balance. The problem where (uppställt) with Newtionial mechanics.
+ 
+\section{Motor and Motor Control}
+The motors nominal and stall torque are very important for the system blaha
+  
+\section{Sensor Reading}
+The IMU's parameters and filtering of the signals
+
+\section{System Control}
+The choosen conrol methot where state space. The problem in to linareise and discretise with good enough precition.
+>>>>>>> origin/master
 
 
 \chapter{Theory}
 \emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
 \\ Här måste det köttas på mycket inför tisdag 9/3 \\
 
+<<<<<<< HEAD
 Balancing 1-DOF inverted pendulum type structures using reaction wheels is no new concept, and became common with the introduction of cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instabillity of pendulums. The latest development is on "2-DOF" pendelum structures unsing multiple orthogonal reaction wheels. This method is commonly used to rotate sattelites and maintaining their attitude to increase performance and allign solar panels. 
 Also creating transversal movement using only the reaction wheels is a recent topic for research ie not only changeing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be usefull for land/sea based machines to overcome various obstacles without a seperate system for balancing and movement.
  
+=======
+Balancing 1-DOF inverted penelum type strucktures using reaction wheels is no new concept, and became common with the introduction to cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instabillity of pendulums. The latest development is on "2-DOF" pendelum structures unsing multiple orthogonal reaction wheels. This method is commonly used to rotate sattelites and maintaining their attitude so incerease performance and allign solar panels. 
+Allso creating transversal movement using only the reaction wheels is a recent topic for research ie not only changeing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be usefull for land/sea based machines to overcome various obstacles without a seperate system for balanceing and movement. 
+>>>>>>> origin/master
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
 
 
 \section{Problem Formulation}
 Beskriv din problemställning för demonstratorn.\\
+<<<<<<< HEAD
 
+=======
+Create ze cube, balance it, go home
+The engineering problem where to build a cube that, using a reaction wheel, could balance on it-s edge.
+>>>>>>> origin/master
 \section{State space model}
 To create a state-space model the physical model has to be translated to a mathematical model. To do this, \emph{Euler-Lagrange} equations is used where a system in motion can be described by:
 \begin{equation}
@@ -311,8 +360,7 @@ Beskriv din elektroniska konstruktion. Använd figurer och förenklade blocksche
 
 \section{Hardware}
 Beskriv din mekaniska konstruktion (om du har någon)
-Testar att ändra direckt i GitHub
-The motor is ficed through the middle wall in the cube, the saft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other componets are mounted on the motor-body side of the cube.
+The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other componets are mounted on the motor-body side of the cube.
 \\ Basic construction
 
 \section{Results}
@@ -336,7 +384,7 @@ Bla bla bla
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 \section{Future work}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+An extention of the project would be balancing the cube not only in it's edge but it's corner. To achieve this multiple reaction wheels must be used and a more complicated control system due to changes in moment of inertia caused by angular velocities in the other reaction wheels.
 
 %\bibliography
 \cleardoublepage
