@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  9 MAR 2015 15:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  9 MAR 2015 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1036,7 +1036,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 47.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=130, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=126, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
@@ -1114,9 +1114,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--77
 No file Bachelors_Thesis.ind.
 (./Bachelors_Thesis.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 36.
+(Font)              <12> on input line 35.
 ) [10]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 119--119
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 117--117
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
 
@@ -1128,18 +1128,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [12]
-Overfull \hbox (0.25471pt too wide) in paragraph at lines 142--144
+Overfull \hbox (0.25471pt too wide) in paragraph at lines 140--142
 []\T1/lmr/m/n/10.95 ----Balancing a in-verted pen-du-lum can be a chal-leng-ing
  task. It re-quires knoledge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
@@ -1148,7 +1148,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 162.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 160.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1158,19 +1158,19 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 180--182
 
  []
 
 [5] [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 269--271
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
@@ -1179,20 +1179,17 @@ Package epstopdf Info: Source file: <simmodel.eps>
 (epstopdf)                    date: 2015-03-09 15:36:15
 (epstopdf)                    size: 107086 bytes
 (epstopdf)             Output file: <simmodel-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-03-09 15:38:20
+(epstopdf)                    size: 25191 bytes
 (epstopdf)             Command: <repstopdf --outfile=simmodel-eps-converted-to.
 pdf simmodel.eps>
-(epstopdf)             \includegraphics on input line 290.
-runsystem(repstopdf --outfile=simmodel-eps-converted-to.pdf simmodel.eps)...exe
-cuted safely (allowed).
-
-Package epstopdf Info: Result file: <simmodel-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-09 15:38:20
-(epstopdf)                    size: 25191 bytes.
- <simmodel-eps-converted-to.pdf, id=293, 530.98375pt x 245.91875pt>
+(epstopdf)             \includegraphics on input line 285.
+Package epstopdf Info: Output file is already uptodate.
+ <simmodel-eps-converted-to.pdf, id=287, 530.98375pt x 245.91875pt>
 File: simmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use simmodel-eps-converted-to.pdf>
-Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 290.
+Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 285.
 (pdftex.def)             Requested size: 371.68608pt x 172.14194pt.
 Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:36
@@ -1202,15 +1199,15 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 297.
+(epstopdf)             \includegraphics on input line 293.
 Package epstopdf Info: Output file is already uptodate.
 
-<voltageplot-eps-converted-to.pdf, id=294, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=289, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
 Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 29
-7.
+3.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
@@ -1220,14 +1217,14 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 306.
+(epstopdf)             \includegraphics on input line 302.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=295, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=290, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 306.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 302.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
  [9 <./simmodel-eps-converted-to.pdf>]
@@ -1236,13 +1233,7 @@ Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 306.
 
 ] [13] [14
 
-]
-Overfull \hbox (8.65875pt too wide) in paragraph at lines 344--345
-\T1/lmr/m/it/10.95 I detta kapi-tel ges rek-om-men-da-tioner for mera de-tal-je
-r-ade lös-ningar och/eller framtida
- []
-
-[15] [16
+] [15] [16
 
 ] (./Bachelors_Thesis.bbl
 bibitemlist
@@ -1267,24 +1258,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--18
 \tf@toc=\write5
 \openout5 = `Bachelors_Thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
  (./Bachelors_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
 Package rerunfilecheck Info: File `Bachelors_Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 237F3B7CE0F8E5795A4C4AB7B817B92E;1740.
+(rerunfilecheck)             Checksum: 8F623C5DC60F9206C8B36259C1667804;1683.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 371.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
  ) 
 Here is how much of TeX's memory you used:
- 10582 strings out of 493117
- 148416 string characters out of 6135434
- 273681 words of memory out of 5000000
- 13775 multiletter control sequences out of 15000+600000
+ 10580 strings out of 493117
+ 148392 string characters out of 6135434
+ 273721 words of memory out of 5000000
+ 13774 multiletter control sequences out of 15000+600000
  92996 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,39p,719b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1309,10 +1300,10 @@ lic/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lms
 sbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssdc10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Bachelors_Thesis.pdf (35 pages, 383078 bytes).
+Output written on Bachelors_Thesis.pdf (35 pages, 383343 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 410 compressed objects within 5 object streams
- 89 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 475 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
+ 88 named destinations out of 1000 (max. 500000)
+ 269 words of extra memory for PDF output out of 10000 (max. 10000000)
 
