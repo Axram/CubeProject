@@ -47,7 +47,7 @@ Approved: & TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. ?This thesis is about implementing automated control and balance a simple construction using a reaction wheel commonly used in satellites? 
+This thesis is about implementing automated control and balance a simple construction using a reaction wheel commonly used in satellites...
 \\ To be filled in:
 \\	Problem
 \\	Approach % (On the premiss of constructing a small box shaped robot components with desired properties were chosen....)
@@ -71,8 +71,7 @@ Skriv som abstract men på svenska
 \clearpage
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
-Detta är rätt ställe att tacka för hjälp, råd, samarbete och inspiration för det presenterade projektet. Detta kapitel är valfritt. 
-Förordet avslutas lämpligtvis med de båda raderna Namn och Plats, månad och år. \\ \\
+Here goes our thanks to sources of  help, cooperation, inspiration \\ To be filled in \\
 % Here goes credits to Daniel Frede, Staffan, Assarna som tog sig tid, eventuella maskiner som inte strulat
 \begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
 
@@ -88,7 +87,7 @@ Förordet avslutas lämpligtvis med de båda raderna Namn och Plats, månad och 
 \cleardoublepage
 \chapter*{Nomenclature}
 \addcontentsline{toc}{chapter}{Nomenclature}
-\section*{Symbols}
+\section*{Symbols - needs restructure}
 \noindent{}\begin{tabular}{@{}p{2.5cm}l}
 \textbf{Symbol} 	& \textbf{Description} \vspace{.5em} \\
 $E$ 		& Elasticity module (Pa) \\
@@ -111,6 +110,7 @@ U			& Voltage across motor poles\\
 $R_m	$		& Motor internal resitance \\
 $\eta_m$		& Motor efficiency\\	
 \end{tabular}
+\clearpage
 
 \section*{Abbreviations}
 \noindent{}\begin{tabular}{@{}p{2.5cm}l}
@@ -121,11 +121,11 @@ PLM			& Product Lifecycle Management\\
 PWM			& Pulse With Modulation\\
 DOF			& Degrees of freedom\\
 MEMS			& Microelectromechanical Systems \\
-MATLAB		& Matrix Laboratory, computational program\\
+MATLAB\cite{MATLAB:2014}		& Matrix Laboratory, computational program\\
 IC			& Integrated circuit\\
 $I^2C$		& Inter-Integrated circuit\\
 USB			& Universal Serial Bus \\
-$\ldots$		& $\ldots$ 
+
 \end{tabular}
 \cleardoublepage
 
@@ -134,16 +134,15 @@ $\ldots$		& $\ldots$
 
 \chapter{Introduction}
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH. The work was carried out during the spring 2015.
-\section{Background}
-Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production( source?). This growth has made automated control available in our every-day life in products lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters. The process 
 
-----Balancing a inverted pendulum can be a challenging task. It requires knoledge of closed loop control systems and their stability, electronics and... ---
-\\ (JUST SOME BACKGROUND TO THE PROBLEM, AND SOME CONTEMPORARY EXAMPLES TO GET THE READERS ATTENTION)
+\section{Background}
+Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production [\cite{MEMSmarket}]. This growth has made automated control available more now than ever, in our every-day life in product lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters. \\
+%Balancing an inverted pendulum or any other unstable structure can be a challenging task. It requires knowledge of closed-loop control systems and their stability.  --Ska vi sluta där kanske ?--
 
 \section{Purpose}
 
 \emph{"What improvements can be made to the control system to better cope with an applied external force to the cube" } \\
-
+Den här borde vi flytta ner
 \noindent{}The purpose was to examine what affected the stability of the mechanical system, (speciellt) the control system. Many parameters goes in to the state space control system and their affect on the mechanical system behaviour is not trivial. The purpose was to detirmine if some of the parameters had an extra importance and if the conclutions were applicable on other mechanical systems. Sample frequency and clock frequency were other parametesr which where to be examined aswell. Also the results were to be contributed to the open source comunity. All results are availible online, open source (referens till MIT licens här), on GitHub (ref till github länk)(summer 2015).\\  
 
 
@@ -151,6 +150,7 @@ Today the use of automated control is growing in a rapid pace and is being imple
 %Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
 The scope were to examine the parameters, of a state space controller and other electronical desitions, affect on the behaviour of a balancing "1-DOF" inverted pendulum.
 
+\cleardoublepage
 
 \chapter{Method}
 %Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
@@ -316,8 +316,7 @@ Beskriv din elektroniska konstruktion. Använd figurer och förenklade blocksche
 
 
 \section{Hardware}
-Beskriv din mekaniska konstruktion (om du har någon)
-The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other componets are mounted on the motor-body side of the cube.
+The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other components are mounted on the motor-body side of the cube.
 \\ Basic construction
 
 \section{Results}

@@ -3,44 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Bachelors_Thesis.aux
 The style file: elsarticle-num-names.bst
 Database file #1: FiM_references.bib
-You've used 1 entry,
+Warning--entry type for "MEMSmarket" isn't style-file defined
+--line 70 of file FiM_references.bib
+You've used 3 entries,
             2793 wiz_defined-function locations,
-            607 strings with 5058 characters,
-and the built_in function-call counts, 773 in all, are:
-= -- 46
-> -- 26
-< -- 0
-+ -- 12
-- -- 8
-* -- 81
-:= -- 101
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 62
-empty$ -- 62
-format.name$ -- 11
-if$ -- 149
+            620 strings with 5308 characters,
+and the built_in function-call counts, 1474 in all, are:
+= -- 86
+> -- 40
+< -- 2
++ -- 20
+- -- 12
+* -- 152
+:= -- 209
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 12
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 124
+empty$ -- 126
+format.name$ -- 17
+if$ -- 275
 int.to.chr$ -- 1
-int.to.str$ -- 2
-missing$ -- 13
-newline$ -- 13
-num.names$ -- 3
-pop$ -- 22
+int.to.str$ -- 4
+missing$ -- 27
+newline$ -- 19
+num.names$ -- 9
+pop$ -- 46
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 15
 quote$ -- 0
-skip$ -- 28
+skip$ -- 50
 stack$ -- 0
-substring$ -- 42
-swap$ -- 47
+substring$ -- 66
+swap$ -- 85
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 16
 warning$ -- 0
-while$ -- 4
+while$ -- 8
 width$ -- 0
-write$ -- 20
+write$ -- 40
+(There was 1 warning)

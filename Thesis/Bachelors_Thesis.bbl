@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,17 @@
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
+
+\bibitem[{MATLAB(2014)}]{MATLAB:2014}
+\bibinfo{author}{MATLAB}, \bibinfo{title}{version 8.4.0 (R2014b)},
+  \bibinfo{publisher}{The MathWorks Inc.}, \bibinfo{address}{Natick,
+  Massachusetts}, \bibinfo{year}{2014}.
+
+\bibitem[{A.Ciufo(2012)}]{MEMSmarket}
+\bibinfo{author}{C.~A.Ciufo}, \bibinfo{title}{MEMS Trends: Smaller, Cheaper,
+  Everywhere},
+  \urlprefix\url{http://eecatalog.com/sensors/2012/05/24/mems-trends-smaller-cheaper-everywhere/},
+  \bibinfo{year}{2012}.
 
 \bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
   D'Andrea}]{cubliECC13}
