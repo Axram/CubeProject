@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  9 MAR 2015 20:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  9 MAR 2015 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,27 +956,27 @@ LaTeX Warning: Label `fig:voltageplot' multiply defined.
 )
 \openout1 = `Bachelors_Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 37.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 39.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -984,7 +984,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \c@lofdepth=\count155
 \c@lotdepth=\count156
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 39.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -994,9 +994,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (./Bachelors_Thesis.out) (./Bachelors_Thesis.out)
 \@outlinefile=\write4
@@ -1031,7 +1031,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 47.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1040,36 +1040,36 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
-Package pdftex.def Info: KTH_Logotyp_PMS_2013.png used on input line 47.
+Package pdftex.def Info: KTH_Logotyp_PMS_2013.png used on input line 49.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 47.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 47.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 49.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 47.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 49.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 47.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 49.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 47.
+(Font)              <10.95> on input line 49.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 47.
+(Font)              <8> on input line 49.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 47.
+(Font)              <6> on input line 49.
  [1
 
 
@@ -1081,17 +1081,17 @@ ogotyp_PMS_2013.png>] [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 62.
+(Font)              <10> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 62.
+(Font)              <7> on input line 64.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 62.
+(Font)              <5> on input line 64.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language append on input line 63.
+(babel)             in language append on input line 65.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language append on input line 63.
+(babel)             in language append on input line 65.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--66
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
@@ -1099,7 +1099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--66
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 74--76
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
@@ -1114,64 +1114,51 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 117--117
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 119--119
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-[]|\T1/lmr/m/n/10.95 MATLAB
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-\T1/lmr/m/n/10.95 [[]MAT-
  []
 
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
+Underfull \hbox (badness 10000) in paragraph at lines 150--152
 
  []
 
-
-Underfull \vbox (badness 1845) has occurred while \output is active []
-
- [1
+[1
 
 
 
-]
-[2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 160.
+] [2]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 164.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3
 
 
-] [4
+]
+[4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 180--182
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 [5] [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
@@ -1184,13 +1171,13 @@ Package epstopdf Info: Source file: <simmodel.eps>
 (epstopdf)                    size: 25191 bytes
 (epstopdf)             Command: <repstopdf --outfile=simmodel-eps-converted-to.
 pdf simmodel.eps>
-(epstopdf)             \includegraphics on input line 285.
+(epstopdf)             \includegraphics on input line 289.
 Package epstopdf Info: Output file is already uptodate.
- <simmodel-eps-converted-to.pdf, id=293, 530.98375pt x 245.91875pt>
+ <simmodel-eps-converted-to.pdf, id=289, 530.98375pt x 245.91875pt>
 File: simmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use simmodel-eps-converted-to.pdf>
-Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 285.
+Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 289.
 (pdftex.def)             Requested size: 371.68608pt x 172.14194pt.
 Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:36
@@ -1200,15 +1187,15 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 293.
+(epstopdf)             \includegraphics on input line 297.
 Package epstopdf Info: Output file is already uptodate.
 
-<voltageplot-eps-converted-to.pdf, id=295, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=291, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
 Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 29
-3.
+7.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
@@ -1218,14 +1205,14 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 302.
+(epstopdf)             \includegraphics on input line 306.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=296, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=292, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 302.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 306.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
  [9 <./simmodel-eps-converted-to.pdf>]
@@ -1238,22 +1225,22 @@ Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 302.
 
 ] (./Bachelors_Thesis.bbl
 bibitemlist
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 19.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 17--21
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
 []\T1/lmr/m/n/10.95 C. A.Ciufo, MEMS Trends: Smaller, Cheaper, Ev-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--21
+Underfull \hbox (badness 10000) in paragraph at lines 12--16
 \T1/lmr/m/n/10.95 ery-where, URL []$\T1/lmtt/m/n/10.95 http : / / eecatalog . c
 om / sensors / 2012 / 05 / 24 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--29
+Underfull \hbox (badness 10000) in paragraph at lines 19--24
 []
  []
 
@@ -1273,27 +1260,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
 \tf@toc=\write5
 \openout5 = `Bachelors_Thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
  (./Bachelors_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `Bachelors_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 8F623C5DC60F9206C8B36259C1667804;1683.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
  10624 strings out of 493117
- 149096 string characters out of 6135434
- 273809 words of memory out of 5000000
- 13812 multiletter control sequences out of 15000+600000
+ 149094 string characters out of 6135434
+ 273768 words of memory out of 5000000
+ 13813 multiletter control sequences out of 15000+600000
  93315 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,39p,719b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,39p,516b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/
 texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-dist
@@ -1316,10 +1303,10 @@ sbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssdc10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Bachelors_Thesis.pdf (35 pages, 406069 bytes).
+Output written on Bachelors_Thesis.pdf (35 pages, 405923 bytes).
 PDF statistics:
- 486 PDF objects out of 1000 (max. 8388607)
- 416 compressed objects within 5 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 483 PDF objects out of 1000 (max. 8388607)
+ 413 compressed objects within 5 object streams
+ 89 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

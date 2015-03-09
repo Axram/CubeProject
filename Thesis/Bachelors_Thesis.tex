@@ -16,7 +16,9 @@
 \usepackage{cite}
 %\usepackage{biblatex}
 %\addbibresource{references.bib}
-
+\newenvironment{italicquotes}
+{\begin{quote}\itshape}
+{\end{quote}}
 
 
 %\usepackage{appendix} 
@@ -27,7 +29,7 @@
 \date{May 2015}
 \blurb{ Bacherlor's Thesis in Mechatronics \vspace{1em} \\
 \begin{tabular}{ll} 
-Supervisor: Daniel Frede (Is this correct?)&  \\
+Supervisor: Daniel Frede &  \\
 Examiner:Martin Edin Grimheden \\ 
 Approved: & TBA 2015-month-day
 \end{tabular} }
@@ -121,7 +123,7 @@ PLM			& Product Lifecycle Management\\
 PWM			& Pulse With Modulation\\
 DOF			& Degrees of freedom\\
 MEMS			& Microelectromechanical Systems \\
-MATLAB\cite{MATLAB:2014}		& Matrix Laboratory, computational program\\
+MATLAB		& Matrix Laboratory, computational program\\
 IC			& Integrated circuit\\
 $I^2C$		& Inter-Integrated circuit\\
 USB			& Universal Serial Bus \\
@@ -136,15 +138,17 @@ USB			& Universal Serial Bus \\
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH. The work was carried out during the spring 2015.
 
 \section{Background}
-Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production [\cite{MEMSmarket}]. This growth has made automated control available more now than ever, in our every-day life in product lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters. \\
+Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production [\cite{MEMSmarket}]. This growth has made automated control available more now than ever, in our every-day life in product lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters.
 %Balancing an inverted pendulum or any other unstable structure can be a challenging task. It requires knowledge of closed-loop control systems and their stability.  --Ska vi sluta där kanske ?--
 
 \section{Purpose}
-
-\emph{"What improvements can be made to the control system to better cope with an applied external force to the cube" } \\
-Den här borde vi flytta ner
-\noindent{}The purpose was to examine what affected the stability of the mechanical system, (speciellt) the control system. Many parameters goes in to the state space control system and their affect on the mechanical system behaviour is not trivial. The purpose was to detirmine if some of the parameters had an extra importance and if the conclutions were applicable on other mechanical systems. Sample frequency and clock frequency were other parametesr which where to be examined aswell. Also the results were to be contributed to the open source comunity. All results are availible online, open source (referens till MIT licens här), on GitHub (ref till github länk)(summer 2015).\\  
-
+The purpose of this thesis was to examine what effected the stability of the mechanical system, especially the control system. Many parameters are to be accounted for in the state-space model and their effects on the mechanical system behaviour is not trivial. 
+The aim was to determine if some of the parameters had an extra importance and if any conclusions were applicable on other mechanical systems. The research can be summarized with: 
+\begin{italicquotes}
+`What improvements can be made to the control system to better cope with an applied external force to the cube?' \\
+\end{italicquotes}
+Sample frequency and clock frequency are other parameters which were to be examined as well.\\ The  open-source community is growing but still lacks automated control systems for balancing robots. This project will hopefully contribute to some development within the open-source community.
+All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).\\ 
 
 \section{Scope}
 %Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
