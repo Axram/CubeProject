@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Bachelors_Thesis.aux
 The style file: elsarticle-num-names.bst
 Database file #1: FiM_references.bib
-You've used 6 entries,
+You've used 1 entry,
             2793 wiz_defined-function locations,
-            646 strings with 5964 characters,
-and the built_in function-call counts, 3330 in all, are:
-= -- 200
-> -- 104
-< -- 4
-+ -- 43
-- -- 31
-* -- 424
-:= -- 447
-add.period$ -- 6
-call.type$ -- 6
-change.case$ -- 27
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 273
-empty$ -- 270
-format.name$ -- 53
-if$ -- 604
+            607 strings with 5058 characters,
+and the built_in function-call counts, 773 in all, are:
+= -- 46
+> -- 26
+< -- 0
++ -- 12
+- -- 8
+* -- 81
+:= -- 101
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 1
+cite$ -- 1
+duplicate$ -- 62
+empty$ -- 62
+format.name$ -- 11
+if$ -- 149
 int.to.chr$ -- 1
-int.to.str$ -- 7
-missing$ -- 65
-newline$ -- 28
-num.names$ -- 20
-pop$ -- 80
+int.to.str$ -- 2
+missing$ -- 13
+newline$ -- 13
+num.names$ -- 3
+pop$ -- 22
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 5
 quote$ -- 0
-skip$ -- 80
+skip$ -- 28
 stack$ -- 0
-substring$ -- 154
-swap$ -- 234
+substring$ -- 42
+swap$ -- 47
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
+type$ -- 6
 warning$ -- 0
-while$ -- 20
+while$ -- 4
 width$ -- 0
-write$ -- 74
+write$ -- 20
