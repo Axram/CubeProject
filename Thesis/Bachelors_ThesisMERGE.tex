@@ -13,15 +13,13 @@
 \usepackage{pdfpages}
 \newcommand{\textunderscript}[1]{$_{\text{#1}}$}
 \usepackage[utf8]{inputenc}
-\usepackage{cite}
-%\usepackage{biblatex}
-%\addbibresource{references.bib}
+
 
 
 %\usepackage{appendix} 
-\title{Rad Cube (working title)}
+\title{Rad Cube}
 \subtitle{Control of reaction wheel balanced inverted pendulum}
-\foreigntitle{Stabilisering med svänghjul}
+\foreigntitle{Rapporttitel på svenska}
 \author{Mikael Sjöstedt \\ Alexander Ramm}
 \date{May 2015}
 \blurb{ Bacherlor's Thesis in Mechatronics \vspace{1em} \\
@@ -46,26 +44,24 @@ Approved: & TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
+
 Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. ?This thesis is about implementing automated control and balance a simple construction using a reaction wheel commonly used in satellites? 
 \\ To be filled in:
-\\	Problem ( 
-\\	Approach (On the premiss of constructing a small box shaped robot components with desired properties were chosen....)
-\\	Results
-\\ 	Conclusion
+\\Problem ( 
+\\Approach (On the premiss of constructing a small box shaped robot "Items" with desired properties were chosen....)
+\\Results ( Hopefully something that looks cool ) 
+\\ Conclusion
 \\ \\
-
-%(The thesis is written in English and it has both a Swedish and an English \textit{Abstract} page. An English thesis has English \textit{Cover} and \textit{Title} pages. This template, which has no bookmarks or other automation features, defines the layout of a bachelor thesis in Machine Design (MF123X) or Industrial Engineering (MF105X).  The chapter structure that is presented here is just an example.
-%The abstract is maximum one page long. The abstract page is followed by a blank page. The preceding title page, which preferably contains an illustrative picture, is also followed by a blank page. All chapters start at the top of a right hand page, i.e. a page with an odd number.) 
+(The thesis is written in English and it has both a Swedish and an English \textit{Abstract} page. An English thesis has English \textit{Cover} and \textit{Title} pages. This template, which has no bookmarks or other automation features, defines the layout of a bachelor thesis in Machine Design (MF123X) or Industrial Engineering (MF105X).  The chapter structure that is presented here is just an example.
+The abstract is maximum one page long. The abstract page is followed by a blank page. The preceding title page, which preferably contains an illustrative picture, is also followed by a blank page. All chapters start at the top of a right hand page, i.e. a page with an odd number.)
 \end{abstract}
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
-Skriv som abstract men på svenska
+Som abstract fast på engelska
 \\
-
-
-%Examensarbetet skrivs på engelska och har alltid både en svensk och en engelsk sammanfattningssida. Denna skrivmall, som inte har ``bookmarks'' eller några avancerade ``features'', definierar layouten för ett examensarbete i Maskinteknik (MF123X) eller Industriell ekonomi (MF105X).
-%I detta kapitel sammanfattas examensarbetet. Sammanfattningens omfattning är högst en sida. Sammanfattningen åtföljs av en blank sida. Den föregående titelsidan, som lämpligen också innehåller en illustrativ bild, följs också av en blank sida. Alla kapitel börjar längst upp på en högersida, dvs på ett udda sidonummer.
+Examensarbetet skrivs på engelska och har alltid både en svensk och en engelsk sammanfattningssida. Denna skrivmall, som inte har ``bookmarks'' eller några avancerade ``features'', definierar layouten för ett examensarbete i Maskinteknik (MF123X) eller Industriell ekonomi (MF105X).
+I detta kapitel sammanfattas examensarbetet. Sammanfattningens omfattning är högst en sida. Sammanfattningen åtföljs av en blank sida. Den föregående titelsidan, som lämpligen också innehåller en illustrativ bild, följs också av en blank sida. Alla kapitel börjar längst upp på en högersida, dvs på ett udda sidonummer.
 \end{foreignabstract}
 \clearpage
 \chapter*{Preface}
@@ -124,7 +120,7 @@ CAE			& Computer Aided Engineering\\
 PLM			& Product Lifecycle Management\\
 PWM			& Pulse With Modulation\\
 DOF			& Degrees of freedom\\
-MEMS			& Microelectromechanical Systems \\
+
 $\ldots$		& $\ldots$ 
 \end{tabular}
 \cleardoublepage
@@ -137,10 +133,14 @@ Beskriv bakgrund, syfte, avgränsning för det utförda examensarbetet, samt äv
 
 This chapter decribes the backgroud,pupose, scope, and method of the theisis. 
 \section{Background}
+<<<<<<< HEAD
+<<<<<<< HEAD
 Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production( http://www.reuters.com/article/2015/01/15/technavio-research-idUSnBw155173a+100+BSW20150115, should refer to the source but cant gain access...). This growth has made automated control available in our every-day life in products lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters. The process 
-
-----Balancing a inverted pendulum can be a challenging task. It requires knoledge of closed loop control systems and their stability, electronics and... ---
-\\ (JUST SOME BACKGROUND TO THE PROBLEM, AND SOME CONTEMPORARY EXAMPLES TO GET THE READERS ATTENTION)
+\section{Purpose}
+The purpose of this paper 
+\section{Tänk på}
+=======
+Balancing a inverted pendulum can be a challenging task. It requires knoledge of closed loop control systems and their stability, electronics and... 
 
 \section{Purpose}
 
@@ -149,9 +149,12 @@ Today the use of automated control is growing in a rapid pace and is being imple
 \noindent{}The purpose was to examine what affected the stability of the mechanical system, (speciellt) the control system. Many parameters goes in to the state space control system and their affect on the mechanical system behaviour is not trivial. The purpose was to detirmine if some of the parameters had an extra importance and if the conclutions were applicable on other mechanical systems. Sample frequency and clock frequency were other parametesr which where to be examined aswell. Also the results were to be contributed to the open source comunity. All results is availible online, open source (referens till MIT licens här), on GitHub (ref till github länk)(summer 2015).\\  
 
 
+>>>>>>> origin/master
+=======
+Bla bla bla
 
-\section{TÄNK PÅ DETTA}
-
+\section{Purpose}
+>>>>>>> parent of 6c0af1e... Ska vi börja trycka till dev ?
 Figurer i avhandlingen skall centreras och figurtexten skrivs centrerat. Figurerna numereras Fig. \ref{fig:kth_logo}, Fig. 1.2, och så vidare. 
 \begin{figure}[htbp]
 \begin{center}
@@ -193,16 +196,29 @@ råd n, kolumn 1 & råd n, kolumn 2 \\
 R= \frac{N_F}{N_F-N_R} \label{eq:testequation}
 \end{equation}
 
-\noindent{}Referenser bör göras med namn och år, som exempel, \cite{Angell1999} hävdar att $\ldots$, eller ickelinjär finita element analys förutsätter såväl specialkunskaper som erfarenhet \cite{DeBorst2012}. Observera också lilla skillnaderna mellan referenser till tidskrifter \cite{VanWezel2001} och \cite{Angell1999}, en bok \cite{DeBorst2012} och en konferens \cite{Eppinger2001}. Ett exempel på en Internetreferens är \cite{StandishGroup1994}. Huvudrubriken för referenskapitlet 
-\cite{Angell1999}behandlas som en helt vanlig huvudrubrik. \\
+\noindent{}Referenser bör göras med namn och år, som exempel, \cite{Angell1999} hävdar att $\ldots$, eller ickelinjär finita element analys förutsätter såväl specialkunskaper som erfarenhet \cite{DeBorst2012}. Observera också lilla skillnaderna mellan referenser till tidskrifter \cite{VanWezel2001} och \cite{Angell1999}, en bok \cite{DeBorst2012} och en konferens \cite{Eppinger2001}. Ett exempel på en Internetreferens är \cite{StandishGroup1994}. Huvudrubriken för referenskapitlet behandlas som en helt vanlig huvudrubrik. \\
+
 
 \noindent{}\emph{Angående forskningsfrågor och vetenskaplig frågeställning}\\
 Beskriv, med utgångspunkt i den bakgrund som presenterats i föregående avsnitt, den frågeställning som rapporten undersöker, diskuterar och drar slutsatser runt. Själva frågeställningen ska beskrivas i 1-2 meningar som tydligt pekar ut vad som ska mätas inom de begränsningar och med de metoder som presenteras i efterföljande avsnitt. Med andra ord, undvik vaga formuleringar (``Går det att$\ldots$''), kriterier som egentligen är funktioner (``Ska kunna$\ldots$'') eller subjektiva formuleringar (``$\ldots$ska vara bra/acceptabel/tillräckligt snabb/etc.'')
 \section{Scope}
 Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
-// The scope were to examine the parameters, of a state space controller and other electronical desitions, affect on the behaviour of a balancing "1-DOF" inverted pendulum.
 
-
+<<<<<<< HEAD
+\section{Method}
+Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.
+<<<<<<< HEAD
+\\
+The main goal of this project build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts
+\begin{itemize}
+\item Constructing the main frame
+\item Choosing motor and motor control
+\item Filter sensors and "get good readings"
+\item "Make them all play in the same kindergarten"
+\item Final assembly
+\end{itemize} 
+=======
+The scope were to examine the parameters, of a state space controller and other electronical desitions, affect on the behaviour of a balancing "1-DOF" inverted pendulum.
 \chapter{Method}
 Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
 
@@ -213,19 +229,6 @@ The engineering tast was devided into smaller problems (In med punktlista?). (Be
 \item Sensor Reading
 \item System Control
 \end{itemize}
-
-The main goal of this project build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts
-\begin{itemize}
-\item Constructing the main frame
-\item Choosing motor and motor control
-\item Filter sensors and "get good readings"
-\item "Make them all play in the same kindergarten"
-\item Final assembly
-\end{itemize} 
-
-
-
-
 
 \section{Contruction}
 The main contruction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes abillity to balance. The problem where (uppställt) with Newtionial mechanics.
@@ -247,25 +250,42 @@ The choosen conrol methot where state space. The problem in to linareise and dis
 \emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
 \\ Här måste det köttas på mycket inför tisdag 9/3 \\
 
-
+<<<<<<< HEAD
+<<<<<<< HEAD
 Balancing 1-DOF inverted pendulum type structures using reaction wheels is no new concept, and became common with the introduction of cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instabillity of pendulums. The latest development is on "2-DOF" pendelum structures unsing multiple orthogonal reaction wheels. This method is commonly used to rotate sattelites and maintaining their attitude to increase performance and allign solar panels. 
 Also creating transversal movement using only the reaction wheels is a recent topic for research ie not only changeing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be usefull for land/sea based machines to overcome various obstacles without a seperate system for balancing and movement.
  
+=======
+Balancing 1-DOF inverted penelum type strucktures using reaction wheels is no new concept, and became common with the introduction to cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instabillity of pendulums. The latest development is on "2-DOF" pendelum structures unsing multiple orthogonal reaction wheels. This method is commonly used to rotate sattelites and maintaining their attitude so incerease performance and allign solar panels. 
+Allso creating transversal movement using only the reaction wheels is a recent topic for research ie not only changeing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be usefull for land/sea based machines to overcome various obstacles without a seperate system for balanceing and movement. 
+>>>>>>> origin/master
+=======
+Balancing 1-DOF inverted penelum type strucktures using reaction wheels is no new concept, and became commen with the introduction to cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instabillity of pendulums. The latest development is on "2-DOF" pendelum structures unsing multiple orthogonal reaction wheels. This method is commonly used to rotate sattelites and maintaining their attitude so incerease performance and allign solar panels. 
+Allso creating transversal movement using only the reaction wheels is a recent topic for research ie not only changeing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be usefull for land/sea based machines to overcome various obstacles without a seperate system for balanceing and movement. 
+>>>>>>> parent of 6c0af1e... Ska vi börja trycka till dev ?
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
 
 
 \section{Problem Formulation}
 Beskriv din problemställning för demonstratorn.\\
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-The engineering problem where to build a cube that, using a reaction wheel, could balance on its edge.
-
+=======
+Create ze cube, balance it, go home
+The engineering problem where to build a cube that, using a reaction wheel, could balance on it-s edge.
+>>>>>>> origin/master
+=======
+Create ze cube, balance it, go home
+>>>>>>> parent of 6c0af1e... Ska vi börja trycka till dev ?
 \section{State space model}
 To create a state-space model the physical model has to be translated to a mathematical model. To do this, \emph{Euler-Lagrange} equations is used where a system in motion can be described by:
 \begin{equation}
 Q_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\partial L}{\partial q_i}\right)
 \end{equation}
-In this case the cube's angular momentum is counteracted by the flywheel and the system can be written as follows
+
+In this case the cube's angular momentum (Rätt ordval?) is counteracted by the flywheel and the system can be then be written as follows
 
 %\begin{equation}
 \begin{equation} \label{eq:positiveL}
@@ -274,56 +294,53 @@ M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\left(\fra
 \begin{equation} \label{eq:negativeL}
 -M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)-\left(\frac{\partial L}{\partial \phi}\right)
 \end{equation}
+
+
+
 Whereas $\theta$ represents the angle of the cube and $\phi$ is the position of the flywheel. \\
 The Lagrange equation is derived from the difference in kinetic energy and potential energy of the cube
 \begin{equation} \label{eq:Lagrange}
 L = E_k - E_p
 \end{equation}
 
-\begin{equation}
-E_k = \frac{I_c \cdot \dot{\theta^2}}{2} + \frac{I_f \cdot \dot{\phi^2} }{2}
-\end{equation}
-\begin{equation}
-E_p = \frac{M_c \cdot g \cdot l \cdot \cos \theta}{\sqrt{2}}
-\end{equation}
-Equation \eqref{eq:positiveL} and \eqref{eq:negativeL} with \eqref{eq:Lagrange}
+\begin{align}
+E_k = \frac{I_c \cdot \dot{\theta^2}}{2} + \frac{I_f \cdot \dot{\phi^2} }{2} \\
+E_p = \frac{M_c \cdot g \cdot l \cdot \cos \theta}{\sqrt{2}} 
+\end{align}
+Equation \eqref{eq:negativeL} and \eqref{eq:positiveL} with \eqref{eq:Lagrange} gives
 \begin{equation} \label{eq:negativeL2}
 I_k \cdot \ddot{\theta} - \frac{M_c \cdot g \cdot l \cdot \sin \theta }{\sqrt{2}}  = -M_a
 \end{equation}
 \begin{equation} \label{eq:postiveL2}
 I_s \cdot \ddot{\phi} = M_a
 \end{equation}
-From these equations it is evident that $M_a$ is the torque executed by the flywheel which is wielded by the motor torque $\tau$, it can be described by a relation between the torque constant and the current flowing through the motor.
+It is now plain to see that (Jävligt slentriant skrivet) $M_a$ is the torque (utövat ??) needed by the flywheel which is wielded by the motor torque $\tau$, it can be described by a relation between a motor constant and the current flowing through the motor.
 \begin{equation}
 \tau = K_t \cdot i_m
 \end{equation}
-The current can be described by the voltage across the two poles of the motor. 
+The current can be described by the voltage (över motorn?)
 \begin{equation}
 \tau = K_t \cdot \frac{U-E_{\text{emf}} }{R_m}
 \end{equation}
-The induced voltage is related to the induced voltage constant and the rotor rotation
-\begin{equation}
-E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r}
-\end{equation}
-\begin{equation}
-\phi_r = \dot{\phi} - \dot{\theta}
-\end{equation}
- 
+The induced voltage is related to the 'random constant´and the rotor rotation
+\begin{align}
+E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r} \\
+\phi_r = \dot{\phi} - \dot{\theta} 
+\end{align}
 \begin{equation} \label{eq:tau}
 \tau = \frac{K_t}{R_m} U - \frac{K_t K_{\text{emf}} }{R_m} \dot{\phi} + \frac{K_t K_{\text{emf}} }{R_m} \dot{\theta}
 \end{equation}
-The torque on the executed by the flywheel can then be described with the efficiency of the motor
+The torque on the (hur fan blir det här bra ? ) flywheel can then be described with the efficiency of the motor
 \begin{equation} \label{eq:eff}
 M_a = \tau \cdot \eta_m
 \end{equation}
 Based on equation \eqref{eq:negativeL}, \eqref{eq:positiveL} and \eqref{eq:eff} the system can be described by
-\begin{equation}
+\begin{align} 
 \ddot{\theta} = -\frac{K_t \eta_m}{R_m I_c} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\theta} + \frac{Mt g l }{\sqrt{2} I_c} \sin \theta \label{thetadotdot}
-\end{equation}
-\begin{equation}
+\\
 \ddot{\phi} = \frac{K_t \eta_m}{R_m I_f} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} \dot{\theta} 
 \label{phidotdot}
-\end{equation} 
+\end{align} 
 
 based on equations \eqref{thetadotdot} and \eqref{phidotdot} the system can be described with a state space model with a states $x^T = [\theta, \dot{\theta}, \dot{\phi}$]. The system is hence described by
 \begin{equation}
@@ -352,7 +369,7 @@ Beskriv hur din mjukvara fungerar. Använd bl.a. flödesscheman för att åskåd
 Beskriv din elektroniska konstruktion. Använd figurer och förenklade blockschema. Motivera dina lösningar.
 \\ Sensors
 \\ Motor
-\\ Arduino
+\\ arduino
 \\ Motor control
 
 
@@ -382,12 +399,12 @@ Bla bla bla
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 \section{Future work}
-An extention of the project would be balancing the cube not only on it's edge but it's corner. To achieve this multiple reaction wheels must be used and a more complicated control system due to changes in moment of inertia caused by angular velocities in the other reaction wheels.
+An extention of the project would be balancing the cube not only in it's edge but it's corner. To achieve this multiple reaction wheels must be used and a more complicated control system due to changes in moment of inertia caused by angular velocities in the other reaction wheels.
 
 %\bibliography
 \cleardoublepage
 \bibliography{FiM_references}
-\bibliographystyle{elsarticle-num-names}%apalike-url}
+\bibliographystyle{apalike-url}
 
 \cleardoublepage
 \appendix
@@ -402,6 +419,6 @@ An extention of the project would be balancing the cube not only on it's edge bu
 \cleartoverso %force back cover to be "left" page
 %\includepdf[pages={2}]{kth-cover.pdf}
 
-%\printbibliography
+
 \end{document}
 
