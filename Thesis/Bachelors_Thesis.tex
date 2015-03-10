@@ -63,7 +63,9 @@ This thesis is about implementing automated control and balance a simple constru
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
-Skriv som abstract men på svenska
+Projektet gick ut på att bygga en cub som kan balansera på en kant med hjälp av ett reaktionshjul. Dessutom sulle den undersökas huruvida det gick att förbättra reglersystemet
+för cuben, så den klarade en större yttre störning. Ingengörsproblemet delades upp i mindre delproblem och kuben byggdes. Reglestystemet beräknades på formen "State space" och implementerades.
+Från resultatet drogs slutsatserna att...
 \\
 
 
@@ -152,9 +154,8 @@ All results are available online, open source (MIT license reference here), on G
 
 \section{Scope}
 %Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
-The scope were to examine the parameters, of a state space controller and other electronical desitions, affect on the behaviour of a balancing "1-DOF" inverted pendulum.
-
-\cleardoublepage
+The scope were to examine the parameters, of the state space controller and sensor sample frequency, affects on the overshoot behaviour of a balancing "1-DOF" inverted pendulum.
+The overshoot should be caused by an external force, disrupting the cubes balance.
 
 \chapter{Method}
 %Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
@@ -170,15 +171,20 @@ The engineering task The main goal of this project was to build a structure whic
 
 \section{Contruction}
 The main contruction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes abillity to balance. The problem where (uppställt) with Newtionial mechanics.
+Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
  
 \section{Motor and Motor Control}
-The motors nominal and stall torque are very important for the system blaha
+The motors nominal and stall torque are very important for the system blaha. The motor driver is allso imortant, but usually one can get suggestions on drivers from motor manufactores, which was the choosen path.
   
 \section{Sensor Reading}
 The IMU's parameters and filtering of the signals
 
 \section{System Control}
 The choosen control method where state space. The problem in to linareise and discretise with good enough precition.
+
+\section{Final Assembly}
+When the subproblems above are solved and constructed, the final machine can be built. Here cabeling and disturbances from other subsystems must be taken into consideration. 
+The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
 
 \chapter{Theory}
 \emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
