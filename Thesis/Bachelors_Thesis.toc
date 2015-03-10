@@ -21,10 +21,11 @@
 \contentsline {chapter}{\chapternumberline {4}Demonstrator}{7}{chapter.4}
 \contentsline {section}{\numberline {4.1}Problem Formulation}{7}{section.4.1}
 \contentsline {section}{\numberline {4.2}State space model}{7}{section.4.2}
-\contentsline {section}{\numberline {4.3}Software}{9}{section.4.3}
-\contentsline {section}{\numberline {4.4}Electronics}{9}{section.4.4}
-\contentsline {section}{\numberline {4.5}Hardware}{10}{section.4.5}
-\contentsline {section}{\numberline {4.6}Results}{10}{section.4.6}
+\contentsline {section}{\numberline {4.3}Kalman filter}{9}{section.4.3}
+\contentsline {section}{\numberline {4.4}Software}{9}{section.4.4}
+\contentsline {section}{\numberline {4.5}Electronics}{10}{section.4.5}
+\contentsline {section}{\numberline {4.6}Hardware}{10}{section.4.6}
+\contentsline {section}{\numberline {4.7}Results}{11}{section.4.7}
 \contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion}{13}{section.5.1}
 \contentsline {section}{\numberline {5.2}Conclusions}{13}{section.5.2}

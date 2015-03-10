@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -8,11 +8,23 @@
   \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
 
-\bibitem[{A.Ciufo(2012)}]{MEMSmarket}
-\bibinfo{author}{C.~A.Ciufo}, \bibinfo{title}{MEMS Trends: Smaller, Cheaper,
+\bibitem[{Ciufo(2012)}]{MEMSmarket}
+\bibinfo{author}{C.~A. Ciufo}, \bibinfo{title}{MEMS Trends: Smaller, Cheaper,
   Everywhere},
   \urlprefix\url{http://eecatalog.com/sensors/2012/05/24/mems-trends-smaller-cheaper-everywhere/},
   \bibinfo{year}{2012}.
+
+\bibitem[{Simon(2001)}]{Simon2001}
+\bibinfo{author}{D.~Simon}, \bibinfo{title}{Kalman Filtering},
+  \bibinfo{journal}{Embedded System Programming}
+  \bibinfo{volume}{1}~(\bibinfo{number}{6}) (\bibinfo{year}{2001})
+  \bibinfo{pages}{72--79}.
+
+\bibitem[{Welch and Bishop(2006)}]{Kalmanintro}
+\bibinfo{author}{G.~Welch}, \bibinfo{author}{G.~Bishop},
+  \bibinfo{title}{Introduction to the Kalman Filter}, \bibinfo{type}{Tech.
+  Rep.}, \bibinfo{institution}{Department of Computer Science, University of
+  North Carolina at Chapel Hill}, \bibinfo{year}{2006}.
 
 \bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
   D'Andrea}]{cubliECC13}
