@@ -12,33 +12,23 @@
 \BOOKMARK [1][-]{section.2.2}{Motor and Motor Control}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.3}{Sensor Reading}{chapter.2}% 13
 \BOOKMARK [1][-]{section.2.4}{System Control}{chapter.2}% 14
-<<<<<<< HEAD
-\BOOKMARK [0][-]{chapter.3}{Theory}{}% 15
-\BOOKMARK [0][-]{chapter.4}{Demonstrator}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Problem Formulation}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.2}{State space model}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.3}{Kalman filter}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 23
-=======
 \BOOKMARK [1][-]{section.2.5}{Final Assembly}{chapter.2}% 15
 \BOOKMARK [0][-]{chapter.3}{Theory}{}% 16
 \BOOKMARK [0][-]{chapter.4}{Demonstrator}{}% 17
 \BOOKMARK [1][-]{section.4.1}{Problem Formulation}{chapter.4}% 18
 \BOOKMARK [1][-]{section.4.2}{State space model}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.3}{Software}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.4}{Electronics}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.5}{Hardware}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.6}{Results}{chapter.4}% 23
->>>>>>> origin/master
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 26
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 27
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 28
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 29
-\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 30
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 31
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 32
+\BOOKMARK [1][-]{section.4.3}{Kalman filter}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.3.1}{The process}{section.4.3}% 21
+\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 31
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 32
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 33
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 34
