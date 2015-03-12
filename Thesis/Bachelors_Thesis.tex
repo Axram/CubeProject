@@ -295,7 +295,7 @@ $B = \begin{bmatrix}
 It is an estimator, recursive, new measurements are processed on the go. optimal for gaussian error much like the one in piezoelectrothings, minimises the mean square error
 algorithm that uses observed measurement over time which in this case is the measurements from the gyro and accelerometer. The problem with the accelerometer is that it's very noisy? for small adjustments/accelerations. The gyro on the other hand, drifts over time [In med källa, finns hur många som helst..] and can be accounted for during short accelerations.  \cite{Simon2001}
 \cite{Kalmanintro} It minimizes the variance of the estimation error
-A kalman filter suits the needs of this project. Because to control the position of the cube, a good and reliable estimate of the position is needed.
+A kalman filter suits the needs of this project. Because to control the position of the cube, a good and reliable estimate of the position is needed.(Bör vävas in : A good estimator produces states that are non biased, values that have an average  of the true value. And that the estimated state variance from the true state is as small as possible)
 \subsection{The process}
 The discrete Kalman filter which is applied to the problem at hand is a state based estimator. By using the measurements from both the accelerometer and the gyro from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
 \begin{equation}\label{eq:kalmanstate}

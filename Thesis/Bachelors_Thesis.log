@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  12 MAR 2015 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  12 MAR 2015 12:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,16 +1208,18 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)             \includegraphics on input line 333.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=324, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=323, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
 Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 333.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
- [10 <./simmodel-eps-converted-to.pdf> <./voltageplot-eps-converted-to.pdf>] [1
-1 <./angleplot-eps-converted-to.pdf>]
-[12] [13
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+ [10 <./simmodel-eps-converted-to.pdf>] [11 <./voltageplot-eps-converted-to.pdf
+>] [12 <./angleplot-eps-converted-to.pdf>] [13
 
 ] [14
 
@@ -1303,7 +1305,7 @@ sbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssdc10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Bachelors_Thesis.pdf (35 pages, 413630 bytes).
+Output written on Bachelors_Thesis.pdf (35 pages, 413797 bytes).
 PDF statistics:
  507 PDF objects out of 1000 (max. 8388607)
  437 compressed objects within 5 object streams
