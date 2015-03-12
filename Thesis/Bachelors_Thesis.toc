@@ -25,9 +25,9 @@
 \contentsline {section}{\numberline {4.3}Kalman filter}{9}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}The process}{9}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}Software}{9}{section.4.4}
-\contentsline {section}{\numberline {4.5}Electronics}{9}{section.4.5}
+\contentsline {section}{\numberline {4.5}Electronics}{11}{section.4.5}
 \contentsline {section}{\numberline {4.6}Hardware}{11}{section.4.6}
-\contentsline {section}{\numberline {4.7}Results}{11}{section.4.7}
+\contentsline {section}{\numberline {4.7}Results}{12}{section.4.7}
 \contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion}{13}{section.5.1}
 \contentsline {section}{\numberline {5.2}Conclusions}{13}{section.5.2}

@@ -23,7 +23,7 @@
 
 %\usepackage{appendix} 
 \title{Rad Cube (working title)}
-\subtitle{Control of reaction wheel balanced inverted pendulum}
+\subtitle{Control and design of reaction wheel balanced inverted pendulum}
 \foreigntitle{Stabilisering med svänghjul}
 \author{Mikael Sjöstedt \\ Alexander Ramm}
 \date{May 2015}
@@ -113,6 +113,8 @@ K\textunderscript{emf} 	& Induced voltage constant \\
 U			& Voltage across motor poles\\
 $R_m	$		& Motor internal resitance \\
 $\eta_m$		& Motor efficiency\\	
+$z$			& Measurement noise \\
+$w$			& Process noise \\
 \end{tabular}
 \clearpage
 
@@ -289,13 +291,23 @@ $B = \begin{bmatrix}
 \end{center}
 
 \section{Kalman filter}
-Nu har jag bara slängt ut nyckelord. Den ska styras upp :) Men 2 bra källor iaf tror jag \\
+\textbf{Nu har jag bara slängt ut nyckelord. Den ska styras upp :) Men 2 bra källor iaf tror jag}  \\
 It is an estimator, recursive, new measurements are processed on the go. optimal for gaussian error much like the one in piezoelectrothings, minimises the mean square error
 algorithm that uses observed measurement over time which in this case is the measurements from the gyro and accelerometer. The problem with the accelerometer is that it's very noisy? for small adjustments/accelerations. The gyro on the other hand, drifts over time [In med källa, finns hur många som helst..] and can be accounted for during short accelerations.  \cite{Simon2001}
-\cite{Kalmanintro}
-
+\cite{Kalmanintro} It minimizes the variance of the estimation error
+A kalman filter suits the needs of this project. Because to control the position of the cube, a good and reliable estimate of the position is needed.
 \subsection{The process}
-The discrete Kalman filter which is applied to the problem at hand is a state based estimator. By using the measurements from both the accelerometer and the gyro from the past, present (future??) it can derive a good estimate of the state of the  cube's position.
+The discrete Kalman filter which is applied to the problem at hand is a state based estimator. By using the measurements from both the accelerometer and the gyro from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
+\begin{equation}\label{eq:kalmanstate}
+x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
+\end{equation}
+\begin{equation}
+y_k = Hx_k + z_k
+\end{equation}
+Where $x$ is the states of the cube which cannot be measured directly i.e $\theta$ and   $\dot{\theta}$. $y$ is the measured value which would be the serial data from the IMU 
+%Kanske ta upp lite hur vi skickar data ? se serial data ovana
+, which is a function of $x$ but is distorted by the measurement noise $z$
+The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop this}. 
 
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 

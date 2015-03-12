@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  11 MAR 2015 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  12 MAR 2015 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1114,19 +1114,19 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 121--121
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 123--123
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
 
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--154
+Underfull \hbox (badness 10000) in paragraph at lines 154--156
 
  []
 
@@ -1135,7 +1135,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 165.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 167.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1143,7 +1143,7 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ]
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 190--192
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
 
  []
 
@@ -1152,12 +1152,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--192
 ] [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 275--277
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
@@ -1170,13 +1170,13 @@ Package epstopdf Info: Source file: <simmodel.eps>
 (epstopdf)                    size: 25191 bytes
 (epstopdf)             Command: <repstopdf --outfile=simmodel-eps-converted-to.
 pdf simmodel.eps>
-(epstopdf)             \includegraphics on input line 304.
+(epstopdf)             \includegraphics on input line 316.
 Package epstopdf Info: Output file is already uptodate.
- <simmodel-eps-converted-to.pdf, id=307, 530.98375pt x 245.91875pt>
+ <simmodel-eps-converted-to.pdf, id=308, 530.98375pt x 245.91875pt>
 File: simmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use simmodel-eps-converted-to.pdf>
-Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 304.
+Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 316.
 (pdftex.def)             Requested size: 371.68608pt x 172.14194pt.
 Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:36
@@ -1186,16 +1186,17 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 312.
+(epstopdf)             \includegraphics on input line 324.
 Package epstopdf Info: Output file is already uptodate.
 
-<voltageplot-eps-converted-to.pdf, id=309, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=310, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 31
-2.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 32
+4.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
+ [9]
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
 (epstopdf)                    size: 21317 bytes
@@ -1204,23 +1205,21 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 321.
+(epstopdf)             \includegraphics on input line 333.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=310, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=324, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 321.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 333.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
- [9]
-Underfull \vbox (badness 5245) has occurred while \output is active []
-
  [10 <./simmodel-eps-converted-to.pdf> <./voltageplot-eps-converted-to.pdf>] [1
-1 <./angleplot-eps-converted-to.pdf>] [12
+1 <./angleplot-eps-converted-to.pdf>]
+[12] [13
 
-] [13] [14
+] [14
 
 ] [15] [16
 
@@ -1261,24 +1260,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \tf@toc=\write5
 \openout5 = `Bachelors_Thesis.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
  (./Bachelors_Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
 Package rerunfilecheck Info: File `Bachelors_Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 093E9CD1D818DF7EAB1CB72D0A77F0F2;1869.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
  ) 
 Here is how much of TeX's memory you used:
- 10638 strings out of 493117
- 149281 string characters out of 6135434
- 273864 words of memory out of 5000000
- 13822 multiletter control sequences out of 15000+600000
+ 10641 strings out of 493117
+ 149327 string characters out of 6135434
+ 273918 words of memory out of 5000000
+ 13823 multiletter control sequences out of 15000+600000
  96083 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,39p,516b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1304,10 +1303,10 @@ sbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmssdc10.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Bachelors_Thesis.pdf (35 pages, 409685 bytes).
+Output written on Bachelors_Thesis.pdf (35 pages, 413630 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 434 compressed objects within 5 object streams
- 94 named destinations out of 1000 (max. 500000)
+ 507 PDF objects out of 1000 (max. 8388607)
+ 437 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
  293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
