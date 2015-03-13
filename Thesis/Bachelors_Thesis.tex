@@ -63,7 +63,7 @@ This thesis is about implementing automated control and balance a simple constru
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
-Projektet gick ut på att bygga en cub som kan balansera på en kant med hjälp av ett reaktionshjul. Dessutom sulle den undersökas huruvida det gick att förbättra reglersystemet
+Projektet gick ut på att bygga en kub som kan balansera på en kant med hjälp av ett reaktionshjul. Dessutom sulle den undersökas huruvida det gick att förbättra reglersystemet
 för cuben, så den klarade en större yttre störning. Ingengörsproblemet delades upp i mindre delproblem och kuben byggdes. Reglestystemet beräknades på formen "State space" och implementerades.
 Från resultatet drogs slutsatserna att...
 \\
@@ -154,6 +154,15 @@ The aim was to determine if some of the parameters had an extra importance and i
 Sample frequency and clock frequency are other parameters which were to be examined as well.\\ The  open-source community is growing but still lacks automated control systems for balancing robots. This project will hopefully contribute to some development within the open-source community.
 All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).\\ 
 
+\section{Purpose försök 2}
+The goal was to build a balancing mechanical system and to examine the behaviour of the particular system.\\
+The behaviour is mostly affected by the controlsystem, which is responsible for accelerating the motor, in the at the time correct direction, to maintain balance. The parameters in the control system affects redponsetime, overshoot and sinusodial (insvängninsfas).
+
+\begin{italicquotes}
+`How can the control parameters be optimised to minimize the overshoot while sill having a quick enough responce til to maintain balance.'
+\end{italicquotes}
+
+(insert supernarrow purpose here)
 \section{Scope}
 %Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
 The scope were to examine the parameters, of the state space controller and sensor sample frequency, affects on the overshoot behaviour of a balancing "1-DOF" inverted pendulum.

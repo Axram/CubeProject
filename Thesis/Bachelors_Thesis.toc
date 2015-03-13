@@ -11,7 +11,8 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Background}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Purpose}{1}{section.1.2}
-\contentsline {section}{\numberline {1.3}Scope}{2}{section.1.3}
+\contentsline {section}{\numberline {1.3}Purpose f\IeC {\"o}rs\IeC {\"o}k 2}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Scope}{2}{section.1.4}
 \contentsline {chapter}{\chapternumberline {2}Method}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Contruction}{3}{section.2.1}
 \contentsline {section}{\numberline {2.2}Motor and Motor Control}{3}{section.2.2}
@@ -27,14 +28,14 @@
 \contentsline {section}{\numberline {4.4}Software}{10}{section.4.4}
 \contentsline {section}{\numberline {4.5}Electronics}{10}{section.4.5}
 \contentsline {section}{\numberline {4.6}Hardware}{10}{section.4.6}
-\contentsline {section}{\numberline {4.7}Results}{11}{section.4.7}
-\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion}{13}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conclusions}{13}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{15}{chapter.6}
-\contentsline {section}{\numberline {6.1}Recommendations}{15}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future work}{15}{section.6.2}
-\contentsline {chapter}{Bibliography}{17}{section*.6}
+\contentsline {section}{\numberline {4.7}Results}{10}{section.4.7}
+\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{11}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion}{11}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conclusions}{11}{section.5.2}
+\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{13}{chapter.6}
+\contentsline {section}{\numberline {6.1}Recommendations}{13}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future work}{13}{section.6.2}
+\contentsline {chapter}{Bibliography}{15}{section*.6}
 \contentsline {part}{Appendices}{}{}
-\contentsline {chapter}{\chapternumberline {A}Additional information}{19}{appendix.A}
-\contentsline {chapter}{\chapternumberline {B}Proofs}{21}{appendix.B}
+\contentsline {chapter}{\chapternumberline {A}Additional information}{17}{appendix.A}
+\contentsline {chapter}{\chapternumberline {B}Proofs}{19}{appendix.B}
