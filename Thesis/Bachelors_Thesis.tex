@@ -306,7 +306,7 @@ algorithm that uses observed measurement over time which in this case is the mea
 \cite{Kalmanintro} It minimizes the variance of the estimation error
 A kalman filter suits the needs of this project. Because to control the position of the cube, a good and reliable estimate of the position is needed.(Bör vävas in : A good estimator produces states that are non biased, values that have an average  of the true value. And that the estimated state variance from the true state is as small as possible)
 \subsection{The process}
-The discrete Kalman filter which is applied to the problem at hand is a state based estimator. By using the measurements from both the accelerometer and the gyro from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
+The discrete Kalman filter which is used to tackle this problem is a state based estimator. By using the measurements from both the accelerometer and the gyro from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
 \begin{equation}\label{eq:kalmanstate}
 x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \end{equation}
@@ -316,8 +316,14 @@ y_k = Hx_k + z_k
 Where $x$ is the states of the cube which cannot be measured directly i.e $\theta$ and   $\dot{\theta}$. $y$ is the measured value which would be the serial data from the IMU 
 %Kanske ta upp lite hur vi skickar data ? se serial data ovana
 , which is a function of $x$ but is distorted by the measurement noise $z$
-The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop this}. 
-
+The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop}. 
+For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, a gaussian error. $z$ and $w$ also has to be independent of  each other as the noise covariance can then be expressed by
+\begin{equation} \label{eq:covariance measurement noise}
+S_z = E(z_k z_k \textsuperscript{T} )
+\end{equation}
+\begin{equation} \label{eq:covariance process noise}
+S_w = E(w_k w_k \textsuperscript{T})
+\end{equation}
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
 \begin{figure}[!htb]
