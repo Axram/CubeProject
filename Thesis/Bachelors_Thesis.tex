@@ -300,13 +300,14 @@ $B = \begin{bmatrix}
 \end{center}
 
 \section{Kalman filter}
-\textbf{Nu har jag bara slängt ut nyckelord. Den ska styras upp :) Men 2 bra källor iaf tror jag}  \\
-It is an estimator, recursive, new measurements are processed on the go. optimal for gaussian error much like the one in piezoelectrothings, minimises the mean square error
-algorithm that uses observed measurement over time which in this case is the measurements from the gyro and accelerometer. The problem with the accelerometer is that it's very noisy? for small adjustments/accelerations. The gyro on the other hand, drifts over time [In med källa, finns hur många som helst..] and can be accounted for during short accelerations.  \cite{Simon2001}
-\cite{Kalmanintro} It minimizes the variance of the estimation error
-A kalman filter suits the needs of this project. Because to control the position of the cube, a good and reliable estimate of the position is needed.(Bör vävas in : A good estimator produces states that are non biased, values that have an average  of the true value. And that the estimated state variance from the true state is as small as possible)
+\textbf{Still a bit messy}  \\
+The problem with the accelerometer is that that the signal contains a lot of noise. It can be accounted for measurements over a longer period but not short term. The gyroscope on the other hand, drifts over time and is only reliable during short accelerations. 
+A Kalman filter suits the needs of this project. It is a recursive estimator, where old and new measurements are processed realtime. 
+A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. And that the estimated state variance from the true state is as small as possible. Hence the Kalman filter is optimal with the use of an accelerometer as the error is gaussian much like many other measurement devices.  \cite{Simon2001}
+\cite{Kalmanintro}
+
 \subsection{The process}
-The discrete Kalman filter which is used to tackle this problem is a state based estimator. By using the measurements from both the accelerometer and the gyro from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
+The discrete Kalman filter which is used is a state based estimator. By using the measurements from both the accelerometer and the gyroscope from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
 \begin{equation}\label{eq:kalmanstate}
 x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \end{equation}
@@ -316,7 +317,7 @@ y_k = Hx_k + z_k
 Where $x$ is the states of the cube which cannot be measured directly i.e $\theta$ and   $\dot{\theta}$. $y$ is the measured value which would be the serial data from the IMU 
 %Kanske ta upp lite hur vi skickar data ? se serial data ovana
 , which is a function of $x$ but is distorted by the measurement noise $z$
-The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop}. 
+The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop this thought}. 
 For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, a gaussian error. $z$ and $w$ also has to be independent of  each other as the noise covariance can then be expressed by
 \begin{equation} \label{eq:covariance measurement noise}
 S_z = E(z_k z_k \textsuperscript{T} )
@@ -324,6 +325,7 @@ S_z = E(z_k z_k \textsuperscript{T} )
 \begin{equation} \label{eq:covariance process noise}
 S_w = E(w_k w_k \textsuperscript{T})
 \end{equation}
+To be continued...
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
 \begin{figure}[!htb]
