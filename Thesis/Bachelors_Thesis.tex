@@ -142,31 +142,28 @@ USB			& Universal Serial Bus \\
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH. The work was carried out during the spring 2015.
 
 \section{Background}
-Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production [\cite{MEMSmarket}]. This growth has made automated control available more now than ever, in our every-day life in product lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters.
+Today the use of automated control is growing in a rapid pace and is being implemented more and more in consumer related products. The cost of MEMS sensors today are cheap due to high demand and production [\cite{MEMSmarket}]. This growth has made automated control available more now than ever, in our every-day life in product lines as mobile phones, gaming controllers, cars and UAV's such as quadrocopters. The  open-source community is growing but still lacks automated control systems for balancing robots. (out of context atm...)
 %Balancing an inverted pendulum or any other unstable structure can be a challenging task. It requires knowledge of closed-loop control systems and their stability.  --Ska vi sluta där kanske ?--
 
+
 \section{Purpose}
-The purpose of this thesis was to examine what effected the stability of the mechanical system, especially the control system. Many parameters are to be accounted for in the state-space model and their effects on the mechanical system behaviour is not trivial. 
-The aim was to determine if some of the parameters had an extra importance and if any conclusions were applicable on other mechanical systems. The research can be summarized with: 
-\begin{italicquotes}
-`What improvements can be made to the control system to better cope with an applied external force to the cube?' \\
-\end{italicquotes}
-Sample frequency and clock frequency are other parameters which were to be examined as well.\\ The  open-source community is growing but still lacks automated control systems for balancing robots. This project will hopefully contribute to some development within the open-source community.
+The goal of this project was to build a balancing mechanical system and to examine the behaviour of the particular system.\\
+The behaviour is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
+This project will hopefully contribute to some development within the open-source community.
 All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).\\ 
-
-\section{Purpose försök 2}
-The goal was to build a balancing mechanical system and to examine the behaviour of the particular system.\\
-The behaviour is mostly affected by the controlsystem, which is responsible for accelerating the motor, in the at the time correct direction, to maintain balance. The parameters in the control system affects redponsetime, overshoot and sinusodial (insvängninsfas).
-
+%\begin{italicquotes}
+%`How can the control parameters be optimised to minimize the overshoot while sill having a quick enough responce til to maintain balance.'
+%\end{italicquotes}
 \begin{italicquotes}
-`How can the control parameters be optimised to minimize the overshoot while sill having a quick enough responce til to maintain balance.'
+If balance is maintained how does the maximum applied force correlate to the rise time and overshoot separately, can any conclusions be drawn from the results?
 \end{italicquotes}
+Where balance is defined as as the state where the cube is able to return to its reference angle/value?. The rise time and overshoot refers to the system angle. Can the results contribute to improve the overall performance?
 
-(insert supernarrow purpose here)
+
 \section{Scope}
-%Det är god sed att definiera och beskriva projektets/uppgiftens  avgränsning i det introducerande kapitlet.
 The scope were to examine the parameters, of the state space controller and sensor sample frequency, affects on the overshoot behaviour of a balancing "1-DOF" inverted pendulum.
 The overshoot should be caused by an external force, disrupting the cubes balance.
+Moar "we will not do this"
 
 \chapter{Method}
 %Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
@@ -181,11 +178,11 @@ The engineering task The main goal of this project was to build a structure whic
 \end{itemize}
 
 \section{Contruction}
-The main contruction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes abillity to balance. The problem where (uppställt) with Newtionial mechanics.
+The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
 Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
  
 \section{Motor and Motor Control}
-The motors nominal and stall torque are very important for the system blaha. The motor driver is allso imortant, but usually one can get suggestions on drivers from motor manufactores, which was the choosen path.
+The motors nominal and stall torque are very important for the system blaha. The motor driver is also important, but usually one can get suggestions on drivers from motor manufactures, which was the chosen path.
   
 \section{Sensor Reading}
 The IMU's parameters and filtering of the signals
@@ -194,26 +191,26 @@ The IMU's parameters and filtering of the signals
 The choosen control method where state space. The problem in to linareise and discretise with good enough precition.
 
 \section{Final Assembly}
-When the subproblems above are solved and constructed, the final machine can be built. Here cabeling and disturbances from other subsystems must be taken into consideration. 
+When the subproblems above are solved and constructed, the final machine can be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
 The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
 
 \chapter{Theory}
-\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
-\\ Här måste det köttas på mycket inför tisdag 9/3 \\
+%%\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
 
 
-Balancing 1-DOF inverted pendulum type structures using reaction wheels is no new concept, and became common with the introduction of cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instabillity of pendulums. The latest development is on "2-DOF" pendelum structures unsing multiple orthogonal reaction wheels. This method is commonly used to rotate sattelites and maintaining their attitude to increase performance and allign solar panels. 
-Also creating transversal movement using only the reaction wheels is a recent topic for research ie not only changeing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be usefull for land/sea based machines to overcome various obstacles without a seperate system for balancing and movement.
+
+Balancing 1-DOF inverted pendulum type structures using reaction wheels is no new concept, and became common with the introduction of cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instability of pendulums. The latest development is on "2-DOF" pendulum structures using multiple orthogonal reaction wheels. This method is commonly used to rotate satellites and maintaining their attitude to increase performance and align solar panels. 
+Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.
  
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
 
 
 \section{Problem Formulation}
-Beskriv din problemställning för demonstratorn.\\
+%Beskriv din problemställning för demonstratorn.\\
 
 The engineering problem where to build a cube that, using a reaction wheel, could balance on its edge.
-
+\emph{To be continued}
 \section{State space model}
 PICTURE TO BE ADDED
 \\
@@ -357,6 +354,7 @@ The angle of the cube. Very good such magic
 
 \section{Electronics}
 Beskriv din elektroniska konstruktion. Använd figurer och förenklade blockschema. Motivera dina lösningar.
+How do we send data?
 \\ Sensors
 \\ Motor
 \\ Arduino
@@ -375,10 +373,10 @@ Beskriv resultatet.
 \emph{I detta kapitel diskuteras och sammanfattas de resultat som presenterats i föregående kapitel. Sammanfattningen baseras på en resultatanalys och syftar till att svara på den fråga eller de frågor som formuleras i kapitel i.}
 
 \section{Discussion}
-Bla bla bla
+Motor choice osv
 
 \section{Conclusions}
-Bla bla bla
+Successful victory
 
 
 \chapter{Recommendations and future work}
