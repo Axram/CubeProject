@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{Doc-Start}{Abstract}{}% 1
+\BOOKMARK [0][-]{Doc-Start}{Sammanfattning}{}% 2
+\BOOKMARK [0][-]{chapter*.1}{Preface}{}% 3
+\BOOKMARK [0][-]{chapter*.1}{Contents}{}% 4
+\BOOKMARK [0][-]{chapter*.2}{Nomenclature}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 6
+\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Purpose}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Scope}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Method}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Construction}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Motor and Motor Control}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Sensor Reading}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{System Control}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Final Assembly}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Theory}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Moar theory ?}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Kalman filter}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Estimator \(better subtitle...}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{The process}{section.3.2}% 20
+\BOOKMARK [0][-]{chapter.4}{Demonstrator}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Problem Formulation}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{State space model}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Discrete Kalman filter}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 28
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 29
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 31
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 32
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 33
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 34
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 35
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 36
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 37

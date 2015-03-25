@@ -1,0 +1,37 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\url{#1}\endgroup}\fi
+\providecommand{\bibinfo}[2]{#2}
+
+\bibitem[{Ciufo(2012)}]{MEMSmarket}
+\bibinfo{author}{C.~A. Ciufo}, \bibinfo{title}{MEMS Trends: Smaller, Cheaper,
+  Everywhere},
+  \urlprefix\url{http://eecatalog.com/sensors/2012/05/24/mems-trends-smaller-cheaper-everywhere/},
+  \bibinfo{year}{2012}.
+
+\bibitem[{Simon(2001)}]{Simon2001}
+\bibinfo{author}{D.~Simon}, \bibinfo{title}{Kalman Filtering},
+  \bibinfo{journal}{Embedded System Programming}
+  \bibinfo{volume}{1}~(\bibinfo{number}{6}) (\bibinfo{year}{2001})
+  \bibinfo{pages}{72--79}.
+
+\bibitem[{Welch and Bishop(2006)}]{Kalmanintro}
+\bibinfo{author}{G.~Welch}, \bibinfo{author}{G.~Bishop},
+  \bibinfo{title}{Introduction to the Kalman Filter}, \bibinfo{type}{Tech.
+  Rep.}, \bibinfo{institution}{Department of Computer Science, University of
+  North Carolina at Chapel Hill}, \bibinfo{year}{2006}.
+
+\bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
+  D'Andrea}]{cubliECC13}
+\bibinfo{author}{M.~Gajamohan}, \bibinfo{author}{M.~Muehlebach},
+  \bibinfo{author}{T.~Widmer}, \bibinfo{author}{R.~D'Andrea},
+  \bibinfo{title}{The Cubli: A Reaction Wheel Based 3D Inverted Pendulum}, in:
+  \bibinfo{booktitle}{proc. European Control Conference},
+  \bibinfo{pages}{268--274}, \bibinfo{year}{2013}.
+
+\end{thebibliography}

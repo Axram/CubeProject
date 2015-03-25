@@ -22,7 +22,7 @@
 
 
 %\usepackage{appendix} 
-\title{Rad Cube (working title)}
+\title{Balancing Cube (working title)}
 \subtitle{Control and design of reaction wheel balanced inverted pendulum}
 \foreigntitle{Stabilisering med svänghjul}
 \author{Mikael Sjöstedt \\ Alexander Ramm}
@@ -157,6 +157,10 @@ All results are available online, open source (MIT license reference here), on G
 \begin{italicquotes}
 If balance is maintained how does the maximum applied force correlate to the rise time and overshoot separately, can any conclusions be drawn from the results?
 \end{italicquotes}
+or maybe
+\begin{italicquotes}
+How does sensor placement effect system performance -and can internal disturbances terminaTOR nej men något sånt???
+\end{italicquotes}
 Where balance is defined as as the state where the cube is able to return to its reference angle/value?. The rise time and overshoot refers to the system angle. Can the results contribute to improve the overall performance?
 
 
@@ -177,7 +181,7 @@ The engineering task The main goal of this project was to build a structure whic
 \item Final Assembly
 \end{itemize}
 
-\section{Contruction}
+\section{Construction}
 The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
 Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
  
@@ -196,11 +200,43 @@ The IMU placement would provisoricly be tried to se a placement were bad due to 
 
 \chapter{Theory}
 %%\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
-
-
-
 Balancing 1-DOF inverted pendulum type structures using reaction wheels is no new concept, and became common with the introduction of cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instability of pendulums. The latest development is on "2-DOF" pendulum structures using multiple orthogonal reaction wheels. This method is commonly used to rotate satellites and maintaining their attitude to increase performance and align solar panels. 
-Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.
+Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement. \textbf{Move some to background}
+
+\section{Moar theory ?}
+\textbf{Where do we mention communication protocol, maybe some in-depth of accelerometer and gyro ? }
+
+
+\section{Kalman filter}
+\textbf{Still a bit messy, should it be all theory or connected to our problem ?}  \\
+The problem with the accelerometer is that that the signal contains a lot of noise. It can be accounted for measurements over a longer period but not short term. The gyroscope on the other hand, drifts over time and is only reliable during short accelerations. 
+A Kalman filter suits the needs of this project. It is a recursive estimator, where old and new measurements are processed realtime. 
+A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. And that the estimated state variance from the true state is as small as possible. Hence the Kalman filter is optimal with the use of an accelerometer as the error is gaussian much like many other measurement devices.  \cite{Simon2001}
+\cite{Kalmanintro}
+
+\subsection{Estimator (better subtitle...}
+The Kalman filter which can be used is a state based estimator. By using the measurements the past and present it can derive a good estimate of a current state. The Kalman filter estimates the present state using the following equations
+\begin{equation}\label{eq:kalmanstate}
+x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
+\end{equation}
+\begin{equation} \label{eq:kalmanmeas}
+y_k = Hx_k + z_k
+\end{equation}
+Where $x$ is the states of the cube which cannot be measured directly i.e $\theta$ and   $\dot{\theta}$. $y$ (see \eqref{eq:kalmanmeas}) is the measured value which would be the serial data from the IMU. In an ideal world this would only be a function of $x$, but is distorted by the measurement noise $z$
+The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances/disturbances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop this thought}. 
+For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, a Gaussian error. $z$ and $w$ also has to be independent of  each other. These criteria are often fulfilled when handling with electronic devices, hence the Kalman would fit this project.
+\subsection{The process}
+The filter is dependant on knowing the last and current state, and does so in a step $k$ 
+\begin{equation} \label{eq:covariance measurement noise}
+S_z = E(z_k z_k \textsuperscript{T} )
+\end{equation}
+\begin{equation} \label{eq:covariance process noise}
+S_w = E(w_k w_k \textsuperscript{T})
+\end{equation}
+To be continued...
+
+
+
  
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
@@ -285,44 +321,19 @@ where \\
 \begin{center}
 $A =\begin{bmatrix}
 0 & 1 & 0 \\
-\frac{Mt g l }{\sqrt{2} I_c} & - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} & \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \\ 
-0 & \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} & -\frac{K_t K_{\text{emf}} \eta_m}{R_m I_f}
+\dfrac{Mt g l }{\sqrt{2} I_c} & - \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \\ 
+0 & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_f} & -\dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_f}
 \end{bmatrix}$
 
 $B = \begin{bmatrix}
 0 \\ 
--\frac{K_t \eta_m}{R_m I_c} \\
-\frac{K_t \eta_m}{R_m I_f}
+-\dfrac{K_t \eta_m}{R_m I_c} \\
+\dfrac{K_t \eta_m}{R_m I_f}
 \end{bmatrix} $
 \end{center}
 
-\section{Kalman filter}
-\textbf{Still a bit messy}  \\
-The problem with the accelerometer is that that the signal contains a lot of noise. It can be accounted for measurements over a longer period but not short term. The gyroscope on the other hand, drifts over time and is only reliable during short accelerations. 
-A Kalman filter suits the needs of this project. It is a recursive estimator, where old and new measurements are processed realtime. 
-A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. And that the estimated state variance from the true state is as small as possible. Hence the Kalman filter is optimal with the use of an accelerometer as the error is gaussian much like many other measurement devices.  \cite{Simon2001}
-\cite{Kalmanintro}
+\section{Discrete Kalman filter}
 
-\subsection{The process}
-The discrete Kalman filter which is used is a state based estimator. By using the measurements from both the accelerometer and the gyroscope from the past, present (future??) it can derive a good estimate of the state in our linearised problem. The Kalman filter estimates the present state using the following equations
-\begin{equation}\label{eq:kalmanstate}
-x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
-\end{equation}
-\begin{equation}
-y_k = Hx_k + z_k
-\end{equation}
-Where $x$ is the states of the cube which cannot be measured directly i.e $\theta$ and   $\dot{\theta}$. $y$ is the measured value which would be the serial data from the IMU 
-%Kanske ta upp lite hur vi skickar data ? se serial data ovana
-, which is a function of $x$ but is distorted by the measurement noise $z$
-The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances? in the system behavior that cannot be mathematically predicted. $z$, the measurement noise is common in any measurement and represents fluctuations in the equipment or \textbf{develop this thought}. 
-For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, a gaussian error. $z$ and $w$ also has to be independent of  each other as the noise covariance can then be expressed by
-\begin{equation} \label{eq:covariance measurement noise}
-S_z = E(z_k z_k \textsuperscript{T} )
-\end{equation}
-\begin{equation} \label{eq:covariance process noise}
-S_w = E(w_k w_k \textsuperscript{T})
-\end{equation}
-To be continued...
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
 \begin{figure}[!htb]
