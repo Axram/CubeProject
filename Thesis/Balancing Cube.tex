@@ -209,7 +209,7 @@ Also creating transversal movement using only the reaction wheels is a recent to
 
 \section{Kalman filter}
 \textbf{Still a bit messy, should it be all theory or connected to our problem ?}  \\
-The problem with the accelerometer is that that the signal contains a lot of noise. It can be accounted for measurements over a longer period but not short term. The gyroscope on the other hand, drifts over time and is only reliable during short accelerations. 
+The problem with an IMU is that that the signal contains a lot of noise. The accelerometer can be accounted for measurements over a longer period but not short term. The gyroscope on the other hand, drifts over time and is only reliable during short accelerations. 
 A Kalman filter suits the needs of this project. It is a recursive estimator, where old and new measurements are processed realtime. 
 A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. And that the estimated state variance from the true state is as small as possible. Hence the Kalman filter is optimal with the use of an accelerometer as the error is gaussian much like many other measurement devices.  \cite{Simon2001}
 \cite{Kalmanintro}

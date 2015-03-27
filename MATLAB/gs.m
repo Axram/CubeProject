@@ -1,7 +1,42 @@
 clc
 clear all
 close all
+% %% Maxon 148877  DC
+% Kt = 60.3E-3;
+% alu_mass = 0.2;
+% motor_mass = 0.5;
+% motor_power = 0.2;
+% arduino_mass = 0.05;
+% extra = 0.2;
+% M_s = 0.4;   % Svänghjul massa
+% Mtot = alu_mass + motor_mass + motor_power + arduino_mass + extra + M_s  %Kub massa
+% I_kub = 0.003856;
+% 
+% l = 0.15;    % sida på kuben
+% w_prickkub = 1;  % omegaprick kub
+% g = 9.82;
+% theta = 15;
+% centerl = l * sqrt(2) / 2
+% r = 0.15/2-0.01
+% % Tröghetsmoment
+% I_s = M_s * r^2/2
+% 
+% I_kub = 0.001856
+% Itot = I_s + Mtot* centerl^2/2 + I_kub % M_s* centerl^2 / 2
+% 
+% Torque_g = (Mtot) * g* l * sind(theta) / sqrt(2)
+% Torque_inertia = Itot*w_prickkub
+% 
+% Moment_needed =  Torque_g + Torque_inertia
+% current_needed = Moment_needed / Kt 
+% 
+
+
+
+% Constatnts
 %% Maxon 148877  DC
+max_voltage = 48;
+max_current = 1;
 Kt = 60.3E-3;
 alu_mass = 0.2;
 motor_mass = 0.5;
@@ -10,45 +45,22 @@ arduino_mass = 0.05;
 extra = 0.2;
 M_s = 0.4;   % Svänghjul massa
 Mtot = alu_mass + motor_mass + motor_power + arduino_mass + extra + M_s  %Kub massa
-I_kub = 0.003856;
-
-l = 0.15;    % sida på kuben
-w_prickkub = 1;  % omegaprick kub
-g = 9.82;
-theta = 30;
-centerl = l * sqrt(2) / 2
-r = 0.15/2-0.01
-% Tröghetsmoment
-I_s = M_s * r^2/2
-
-I_kub = 0.001856
-Itot = I_s + Mtot* centerl^2/2 + I_kub % M_s* centerl^2 / 2
-
-Torque_g = (Mtot) * g* l * sind(theta) / sqrt(2)
-Torque_inertia = Itot*w_prickkub
-
-Moment_needed =  Torque_g + Torque_inertia
-current_needed = Moment_needed / Kt 
-
-
-
-
-% Constatnts
-Ms = M_s;           % massa svänghjul [kg]
+Ms = 0.2;           % massa svänghjul [kg]
 %Mk = 1.2;           % massa kub [kg]
 l = 0.17;           % sidlängd [m]
 %Mtot = Ms+Mk;       % totalvikt [kg]
 g =9.82;            % gravitation [kg*m/s^2]
 nf = 7580;          % no load speed [rpm]
 V = 48;             % nätspänning [V]
-K_emf = V/nf;          % spänningskonstant [V/rpm]
+K_emf = 1/158;          % spänningskonstant [V/rpm]
 Kt = 60.3*10^-3;% momentkonstant [N/A]
 eta = 0.9;          % verkningsgrad []
 Rm = 1.16;          % inre resistans [Ohm]
 rs = l/2-0.01;      % radie svänghjul [m]
 Ik = 0.004;         % tröghetsmoment kub []
 Is = Ms*rs^2/2;     % tröghetsmoment svänghjul []
-
+L = 0.329E-3;        % Induktans motor [H]
+J = 138E-7;             % Inertia rotor
 % Assembly of A matrix
 a11 = 0;
 a12 = 1;
@@ -80,7 +92,7 @@ D = [0; 0; 0];
 
 % Simulink Definitions och annat troll
 
-theta_start = 30 %Startvillkor i grader
+theta_start = 35 %Startvillkor i grader
 rad_start = 1
 x0 = [theta_start*pi/180, rad_start, 0]; %startvillkor
 X0 = x0;
