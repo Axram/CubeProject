@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  31 MAR 2015 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  31 MAR 2015 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,7 +1121,7 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 123--123
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 150--157
+Underfull \hbox (badness 10000) in paragraph at lines 166--173
 
  []
 
@@ -1130,7 +1130,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--157
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 177.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 193.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1139,14 +1139,14 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ]
 [4]
 
-LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 211.
+LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 227.
 
 [5
 
 ] [6] [7] [8
 
 ] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 349--351
 
  []
 
@@ -1159,13 +1159,13 @@ Package epstopdf Info: Source file: <simmodel.eps>
 (epstopdf)                    size: 25191 bytes
 (epstopdf)             Command: <repstopdf --outfile=simmodel-eps-converted-to.
 pdf simmodel.eps>
-(epstopdf)             \includegraphics on input line 356.
+(epstopdf)             \includegraphics on input line 372.
 Package epstopdf Info: Output file is already uptodate.
- <simmodel-eps-converted-to.pdf, id=344, 530.98375pt x 245.91875pt>
+ <simmodel-eps-converted-to.pdf, id=342, 530.98375pt x 245.91875pt>
 File: simmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use simmodel-eps-converted-to.pdf>
-Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 356.
+Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 372.
 (pdftex.def)             Requested size: 371.68608pt x 172.14194pt.
 Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:36
@@ -1175,15 +1175,15 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 364.
+(epstopdf)             \includegraphics on input line 380.
 Package epstopdf Info: Output file is already uptodate.
 
-<voltageplot-eps-converted-to.pdf, id=346, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=344, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 36
-4.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 38
+0.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
@@ -1193,14 +1193,14 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 373.
+(epstopdf)             \includegraphics on input line 389.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=347, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=345, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 373.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 389.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
@@ -1254,11 +1254,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \tf@toc=\write5
 \openout5 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 435.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 435.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 435.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 435.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
 (rerunfilecheck)             Checksum: 560EE489E5CA7B165EF4268B1F61130D;2085.
 
@@ -1268,7 +1268,7 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 435.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
  ) 
 Here is how much of TeX's memory you used:
  10663 strings out of 493117
@@ -1298,10 +1298,10 @@ nts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10
 .pfb>
-Output written on "Balancing Cube.pdf" (37 pages, 394481 bytes).
+Output written on "Balancing Cube.pdf" (37 pages, 395056 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 462 compressed objects within 5 object streams
+ 530 PDF objects out of 1000 (max. 8388607)
+ 461 compressed objects within 5 object streams
  106 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
