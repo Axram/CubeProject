@@ -27,7 +27,8 @@
 \contentsline {section}{\numberline {4.1}Problem Formulation}{9}{section.4.1}
 \contentsline {section}{\numberline {4.2}State space model}{9}{section.4.2}
 \contentsline {section}{\numberline {4.3}Discrete Kalman filter}{11}{section.4.3}
-\contentsline {section}{\numberline {4.4}Software}{11}{section.4.4}
+\contentsline {subsection}{\numberline {4.3.1}Kalman implementation}{11}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Software}{12}{section.4.4}
 \contentsline {section}{\numberline {4.5}Electronics}{12}{section.4.5}
 \contentsline {section}{\numberline {4.6}Hardware}{12}{section.4.6}
 \contentsline {section}{\numberline {4.7}Results}{13}{section.4.7}

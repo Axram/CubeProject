@@ -36,14 +36,14 @@ close all
 % Constatnts
 %% Maxon 148877  DC
 max_voltage = 48;
-max_current = 14;
+max_current = 18;
 Kt = 60.3E-3;
 alu_mass = 0.2;
 motor_mass = 0.5;
 motor_power = 0.2;
 arduino_mass = 0.05;
 extra = 0.2;
-M_s = 0.05;   % Svänghjul massa
+M_s = 0.2;   % Svänghjul massa
 Mtot = alu_mass + motor_mass + motor_power + arduino_mass + extra + M_s  %Kub massa
 Ms = M_s;           % massa svänghjul [kg]
 %Mk = 1.2;           % massa kub [kg]
@@ -107,9 +107,9 @@ states = {'theta' 'theta_dot' 'phi_dot'};
 inputs = {'u'};
 outputs = {'theta' 'theta_dot' 'phi_dot'};
 % Väljer godtyckliga poler
-p0 = -10+10i;
-p1 = -10-10i;
-p2 = -40;
+p0 = -5+5i;
+p1 = -5-5i;
+p2 = -20;
 
 %K = place(A, B, [p0, p1, p2]);
 p = 500;

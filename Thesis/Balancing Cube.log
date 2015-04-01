@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  31 MAR 2015 15:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  1 APR 2015 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1036,7 +1036,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 49.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=150, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=154, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
@@ -1109,7 +1109,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--80
 No file "Balancing Cube".ind.
 (./Balancing Cube.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 41.
+(Font)              <12> on input line 42.
 ) [10] [11
 
 
@@ -1120,33 +1120,32 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 123--123
 
 [12
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 166--173
-
- []
-
-[1
+] [1
 
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 193.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 195.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3
+)
+[3
 
-]
-[4]
+] [4]
 
-LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 227.
+LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 229.
 
 [5
 
 ] [6] [7] [8
 
-] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 349--351
+]
+
+LaTeX Warning: Reference `KTHpendulum' on page 9 undefined on input line 291.
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 358--360
 
  []
 
@@ -1159,13 +1158,13 @@ Package epstopdf Info: Source file: <simmodel.eps>
 (epstopdf)                    size: 25191 bytes
 (epstopdf)             Command: <repstopdf --outfile=simmodel-eps-converted-to.
 pdf simmodel.eps>
-(epstopdf)             \includegraphics on input line 372.
+(epstopdf)             \includegraphics on input line 416.
 Package epstopdf Info: Output file is already uptodate.
- <simmodel-eps-converted-to.pdf, id=342, 530.98375pt x 245.91875pt>
+ <simmodel-eps-converted-to.pdf, id=349, 530.98375pt x 245.91875pt>
 File: simmodel-eps-converted-to.pdf Graphic file (type pdf)
 
 <use simmodel-eps-converted-to.pdf>
-Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 372.
+Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 416.
 (pdftex.def)             Requested size: 371.68608pt x 172.14194pt.
 Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:36
@@ -1175,16 +1174,17 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 380.
+(epstopdf)             \includegraphics on input line 424.
 Package epstopdf Info: Output file is already uptodate.
 
-<voltageplot-eps-converted-to.pdf, id=344, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=351, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 38
-0.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 42
+4.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
+ [11]
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
 (epstopdf)                    size: 21317 bytes
@@ -1193,27 +1193,23 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 389.
+(epstopdf)             \includegraphics on input line 433.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=345, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=362, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 389.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 433.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
-Underfull \vbox (badness 7081) has occurred while \output is active []
+Underfull \vbox (badness 1603) has occurred while \output is active []
 
- [11 <./simmodel-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [12 <./simmodel-eps-converted-to.pdf>] [13 <./voltageplot-eps-converted-to.pdf
+>] [14 <./angleplot-eps-converted-to.pdf>] [15
 
- [12 <./voltageplot-eps-converted-to.pdf>] [13 <./angleplot-eps-converted-to.pd
-f>]
-[14
-
-] [15] [16
+] [16
 
 ] [17] [18
 
@@ -1254,13 +1250,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \tf@toc=\write5
 \openout5 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 451.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 451.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 451.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 451.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: 560EE489E5CA7B165EF4268B1F61130D;2085.
+(rerunfilecheck)             Checksum: 1B384B4B5786E6B7FA938FB0A956D625;2160.
 
 
 LaTeX Warning: There were undefined references.
@@ -1268,16 +1264,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 451.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 495.
  ) 
 Here is how much of TeX's memory you used:
- 10663 strings out of 493117
- 149634 string characters out of 6135434
- 274271 words of memory out of 5000000
- 13835 multiletter control sequences out of 15000+600000
- 96083 words of font info for 64 fonts, out of 8000000 for 9000
+ 10676 strings out of 493117
+ 149813 string characters out of 6135434
+ 274274 words of memory out of 5000000
+ 13839 multiletter control sequences out of 15000+600000
+ 102069 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,39p,583b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,39p,608b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/
 texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2014/texmf-dist
@@ -1296,12 +1292,12 @@ e/2014/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist/fo
 nts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
-/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10
-.pfb>
-Output written on "Balancing Cube.pdf" (37 pages, 395056 bytes).
+/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.
+pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "Balancing Cube.pdf" (37 pages, 402438 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
- 461 compressed objects within 5 object streams
- 106 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 548 PDF objects out of 1000 (max. 8388607)
+ 478 compressed objects within 5 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
