@@ -23,16 +23,17 @@
 \BOOKMARK [1][-]{section.4.2}{State space model}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.3}{Discrete Kalman filter}{chapter.4}% 24
 \BOOKMARK [2][-]{subsection.4.3.1}{Kalman implementation}{section.4.3}% 25
-\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 29
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 30
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 32
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 35
-\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 36
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 37
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 38
+\BOOKMARK [2][-]{subsection.4.3.2}{Error thingys}{section.4.3}% 26
+\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 33
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 34
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 36
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 37
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 38
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 39

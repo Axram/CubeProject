@@ -19,6 +19,7 @@
 \newenvironment{italicquotes}
 {\begin{quote}\itshape}
 {\end{quote}}
+\usepackage{graphicx}
 
 
 %\usepackage{appendix} 
@@ -240,12 +241,9 @@ x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \begin{equation} \label{eq:kalmanmeas}
 y_k = Hx_k + z_k
 \end{equation}
-Where $x$ is the states, in this case the states of the cube which can't be measured directly i.e a position. The measured value, $y$ (see \eqref{eq:kalmanmeas}) would be the serial data from the IMU. In an ideal world this would only be a function of $x$, but is distorted by the measurement noise $z$.
-The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances/disturbances? in the system behavior that cannot be mathematically predicted. The measurement noise, $z$ is common in any measurement and represents various fluctuations caused by the equipment. As the recursive filter uses old and new values a \textit{priori} state $\hat{x}^-_k$  is defined as the estimate of the current state at the time $k$. The \textit{posteriori} state $\hat{x}_k$ is the new estimated state.
-For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the charecteristics of gaussian noise. Hence the Kalman filter is optimal \textbf{Do I dare to use this word?..} for this task.
-
-\subsection{The process} 
-By using the above definitions of process noise and measurement noise the noise covariance is defined as
+Where $x$ is the states, in this case the states of the cube which can't be measured directly i.e a position.  The measured value, $y$ (see \eqref{eq:kalmanmeas}) is information from another source, in this case the accelerometer. In an ideal world this would only be a function of $x$, but is distorted by the measurement noise $z$.
+The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the gyroscope that cannot be mathematically predicted such as flaws in production. The measurement noise, $z$ is common in any measurement and represents various fluctuations caused by the equipment. As the recursive filter uses old and new values a \textit{priori} state $\hat{x}^-_k$  is defined as the estimate of the current state at the time $k$. The \textit{posteriori} state $\hat{x}_k$ is the new estimated state.
+For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the charecteristics of gaussian noise. By using the above definitions of process noise and measurement noise the noise covariance is defined as
 \begin{equation} \label{eq:covariance process noise}
 Q = E(w_k w_k \textsuperscript{T})
 \end{equation}
@@ -253,21 +251,47 @@ Q = E(w_k w_k \textsuperscript{T})
 R = E(z_k z_k \textsuperscript{T} )
 \end{equation}
 
-From here the Kalman equations can be derived as 
-the \textit{priori} error covariance can be defined as
-\
+\subsection{The process} 
+The Kalman filter loops two stages. The \textit{predict} and \textit{update} stages.
+ 
+\begin{figure}[!htb] 
+\centering
+\includegraphics[width = 0.7\textwidth]{Kalmanphasepic.jpg}
+\caption{Kalman phases.}
+\label{figure : Kalman phases}
+\end{figure}
+
+During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. \ref{figure : Kalman phases}
+\begin{equation}
+\hat{x^-_k} = A\hat{x}^-\textsubscript{k-1}+Bu\textsubscript{k-1}
+\end{equation}
+As stated above \textbf{is this stated above? ..} the Kalman filter uses readings from both the gyro and accelerometer to estimate a position closer to the true value. A \textit{priori} error covariance matrix is introduced to estimate how much the the readings from the process can be trusted. 
+\begin{equation}
+P^-_k = AP^-1\textsubscript{k-1}A^T + Q_k
+\end{equation}
+During the \textit{update} the accelerometer values are used. \textbf{Do i mention earlier that this is the measurement?} The measurement \textit{innovation} is calculated as
+\begin{equation}
+\tilde{y} = z_k - H\hat{x}^-_k
+\end{equation}
+This residual reflects the relation between the prediced measurement and the actal measurement. A measurement \textit{innovation} of zero indicates a perfect agreement.
+From there the measurement \textit{innovation} covariance is calculated
+\begin{equation}
+S_k = HP^-_kH^T + R
+\end{equation}
+This is very similiar to the \textit{priori} error covariance but represents how much the measurement can be trusted. From there the core of the Kalman filter can be calculated, the Kalman gain
+\begin{equation}
+K_k = P^-1_kH^TS\textsuperscript{-1}_k
+\end{equation}
+indicates how reliable the measurement is. Not that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small.
+By now the \textit{posteriori} state can be estimated by
+\begin{equation}
+\hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
+\end{equation}
+
 
 
  
-\begin{equation} \label{eq:estimated state}
-\hat{x}\textsubscript{k+1} = (A\hat{x}_k+Bu_k)+K_k(y\textsubscript{k+1}-C\hat{x}_k)
-\end{equation}
-\begin{equation} \label{eq:kalmangain}
-K_k = AP_kC \textsuperscript{T}(CP_kC \textsuperscript{T} + S_z) \textsuperscript{-1}
-\end{equation}
-\begin{equation} \label{eq:kalman P}
-P \textsubscript{k+1} = AP_kA^T+S_w-AP_kC^TS_z\textsuperscript{-1}CP_kA^T
-\end{equation}
+
 The Kalman filter can be represented in many different ways, this is just one of them. It consists of an estimated step, a Kalman gain and  estimation error covariance $P$.
 The new estimated step consists of two terms. One that considers the former estimated step and the input at that time and the second term is called the \textit{correction term} considers how much the estimated value needs to be corrected due to the measurement. 
 Inspection of the Kalman gain in equation \eqref{eq:kalmangain} indicates that if the measurement contains a lot of error and noise the noise covariance \eqref{eq:covariance measurement noise} will be large hence the Kalman gain will be small. That is if the credibility of the measurement is low, it wont effect the estimated state as much as if the credibility would be high. \textbf{Maybe needs restructuring ...} 
@@ -409,14 +433,23 @@ Looking at equation \eqref{eq:kalmanstate} the system can be written
 \Delta t \\ 0
 \end{bmatrix}
 \end{equation}
+
+
+\subsection{Error thingys}
+To improve the Kalman filter the characteristics of the model has to me (ta fram ?? ) . A way of determining the process noise and measurement noise of the IMU is the Allan variance method \ref{AllanV}.
+The gyro data is treated as an external input the system, so the error and bias from the gyro readings are characterised as process noise. The advantage of using the gyro data instead of accelerometer data is the reduction in states as the accelerometer would need to be integrated twice to retrieve and angle ( elaborate....)
+
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=.7]{simmodel.eps}
-\caption{Simulink model.}
-\label{fig:simmodel}
-\end{figure}
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale=.7]{simmodel.eps}
+%\caption{Simulink model.}
+%\label{fig:simmodel}
+%\end{figure}
+
+
+
 The Simulinkmodel seen in figure \ref{fig:simmodel} describes the system
 \\ Something about the optimizing of the feedback control
 \begin{figure}[!htb]

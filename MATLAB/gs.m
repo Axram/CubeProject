@@ -36,7 +36,7 @@ close all
 % Constatnts
 %% Maxon 148877  DC
 max_voltage = 48;
-max_current = 18;
+max_current = 20;
 Kt = 60.3E-3;
 alu_mass = 0.2;
 motor_mass = 0.5;

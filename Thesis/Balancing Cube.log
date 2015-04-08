@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  1 APR 2015 00:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  8 APR 2015 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -956,27 +956,27 @@ LaTeX Warning: Label `fig:voltageplot' multiply defined.
 )
 \openout1 = `"Balancing Cube.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 40.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 39.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 40.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -984,7 +984,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \c@lofdepth=\count155
 \c@lotdepth=\count156
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 40.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -994,9 +994,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
 
 (./Balancing Cube.out) (./Balancing Cube.out)
 \@outlinefile=\write4
@@ -1031,45 +1031,45 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 49.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 50.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=154, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=158, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
-Package pdftex.def Info: KTH_Logotyp_PMS_2013.png used on input line 49.
+Package pdftex.def Info: KTH_Logotyp_PMS_2013.png used on input line 50.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 49.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 50.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 49.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 50.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 50.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 49.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 50.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 49.
+(Font)              <10.95> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 49.
+(Font)              <6> on input line 50.
  [1
 
 
@@ -1081,17 +1081,17 @@ ogotyp_PMS_2013.png>] [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 64.
+(Font)              <10> on input line 65.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 64.
+(Font)              <7> on input line 65.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 64.
+(Font)              <5> on input line 65.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language append on input line 65.
+(babel)             in language append on input line 66.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language append on input line 65.
+(babel)             in language append on input line 66.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
  []
 
@@ -1099,7 +1099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
@@ -1109,12 +1109,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--80
 No file "Balancing Cube".ind.
 (./Balancing Cube.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 42.
+(Font)              <12> on input line 43.
 ) [10] [11
 
 
 ]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 123--123
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 124--124
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
 
@@ -1125,7 +1125,7 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 123--123
 
 
 ] [2]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 195.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 196.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1134,38 +1134,41 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ] [4]
 
-LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 229.
+LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 230.
 
 [5
 
-] [6] [7] [8
+] <Kalmanphasepic.jpg, id=289, 1650.165pt x 1055.945pt>
+File: Kalmanphasepic.jpg Graphic file (type jpg)
+
+<use Kalmanphasepic.jpg>
+Package pdftex.def Info: Kalmanphasepic.jpg used on input line 259.
+(pdftex.def)             Requested size: 277.19879pt x 177.36533pt.
+ [6]
+
+LaTeX Warning: Reference `eq:kalmangain' on page 7 undefined on input line 297.
+
+
+[7 <./Kalmanphasepic.jpg>] [8]
+
+LaTeX Warning: Reference `KTHpendulum' on page 9 undefined on input line 315.
+
+[9
 
 ]
-
-LaTeX Warning: Reference `KTHpendulum' on page 9 undefined on input line 291.
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 358--360
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
 
 [10]
-Package epstopdf Info: Source file: <simmodel.eps>
-(epstopdf)                    date: 2015-03-09 15:36:15
-(epstopdf)                    size: 107086 bytes
-(epstopdf)             Output file: <simmodel-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-03-09 15:38:20
-(epstopdf)                    size: 25191 bytes
-(epstopdf)             Command: <repstopdf --outfile=simmodel-eps-converted-to.
-pdf simmodel.eps>
-(epstopdf)             \includegraphics on input line 416.
-Package epstopdf Info: Output file is already uptodate.
- <simmodel-eps-converted-to.pdf, id=349, 530.98375pt x 245.91875pt>
-File: simmodel-eps-converted-to.pdf Graphic file (type pdf)
 
-<use simmodel-eps-converted-to.pdf>
-Package pdftex.def Info: simmodel-eps-converted-to.pdf used on input line 416.
-(pdftex.def)             Requested size: 371.68608pt x 172.14194pt.
+LaTeX Warning: Reference `AllanV' on page 11 undefined on input line 439.
+
+[11]
+
+LaTeX Warning: Reference `fig:simmodel' on page 12 undefined on input line 453.
+
+
 Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:36
 (epstopdf)                    size: 21605 bytes
@@ -1174,17 +1177,15 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 424.
+(epstopdf)             \includegraphics on input line 457.
 Package epstopdf Info: Output file is already uptodate.
-
-<voltageplot-eps-converted-to.pdf, id=351, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=372, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 42
-4.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 45
+7.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
- [11]
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
 (epstopdf)                    size: 21317 bytes
@@ -1193,27 +1194,25 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 433.
+(epstopdf)             \includegraphics on input line 466.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=362, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=373, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 433.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 466.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
-
-Underfull \vbox (badness 1603) has occurred while \output is active []
-
- [12 <./simmodel-eps-converted-to.pdf>] [13 <./voltageplot-eps-converted-to.pdf
->] [14 <./angleplot-eps-converted-to.pdf>] [15
+ [12 <./voltageplot-eps-converted-to.pdf>]
+[13 <./angleplot-eps-converted-to.pdf>] [14] [15
 
 ] [16
 
 ] [17] [18
 
-] (./Balancing Cube.bbl
+]
+(./Balancing Cube.bbl
 bibitemlist
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -1250,13 +1249,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \tf@toc=\write5
 \openout5 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: 1B384B4B5786E6B7FA938FB0A956D625;2160.
+(rerunfilecheck)             Checksum: FE2459CB12B285D97400D2CCFFBFD251;2227.
 
 
 LaTeX Warning: There were undefined references.
@@ -1264,13 +1263,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 495.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 528.
  ) 
 Here is how much of TeX's memory you used:
- 10676 strings out of 493117
- 149813 string characters out of 6135434
- 274274 words of memory out of 5000000
- 13839 multiletter control sequences out of 15000+600000
+ 10682 strings out of 493117
+ 149855 string characters out of 6135434
+ 274187 words of memory out of 5000000
+ 13840 multiletter control sequences out of 15000+600000
  102069 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,39p,608b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1294,10 +1293,10 @@ nts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Balancing Cube.pdf" (37 pages, 402438 bytes).
+Output written on "Balancing Cube.pdf" (37 pages, 566344 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
- 478 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 555 PDF objects out of 1000 (max. 8388607)
+ 485 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
