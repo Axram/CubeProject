@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  8 APR 2015 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  10 APR 2015 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,35 +1138,69 @@ LaTeX Warning: Citation `MEMSdrift' on page 5 undefined on input line 230.
 
 [5
 
-] <Kalmanphasepic.jpg, id=289, 1650.165pt x 1055.945pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 243--249
+
+ []
+
+<Kalmanphasepic.jpg, id=291, 1650.165pt x 1055.945pt>
 File: Kalmanphasepic.jpg Graphic file (type jpg)
-
-<use Kalmanphasepic.jpg>
-Package pdftex.def Info: Kalmanphasepic.jpg used on input line 259.
+ <use Kalmanphasepic.jpg>
+Package pdftex.def Info: Kalmanphasepic.jpg used on input line 263.
 (pdftex.def)             Requested size: 277.19879pt x 177.36533pt.
- [6]
 
-LaTeX Warning: Reference `eq:kalmangain' on page 7 undefined on input line 297.
+[6] [7 <./Kalmanphasepic.jpg>] [8]
+
+LaTeX Warning: Reference `KTHpendulum' on page 9 undefined on input line 317.
 
 
-[7 <./Kalmanphasepic.jpg>] [8]
+LaTeX Warning: Reference `Lagrangeswing' on page 9 undefined on input line 317.
 
-LaTeX Warning: Reference `KTHpendulum' on page 9 undefined on input line 315.
 
 [9
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 382--384
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
 [10]
+Package epstopdf Info: Source file: <Kalmancomparisonplot.eps>
+(epstopdf)                    date: 2015-04-10 14:21:35
+(epstopdf)                    size: 32015 bytes
+(epstopdf)             Output file: <Kalmancomparisonplot-eps-converted-to.pdf>
 
-LaTeX Warning: Reference `AllanV' on page 11 undefined on input line 439.
+(epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonplot-eps-c
+onverted-to.pdf Kalmancomparisonplot.eps>
+(epstopdf)             \includegraphics on input line 442.
+runsystem(repstopdf --outfile=Kalmancomparisonplot-eps-converted-to.pdf Kalmanc
+omparisonplot.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <Kalmancomparisonplot-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2015-04-10 14:22:51
+(epstopdf)                    size: 13019 bytes.
+ <Kalmancomparisonplot-eps-converted-to.pdf, id=365, 666.49pt x 554.07pt>
+File: Kalmancomparisonplot-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Kalmancomparisonplot-eps-converted-to.pdf>
+Package pdftex.def Info: Kalmancomparisonplot-eps-converted-to.pdf used on inpu
+t line 442.
+(pdftex.def)             Requested size: 466.53983pt x 387.84636pt.
+
+Overfull \hbox (70.53983pt too wide) in paragraph at lines 442--443
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `AllanV' on page 11 undefined on input line 450.
 
 [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:simmodel' on page 12 undefined on input line 453.
+ [12 <./Kalmancomparisonplot-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:simmodel' on page 13 undefined on input line 464.
 
 
 Package epstopdf Info: Source file: <voltageplot.eps>
@@ -1177,14 +1211,14 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 457.
+(epstopdf)             \includegraphics on input line 468.
 Package epstopdf Info: Output file is already uptodate.
-<voltageplot-eps-converted-to.pdf, id=372, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=389, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 45
-7.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 46
+8.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
@@ -1194,18 +1228,18 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 466.
+(epstopdf)             \includegraphics on input line 477.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=373, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=390, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 466.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 477.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
- [12 <./voltageplot-eps-converted-to.pdf>]
-[13 <./angleplot-eps-converted-to.pdf>] [14] [15
+ [13 <./voltageplot-eps-converted-to.pdf>]
+[14 <./angleplot-eps-converted-to.pdf>] [15
 
 ] [16
 
@@ -1249,11 +1283,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \tf@toc=\write5
 \openout5 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 528.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 528.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 528.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 528.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 539.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 539.
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
 (rerunfilecheck)             Checksum: FE2459CB12B285D97400D2CCFFBFD251;2227.
 
@@ -1263,16 +1297,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 528.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 539.
  ) 
 Here is how much of TeX's memory you used:
- 10682 strings out of 493117
- 149855 string characters out of 6135434
- 274187 words of memory out of 5000000
- 13840 multiletter control sequences out of 15000+600000
+ 10693 strings out of 493117
+ 150165 string characters out of 6135434
+ 274269 words of memory out of 5000000
+ 13847 multiletter control sequences out of 15000+600000
  102069 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,39p,608b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,39p,690b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/
 texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2014/texmf-dist
@@ -1293,10 +1327,10 @@ nts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
 /lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.
 pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Balancing Cube.pdf" (37 pages, 566344 bytes).
+Output written on "Balancing Cube.pdf" (37 pages, 576940 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 117 named destinations out of 1000 (max. 500000)
- 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 568 PDF objects out of 1000 (max. 8388607)
+ 495 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 500000)
+ 338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

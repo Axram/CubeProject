@@ -2,7 +2,7 @@
 function [tau, AVAR] = Allanvar(time, data)
 
 if nargin < 2,
-    disp ('Usage: allanVAR(time, data)')
+    disp ('Usage: Allanvar(time, data)')
 else
     numtaus = floor(length(time)/9);
     for b = 1:numtaus

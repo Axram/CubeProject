@@ -20,7 +20,7 @@ void setup() {
   }
 
   gyro.enableDefault();
-  gyro.writeReg(L3G_CTRL_REG5,0X2);   // 95 Hz, Low pass filter of 13 Hz
+  //gyro.writeReg(L3G::CTRL_REG5,0X2);   // 95 Hz, Low pass filter of 13 Hz
   inittime = micros(); // Microseconds since the program started 
 }
 
