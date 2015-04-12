@@ -151,16 +151,16 @@ has made automated control available more now than ever, in our every-day life i
 product lines as mobile phones, gaming controllers, cars and UAV’s such as quadrocopters.
 
 One of the most basic systems that requires some control to become stable is the inverted pendulum. 
-Altho it is simple to define controling it is not a trivial task. A lot of work has been done on the topic
-but ther's still not knowledge easely aquired by the public. 
+Altho it is simple to define controlling it is not a trivial task. A lot of work has been done on the topic
+but their is still not knowledge easely acquired by the public. 
 
-The methode the achive balance of the pendulum using reaction wheels is eaven more narrow. 
-The use of reactionwheels to change the rotation is commonly used in sattelites. The exact conrol is also required.
-In recent years prototypes of land based structures using reaqtion wheels have been a hot topic and the cubli is
-truly remarcable.
+The method the achieve balance of the pendulum using reaction wheels is even more narrow. 
+The use of reaction wheels to change the rotation is commonly used in satellites. The exact control is also required.
+In recent years prototypes of land based structures using reaction wheels have been a hot topic and the cubli is
+truly remarkable.
 
-It would be a great achivement tho contrubite knoledge about how such a mechanism could be built and evaluate
-the capabliities and restrictions of such a machine, on a level that dosn't require a PhD.
+It would be a great achievement to contribute knowledge about how such a mechanism could be built and evaluate
+the capabilities and restrictions of such a machine, on a level that does not require a PhD.
 
 
 \section{Purpose}
@@ -219,8 +219,12 @@ The IMU placement would provisoricly be tried to se a placement were bad due to 
 
 \chapter{Theory}
 %%\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
-Balancing 1-DOF inverted pendulum type structures using reaction wheels is no new concept, and became common with the introduction of cheap microcontrollers. A lot work has been done on the topic but it's still no easy task due tu the instability of pendulums. The latest development is on "2-DOF" pendulum structures using multiple orthogonal reaction wheels. This method is commonly used to rotate satellites and maintaining their attitude to increase performance and align solar panels. 
-Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement. \textbf{Move some to background}
+This chapter cover some theory that is required if one want to build a similar machine. It is assumed that the reader has some 
+understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor is also an advantage.  
+The first part covers the Kalman filter theory, required for getting high quality data from the IMU. The filter task noisy data from sensors and digitaly filters it to a more reliable quality. The second part will cover 
+the theory of the mechanical system behaviour that is used to device the state space control system. Those equations are responsible for the actual balance part and thus important. There is also a part on sensor characteristics and why they are important 
+to the system as a whole and the research question in particular. When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Altho the resolutions were not changed between measurements these settings could be important when comparing to another machine.
+%%\emph{so nog skivas ngn annan stans. Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.} \textbf{Move some to background}
 
 \section{Moar theory ?}
 \textbf{Where do we mention communication protocol, maybe some in-depth of accelerometer and gyro ? }
