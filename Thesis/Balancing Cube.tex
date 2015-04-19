@@ -505,7 +505,7 @@ Looking at equation \eqref{eq:kalmanstate} the system can be written
 For the Kalman filter to properly work it is essential to know how reliable the process and measurement inputs are. A way of determining the process noise and measurement noise of the IMU is the Allan variance method ref.
 The gyro data is treated as an external input the system, so the error and bias from the gyro readings are characterised as process noise. This is then compared to the measurement, the accelerometer which contains a measurement noise.
 More to come
-% 
+% By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated for the IMU. The Allan variance is then used to determine the noise of the system. The interessting components of the variance for the gyroscope are angle random walk (ARW) and the bias stability, as well as the velocity random walk (VRW) for the accelerometer. 
 
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
