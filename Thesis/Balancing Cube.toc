@@ -28,12 +28,12 @@
 \contentsline {chapter}{\chapternumberline {4}Demonstrator}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Problem Formulation}{11}{section.4.1}
 \contentsline {section}{\numberline {4.2}Model validation}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Discrete Kalman filter}{11}{section.4.3}
+\contentsline {section}{\numberline {4.3}Discrete Kalman filter}{12}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Kalman implementation}{12}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Error thingys}{12}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Measurement and process noise}{12}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Software}{12}{section.4.4}
 \contentsline {section}{\numberline {4.5}Electronics}{13}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}PWM}{13}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.1}PWM}{14}{subsection.4.5.1}
 \contentsline {section}{\numberline {4.6}Hardware}{14}{section.4.6}
 \contentsline {section}{\numberline {4.7}Results}{14}{section.4.7}
 \contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{17}{chapter.5}

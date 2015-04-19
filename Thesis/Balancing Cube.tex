@@ -372,12 +372,11 @@ From these equations it is evident that $\tau_k$ is the torque executed on the f
 
 The current can be described by the voltage across the two poles of the motor.
 
-\begin{equation}
+\begin{equation} \label{eq:motor torque}
 \tau_m = K_t \cdot \frac{U-E_{\text{emf}} }{R_m}
 \end{equation}
 
-Note that the inductance in neglected due to snabb jävla pol referera till KTH pendulum grejen som jag tappade bort....
-The induced voltage is related to the induced voltage constant and the rotor rotation
+Note that the motor inductance in neglected in equation \eqref{eq:motor torque}, that is due to the time constant which is fast considering the rest of the system.\textbf{Do we need source ?}
 
 \begin{equation}
 E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r}
@@ -430,6 +429,7 @@ $B = \begin{bmatrix}
  
 \subsection{Control theory}
 To create a state space feedback loop...
+Use Ackermann instead of place? Why ?
  
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
@@ -448,14 +448,14 @@ To validate the model from chapter \ref{chapter: state space}, events with known
 First of all the DC-motor model is validated to known characteristics, such as no load speed and current. 
 
 \textbf{Graph here}
-
+\\
 The graphs in figure (ref) displays the speed and current of the unloaded motor. Showing that it   
 
-The dynamics of the cube is simplified as an inverted pendulum. That means 
+The dynamics of the cube is simplified as an inverted pendulum. That means if there is no control input to the system it should behave as pendulum in free movement. That is, it should oscillate at a constant amplitude. As there is no torque applied to the flywheel the rotor should remain zero at all times. 
 \section{Discrete Kalman filter} \label{sec: discrete kalman}
 To implement the Kalman filter in algorithm it has to be discretizied 
 This is done much like a feedback control. The filter firstly? estimates the process state and then obtains feedback as noisy measurements. That means that the filter works in two steps, a \textit{time update} and a \textit{measurement update}. The names implicate that the \textit{time update} projects the next state to obtain the \textit{priori estimate} whilst the \textit{measurement update} uses the feedback mentioned above to obtain an improved \textit{posteriori} estimate.
-\textbf{We need a picture here, but not the same as david and viktor...}
+
 
 Some of the implementation and discretization of the filter.
 \subsection{Kalman implementation}
@@ -501,9 +501,11 @@ Looking at equation \eqref{eq:kalmanstate} the system can be written
 
 
 
-\subsection{Error thingys}
-For the Kalman filter to properly work it is essential to know how reliable the process and measurement input is. A way of determining the process noise and measurement noise of the IMU is the Allan variance method \ref{AllanV}.
-The gyro data is treated as an external input the system, so the error and bias from the gyro readings are characterised as process noise. The advantage of using the gyro data instead of accelerometer data is the reduction in states as the accelerometer would need to be integrated twice to retrieve and angle ( elaborate....)
+\subsection{Measurement and process noise}
+For the Kalman filter to properly work it is essential to know how reliable the process and measurement inputs are. A way of determining the process noise and measurement noise of the IMU is the Allan variance method ref.
+The gyro data is treated as an external input the system, so the error and bias from the gyro readings are characterised as process noise. This is then compared to the measurement, the accelerometer which contains a measurement noise.
+More to come
+% 
 
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 

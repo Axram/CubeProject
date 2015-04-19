@@ -25,7 +25,7 @@
 \BOOKMARK [1][-]{section.4.2}{Model validation}{chapter.4}% 25
 \BOOKMARK [1][-]{section.4.3}{Discrete Kalman filter}{chapter.4}% 26
 \BOOKMARK [2][-]{subsection.4.3.1}{Kalman implementation}{section.4.3}% 27
-\BOOKMARK [2][-]{subsection.4.3.2}{Error thingys}{section.4.3}% 28
+\BOOKMARK [2][-]{subsection.4.3.2}{Measurement and process noise}{section.4.3}% 28
 \BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 29
 \BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 30
 \BOOKMARK [2][-]{subsection.4.5.1}{PWM}{section.4.5}% 31

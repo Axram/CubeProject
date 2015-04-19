@@ -114,7 +114,7 @@ min_current = Mtot*g*l*sin(theta_start*pi/180)/(sqrt(2)*Kt*eta*etaGear*Gear)
 
 %% Model validation
 close all
-Motorval = figure
+Motorval = f
 time = 5;
 t=0:time/length(vel):time-time/length(vel);
 subplot(1,2,1)
