@@ -146,16 +146,18 @@ USB			& Universal Serial Bus \\
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH. The work was carried out during the spring 2015.
 
 \section{Background}
+A reaction wheel is a wheel that is accelerated to apply torque to something. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct sunlight to the solar panels or pointing antennas yo assure maximum performance and connectivity to the satellite. Compared to most machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
+
 Balancing 1-DOF inverted pendulum type structures using reaction wheels is no
-new concept, and became more acsessible with the introduction of cheap microcontrollers.
+new concept, and became more accessible with the introduction of cheap microcontrollers.
 The use of automated control is growing in a rapid pace and is being implemented
 more and more in consumer related products.  This growth
 has made automated control available more now than ever, in our every-day life in
 product lines as mobile phones, gaming controllers, cars and UAV’s such as quadrocopters.
 
 One of the most basic systems that requires some control to become stable is the inverted pendulum. 
-Altho it is simple to define controlling it is not a trivial task. A lot of work has been done on the topic
-but their is still not knowledge easely acquired by the public. 
+Although it is simple to define controlling it is not a trivial task. A lot of work has been done on the topic
+but their is still not knowledge easily acquired by the public. 
 
 The method the achieve balance of the pendulum using reaction wheels is even more narrow. 
 The use of reaction wheels to change the rotation is commonly used in satellites. The exact control is also required.
@@ -172,7 +174,13 @@ The behaviour is mostly effected by the control system, which is responsible for
 This project will hopefully contribute to some development within the open-source community.
 All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).\\ 
 As a mechatronical thesis the research task were to be along the line of how something physical is implemented 
-in a, in some context, good or eaven correct way. 
+in a, in some context, good or better than normal way. The research topic were concentrated in to: 
+\begin{italicquotes}
+How does the sensor placement affect the quality of the sensor data.
+\end{italicquotes}
+The only sensor that can be placed arbitrarily in out system is the IMU. Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a senistive devise and disturbances such as high current and fast occilations inits vacinity might ruin the data entirely.[citation PLZ]. With quality defined as the usability of the data given by the sensor.
+
+HÄR ÄR DET GAMMALT JOX
 %\begin{italicquotes}
 %`How can the control parameters be optimised to minimize the overshoot while sill having a quick enough responce til to maintain balance.'
 %\end{italicquotes}
@@ -187,11 +195,22 @@ Where balance is defined as as the state where the cube is able to return to its
 
 
 \section{Scope}
+To only sensor to be examined were the IMU. The encoder for the motor is fixed to the motor shaft and was not examined. Only key positions were to be used, not all positions between to points. Only data thar were used for the control system were examined, other degrees of freedom measurement data quality were not taken into consideration. I.e. the results may only be applicable in similar machines and not in general. The effect that were looked at was the ones linked to the control system. Mainly the overshootal behaviour and the settling time of the system. For every position the same parameters and constants were used in all systems and software. The comparasion were between measurements while balance was maintained and no known non random applied disturbances were in affect. All measurements where taken during a 10 s time frame. 
+
+OLD SCHOOL COOL
 The scope were to examine the parameters, of the state space controller and sensor sample frequency, affects on the overshoot behaviour of a balancing "1-DOF" inverted pendulum.
 The overshoot should be caused by an external force, disrupting the cubes balance.
 Moar "we will not do this"
 
-\chapter{Method}
+\section{Method}
+The sensor was placed in the upper corner, one of the side corners, between the mentiond corners and in the center of the cube (see figure 1.1). Both raw data and filterd data 
+where collected and sent over serial to a computer. Using matlab the readings where analyzed. Other obivuous observations were noted. To have equal conditions for all measurements the cube where exposed to a (KANSKE BARA LÅTA SKITEN STÅ STILLA?)
+external force caused by a spring giving roughly the same energy to the cube every time. Data over the time when the cube wasn't in stability condition where collected. 
+Both readings and time required the achieve balance where compared. Multiple measurements where taken for every placement.
+All measurements where taken during a 10 s time frame.
+
+
+\chapter{Method to be EXTERMINATED eller renamed}
 %Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
 
 The engineering task The main goal of this project was to build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts. 
