@@ -23,23 +23,26 @@
 \contentsline {section}{\numberline {3.2}Kalman filter}{5}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}State Estimator}{6}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}The process}{6}{subsection.3.2.2}
-\contentsline {chapter}{\chapternumberline {4}Demonstrator}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}Problem Formulation}{9}{section.4.1}
-\contentsline {section}{\numberline {4.2}State space model}{9}{section.4.2}
+\contentsline {section}{\numberline {3.3}Model dynamics}{8}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Control theory}{10}{subsection.3.3.1}
+\contentsline {chapter}{\chapternumberline {4}Demonstrator}{11}{chapter.4}
+\contentsline {section}{\numberline {4.1}Problem Formulation}{11}{section.4.1}
+\contentsline {section}{\numberline {4.2}Model validation}{11}{section.4.2}
 \contentsline {section}{\numberline {4.3}Discrete Kalman filter}{11}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Kalman implementation}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Kalman implementation}{12}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Error thingys}{12}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Software}{12}{section.4.4}
-\contentsline {section}{\numberline {4.5}Electronics}{12}{section.4.5}
-\contentsline {section}{\numberline {4.6}Hardware}{13}{section.4.6}
-\contentsline {section}{\numberline {4.7}Results}{13}{section.4.7}
-\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conclusions}{15}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{17}{chapter.6}
-\contentsline {section}{\numberline {6.1}Recommendations}{17}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future work}{17}{section.6.2}
-\contentsline {chapter}{Bibliography}{19}{section*.6}
+\contentsline {section}{\numberline {4.5}Electronics}{13}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}PWM}{13}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Hardware}{14}{section.4.6}
+\contentsline {section}{\numberline {4.7}Results}{14}{section.4.7}
+\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conclusions}{17}{section.5.2}
+\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{19}{chapter.6}
+\contentsline {section}{\numberline {6.1}Recommendations}{19}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future work}{19}{section.6.2}
+\contentsline {chapter}{Bibliography}{21}{section*.6}
 \contentsline {part}{Appendices}{}{}
-\contentsline {chapter}{\chapternumberline {A}Additional information}{21}{appendix.A}
-\contentsline {chapter}{\chapternumberline {B}Proofs}{23}{appendix.B}
+\contentsline {chapter}{\chapternumberline {A}Additional information}{23}{appendix.A}
+\contentsline {chapter}{\chapternumberline {B}Proofs}{25}{appendix.B}

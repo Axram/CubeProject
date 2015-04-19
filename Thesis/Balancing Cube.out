@@ -18,22 +18,25 @@
 \BOOKMARK [1][-]{section.3.2}{Kalman filter}{chapter.3}% 18
 \BOOKMARK [2][-]{subsection.3.2.1}{State Estimator}{section.3.2}% 19
 \BOOKMARK [2][-]{subsection.3.2.2}{The process}{section.3.2}% 20
-\BOOKMARK [0][-]{chapter.4}{Demonstrator}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Problem Formulation}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{State space model}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{Discrete Kalman filter}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.3.1}{Kalman implementation}{section.4.3}% 25
-\BOOKMARK [2][-]{subsection.4.3.2}{Error thingys}{section.4.3}% 26
-\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 30
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 31
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 33
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 34
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 36
-\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 37
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 38
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 39
+\BOOKMARK [1][-]{section.3.3}{Model dynamics}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Control theory}{section.3.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Demonstrator}{}% 23
+\BOOKMARK [1][-]{section.4.1}{Problem Formulation}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{Model validation}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.3}{Discrete Kalman filter}{chapter.4}% 26
+\BOOKMARK [2][-]{subsection.4.3.1}{Kalman implementation}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.2}{Error thingys}{section.4.3}% 28
+\BOOKMARK [1][-]{section.4.4}{Software}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.5}{Electronics}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.5.1}{PWM}{section.4.5}% 31
+\BOOKMARK [1][-]{section.4.6}{Hardware}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.7}{Results}{chapter.4}% 33
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 34
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 36
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 37
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 39
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 40
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 41
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 42

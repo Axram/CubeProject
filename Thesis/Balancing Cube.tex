@@ -114,8 +114,11 @@ K\textunderscript{emf} 	& Induced voltage constant \\
 U			& Voltage across motor poles\\
 $R_m	$		& Motor internal resitance \\
 $\eta_m$		& Motor efficiency\\	
+$\eta_g$		& Gear efficiency \\
+$\Gamma$		& Gear ratio\\
 $z$			& Measurement noise \\
 $w$			& Process noise \\
+
 \end{tabular}
 \clearpage
 
@@ -305,83 +308,107 @@ By now the \textit{posteriori} state can be estimated by
 A current state has been estimated and the Kalman filter returns to the measurement phase seen in figure \ref{figure : Kalman phases}.
 For further reading, and mathematical proof see \cite{Kalmanintro}.
 
- 
-\chapter{Demonstrator}
-\emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
+\section{Model dynamics} \label{chapter: state space}
+To create a state-space model the physical model has to be translated to a mathematical model. The system can be estimated much like an inverted pendulum two-degree-of-freedom model \cite{KTHpendulum}.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=.6]{Lagrangeflywheel.pdf}
+\caption{Cube modelled as a reaction wheel pendulum}
+\label{fig:Lagrangeflywheel}
+\end{figure}
 
+\emph{Lagrangian} Dynamics have been used to derive the systems behaviour. Firstly by expressing the generlized forces, the energy functions and lagrangian. And then acquire the equations of motion from the Lagrange equation  \cite{Lagrangref}. Consider the Lagrangian
 
-\section{Problem Formulation}
-%Beskriv din problemställning för demonstratorn.\\
-
-The engineering problem were to build a cube that, using a reaction wheel, could balance on its edge.
-\emph{To be continued}
-\section{State space model}
-PICTURE TO BE ADDED
-\\
-To create a state-space model the physical model has to be translated to a mathematical model. The system can be estimated much like an inverted pendulum as a two-degree-of-freedom model \ref{KTHpendulum}. \emph{Lagrangian} Dynamics can be used to derive the systems behaviour. Firstly by expressing the generlized forces, the energy functions and lagrangian. And then acquire the equations of motion with the Lagrange equation \ref{Lagrangeswing}.
 \begin{equation}
-Q_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\partial L}{\partial q_i}\right)
+\tau_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\partial L}{\partial q_i}\right)
 \end{equation}
-In this case the cube's angular momentum is counteracted by the flywheel and the system can be written as follows
 
-%\begin{equation}
+Where $\tau$ is generilzed force, in this case a torque. The cube's angular momentum is counteracted by the flywheel and the system can be divided into two parts, One considering the movement of the cube, the other the flywheel.
+
 \begin{equation} \label{eq:positiveL}
-M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\left(\frac{\partial L}{\partial \theta}\right)
+\tau_k=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\theta}}\right)-\left(\frac{\partial L}{\partial \theta}\right)
 \end{equation}
+
 \begin{equation} \label{eq:negativeL}
--M_a=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)-\left(\frac{\partial L}{\partial \phi}\right)
+-\tau_k=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\phi}}\right)-\left(\frac{\partial L}{\partial \phi}\right)
 \end{equation}
+
 Whereas $\theta$ represents the angle of the cube and $\phi$ is the position of the flywheel. \\
 The Lagrange equation is derived from the difference in kinetic energy and potential energy of the cube
+
 \begin{equation} \label{eq:Lagrange}
-L = E_k - E_p
+\mathcal{L} = E_k - E_p
 \end{equation}
 
-\begin{equation}
+\begin{equation} \label{eq:kinetic energy}
 E_k = \frac{I_c \cdot \dot{\theta^2}}{2} + \frac{I_f \cdot \dot{\phi^2} }{2}
 \end{equation}
-\begin{equation}
+
+\begin{equation} \label{eq:potential energy}
 E_p = \frac{M_c \cdot g \cdot l \cdot \cos \theta}{\sqrt{2}}
 \end{equation}
+The lagrangian \eqref{eq:Lagrange} is then
+
+\begin{equation}
+\mathcal{L} = \frac{I_c \cdot \dot{\theta^2}}{2} + \frac{I_f \cdot \dot{\phi^2} }{2} - \frac{M_c \cdot g \cdot l \cdot \cos \theta}{\sqrt{2}} 
+\end{equation}
+
+The kinetic energy depends on the angular velocities of the cube construction as well as the flywheel fixed to the motor. Note that the total moment of inertia $I_c$ is defined around the pivot point of the cube. The potential energy has been defined as being at its maximum when the cube is balancing in an upright position. The construction is considered to be symmetric and hence the gravitational force is applied on the center of the cube.
 Equation \eqref{eq:positiveL} and \eqref{eq:negativeL} with \eqref{eq:Lagrange}
+
 \begin{equation} \label{eq:negativeL2}
-I_k \cdot \ddot{\theta} - \frac{M_c \cdot g \cdot l \cdot \sin \theta }{\sqrt{2}}  = -M_a
+I_c \cdot \ddot{\theta} + \frac{M_c \cdot g \cdot l \cdot \sin \theta }{\sqrt{2}}  = -\tau_k
 \end{equation}
+
 \begin{equation} \label{eq:postiveL2}
-I_s \cdot \ddot{\phi} = M_a
+I_s \cdot \ddot{\phi} = \tau_k
 \end{equation}
-From these equations it is evident that $M_a$ is the torque executed by the flywheel which is wielded by the motor torque $\tau$, it can be described by a relation between the torque constant and the current flowing through the motor.
+
+From these equations it is evident that $\tau_k$ is the torque executed on the flywheel which is wielded by the motor torque $\tau_m$, it can be described by a relation between the torque constant and the current flowing through the motor.
+
 \begin{equation}
-\tau = K_t \cdot i_m
+\tau_m = K_t \cdot i_m
 \end{equation}
-The current can be described by the voltage across the two poles of the motor. 
+
+The current can be described by the voltage across the two poles of the motor.
+
 \begin{equation}
-\tau = K_t \cdot \frac{U-E_{\text{emf}} }{R_m}
+\tau_m = K_t \cdot \frac{U-E_{\text{emf}} }{R_m}
 \end{equation}
-\textbf{Mention that inductance is neglected due to something? see KTHpendulum reference}
+
+Note that the inductance in neglected due to snabb jävla pol referera till KTH pendulum grejen som jag tappade bort....
 The induced voltage is related to the induced voltage constant and the rotor rotation
+
 \begin{equation}
 E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r}
 \end{equation}
+
 \begin{equation}
 \phi_r = \dot{\phi} - \dot{\theta}
 \end{equation}
  
 \begin{equation} \label{eq:tau}
-\tau = \frac{K_t}{R_m} U - \frac{K_t K_{\text{emf}} }{R_m} \dot{\phi} + \frac{K_t K_{\text{emf}} }{R_m} \dot{\theta}
+\tau_m = \frac{K_t}{R_m} U - \frac{K_t K_{\text{emf}} }{R_m} \dot{\phi} + \frac{K_t K_{\text{emf}} }{R_m} \dot{\theta}
 \end{equation}
-The torque on the executed by the flywheel can then be described with the efficiency of the motor
+
+The torque executed \textbf{byta ord  och symbol för gear ?} on the flywheel can then be described with the torque on the motor shaft, efficiency and gearing.
 \begin{equation} \label{eq:eff}
-M_a = \tau \cdot \eta_m
+\tau_k = \tau_m \cdot \eta_m \cdot \eta_g \cdot \Gamma
 \end{equation}
 Based on equation \eqref{eq:negativeL}, \eqref{eq:positiveL} and \eqref{eq:eff} the system can be described by
 \begin{equation}
-\ddot{\theta} = -\frac{K_t \eta_m}{R_m I_c} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\theta} + \frac{Mt g l }{\sqrt{2} I_c} \sin \theta \label{thetadotdot}
+\ddot{\theta} = -\frac{K_t \eta_m}{R_m I_c} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \dot{\theta} - \frac{Mt g l }{\sqrt{2} I_c} \sin \theta \label{thetadotdot}
 \end{equation}
 \begin{equation}
 \ddot{\phi} = \frac{K_t \eta_m}{R_m I_f} U + \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} \dot{\phi} - \frac{K_t K_{\text{emf}} \eta_m}{R_m I_f} \dot{\theta} 
 \label{phidotdot}
 \end{equation} 
+To use linear control methods the model has to be linearised. This is done at the instable equilibrium where the cube is balancing. Consider the sinus term at the equilibrium point where $\theta$ equals $0$. The term can then be expressed with taylor/macloaruin expansion
+
+\begin{equation} \label{eq: sinus taylor}
+sin \theta = \theta - \frac{\theta^3}{3!} +\frac{\theta^5}{5!}... \approx \theta 
+\end{equation}
+
 With the equations \eqref{thetadotdot} and \eqref{phidotdot} the system can be described with a state space model with a states $x^T = [\theta, \dot{\theta}, \dot{\phi}$]. The system is hence described by
 \begin{equation}
 \dot{x} = Ax + Bu
@@ -390,7 +417,7 @@ where \\
 \begin{center}
 $A =\begin{bmatrix}
 0 & 1 & 0 \\
-\dfrac{Mt g l }{\sqrt{2} I_c} & - \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \\ 
+-\dfrac{Mt g l }{\sqrt{2} I_c} & - \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \\ 
 0 & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_f} & -\dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_f}
 \end{bmatrix}$
 
@@ -400,7 +427,31 @@ $B = \begin{bmatrix}
 \dfrac{K_t \eta_m}{R_m I_f}
 \end{bmatrix} $
 \end{center}
+ 
+\subsection{Control theory}
+To create a state space feedback loop...
+ 
+\chapter{Demonstrator}
+\emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}
+VAD FAN ÄR PROBLEMET MED MIN STATE SPACE DET KNASAR JU GRANDE WTF MODE
 
+\section{Problem Formulation}
+%Beskriv din problemställning för demonstratorn.\\
+
+The engineering problem were to build a cube that, using a reaction wheel, could balance on its edge.
+\emph{To be continued}
+
+
+\section{Model validation}
+To synthesize a mathematical model from a real world problem it's often beneficial to simplify the reality. Examples of assumption made for this application would be that center of mass is located at the center of the cube, the friction in the motor is ignored and the frame is considered stiff etcetera. 
+To validate the model from chapter \ref{chapter: state space}, events with known results can be tested. To do so, Simulink \cite{MATLAB:2014} is used.
+First of all the DC-motor model is validated to known characteristics, such as no load speed and current. 
+
+\textbf{Graph here}
+
+The graphs in figure (ref) displays the speed and current of the unloaded motor. Showing that it   
+
+The dynamics of the cube is simplified as an inverted pendulum. That means 
 \section{Discrete Kalman filter} \label{sec: discrete kalman}
 To implement the Kalman filter in algorithm it has to be discretizied 
 This is done much like a feedback control. The filter firstly? estimates the process state and then obtains feedback as noisy measurements. That means that the filter works in two steps, a \textit{time update} and a \textit{measurement update}. The names implicate that the \textit{time update} projects the next state to obtain the \textit{priori estimate} whilst the \textit{measurement update} uses the feedback mentioned above to obtain an improved \textit{posteriori} estimate.
@@ -494,6 +545,8 @@ How do we send data?
 \\ Arduino
 \\ Motor control
 
+\subsection{PWM}
+skriv lite om PWM hax
 
 \section{Hardware}
 The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other components are mounted on the motor-body side of the cube.

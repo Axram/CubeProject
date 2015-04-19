@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -8,11 +8,12 @@
   \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
 
-\bibitem[{Ciufo(2012)}]{MEMSmarket}
-\bibinfo{author}{C.~A. Ciufo}, \bibinfo{title}{MEMS Trends: Smaller, Cheaper,
-  Everywhere},
-  \urlprefix\url{http://eecatalog.com/sensors/2012/05/24/mems-trends-smaller-cheaper-everywhere/},
-  \bibinfo{year}{2012}.
+\bibitem[{Jaw-Kuen~Shiau and Chang(2012)}]{MEMSdrift}
+\bibinfo{author}{C.-X.~H. Jaw-Kuen~Shiau}, \bibinfo{author}{M.-Y. Chang},
+  \bibinfo{title}{Noise Characteristics of MEMS Gyro’s Null Drift and
+  Temperature Compensation}, \bibinfo{journal}{Journal of Applied Science and
+  Engineering} \bibinfo{volume}{15}~(\bibinfo{number}{3})
+  (\bibinfo{year}{2012}) \bibinfo{pages}{239--246}.
 
 \bibitem[{Simon(2001)}]{Simon2001}
 \bibinfo{author}{D.~Simon}, \bibinfo{title}{Kalman Filtering},
@@ -25,6 +26,11 @@
   \bibinfo{title}{Introduction to the Kalman Filter}, \bibinfo{type}{Tech.
   Rep.}, \bibinfo{institution}{Department of Computer Science, University of
   North Carolina at Chapel Hill}, \bibinfo{year}{2006}.
+
+\bibitem[{MATLAB(2014)}]{MATLAB:2014}
+\bibinfo{author}{MATLAB}, \bibinfo{title}{version 8.4.0 (R2014b)},
+  \bibinfo{publisher}{The MathWorks Inc.}, \bibinfo{address}{Natick,
+  Massachusetts}, \bibinfo{year}{2014}.
 
 \bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
   D'Andrea}]{cubliECC13}
