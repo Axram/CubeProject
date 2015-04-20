@@ -209,36 +209,6 @@ external force caused by a spring giving roughly the same energy to the cube eve
 Both readings and time required the achieve balance where compared. Multiple measurements where taken for every placement.
 All measurements where taken during a 10 s time frame.
 
-
-\chapter{Method to be EXTERMINATED eller renamed}
-%Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
-
-The engineering task The main goal of this project was to build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts. 
-\begin{itemize}
-\item Construction
-\item Motor Control
-\item Sensor Reading
-\item System Control
-\item Final Assembly
-\end{itemize}
-
-\section{Construction}
-The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
-Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
- 
-\section{Motor and Motor Control}
-The motors nominal and stall torque are very important for the system blaha. The motor driver is also important, but usually one can get suggestions on drivers from motor manufactures, which was the chosen path.
-  
-\section{Sensor Reading}
-The IMU's parameters and filtering of the signals
-
-\section{System Control}
-The choosen control method where state space. The problem in to linareise and discretise with good enough precition.
-
-\section{Final Assembly}
-When the subproblems above are solved and constructed, the final machine can be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
-The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
-
 \chapter{Theory}
 %%\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
 This chapter cover some theory that is required if one want to build a similar machine. It is assumed that the reader has some 
@@ -248,28 +218,40 @@ the theory of the mechanical system behaviour that is used to device the state s
 to the system as a whole and the research question in particular. When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Although the resolutions were not changed between measurements these settings could be important when comparing to another machine.
 %%\emph{so nog skivas ngn annan stans. Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.} \textbf{Move some to background}
 
-\section{Moar theory ?}
+\section{Inertial Measurement Unit}
+The data collected for calculating the angle of the cube is gathered from an IMU. A small MEMS 
+Accelration can be described by two "events"
+\begin{itemize}
+\item Acelleration because of gravitational force
+
+\item Acelleration because of movement
+\end{itemize}
+
+what ?
+
+
+
 \textbf{Where do we mention communication protocol, maybe some in-depth of accelerometer and gyro ? }
 
 
 \section{Kalman filter}
-The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU would work for short periods but over time the estimated position 'drifts´. This drift occurs because of integration of the measurements to acquire a position, but as the readings contain unwanted noise and often a bias as well this small error grows. Integrating the angular motion to estimate a position would result in an angular drift for the gyro and an even worse drift for the accelerometer as it is integrated twice if it were to estimate a position \cite{MEMSdrift}. \
-By using a Kalman filter the drift can effectively be minimized. By using both readings from the IMU and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it's an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.
-What could be asked of the filter? \textbf{is this too "friendly"}
+The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU would work for short periods but over time the estimated position "drifts" \cite{MEMSdrift}. This drift occurs because of integration of the measurements to acquire a position, the readings contain noise and often a bias which is making the  error to grow for every calulation. Integrating the angular motion to estimate a position would result in an angular drift for the gyroscope and an even worse drift for the accelerometer as it is integrated twice if it were to estimate a position.  \
+By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.
+Keep in mind that there are some regards that should be taken into consideration when choosing an estimator.
 A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. As well that the estimated state variance from the true state is as small as possible.\cite{Simon2001}
 
 
 \subsection{State Estimator}
-The Kalman filter is a state based estimator. By using measurements from the past and present it can derive a good estimate of the current state. The true state and the measured value at a time \textit{k} would be
+The Kalman filter is, as stated above, a state based estimator. By using the last measurement and the one before that it can derive a better estimate of the current state. The true state and the measured value at a time \textit{k} would be
 \begin{equation}\label{eq:kalmanstate}
 x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \end{equation}
 \begin{equation} \label{eq:kalmanmeas}
-y_k = Hx_k + z_k
+z_k = Hx_k + v_k
 \end{equation}
-The true state $x$ is expressed with the the old state, an input $u$, that is data from the gyroscope. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the gyroscope that cannot be mathematically predicted such as flaws in production. 
-The measured value, $y$ (see \eqref{eq:kalmanmeas}) is another observed measurement, in this case the accelerometer. Ideally this would only be a function of $x$, but is distorted by the measurement noise $z$.
-The measurement noise, $z$, much like the process noise is common in any measurement and represents various fluctuations caused by the equipment.
+The true state $x$ is expressed with the the old state, an input $u$, in this case data from the gyroscope. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the gyroscope that cannot be mathematically predicted such as flaws in production. 
+The measured value, $z$ (see \eqref{eq:kalmanmeas}) is an observed measurement, in this case the accelerometer. Ideally this would only be a function of $x$, but is distorted by the measurement noise $v$.
+The measurement noise, $v$, much like the process noise is common in any measurement and represents various fluctuations caused by the equipment.
 \\ \\
 As this recursive filter uses old and new values a \textit{priori} and \textit{posteriori} state is defined
 \begin{equation} \label{eq: priori state}
@@ -283,26 +265,24 @@ For the Kalman filter to work properly some criteria has to be fulfilled. The av
 
 \subsection{The process} 
 The Kalman filter loops two stages. The \textit{predict} and \textit{update} stages.
- 
 \begin{figure}[!htb] 
 \centering
 \includegraphics[width = 0.7\textwidth]{Kalmanphasepic.jpg}
 \caption{Kalman phases.}
 \label{figure : Kalman phases}
 \end{figure}
-
-During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. \ref{figure : Kalman phases}
-\begin{equation}
+\\ During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the measurement, the accelerometer. See figure \ref{figure : Kalman phases}
+\begin{equation} \label{eq:Kalman first estimate}
 \hat{x^-_k} = A\hat{x}^-\textsubscript{k-1}+Bu\textsubscript{k-1}
 \end{equation}
-As stated above \textbf{För slentriant?} the Kalman filter uses readings from both the gyro and accelerometer to estimate a position closer to the true value. To determine how reliable the process and measurement readings are a noise covariance is defined as
+As stated above the Kalman filter uses readings from both the gyroscope and accelerometer to estimate a position closer to the true value. To determine how reliable the process and measurement readings are a noise covariance is defined as
 \begin{equation} \label{eq:covariance process noise}
 Q = E(w_k w_k \textsuperscript{T})
 \end{equation}
 \begin{equation} \label{eq:covariance measurement noise}
-R = E(z_k z_k \textsuperscript{T} )
+R = E(v_k v_k \textsuperscript{T} )
 \end{equation}
-From here a \textit{priori} error covariance matrix is introduced to symbolize the noise in the process measurement.
+From here a \textit{priori} error covariance matrix is introduced to symbolize the noise in the process measurement
 \begin{equation}
 P^-_k = AP^-1\textsubscript{k-1}A^T + Q_k
 \end{equation}
@@ -315,11 +295,11 @@ The measurement \textit{innovation} covariance is calculated as
 \begin{equation}
 S_k = HP^-_kH^T + R
 \end{equation}
-This is very similiar to the \textit{priori} error covariance but represents the measurement instead. From here the core of the Kalman filter can be calculated, the Kalman gain
+The \textit{innovation} covariance is very similiar to the \textit{priori} error covariance but represents the measurement instead. From here the core of the Kalman filter can be calculated, the Kalman gain
 \begin{equation}
 K_k = P^-_kH^TS\textsuperscript{-1}_k
 \end{equation}
-indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small and the opposite if the\textit{priori} error covariance is large \textbf{superlång mening ?}.
+It indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small and vice versa if the \textit{priori} error covariance is large.
 By now the \textit{posteriori} state can be estimated by
 \begin{equation}
 \hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
@@ -433,20 +413,20 @@ With the equations \eqref{thetadotdot} and \eqref{phidotdot} the system can be d
 \end{equation} 
 where \\
 \begin{center}
-$A =\begin{bmatrix}
+$\textbf{A} =\begin{bmatrix}
 0 & 1 & 0 \\
 -\dfrac{Mt g l }{\sqrt{2} I_c} & - \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_c} \\ 
 0 & \dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_f} & -\dfrac{K_t K_{\text{emf}} \eta_m}{R_m I_f}
 \end{bmatrix}$
 
-$B = \begin{bmatrix}
+$\textbf{B} = \begin{bmatrix}
 0 \\ 
 -\dfrac{K_t \eta_m}{R_m I_c} \\
 \dfrac{K_t \eta_m}{R_m I_f}
 \end{bmatrix} $
 \end{center}
  
-\subsection{Control theory}
+\section{Control theory}
 To create a state space feedback loop...
 Use Ackermann instead of place? Why ?
  
@@ -472,29 +452,27 @@ The graphs in figure (ref) displays the speed and current of the unloaded motor.
 
 The dynamics of the cube is simplified as an inverted pendulum. That means if there is no control input to the system it should behave as pendulum in free movement. That is, it should oscillate at a constant amplitude. As there is no torque applied to the flywheel the rotor should remain zero at all times. 
 \section{Discrete Kalman filter} \label{sec: discrete kalman}
-To implement the Kalman filter in algorithm it has to be discretizied 
+To implement the Kalman filter in an algorithm it has to be discretizied 
 This is done much like a feedback control. The filter firstly? estimates the process state and then obtains feedback as noisy measurements. That means that the filter works in two steps, a \textit{time update} and a \textit{measurement update}. The names implicate that the \textit{time update} projects the next state to obtain the \textit{priori estimate} whilst the \textit{measurement update} uses the feedback mentioned above to obtain an improved \textit{posteriori} estimate.
 
 
 Some of the implementation and discretization of the filter.
 \subsection{Kalman implementation}
+The Kalman filter cycles two states, the \textit{predict} and \textit{update} phases. Making the filter implemented on a microprocessor fairly simple. 
 An implementation of the Kalman filter on the IMU would look something like this for the gyroscope
+
+Consider the equation \eqref{eq:Kalman first estimate} from theory chapter.
 \begin{equation}
-\theta_k = \theta \textsubscript{k-1} + (w_k \mp b\textsubscript{k-1}) \Delta t
+\hat{x^-_k} = A\hat{x}^-\textsubscript{k-1}+Bu\textsubscript{k-1}
 \end{equation}
-\begin{equation}
-b_k = b\textsubscript{k-1}
-\end{equation}
-\begin{equation}
-z_k = a_k
-\end{equation}
-With $b$ as the gyro bias
-Looking at equation \eqref{eq:kalmanstate} the system can be written
+
+
 \begin{equation}
 \textbf{x}_k = \begin{bmatrix}
 \theta \\
 \dot{\theta_b}_k
 \end{bmatrix}
+u\textsubscript{k-1} = \dot{\theta}
 \end{equation}
 
 \begin{equation}
@@ -502,13 +480,12 @@ Looking at equation \eqref{eq:kalmanstate} the system can be written
 1  & -\Delta t \\
 0   & 1
 \end{bmatrix}
-\end{equation}
-
-\begin{equation}
+,
 \textbf{B} = \begin{bmatrix}
 \Delta t \\ 0
 \end{bmatrix}
 \end{equation}
+
 
 
 \begin{figure}[!htb]
@@ -522,7 +499,7 @@ Looking at equation \eqref{eq:kalmanstate} the system can be written
 
 \subsection{Measurement and process noise}
 For the Kalman filter to properly work it is essential to know how reliable the process and measurement inputs are. A way of determining the process noise and measurement noise of the IMU is the Allan variance method ref.
-The gyro data is treated as an external input the system, so the error and bias from the gyro readings are characterised as process noise. This is then compared to the measurement, the accelerometer which contains a measurement noise.
+The gyro data is treated as an external input to the system, so the error and bias from the gyro readings are characterised as process noise. This is then compared to the measurement, the accelerometer which contains a measurement noise.
 More to come
 % By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated for the IMU. The Allan variance is then used to determine the noise of the system. The interessting components of the variance for the gyroscope are angle random walk (ARW) and the bias stability, as well as the velocity random walk (VRW) for the accelerometer. 
 
@@ -576,6 +553,35 @@ The motor is fixed through the middle wall in the cube, the shaft on one side an
 \section{Results}
 Beskriv resultatet.
 
+\section{ALLT NEDANFÖR ÄR FRÅN METHOD SÅ GÖR VAD FAN MAN VILL MED DET HÄR PAJSDÅOAIHSDAIOHUSD}
+
+%Den metod eller de metoder, som huvudsakligen används för att angripa den uppgift eller det problem som definieras ovan, kan antingen definieras i introduktionskapitlet eller förklaras mera ingående i ett följande metodkapitel.\\
+
+The engineering task The main goal of this project was to build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts. 
+\begin{itemize}
+\item Construction
+\item Motor Control
+\item Sensor Reading
+\item System Control
+\item Final Assembly
+\end{itemize}
+
+\section{Construction}
+The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
+Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
+ 
+\section{Motor and Motor Control}
+The motors nominal and stall torque are very important for the system blaha. The motor driver is also important, but usually one can get suggestions on drivers from motor manufactures, which was the chosen path.
+  
+\section{Sensor Reading}
+The IMU's parameters and filtering of the signals
+
+\section{System Control}
+The choosen control method where state space. The problem in to linareise and discretise with good enough precition.
+
+\section{Final Assembly}
+When the subproblems above are solved and constructed, the final machine can be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
+The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
 
 \chapter{Discussion and conclusions}
 \emph{I detta kapitel diskuteras och sammanfattas de resultat som presenterats i föregående kapitel. Sammanfattningen baseras på en resultatanalys och syftar till att svara på den fråga eller de frågor som formuleras i kapitel i.}
