@@ -15,7 +15,9 @@
 \contentsline {section}{\numberline {1.4}Method}{3}{section.1.4}
 \contentsline {chapter}{\chapternumberline {2}Theory}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Inertial Measurement Unit}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Kalman filter}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.1.1}Accelerometer}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Gyroscope}{5}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Kalman filter}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}State Estimator}{6}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}The process}{7}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Model dynamics}{8}{section.2.3}

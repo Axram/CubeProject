@@ -10,34 +10,36 @@
 \BOOKMARK [1][-]{section.1.4}{Method}{chapter.1}% 10
 \BOOKMARK [0][-]{chapter.2}{Theory}{}% 11
 \BOOKMARK [1][-]{section.2.1}{Inertial Measurement Unit}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{Kalman filter}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.1}{State Estimator}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.2}{The process}{section.2.2}% 15
-\BOOKMARK [1][-]{section.2.3}{Model dynamics}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.4}{Control theory}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Demonstrator}{}% 18
-\BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.2}{Model validation}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.3}{Discrete Kalman filter}{chapter.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.1}{Kalman implementation}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.2}{Measurement and process noise}{section.3.3}% 23
-\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 26
-\BOOKMARK [1][-]{section.3.6}{Hardware}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.7}{Results}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.8}{ALLT NEDANF\326R \304R FR\305N METHOD S\305 G\326R VAD FAN MAN VILL MED DET H\304R PAJSD\305OAIHSDAIOHUSD}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.9}{Construction}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.10}{Motor and Motor Control}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.11}{Sensor Reading}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.12}{System Control}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.13}{Final Assembly}{chapter.3}% 34
-\BOOKMARK [0][-]{chapter.4}{Discussion and conclusions}{}% 35
-\BOOKMARK [1][-]{section.4.1}{Discussion}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.2}{Conclusions}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter.5}{Recommendations and future work}{}% 38
-\BOOKMARK [1][-]{section.5.1}{Recommendations}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.2}{Future work}{chapter.5}% 40
-\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 41
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 42
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 43
+\BOOKMARK [2][-]{subsection.2.1.1}{Accelerometer}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{Gyroscope}{section.2.1}% 14
+\BOOKMARK [1][-]{section.2.2}{Kalman filter}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{State Estimator}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{The process}{section.2.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Model dynamics}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.4}{Control theory}{chapter.2}% 19
+\BOOKMARK [0][-]{chapter.3}{Demonstrator}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Model validation}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{Discrete Kalman filter}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.1}{Kalman implementation}{section.3.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.2}{Measurement and process noise}{section.3.3}% 25
+\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 28
+\BOOKMARK [1][-]{section.3.6}{Hardware}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.7}{Results}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.8}{ALLT NEDANF\326R \304R FR\305N METHOD S\305 G\326R VAD FAN MAN VILL MED DET H\304R PAJSD\305OAIHSDAIOHUSD}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.9}{Construction}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.10}{Motor and Motor Control}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.11}{Sensor Reading}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.12}{System Control}{chapter.3}% 35
+\BOOKMARK [1][-]{section.3.13}{Final Assembly}{chapter.3}% 36
+\BOOKMARK [0][-]{chapter.4}{Discussion and conclusions}{}% 37
+\BOOKMARK [1][-]{section.4.1}{Discussion}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.2}{Conclusions}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Recommendations and future work}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Recommendations}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Future work}{chapter.5}% 42
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 43
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 44
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 45
