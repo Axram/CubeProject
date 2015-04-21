@@ -50,12 +50,9 @@ Approved: & TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-This thesis is about implementing automated control and balance a simple construction using a reaction wheel commonly used in satellites...
-\\ To be filled in:
-\\	Problem
-\\	Approach % (On the premiss of constructing a small box shaped robot components with desired properties were chosen....)
-\\	Results
-\\ 	Conclusion
+Robots that moves requires a high degree of precision from is position tracking sensors. The paper studies how the 
+placement of these sensors affect the robots ability to determine its position. A robot with a cube frame were 
+built, which were able to balance on a edge with help of a reaction wheel. The robot could determine its rotation using a sensor type called inertial measurement unit. Different sensor positions were evaluated empirically and...
 
 
 %(The thesis is written in English and it has both a Swedish and an English \textit{Abstract} page. An English thesis has English \textit{Cover} and \textit{Title} pages. This template, which has no bookmarks or other automation features, defines the layout of a bachelor thesis in Machine Design (MF123X) or Industrial Engineering (MF105X).  The chapter structure that is presented here is just an example.
@@ -64,9 +61,9 @@ This thesis is about implementing automated control and balance a simple constru
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
-Projektet gick ut på att bygga en kub som kan balansera på en kant med hjälp av ett reaktionshjul. Dessutom sulle den undersökas huruvida det gick att förbättra reglersystemet
-för cuben, så den klarade en större yttre störning. Ingengörsproblemet delades upp i mindre delproblem och kuben byggdes. Reglestystemet beräknades på formen "State space" och implementerades.
-Från resultatet drogs slutsatserna att...
+Robotar som förflyttar sig kraver mycket precis nogrannhet från sina positionerings sensorer. Det här rapporten tar
+upp hur placeringen av dessa sensorer påverkar robotens förmåga att bestämma sin position. Från en kubformad ram 
+byggdes en robot, som med hjälp av ett motordrivet svänghjul kan applicera ett internt moment för att balansen på en kant. Roboten använde en sensor av typen inertial measurment unit för att bestämma sin position. Olika placeringar av sensorn utvärderases empiriskt och ...
 \\
 
 
@@ -112,7 +109,7 @@ $K_t$		& Torque constant\\
 E\textunderscript{emf} 	& Induced voltage \\
 K\textunderscript{emf} 	& Induced voltage constant \\
 U			& Voltage across motor poles\\
-$R_m	$		& Motor internal resitance \\
+$R_m	$		& Motor internal resistance \\
 $\eta_m$		& Motor efficiency\\	
 $\eta_g$		& Gear efficiency \\
 $\Gamma$		& Gear ratio\\
@@ -148,7 +145,7 @@ UAV			& Unmanned Aerial Vehicle\\
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH. The work was carried out during the spring 2015.
 
 \section{Background}
-A reaction wheel is a wheel that is accelerated to apply torque to something. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct sunlight to the solar panels or pointing antennas yo assure maximum performance and connectivity to the satellite. Compared to most machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
+A reaction wheel is a wheel that is accelerated to apply torque to something. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas yo assure maximum performance and connectivity to the satellite. Compared to most machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
 
 Balancing 1-DOF inverted pendulum type structures using reaction wheels is no
 new concept, and became more accessible with the introduction of cheap microcontrollers.
@@ -163,15 +160,14 @@ but their is still not knowledge easily acquired by the public.
 
 The method the achieve balance of the pendulum using reaction wheels is even more narrow. 
 The use of reaction wheels to change the rotation is commonly used in satellites. The exact control is also required.
-In recent years prototypes of land based structures using reaction wheels have been a hot topic and the cubli is
-truly remarkable.
+In recent years prototypes of land based structures using reaction wheels have been a hot topic and the cubli is truly remarkable.
 
 It would be a great achievement to contribute knowledge about how such a mechanism could be built and evaluate
 the capabilities and restrictions of such a machine, on a level that does not require a PhD.
 
 
 \section{Purpose}
-The goal of the project was to build a stucture that in one DOF can maintain balace using a reaction wheel and examine the bahaviours of the system.\\
+The goal of the project was to build a structure that in one DOF can maintain balace using a reaction wheel and examine the behaviours of the system.\\
 The behaviour is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
 This project will hopefully contribute to some development within the open-source community.
 All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).\\ 
@@ -197,7 +193,7 @@ Where balance is defined as as the state where the cube is able to return to its
 
 
 \section{Scope}
-To only sensor to be examined were the IMU. The encoder for the motor is fixed to the motor shaft and was not examined. Only key positions were to be used, not all positions between to points. Only data thar were used for the control system were examined, other degrees of freedom measurement data quality were not taken into consideration. I.e. the results may only be applicable in similar machines and not in general. The effect that were looked at was the ones linked to the control system. Mainly the overshootal behaviour and the settling time of the system. For every position the same parameters and constants were used in all systems and software. The comparasion were between measurements while balance was maintained and no known non random applied disturbances were in affect. All measurements where taken during a 10 s time frame. 
+To only sensor to be examined were the IMU. The encoder for the motor is fixed to the motor shaft and was not examined. Only key positions were to be used, not all positions between to points. Only data that were used for the control system were examined, other degrees of freedom measurement data quality were not taken into consideration. I.e. the results may only be applicable in similar machines and not in general. The effect that were looked at was the ones linked to the control system. Mainly the overshootal behaviour and the settling time of the system. For every position the same parameters and constants were used in all systems and software. The comparasion were between measurements while balance was maintained and no known non random applied disturbances were in affect. All measurements where taken during a 10 s time frame. 
 
 OLD SCHOOL COOL
 The scope were to examine the parameters, of the state space controller and sensor sample frequency, affects on the overshoot behaviour of a balancing "1-DOF" inverted pendulum.
@@ -205,8 +201,8 @@ The overshoot should be caused by an external force, disrupting the cubes balanc
 Moar "we will not do this"
 
 \section{Method}
-The sensor was placed in the upper corner, one of the side corners, between the mentiond corners and in the center of the cube (see figure 1.1). Both raw data and filterd data 
-where collected and sent over serial to a computer. Using matlab the readings where analyzed. Other obivuous observations were noted. To have equal conditions for all measurements the cube where exposed to a (KANSKE BARA LÅTA SKITEN STÅ STILLA?)
+The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (see figure 1.1). Both raw data and filtered data 
+where collected and sent over serial to a computer. Using matlab the readings where analysed. Other obvious observations were noted. To have equal conditions for all measurements the cube where exposed to a (KANSKE BARA LÅTA SKITEN STÅ STILLA?)
 external force caused by a spring giving roughly the same energy to the cube every time. Data over the time when the cube wasn't in stability condition where collected. 
 Both readings and time required the achieve balance where compared. Multiple measurements where taken for every placement.
 All measurements where taken during a 10 s time frame.
@@ -215,7 +211,7 @@ All measurements where taken during a 10 s time frame.
 %%\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
 This chapter cover some theory that is required if one want to build a similar machine. It is assumed that the reader has some 
 understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor is also an advantage.  
-The first part covers the Kalman filter theory, required for getting high quality data from the IMU. The filter take noisy data from sensors and digitaly filters it to a more reliable quality. The second part will cover 
+The first part covers the Kalman filter theory, required for getting high quality data from the IMU. The filter take noisy data from sensors and digitally filters it to a more reliable quality. The second part will cover 
 the theory of the mechanical system behaviour that is used to device the state space control system. Those equations are responsible for the actual balance part and thus important. There is also a part on sensor characteristics and why they are important 
 to the system as a whole and the research question in particular. When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Although the resolutions were not changed between measurements these settings could be important when comparing to another machine.
 %%\emph{so nog skivas ngn annan stans. Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.} \textbf{Move some to background}
