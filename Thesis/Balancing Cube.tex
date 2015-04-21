@@ -132,6 +132,8 @@ PWM			& Pulse With Modulation\\
 DOF			& Degrees of freedom\\
 MEMS			& Microelectromechanical Systems \\
 MATLAB		& Matrix Laboratory, computational program\\
+RMS			& Root Mean Square\\
+MCU			& Microcontroller\\
 IC			& Integrated circuit\\
 $I^2C$		& Inter-Integrated circuit\\
 USB			& Universal Serial Bus \\
@@ -219,21 +221,49 @@ to the system as a whole and the research question in particular. When using a s
 %%\emph{so nog skivas ngn annan stans. Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.} \textbf{Move some to background}
 
 \section{Inertial Measurement Unit}
-The data collected for calculating the angle of the cube is gathered from an IMU. A small MEMS 
-\subsection{Accelerometer}
-An accelerometer Acceleration can be described by two "events"
+The data collected for calculating the angle of the cube is gathered from an IMU.This is an unit that uses both an accelerometer and a gyroscope to track the orientation and position. An IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measures linear acceleration and angular velocity in each direction seperately.
+To understand the fundamentals of an inertial system a cartesian coordinate system is defined
+\\
+\textbf{Carteesian coordinate system pic here}
+\\
+Acceleration can be described by two "events"
 \begin{itemize}
 \item Acceleration because of gravitational force
 \item Acceleration because of movement
 \end{itemize}
 
+The inertial navigation system used in this project is a small microelectro-mechanical system (MEMS). This is a small piezoelectro.. bla bla . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy. The typical noise sources in a MEMS unit These error terms are known as bias stability and angular/velocity random walk.
+\subsection{Accelerometer}
+Accelerometers are used to measure transversal acceleration. This is done by measuring the change in capacitance when spring mass system is moving. The typical accelerometer consists of a movable mass that is attached via a mechanical spring or suspension system to a frame that is used as a reference. 
+\\
+\textbf{capacitance accelerometer pic here}
+\\
+The measured capacitance is then converted to a voltage that is sent to the microcontroller for further analysis. The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and he measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). 
+
+
+\cite{ref:accelerometer}
+
 \subsection{Gyroscope}
-what ?
+Gyroscopes unlike accelerometers, does not measure transversal acceleration. Gyroscopes, or gyros as they are referred as in everyday speech measure the angular rate of velocity. This is done by making use of the Coriolis effect to measure the angular rate.
+\\ 
+\textbf{Gyroscope pic here}
+\\
+A mass is vibrating along an axis at speed $v$ and when the mass is rotated a secondary vibration is induced which is explained by the coriolis force
+\begin{equation}\label{eq:coriolis}
+\textbf{F}_c = -2m(\textbf{\textit{w}} \times \textbf{\textit{v}})
+\end{equation}
+The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. So for example if a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate.
 
-
-
+A MEMS gyroscope is effected by a constant bias. This is due to production variations that puts stress on the construction resulting in an offset of the output. 
+\begin{equation} \label{eq:bias error}
+\theta\textsubscript{error} = \varepsilon \cdot t
+\end{equation} 
+If the constant error, see equation \eqref{eq:bias error} is integrated the angular error grows linearly with time.This is easily corrected by subtracting the bias from the output.
+More troublesome errors that occur in MEMS gyroscopes is a phenomena known as \textit{Angle Random Walk} or ARW. This is a thermo-mechanical white noise, more or less a zero-mean uncorrelated error.
+The constant bias introduced above is not entirely constant. The small size and sensitivity of this piezoelectric device is making the bias wander due to flickering noise in the electronics. Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.\cite{IMUintro}
+The ARW and bias stability more or less an indication of how precise the gyro readings are.   
 \section{Kalman filter}
-The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU would work for short periods but over time the estimated position "drifts" \cite{MEMSdrift}. This drift occurs because of integration of the measurements to acquire a position, the readings contain noise and often a bias which is making the  error to grow for every calulation. Integrating the angular motion to estimate a position would result in an angular drift for the gyroscope and an even worse drift for the accelerometer as it is integrated twice if it were to estimate a position.  \
+The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU would work for short periods but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs because of integration of the measurements to acquire a position, the readings contain noise and often a bias which is making the  error to grow for every calulation. Integrating the angular motion to estimate a position would result in an angular drift for the gyroscope and an even worse drift for the accelerometer as it is integrated twice if it were to estimate a position.  \
 By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.
 Keep in mind that there are some regards that should be taken into consideration when choosing an estimator.
 A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. As well that the estimated state variance from the true state is as small as possible.\cite{Simon2001}
@@ -280,6 +310,7 @@ Q = E(w_k w_k \textsuperscript{T})
 \begin{equation} \label{eq:covariance measurement noise}
 R = E(v_k v_k \textsuperscript{T} )
 \end{equation}
+How to determine these covariances are further investigated in section  \ref{chapter:Allan Variance}
 From here a \textit{priori} error covariance matrix is introduced to symbolize the noise in the process measurement
 \begin{equation}
 P^-_k = AP^-1\textsubscript{k-1}A^T + Q_k
@@ -459,30 +490,7 @@ Some of the implementation and discretization of the filter.
 The Kalman filter cycles two states, the \textit{predict} and \textit{update} phases. Making the filter implemented on a microprocessor fairly simple. 
 An implementation of the Kalman filter on the IMU would look something like this for the gyroscope
 
-Consider the equation \eqref{eq:Kalman first estimate} from theory chapter.
-\begin{equation}
-\hat{x^-_k} = A\hat{x}^-\textsubscript{k-1}+Bu\textsubscript{k-1}
-\end{equation}
 
-
-\begin{equation}
-\textbf{x}_k = \begin{bmatrix}
-\theta \\
-\dot{\theta_b}_k
-\end{bmatrix}
-u\textsubscript{k-1} = \dot{\theta}
-\end{equation}
-
-\begin{equation}
-\textbf{A} = \begin{bmatrix}
-1  & -\Delta t \\
-0   & 1
-\end{bmatrix}
-,
-\textbf{B} = \begin{bmatrix}
-\Delta t \\ 0
-\end{bmatrix}
-\end{equation}
 
 
 
@@ -495,11 +503,11 @@ u\textsubscript{k-1} = \dot{\theta}
 
 
 
-\subsection{Measurement and process noise}
+\subsection{Measurement and process noise} \label{chapter:Allan Variance}
 For the Kalman filter to properly work it is essential to know how reliable the process and measurement inputs are. A way of determining the process noise and measurement noise of the IMU is the Allan variance method ref.
 The gyro data is treated as an external input to the system, so the error and bias from the gyro readings are characterised as process noise. This is then compared to the measurement, the accelerometer which contains a measurement noise.
 More to come
-% By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated for the IMU. The Allan variance is then used to determine the noise of the system. The interessting components of the variance for the gyroscope are angle random walk (ARW) and the bias stability, as well as the velocity random walk (VRW) for the accelerometer. 
+% By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated for the IMU. The Allan variance is then used to determine the noise of the system. The interessting components of the variance for the gyroscope are angle random walk (ARW) and the bias stability, as well as the velocity random walk (VRW) for the accelerometer. The theory of Allan variance is out of the scope of this thesis but can be found --- 
 
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
@@ -548,8 +556,7 @@ skriv lite om PWM hax
 The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other components are mounted on the motor-body side of the cube.
 \\ Basic construction
 
-\section{Results}
-Beskriv resultatet.
+
 
 \section{ALLT NEDANFÖR ÄR FRÅN METHOD SÅ GÖR VAD FAN MAN VILL MED DET HÄR PAJSDÅOAIHSDAIOHUSD}
 
@@ -581,6 +588,9 @@ The choosen control method where state space. The problem in to linareise and di
 When the subproblems above are solved and constructed, the final machine can be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
 The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
 
+\chapter{Results}
+Beskriv resultatet. 
+
 \chapter{Discussion and conclusions}
 \emph{I detta kapitel diskuteras och sammanfattas de resultat som presenterats i föregående kapitel. Sammanfattningen baseras på en resultatanalys och syftar till att svara på den fråga eller de frågor som formuleras i kapitel i.}
 
@@ -610,7 +620,31 @@ An extension of the project would be balancing the cube not only on it's edge bu
 
 
 \chapter{Additional information} \label{appA}
+\section{Kalman implementation}
+Consider the equation \eqref{eq:Kalman first estimate} from theory chapter.
+\begin{equation}
+\hat{x^-_k} = A\hat{x}^-\textsubscript{k-1}+Bu\textsubscript{k-1}
+\end{equation}
 
+
+\begin{equation}
+\textbf{x}_k = \begin{bmatrix}
+\theta \\
+\dot{\theta_b}_k
+\end{bmatrix}
+u\textsubscript{k-1} = \dot{\theta}
+\end{equation}
+
+\begin{equation}
+\textbf{A} = \begin{bmatrix}
+1  & -\Delta t \\
+0   & 1
+\end{bmatrix}
+,
+\textbf{B} = \begin{bmatrix}
+\Delta t \\ 0
+\end{bmatrix}
+\end{equation}
 \chapter{Proofs} \label{appB}
 
 \cleardoublepage   

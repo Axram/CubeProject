@@ -3,11 +3,13 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Balancing Cube.aux
 The style file: elsarticle-num-names.bst
 Database file #1: FiM_references.bib
+Warning--I didn't find a database entry for "ref:accelerometer"
+Warning--I didn't find a database entry for "IMUintro"
 Warning--I didn't find a database entry for "KTHpendulum"
 Warning--I didn't find a database entry for "Lagrangref"
 You've used 5 entries,
             2793 wiz_defined-function locations,
-            640 strings with 5627 characters,
+            643 strings with 5660 characters,
 and the built_in function-call counts, 2653 in all, are:
 = -- 163
 > -- 68
@@ -46,4 +48,4 @@ warning$ -- 0
 while$ -- 16
 width$ -- 0
 write$ -- 61
-(There were 2 warnings)
+(There were 4 warnings)

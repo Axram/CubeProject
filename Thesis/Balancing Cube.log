@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  20 APR 2015 22:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  21 APR 2015 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1036,7 +1036,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 50.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=182, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=186, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
@@ -1127,46 +1127,54 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 127--127
 ] [2] [3] [4
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 226.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 231.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5]
-Underfull \hbox (badness 10000) in paragraph at lines 249--255
+
+LaTeX Warning: Citation `ref:accelerometer' on page 6 undefined on input line 2
+44.
+
+
+LaTeX Warning: Citation `IMUintro' on page 6 undefined on input line 263.
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 279--285
 
  []
 
-[6] <Kalmanphasepic.jpg, id=336, 1650.165pt x 1055.945pt>
+[7] <Kalmanphasepic.jpg, id=348, 1650.165pt x 1055.945pt>
 File: Kalmanphasepic.jpg Graphic file (type jpg)
 
 <use Kalmanphasepic.jpg>
-Package pdftex.def Info: Kalmanphasepic.jpg used on input line 268.
+Package pdftex.def Info: Kalmanphasepic.jpg used on input line 298.
 (pdftex.def)             Requested size: 277.19879pt x 177.36533pt.
- [7 <./Kalmanphasepic.jpg>]
+ [8 <./Kalmanphasepic.jpg>]
 
-LaTeX Warning: Citation `KTHpendulum' on page 8 undefined on input line 309.
+LaTeX Warning: Citation `KTHpendulum' on page 9 undefined on input line 340.
 
-<Lagrangeflywheel.pdf, id=355, 310.47572pt x 334.59073pt>
+<Lagrangeflywheel.pdf, id=367, 310.47572pt x 334.59073pt>
 File: Lagrangeflywheel.pdf Graphic file (type pdf)
 
 <use Lagrangeflywheel.pdf>
-Package pdftex.def Info: Lagrangeflywheel.pdf used on input line 312.
+Package pdftex.def Info: Lagrangeflywheel.pdf used on input line 343.
 (pdftex.def)             Requested size: 186.28687pt x 200.75598pt.
 
 
-LaTeX Warning: Citation `Lagrangref' on page 8 undefined on input line 317.
+LaTeX Warning: Citation `Lagrangref' on page 9 undefined on input line 348.
 
-[8 <./Lagrangeflywheel.pdf>] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+[9] [10 <./Lagrangeflywheel.pdf>] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 442--444
 
  []
 
-[10] [11] [12
-
-]
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+ [13
+
+]
 Package epstopdf Info: Source file: <Kalmancomparisonplot.eps>
 (epstopdf)                    date: 2015-04-10 14:21:35
 (epstopdf)                    size: 32015 bytes
@@ -1176,23 +1184,23 @@ Package epstopdf Info: Source file: <Kalmancomparisonplot.eps>
 (epstopdf)                    size: 13019 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonplot-eps-c
 onverted-to.pdf Kalmancomparisonplot.eps>
-(epstopdf)             \includegraphics on input line 491.
+(epstopdf)             \includegraphics on input line 499.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonplot-eps-converted-to.pdf, id=473, 666.49pt x 554.07pt>
+<Kalmancomparisonplot-eps-converted-to.pdf, id=482, 666.49pt x 554.07pt>
 File: Kalmancomparisonplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonplot-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonplot-eps-converted-to.pdf used on inpu
-t line 491.
+t line 499.
 (pdftex.def)             Requested size: 466.53983pt x 387.84636pt.
 
-Overfull \hbox (70.53983pt too wide) in paragraph at lines 491--492
+Overfull \hbox (70.53983pt too wide) in paragraph at lines 499--500
  [][] 
  []
 
 
-LaTeX Warning: Reference `fig:simmodel' on page 14 undefined on input line 515.
+LaTeX Warning: Reference `fig:simmodel' on page 14 undefined on input line 523.
 
 
 Package epstopdf Info: Source file: <voltageplot.eps>
@@ -1203,14 +1211,14 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 519.
+(epstopdf)             \includegraphics on input line 527.
 Package epstopdf Info: Output file is already uptodate.
-<voltageplot-eps-converted-to.pdf, id=474, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=483, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 51
-9.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 52
+7.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
@@ -1220,53 +1228,62 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 528.
+(epstopdf)             \includegraphics on input line 536.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=475, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=484, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 528.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 536.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
- [14] [15 <./Kalmancomparisonplot-eps-converted-to.pdf>] [16 <./voltageplot-eps
--converted-to.pdf>] [17 <./angleplot-eps-converted-to.pdf>] [18] [19
+ [14]
+Underfull \vbox (badness 3460) has occurred while \output is active []
+
+ [15 <./Kalmancomparisonplot-eps-converted-to.pdf>] [16 <./voltageplot-eps-conv
+erted-to.pdf>]
+Underfull \vbox (badness 1014) has occurred while \output is active []
+
+ [17 <./angleplot-eps-converted-to.pdf>] [18] [19
 
 ] [20
 
 ] [21] [22
 
-] (./Balancing Cube.bbl
+] [23] [24
+
+]
+(./Balancing Cube.bbl
 bibitemlist
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--42
 []
  []
 
-) [23
-
-] [24
-
-] [25
+) [25
 
 ] [26
 
-] [27] [28
+] [27
 
-] [29
+] [28
+
+] [29] [30
+
+] [31
 
 ]
 \tf@toc=\write5
 \openout5 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 621.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 621.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 655.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 655.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 621.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 621.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 655.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 655.
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: F760477B5C134D83FD488F49E32D46BE;2713.
+(rerunfilecheck)             Checksum: 16EB63968B2D8FD56C5094E02278672B;2770.
 
 
 LaTeX Warning: There were undefined references.
@@ -1274,40 +1291,40 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 621.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 655.
  ) 
 Here is how much of TeX's memory you used:
- 10680 strings out of 493117
- 149984 string characters out of 6135434
- 273675 words of memory out of 5000000
- 13826 multiletter control sequences out of 15000+600000
- 101750 words of font info for 65 fonts, out of 8000000 for 9000
+ 10695 strings out of 493117
+ 150183 string characters out of 6135434
+ 273828 words of memory out of 5000000
+ 13835 multiletter control sequences out of 15000+600000
+ 114563 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,39p,867b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2
-014/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014/texmf-
-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc
+014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2014/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc
 /dvips/lm/lm-rm.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-m
 athit.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014/texmf-
-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts
-/type1/public/lm/lmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/lm/lmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public
-/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.
-pfb>
-Output written on "Balancing Cube.pdf" (41 pages, 613335 bytes).
+014/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/2014/texmf
+-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014/texmf-dist/font
+s/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/lm/lmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/
+lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy1
+0.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on "Balancing Cube.pdf" (43 pages, 626468 bytes).
 PDF statistics:
- 671 PDF objects out of 1000 (max. 8388607)
- 575 compressed objects within 6 object streams
- 131 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 694 PDF objects out of 1000 (max. 8388607)
+ 595 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 399 words of extra memory for PDF output out of 10000 (max. 10000000)
 

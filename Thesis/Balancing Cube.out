@@ -27,19 +27,20 @@
 \BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 27
 \BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 28
 \BOOKMARK [1][-]{section.3.6}{Hardware}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.7}{Results}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.8}{ALLT NEDANF\326R \304R FR\305N METHOD S\305 G\326R VAD FAN MAN VILL MED DET H\304R PAJSD\305OAIHSDAIOHUSD}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.9}{Construction}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.10}{Motor and Motor Control}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.11}{Sensor Reading}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.12}{System Control}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.13}{Final Assembly}{chapter.3}% 36
-\BOOKMARK [0][-]{chapter.4}{Discussion and conclusions}{}% 37
-\BOOKMARK [1][-]{section.4.1}{Discussion}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{Conclusions}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter.5}{Recommendations and future work}{}% 40
-\BOOKMARK [1][-]{section.5.1}{Recommendations}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.2}{Future work}{chapter.5}% 42
+\BOOKMARK [1][-]{section.3.7}{ALLT NEDANF\326R \304R FR\305N METHOD S\305 G\326R VAD FAN MAN VILL MED DET H\304R PAJSD\305OAIHSDAIOHUSD}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.8}{Construction}{chapter.3}% 31
+\BOOKMARK [1][-]{section.3.9}{Motor and Motor Control}{chapter.3}% 32
+\BOOKMARK [1][-]{section.3.10}{Sensor Reading}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.11}{System Control}{chapter.3}% 34
+\BOOKMARK [1][-]{section.3.12}{Final Assembly}{chapter.3}% 35
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 36
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 39
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 40
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 42
 \BOOKMARK [0][-]{section*.6}{Bibliography}{}% 43
 \BOOKMARK [0][-]{appendix.A}{Additional information}{}% 44
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 45
+\BOOKMARK [1][-]{section.A.1}{Kalman implementation}{appendix.A}% 45
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 46
