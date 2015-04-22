@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,11 @@
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
+
+\bibitem[{Woodman(2007)}]{IMUintro}
+\bibinfo{author}{O.~J. Woodman}, \bibinfo{title}{An introduction to intertial
+  navigation}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Computer
+  Laboratory, University of Cambridge}, \bibinfo{year}{2007}.
 
 \bibitem[{Jaw-Kuen~Shiau and Chang(2012)}]{MEMSdrift}
 \bibinfo{author}{C.-X.~H. Jaw-Kuen~Shiau}, \bibinfo{author}{M.-Y. Chang},

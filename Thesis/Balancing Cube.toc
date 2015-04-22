@@ -29,24 +29,24 @@
 \contentsline {subsection}{\numberline {3.3.1}Kalman implementation}{14}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Measurement and process noise}{14}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Software}{14}{section.3.4}
-\contentsline {section}{\numberline {3.5}Electronics}{15}{section.3.5}
+\contentsline {section}{\numberline {3.5}Electronics}{14}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}PWM}{15}{subsection.3.5.1}
 \contentsline {section}{\numberline {3.6}Hardware}{15}{section.3.6}
-\contentsline {section}{\numberline {3.7}ALLT NEDANF\IeC {\"O}R \IeC {\"A}R FR\IeC {\r A}N METHOD S\IeC {\r A} G\IeC {\"O}R VAD FAN MAN VILL MED DET H\IeC {\"A}R PAJSD\IeC {\r A}OAIHSDAIOHUSD}{15}{section.3.7}
-\contentsline {section}{\numberline {3.8}Construction}{16}{section.3.8}
-\contentsline {section}{\numberline {3.9}Motor and Motor Control}{16}{section.3.9}
-\contentsline {section}{\numberline {3.10}Sensor Reading}{16}{section.3.10}
-\contentsline {section}{\numberline {3.11}System Control}{16}{section.3.11}
-\contentsline {section}{\numberline {3.12}Final Assembly}{16}{section.3.12}
-\contentsline {chapter}{\chapternumberline {4}Results}{17}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conclusions}{19}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Recommendations}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future work}{21}{section.6.2}
-\contentsline {chapter}{Bibliography}{23}{section*.6}
+\contentsline {section}{\numberline {3.7}ALLT NEDANF\IeC {\"O}R \IeC {\"A}R FR\IeC {\r A}N METHOD S\IeC {\r A} G\IeC {\"O}R VAD FAN MAN VILL MED DET H\IeC {\"A}R PAJSD\IeC {\r A}OAIHSDAIOHUSD}{16}{section.3.7}
+\contentsline {section}{\numberline {3.8}Construction}{17}{section.3.8}
+\contentsline {section}{\numberline {3.9}Motor and Motor Control}{17}{section.3.9}
+\contentsline {section}{\numberline {3.10}Sensor Reading}{17}{section.3.10}
+\contentsline {section}{\numberline {3.11}System Control}{18}{section.3.11}
+\contentsline {section}{\numberline {3.12}Final Assembly}{18}{section.3.12}
+\contentsline {chapter}{\chapternumberline {4}Results}{19}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conclusions}{21}{section.5.2}
+\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Recommendations}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future work}{23}{section.6.2}
+\contentsline {chapter}{Bibliography}{25}{section*.6}
 \contentsline {part}{Appendices}{}{}
-\contentsline {chapter}{\chapternumberline {A}Additional information}{25}{appendix.A}
-\contentsline {section}{\numberline {A.1}Kalman implementation}{25}{section.A.1}
-\contentsline {chapter}{\chapternumberline {B}Proofs}{27}{appendix.B}
+\contentsline {chapter}{\chapternumberline {A}Additional information}{27}{appendix.A}
+\contentsline {section}{\numberline {A.1}Kalman implementation}{27}{section.A.1}
+\contentsline {chapter}{\chapternumberline {B}Proofs}{29}{appendix.B}

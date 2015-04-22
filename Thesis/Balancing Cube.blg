@@ -3,49 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Balancing Cube.aux
 The style file: elsarticle-num-names.bst
 Database file #1: FiM_references.bib
-Warning--I didn't find a database entry for "ref:accelerometer"
-Warning--I didn't find a database entry for "IMUintro"
 Warning--I didn't find a database entry for "KTHpendulum"
 Warning--I didn't find a database entry for "Lagrangref"
-You've used 5 entries,
+You've used 6 entries,
             2793 wiz_defined-function locations,
-            643 strings with 5660 characters,
-and the built_in function-call counts, 2653 in all, are:
-= -- 163
-> -- 68
-< -- 4
-+ -- 32
-- -- 20
-* -- 311
-:= -- 354
-add.period$ -- 5
-call.type$ -- 5
-change.case$ -- 21
-chr.to.int$ -- 5
-cite$ -- 5
-duplicate$ -- 224
-empty$ -- 221
-format.name$ -- 35
-if$ -- 486
+            646 strings with 5747 characters,
+and the built_in function-call counts, 3025 in all, are:
+= -- 185
+> -- 75
+< -- 5
++ -- 38
+- -- 22
+* -- 349
+:= -- 410
+add.period$ -- 6
+call.type$ -- 6
+change.case$ -- 26
+chr.to.int$ -- 6
+cite$ -- 6
+duplicate$ -- 258
+empty$ -- 250
+format.name$ -- 38
+if$ -- 549
 int.to.chr$ -- 1
-int.to.str$ -- 6
-missing$ -- 52
-newline$ -- 25
-num.names$ -- 15
-pop$ -- 75
+int.to.str$ -- 7
+missing$ -- 60
+newline$ -- 28
+num.names$ -- 18
+pop$ -- 89
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 30
 quote$ -- 0
-skip$ -- 74
+skip$ -- 84
 stack$ -- 0
-substring$ -- 134
-swap$ -- 181
+substring$ -- 148
+swap$ -- 206
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
+type$ -- 34
 warning$ -- 0
-while$ -- 16
+while$ -- 18
 width$ -- 0
-write$ -- 61
-(There were 4 warnings)
+write$ -- 72
+(There were 2 warnings)

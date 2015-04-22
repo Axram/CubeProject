@@ -237,7 +237,7 @@ The force is then converted to an acceleration, this is done by measuring the ch
 The measured capacitance is then converted to a voltage that is sent to the microcontroller for further use. The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to know the bias when estimating a position with the help of an accelerometer but is not  used in this thesis. \textsc{Jag nämner constant bias för accelerometer men vill inte skriva något om det. OK ?}
 
 
-\cite{ref:accelerometer}
+%\cite{ref:accelerometer}
 
 \subsection{Gyroscope}
 Gyroscopes unlike accelerometers, does not measure transversal acceleration. Gyroscopes, or gyros as they are referred as in everyday speech measure the angular rate of velocity. This is done by making use of the Coriolis effect to measure the angular rate.
@@ -505,7 +505,7 @@ More to come
 % By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated for the readings. The Allan variance is then used to determine the noise ans stability of the system. The interessting components of the variance for the IMU are angle random walk (ARW) and the bias stability, as well as the velocity random walk (VRW) for the accelerometer. The theory of Allan variance is out of the scope of this thesis but can be found --- 
 
 \section{Software}
-To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime Simulink\textsuperscript{\textregistered} was used togheter with the mathematical model. 
+To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime, the model were simulated with Simulink\textsuperscript{\textregistered}. 
 %\begin{figure}[!htb]
 %\centering
 %\includegraphics[scale=.7]{simmodel.eps}
