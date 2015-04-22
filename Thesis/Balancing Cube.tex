@@ -95,7 +95,7 @@ $t$		& Thickness (m) \\
 $\mathcal{L}$			& Lagrange \\
 $\theta$		& Cube angle\\
 $\phi$		& Flywheel angle \\
-$Q$ and $q$		& Lagrange operators \\
+$q$			& Lagrange operator \\
 $E_k	$		& Kinetic energy \\
 $E_p$		& Potential Energy \\
 $I_c$		& Inertia of the cube\\
@@ -110,7 +110,7 @@ U			& Voltage across motor poles\\
 $R_m	$		& Motor internal resistance \\
 $\eta_m$		& Motor efficiency\\	
 $\eta_g$		& Gear efficiency \\
-$\Gamma$		& Gear ratio\\
+$u$			& Gear ratio\\
 $z$			& Measurement noise \\
 $w$			& Process noise \\
 
@@ -202,8 +202,7 @@ To understand the fundamentals of an inertial system a cartesian coordinate syst
 \textbf{Carteesian coordinate system pic here}
 \\ \\
 
-The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is more or less a very small unit that take use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy.
-\\ \\ \textsc{fix reference}
+The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is more or less a very small unit that take use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy. \cite{IMUintro}
 \subsection{Accelerometer}
 Accelerometers are used to measure transversal acceleration. Or rather, the device measure forces due to acceleration. These forces can be divided into two groups 
 \begin{itemize}
@@ -215,10 +214,9 @@ The force is then converted to an acceleration, this is done by measuring the ch
 \textbf{capacitance accelerometer pic here}
 \\ \\
 The change of capacitance is converted to a voltage that is sent to the microcontroller for further use. The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position with the help of an accelerometer.
-REF IN
-%\cite{ref:accelerometer}
+\cite{ref:accelerometero}
 
-\subsection{Gyroscope}
+\subsection{Gyroscope} \label{gyroscope}
 Gyroscopes unlike accelerometers, does not measure transversal acceleration. Gyroscopes, or gyros as they are referred as in everyday speech, measure the angular rate of velocity. This is done by making use of the Coriolis effect to measure the angular rate.
 \\ \\
 \textbf{Gyroscope pic here}
@@ -235,7 +233,8 @@ More troublesome errors that occur in MEMS gyroscopes thermo-mechanical white no
 The concepts of ARW, ARW and bias stability that has been introduced are more or less an indication of how precise the  are. \cite{IMUintro}  
 
 \section{Kalman filter}
-The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU would work for short periods but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs because of integration of the measurements to acquire a position, the readings contain noise and often a bias which is making the  error to grow for every calulation. Integrating the angular motion to estimate a position would result in an angular drift for the gyroscope and an even worse drift for the accelerometer as it is integrated twice if it were to estimate a position.  \
+The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU could work for short periods, but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs when measurements containing noise is integrated to acquire a position, the readings contain both white noise and often a bias which is making the  error to grow for every calulation.
+Integrating the angular motion from the gyro to estimate a position would result in an angular drift and an even worse drift for the accelerometer as it is integrated twice to estimate a position.
 By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.
 Keep in mind that there are some regards that should be taken into consideration when choosing an estimator.
 A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. As well that the estimated state variance from the true state is as small as possible.\cite{Simon2001}
@@ -249,7 +248,7 @@ x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \begin{equation} \label{eq:kalmanmeas}
 z_k = Hx_k + v_k
 \end{equation}
-The true state $x$ is expressed with the the old state, an input $u$, in this case data from the gyroscope. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the gyroscope that cannot be mathematically predicted such as flaws in production. 
+The true state $x$ is expressed with the the old state, an input $u$, in this case data from the gyroscope. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the process that cannot be mathematically predicted. When using a gyro this reflects the error characteristics mention in section\ref{gyroscope}. 
 The measured value, $z$ (see \eqref{eq:kalmanmeas}) is an observed measurement, in this case the accelerometer. Ideally this would only be a function of $x$, but is distorted by the measurement noise $v$.
 The measurement noise, $v$, much like the process noise is common in any measurement and represents various fluctuations caused by the equipment.
 \\ \\
@@ -297,10 +296,10 @@ The measurement \textit{innovation} covariance is calculated as
 S_k = HP^-_kH^T + R
 \end{equation}
 The \textit{innovation} covariance is very similiar to the \textit{priori} error covariance but represents the measurement instead. From here the core of the Kalman filter can be calculated, the Kalman gain
-\begin{equation}
+\begin{equation} \label{eq:Kalman gain}
 K_k = P^-_kH^TS\textsuperscript{-1}_k
 \end{equation}
-It indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small and vice versa if the \textit{priori} error covariance is large.
+indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small and vice versa if the \textit{priori} error covariance is large.
 By now the \textit{posteriori} state can be estimated by
 \begin{equation}
 \hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
@@ -317,7 +316,7 @@ To create a state-space model the physical model has to be translated to a mathe
 \label{fig:Lagrangeflywheel}
 \end{figure}
 
-\emph{Lagrangian} Dynamics have been used to derive the systems behaviour. Firstly by expressing the generlized forces, the energy functions and lagrangian. And then acquire the equations of motion from the Lagrange equation  \cite{Lagrangref}. Consider the Lagrangian
+\emph{Lagrangian} Dynamics have been used to derive the systems behaviour. Firstly by expressing the generlized forces, the energy functions and lagrangian. And then acquire the equations of motion from the Lagrange equation  \cite{Lagrangeref}. Consider the Lagrangian
 
 \begin{equation}
 \tau_i=\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q_i}}\right)-\left(\frac{\partial L}{\partial q_i}\right)
@@ -376,7 +375,8 @@ The current can be described by the voltage across the two poles of the motor.
 \tau_m = K_t \cdot \frac{U-E_{\text{emf}} }{R_m}
 \end{equation}
 
-Note that the motor inductance in neglected in equation \eqref{eq:motor torque}, that is due to the time constant which is fast considering the rest of the system.\textbf{Do we need source ?}
+Note that the motor inductance in neglected in equation \eqref{eq:motor torque}, that is due to the time constant which is fast considering the rest of the system and is not vital for the control system \cite{KTHpendulum}.
+The induced voltage can be described as a function of motor speed.
 
 \begin{equation}
 E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r}
@@ -390,9 +390,9 @@ E_{\text{emf}} = K_{\text{emf}} \cdot \dot{\phi_r}
 \tau_m = \frac{K_t}{R_m} U - \frac{K_t K_{\text{emf}} }{R_m} \dot{\phi} + \frac{K_t K_{\text{emf}} }{R_m} \dot{\theta}
 \end{equation}
 
-The torque executed \textbf{byta ord  och symbol för gear ?} on the flywheel can then be described with the torque on the motor shaft, efficiency and gearing.
+The torque executed on the flywheel can then be described with the torque on the motor shaft, efficiency and gearing. \textsc{Not completely finished with this part}
 \begin{equation} \label{eq:eff}
-\tau_k = \tau_m \cdot \eta_m \cdot \eta_g \cdot \Gamma
+\tau_k = \tau_m \cdot \eta_m \cdot \eta_g \cdot u
 \end{equation}
 Based on equation \eqref{eq:negativeL}, \eqref{eq:positiveL} and \eqref{eq:eff} the system can be described by
 \begin{equation}
@@ -430,6 +430,17 @@ $\textbf{B} = \begin{bmatrix}
 \section{Control theory}
 To create a state space feedback loop...
 Use Ackermann instead of place? Why ?
+
+\section{Pulse Width Modulation}
+Pulse Width Modulation:
+Acording to en.wikipedia.org: "Pulse-width modulation (PWM) [...] is a technique used to encode a message into a 
+pulsing signal."
+This is useful in many power applications, from dimming LED's to motor control. The idea of 
+PWM is to alter the voltage over a device while still only having a set level voltage to supply. Simplified  
+the voltage is cut into a square wave. This is done by using two transistors, one that can short the motor poles and one that distibrutes the supply voltage to be applied to the motor \cite{elektro}. If these transistors are swiched on and of fast 
+compared to the time constant of the motor, the root mean square (RMS) voltage will be the acting voltage.(formel i bilaga)
+This allows for a DC voltage that is percived as lower than the acual supply voltage.
+They duty cycle can be changed during operation unlike liner type voltage regulators. 
  
 \chapter{Demonstrator}
 \emph{Detta kapitel beskriver både den utvecklade demonstratorn och den aktuella arbetsprocessen som demonstartorn utvecklats enligt, dvs resultatet och vägen dit.}

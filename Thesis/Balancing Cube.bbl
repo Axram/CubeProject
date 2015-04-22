@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -18,6 +18,11 @@
   navigation}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Computer
   Laboratory, University of Cambridge}, \bibinfo{year}{2007}.
 
+\bibitem[{Andrejasic(2008)}]{ref:accelerometero}
+\bibinfo{author}{M.~Andrejasic}, \bibinfo{title}{MEMS Accelerometers},
+  \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Faculty for mathematics and
+  physics, University of Ljubljana}, \bibinfo{year}{2008}.
+
 \bibitem[{Jaw-Kuen~Shiau and Chang(2012)}]{MEMSdrift}
 \bibinfo{author}{C.-X.~H. Jaw-Kuen~Shiau}, \bibinfo{author}{M.-Y. Chang},
   \bibinfo{title}{Noise Characteristics of MEMS Gyro’s Null Drift and
@@ -36,6 +41,24 @@
   \bibinfo{title}{Introduction to the Kalman Filter}, \bibinfo{type}{Tech.
   Rep.}, \bibinfo{institution}{Department of Computer Science, University of
   North Carolina at Chapel Hill}, \bibinfo{year}{2006}.
+
+\bibitem[{Chauveau et~al.(2005)Chauveau, Chazal, Nakayama, Olsen, and
+  Palm}]{KTHpendulum}
+\bibinfo{author}{G.~Chauveau}, \bibinfo{author}{D.~Chazal},
+  \bibinfo{author}{D.~Nakayama}, \bibinfo{author}{E.~Olsen},
+  \bibinfo{author}{S.~Palm}, \bibinfo{title}{Controlling the Reaction Wheel
+  Pendulum}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{School of
+  electrial engineering , KTH}, \bibinfo{year}{2005}.
+
+\bibitem[{Daniel J.~Block(2007)}]{Lagrangeref}
+\bibinfo{author}{M.~W.~S. Daniel J.~Block, Karl J.~Åström},
+  \bibinfo{title}{The Reaction Wheel Pendulum}, \bibinfo{publisher}{Morgan \&
+  Claypool Publishers}, \bibinfo{year}{2007}.
+
+\bibitem[{Johansson(2003)}]{elektro}
+\bibinfo{author}{H.~Johansson}, \bibinfo{title}{Elektroteknik},
+  \bibinfo{publisher}{Institutionen för Maskinkonstruktion, KTH},
+  \bibinfo{year}{2003}.
 
 \bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
   D'Andrea}]{cubliECC13}

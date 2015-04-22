@@ -85,29 +85,29 @@ K = place(A, B, [p0, p1, p2]);
 % R = 3;
 % [K] = lqr(A,B,Q,R)
 
-% sys_cl = ss(A-B*K,B,C,D, 'statename',states,'inputname',inputs,'outputname',outputs) 
-% lsim(sys_cl,U,t,x0)
-% 
-% % Control Theory
-% poles = eig(A)
-% sys = ss(A,B,C,D)
-% rank(ctrb(sys))
-% min_current = Mtot*g*l*sin(theta_start*pi/180)/(sqrt(2)*Kt*eta*etaGear*Gear)
+sys_cl = ss(A-B*K,B,C,D, 'statename',states,'inputname',inputs,'outputname',outputs) 
+lsim(sys_cl,U,t,x0)
+
+% Control Theory
+poles = eig(A)
+sys = ss(A,B,C,D)
+rank(ctrb(sys))
+min_current = Mtot*g*l*sin(theta_start*pi/180)/(sqrt(2)*Kt*eta*etaGear*Gear)
 
 
-% %% Model validation
-% close all
-% Motorval = figure
-% time = 5;
-% t=0:time/length(vel):time-time/length(vel);
-% subplot(1,2,1)
-% plot (t, vel)
-% title('Motor speed')
-% xlabel('Time [s]')
-% ylabel('Speed [rpm]')
-% hold on
-% subplot(1,2,2)
-% plot(t, Current)
-% title('Motor current')
-% xlabel('Time [s]')
-% ylabel('Current [A]')
+%% Model validation
+close all
+Motorval = figure
+time = 5;
+t=0:time/length(vel):time-time/length(vel);
+subplot(1,2,1)
+plot (t, vel)
+title('Motor speed')
+xlabel('Time [s]')
+ylabel('Speed [rpm]')
+hold on
+subplot(1,2,2)
+plot(t, Current)
+title('Motor current')
+xlabel('Time [s]')
+ylabel('Current [A]')
