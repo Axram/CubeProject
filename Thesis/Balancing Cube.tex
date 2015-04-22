@@ -24,8 +24,8 @@
 
 %\usepackage{appendix} 
 \title{Balancing Cube (working title)}
-\subtitle{Control and design of reaction wheel balanced inverted pendulum}
-\foreigntitle{Stabilisering med svänghjul}
+\subtitle{Stabilization and design of reaction wheel based inverted pendulum. --?-- Control and design of reaction wheel balanced inverted pendulum}
+\foreigntitle{Stabilisering med svänghjul Utevkcla...}
 \author{Mikael Sjöstedt \\ Alexander Ramm}
 \date{May 2015}
 \blurb{ Bachelor's Thesis in Mechatronics \vspace{1em} \\
@@ -50,20 +50,17 @@ Approved: & TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-Robots that moves requires a high degree of precision from is position tracking sensors. The paper studies how the 
-placement of these sensors affect the robots ability to determine its position. A robot with a cube frame were 
-built, which were able to balance on a edge with help of a reaction wheel. The robot could determine its rotation using a sensor type called inertial measurement unit. Different sensor positions were evaluated empirically and...
-
-
-%(The thesis is written in English and it has both a Swedish and an English \textit{Abstract} page. An English thesis has English \textit{Cover} and \textit{Title} pages. This template, which has no bookmarks or other automation features, defines the layout of a bachelor thesis in Machine Design (MF123X) or Industrial Engineering (MF105X).  The chapter structure that is presented here is just an example.
-%The abstract is maximum one page long. The abstract page is followed by a blank page. The preceding title page, which preferably contains an illustrative picture, is also followed by a blank page. All chapters start at the top of a right hand page, i.e. a page with an odd number.) 
+Robots that moves requires a high degree of precision from position tracking sensors. This paper studies how the 
+placement of these sensors affect the robots ability to determine its position. A robot with a cubical frame were 
+built, which were able to balance on a edge with help of a reaction wheel. The robot could determine its rotation using a sensor type called --inertial measurement unit--. Different sensor positions were evaluated empirically and...
+ 
 \end{abstract}
 \cleardoublepage
 \begin{foreignabstract}{swedish}
 \addcontentsline{toc}{chapter}{Sammanfattning}
 Robotar som förflyttar sig kraver mycket precis nogrannhet från sina positionerings sensorer. Det här rapporten tar
 upp hur placeringen av dessa sensorer påverkar robotens förmåga att bestämma sin position. Från en kubformad ram 
-byggdes en robot, som med hjälp av ett motordrivet svänghjul kan applicera ett internt moment för att balansen på en kant. Roboten använde en sensor av typen inertial measurment unit för att bestämma sin position. Olika placeringar av sensorn utvärderases empiriskt och ...
+byggdes en robot, som med hjälp av ett motordrivet svänghjul kan applicera ett internt moment för att balansera på en kant. Roboten använde en sensor av typen --inertial measurment unit-- för att bestämma sin position. Olika placeringar av sensorn utvärderases empiriskt och ...
 \\
 
 
@@ -95,19 +92,20 @@ Here goes our thanks to sources of  help, cooperation, inspiration \\ To be fill
 $E$ 		& Elasticity module (Pa) \\
 $r$		& Radius (m) \\
 $t$		& Thickness (m) \\
-L			& Lagrange ( fixa) \\
+$\mathcal{L}$			& Lagrange \\
 $\theta$		& Cube angle\\
 $\phi$		& Flywheel angle \\
-Q and q		& Lagrange operators \\
+$Q$ and $q$		& Lagrange operators \\
 $E_k	$		& Kinetic energy \\
 $E_p$		& Potential Energy \\
 $I_c$		& Inertia of the cube\\
 $I_f$		& Inertia of the flywheel\\
-$M_c$		& Total mass of the cube\\
+$M\textsubscript{tot}$		& Total mass of the cube\\
+$M_f$		& Mass of the flywheel \\
 $i$			& Current\\
-$K_t$		& Torque constant\\
+$K_t$		& Motor torque constant\\
 E\textunderscript{emf} 	& Induced voltage \\
-K\textunderscript{emf} 	& Induced voltage constant \\
+K\textunderscript{emf} 	& Motor voltage constant \\
 U			& Voltage across motor poles\\
 $R_m	$		& Motor internal resistance \\
 $\eta_m$		& Motor efficiency\\	
@@ -142,24 +140,23 @@ UAV			& Unmanned Aerial Vehicle\\
 \pagestyle{newchap}
 
 \chapter{Introduction}
-This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH. The work was carried out during the spring 2015.
+This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH, Sweden. The work was carried out during the spring 2015.
 
 \section{Background}
-A reaction wheel is a wheel that is accelerated to apply torque to something. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas yo assure maximum performance and connectivity to the satellite. Compared to most machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
+A reaction wheel is a wheel that is accelerated to apply torque to something. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Compared to most machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
 
-Balancing 1-DOF inverted pendulum type structures using reaction wheels is no
+Balancing 1 \textit{degree of freedom} (DOF) inverted pendulum type structures using reaction wheels is no
 new concept, and became more accessible with the introduction of cheap microcontrollers.
 The use of automated control is growing in a rapid pace and is being implemented
 more and more in consumer related products.  This growth
-has made automated control available more now than ever, in our every-day life in
-product lines as mobile phones, gaming controllers, cars and UAV’s such as quadrocopters.
+has made automated control together with sensors available more now than ever. It can be seen in the every-day life in product lines such as mobile phones, gaming controllers, cars and UAV’s such as quadrocopters.
 
 One of the most basic systems that requires some control to become stable is the inverted pendulum. 
 Although it is simple to define controlling it is not a trivial task. A lot of work has been done on the topic
-but their is still not knowledge easily acquired by the public. 
+but there are still no knowledge easily acquired by the public available. 
 
-The method the achieve balance of the pendulum using reaction wheels is even more narrow. 
-The use of reaction wheels to change the rotation is commonly used in satellites. The exact control is also required.
+The method to achieve balance of the pendulum using reaction wheels is even more narrow. 
+The use of reaction wheels to change the rotation is commonly used in satellites. The exact control is also required. --SKRIVS 2 GGR--
 In recent years prototypes of land based structures using reaction wheels have been a hot topic and the cubli is truly remarkable.
 
 It would be a great achievement to contribute knowledge about how such a mechanism could be built and evaluate
@@ -167,96 +164,76 @@ the capabilities and restrictions of such a machine, on a level that does not re
 
 
 \section{Purpose}
-The goal of the project was to build a structure that in one DOF can maintain balace using a reaction wheel and examine the behaviours of the system.\\
-The behaviour is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
+The goal of the project was to build a structure that in one degree of freedom that can maintain balance using a reaction wheel and examine the behaviours of the system.
+The behaviour (samma ord igen) is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
 This project will hopefully contribute to some development within the open-source community.
-All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).\\ 
-As a mechatronical thesis the research task were to be along the line of how something physical is implemented 
-in a, in some context, good or better than normal way. The research topic were concentrated in to: 
-\begin{italicquotes}
-How does the sensor placement affect the quality of the sensor data.
-\end{italicquotes}
-The only sensor that can be placed arbitrarily in out system is the IMU. Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a senistive devise and disturbances such as high current and fast occilations inits vacinity might ruin the data entirely.[citation PLZ]. With quality defined as the usability of the data given by the sensor.
+All results are available online, open source (MIT license reference here), on GitHub (GitHub link here).
+As a mechatronical thesis, this paper can be divided into two parts. One engineering part which focus is to implement knowledge in mechanics, electronics and control theory to result in a functioning robot. And then a research part which topic could be concentrated to a question 
 
-HÄR ÄR DET GAMMALT JOX
-%\begin{italicquotes}
-%`How can the control parameters be optimised to minimize the overshoot while sill having a quick enough responce til to maintain balance.'
-%\end{italicquotes}
 \begin{italicquotes}
-If balance is maintained how does the maximum applied force correlate to the rise time and overshoot separately, can any conclusions be drawn from the results?
+How does the sensor placement effect the quality of the sensor data.
 \end{italicquotes}
-or maybe
-\begin{italicquotes}
-How does sensor placement effect system performance -and can internal disturbances terminaTOR nej men något sånt???
-\end{italicquotes}
-Where balance is defined as as the state where the cube is able to return to its reference angle/value?. The rise time and overshoot refers to the system angle. Can the results contribute to improve the overall performance?
-
+The only sensor that can be placed arbitrarily in the system is the \textit{Inertial Measurement Unit} (IMU). Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive devise and disturbances such as high current and fast oscillations in its vicinity might ruin the data entirely.[citation PLZ]. With quality defined as the usability of the data given by the sensor.
 
 \section{Scope}
-To only sensor to be examined were the IMU. The encoder for the motor is fixed to the motor shaft and was not examined. Only key positions were to be used, not all positions between to points. Only data that were used for the control system were examined, other degrees of freedom measurement data quality were not taken into consideration. I.e. the results may only be applicable in similar machines and not in general. The effect that were looked at was the ones linked to the control system. Mainly the overshootal behaviour and the settling time of the system. For every position the same parameters and constants were used in all systems and software. The comparasion were between measurements while balance was maintained and no known non random applied disturbances were in affect. All measurements where taken during a 10 s time frame. 
-
-OLD SCHOOL COOL
-The scope were to examine the parameters, of the state space controller and sensor sample frequency, affects on the overshoot behaviour of a balancing "1-DOF" inverted pendulum.
-The overshoot should be caused by an external force, disrupting the cubes balance.
-Moar "we will not do this"
+The only sensor to be examined was the IMU. The encoder for the motor is fixed to the motor shaft and was not examined. Only a few key positions of the sensor were examined.
+The effects that were looked at were the ones linked to the control system. Mainly the overshoot behaviour and the settling time of the system. Only data used for the specific control system were examined, other DOF measurements were not taken into consideration. I.e. the results may only be applicable in similar machines and not in general.
+For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....). 
 
 \section{Method}
-The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (see figure 1.1). Both raw data and filtered data 
-where collected and sent over serial to a computer. Using matlab the readings where analysed. Other obvious observations were noted. To have equal conditions for all measurements the cube where exposed to a (KANSKE BARA LÅTA SKITEN STÅ STILLA?)
-external force caused by a spring giving roughly the same energy to the cube every time. Data over the time when the cube wasn't in stability condition where collected. 
-Both readings and time required the achieve balance where compared. Multiple measurements where taken for every placement.
-All measurements where taken during a 10 s time frame.
+The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations were noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
 
 \chapter{Theory}
-%%\emph{Den teoretiska fördjupningen är en sammanfattning av tillgänglig kunskap och resultat från forskning som tidigare har utförts inom examensarbetets område. Detta kapitel presenterar den teoretiska referensramen som utgör utgångspunkten för den utförda forskningen, produktutvecklingen eller konstruktionsuppgiften.}
-This chapter cover some theory that is required if one want to build a similar machine. It is assumed that the reader has some 
-understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor is also an advantage.  
-The first part covers the Kalman filter theory, required for getting high quality data from the IMU. The filter take noisy data from sensors and digitally filters it to a more reliable quality. The second part will cover 
-the theory of the mechanical system behaviour that is used to device the state space control system. Those equations are responsible for the actual balance part and thus important. There is also a part on sensor characteristics and why they are important 
-to the system as a whole and the research question in particular. When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Although the resolutions were not changed between measurements these settings could be important when comparing to another machine.
-%%\emph{so nog skivas ngn annan stans. Also creating transversal movement using only the reaction wheels is a recent topic for research i.e. not only changing direction of something but actually moving it. This is of course impossible in orbit, but could possibly be useful for land/sea based machines to overcome various obstacles without a separate system for balancing and movement.} \textbf{Move some to background}
+This chapter cover some theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
+
+The first part is about the inertial reference unit that covers issues of sensor characteristics and why they are important to the system as a whole and the research question in particular.
+
+There is a part that discuss Kalman filter theory, a filter required for getting high quality data from the IMU. The filter interprets noisy data from the sensor and digitally filters the signal to a more trustworthy output. 
+
+The last part will cover the theory of the mechanical system behaviour that is used to develop the state space control system. The equations are responsible for the actual balance part and thus important. 
+
+% When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Although the resolutions were not changed between measurements these settings could be important when comparing to another machine
+
 
 \section{Inertial Measurement Unit}
-The data collected for calculating the angle of the cube is gathered from an IMU. This is an unit that uses both an accelerometer and a gyroscope to track the orientation and position. An IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measures linear acceleration and angular velocity in each direction seperately. There are also units that are rated for degrees of freedom that usually includes features such as magnetometer or barometer sensors.   
+The data collected for calculating the angle of the cube is gathered from an IMU. This is an unit that uses both an accelerometer and a gyroscope to track the orientation and position. An IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measures linear acceleration and angular velocity in each direction seperately. There are also units that are rated for additional degrees of freedom that usually includes features such as magnetometer or barometer sensors.   
 To understand the fundamentals of an inertial system a cartesian coordinate system is defined
 \\ \\
 \textbf{Carteesian coordinate system pic here}
 \\ \\
-The inertial navigation system used in this project is a small microelectro-mechanical system (MEMS). A micromechanical sensor is more or less a very small unit that take use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy. The typical noise sources in a MEMS unit These error terms are known as bias stability and angular/velocity random walk.
+
+The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is more or less a very small unit that take use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy.
 \\ \\ \textsc{fix reference}
 \subsection{Accelerometer}
-Accelerometers are used to measure transversal acceleration. Or rather, the device measure acceleration forces. This force can be divided into two groups (Ute på hal is nu ? )
+Accelerometers are used to measure transversal acceleration. Or rather, the device measure forces due to acceleration. These forces can be divided into two groups 
 \begin{itemize}
-\item Static acceleration forces, such as gravity
-\item Dynamic acceleration forces, due to movement
+\item Static forces, such as gravity
+\item Dynamic forces, due to movement
 \end{itemize}
 The force is then converted to an acceleration, this is done by measuring the change in capacitance when a spring mass system is moving. The typical accelerometer consists of a movable mass that is attached via a mechanical spring or suspension system to a frame that is used as a reference. 
 \\ \\
 \textbf{capacitance accelerometer pic here}
 \\ \\
-The measured capacitance is then converted to a voltage that is sent to the microcontroller for further use. The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to know the bias when estimating a position with the help of an accelerometer but is not  used in this thesis. \textsc{Jag nämner constant bias för accelerometer men vill inte skriva något om det. OK ?}
-
-
+The change of capacitance is converted to a voltage that is sent to the microcontroller for further use. The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position with the help of an accelerometer.
+REF IN
 %\cite{ref:accelerometer}
 
 \subsection{Gyroscope}
-Gyroscopes unlike accelerometers, does not measure transversal acceleration. Gyroscopes, or gyros as they are referred as in everyday speech measure the angular rate of velocity. This is done by making use of the Coriolis effect to measure the angular rate.
+Gyroscopes unlike accelerometers, does not measure transversal acceleration. Gyroscopes, or gyros as they are referred as in everyday speech, measure the angular rate of velocity. This is done by making use of the Coriolis effect to measure the angular rate.
 \\ \\
 \textbf{Gyroscope pic here}
 \\ \\
-A mass is vibrating along an axis at speed $v$ and when the mass is rotated a secondary vibration is induced which is explained by the coriolis force
+A mass is vibrating along an axis, with the momentary velocity $v$, and when the mass is rotated, a secondary perpendicular vibration is induced which is explained by the coriolis force
 \begin{equation}\label{eq:coriolis}
 \textbf{F}_c = -2m(\textbf{\textit{w}} \times \textbf{\textit{v}})
 \end{equation}
 The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. So for example if a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate.
 
-A micromechanical gyroscope is, like the accelerometer, effected by a constant bias. This is due to production variations that induces stress on the construction resulting in an offset of the output. 
-\begin{equation} \label{eq:bias error}
-\theta\textsubscript{error} = \varepsilon \cdot t
-\end{equation} 
-If the constant error $\varepsilon$, see equation \eqref{eq:bias error} is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.The constant bias introduced above is not entirely constant either. The small size and sensitivity of this device is making the bias wander due to flickering noise in the electronics. Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
-More troublesome errors that occur in MEMS gyroscopes is a phenomena known as \textit{Angle Random Walk} or ARW. This is a thermo-mechanical white noise, more or less a zero-mean uncorrelated error.
-The concepts of ARW, ARW and bias stability that has been introduced are more or less an indication of how precise the  are. --They are necessary to know when implementing a Kalman filter MEDEL PÅ DETTA---- \cite{IMUintro}  
+A micromechanical gyroscope is, like the accelerometer, effected by a constant bias. This is often due to friction caused by moving parts or production variations that induces stress on the construction resulting in an offset of the output. If a constant error is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.
+The constant bias introduced above is not entirely constant either. The small size and sensitivity of this device is making the bias wander due to flickering noise in the electronics. Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
+More troublesome errors that occur in MEMS gyroscopes thermo-mechanical white noise similiar to the accelerometer, a more or less uncorrelated error. This can be translated to a phenomena known as \textit{Angle Random Walk} or ARW that indicates how the integrated value is effected.
+The concepts of ARW, ARW and bias stability that has been introduced are more or less an indication of how precise the  are. \cite{IMUintro}  
+
 \section{Kalman filter}
 The signal from an IMU contains data of angular velocities and transversal acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU would work for short periods but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs because of integration of the measurements to acquire a position, the readings contain noise and often a bias which is making the  error to grow for every calulation. Integrating the angular motion to estimate a position would result in an angular drift for the gyroscope and an even worse drift for the accelerometer as it is integrated twice if it were to estimate a position.  \
 By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.

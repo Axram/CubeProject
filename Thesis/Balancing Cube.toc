@@ -18,9 +18,9 @@
 \contentsline {subsection}{\numberline {2.1.1}Accelerometer}{6}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Gyroscope}{6}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Kalman filter}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}State Estimator}{8}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}State Estimator}{7}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}The process}{8}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Model dynamics}{10}{section.2.3}
+\contentsline {section}{\numberline {2.3}Model dynamics}{9}{section.2.3}
 \contentsline {section}{\numberline {2.4}Control theory}{12}{section.2.4}
 \contentsline {chapter}{\chapternumberline {3}Demonstrator}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Problem Formulation}{13}{section.3.1}

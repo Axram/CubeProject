@@ -8,6 +8,11 @@
   \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
 
+\bibitem[{MATLAB(2014)}]{MATLAB:2014}
+\bibinfo{author}{MATLAB}, \bibinfo{title}{version 8.4.0 (R2014b)},
+  \bibinfo{publisher}{The MathWorks Inc.}, \bibinfo{address}{Natick,
+  Massachusetts}, \bibinfo{year}{2014}.
+
 \bibitem[{Woodman(2007)}]{IMUintro}
 \bibinfo{author}{O.~J. Woodman}, \bibinfo{title}{An introduction to intertial
   navigation}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Computer
@@ -31,11 +36,6 @@
   \bibinfo{title}{Introduction to the Kalman Filter}, \bibinfo{type}{Tech.
   Rep.}, \bibinfo{institution}{Department of Computer Science, University of
   North Carolina at Chapel Hill}, \bibinfo{year}{2006}.
-
-\bibitem[{MATLAB(2014)}]{MATLAB:2014}
-\bibinfo{author}{MATLAB}, \bibinfo{title}{version 8.4.0 (R2014b)},
-  \bibinfo{publisher}{The MathWorks Inc.}, \bibinfo{address}{Natick,
-  Massachusetts}, \bibinfo{year}{2014}.
 
 \bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
   D'Andrea}]{cubliECC13}
