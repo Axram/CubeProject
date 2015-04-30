@@ -21,27 +21,25 @@
 \BOOKMARK [0][-]{chapter.3}{Demonstrator}{}% 21
 \BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 22
 \BOOKMARK [1][-]{section.3.2}{Model validation}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.3}{Discrete Kalman filter}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.1}{Kalman implementation}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.2}{Measurement and process noise}{section.3.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 29
+\BOOKMARK [1][-]{section.3.3}{Kalman implementation}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Measurement and process noise}{section.3.3}% 25
+\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 28
+\BOOKMARK [2][-]{subsection.3.5.2}{System Control}{section.3.5}% 29
 \BOOKMARK [1][-]{section.3.6}{Hardware}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.7}{ALLT NEDANF\326R \304R FR\305N METHOD S\305 G\326R VAD FAN MAN VILL MED DET H\304R PAJSD\305OAIHSDAIOHUSD}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.8}{Construction}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.9}{Motor and Motor Control}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.10}{Sensor Reading}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.11}{System Control}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.12}{Final Assembly}{chapter.3}% 36
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 37
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 38
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 40
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 41
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 42
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 43
-\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 44
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 45
-\BOOKMARK [1][-]{section.A.1}{Kalman implementation}{appendix.A}% 46
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 47
+\BOOKMARK [2][-]{subsection.3.6.1}{Construction}{section.3.6}% 31
+\BOOKMARK [2][-]{subsection.3.6.2}{Motor and Motor Control}{section.3.6}% 32
+\BOOKMARK [2][-]{subsection.3.6.3}{Sensor Reading}{section.3.6}% 33
+\BOOKMARK [2][-]{subsection.3.6.4}{Final Assembly}{section.3.6}% 34
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 35
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 38
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 39
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 41
+\BOOKMARK [0][-]{section*.6}{Bibliography}{}% 42
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 43
+\BOOKMARK [1][-]{section.A.1}{Kalman implementation, more elaborative}{appendix.A}% 44
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 45

@@ -1,0 +1,455 @@
+STEP translation to Solid Edge
+Date: onsdag,april 29,2015 09 :26
+Source File: C:\Users\Mikael\Desktop\Arduino cad\arduino uno.STEP
+Author: 'A'
+Organization: '
+Source System: SolidWorks 2012
+
+Hardware:
+Processor: Intel(R) Core(TM) i7 CPU         930  @ 2.80GHz
+Operating System: Windows 7 Professional Service Pack 1
+Installed Memory: 5.99 GB
+
+Software Information
+Parasolid Version: 26.0.139
+PSBodyShop Version: 16.1.150
+Translator Version: 16.42.0
+Solid Edge Version: 106.00.00.100 x64
+
+Step Import Options
+Enable transfer of attributes: On
+Import Class II Wires: On
+Import Class III Wires: On
+Import Class IV Surfaces: On
+Import Class VI Solids: On
+Enable Stitch : On
+Import and Sew Class II Surfaces: On
+Translate Class IV Solids as Trimmed Surfaces then Stitch: Off
+Boolean Solid Bodies: On
+Make Base Feature: On
+Simplify Geometry: On
+Heal and Sewing Enabled: Off
+Enable Internal Healing: On
+Export Part Component Names As Unicode: On
+
+Phase 1 of 3 Translating to Parasolid data types...
+End of Translation to Parasolid Data Types
+Time required to translate:00 : 00 : 20
+
+Phase 2 of 3 Simplify Geometry...
+Geometry simplification process complete
+Time required to simplify: 00 : 00 : 28
+Stitching free surfaces...
+
+Phase 3 of 3 Creating Parasolid entities...
+Translation process completed
+Total time required to translate and post process:00 : 00 : 52
+
+ssembly: 1
+Total Parts: 6
+Assemblies: 0
+Solid Bodies: 6
+Sheet Bodies: 0
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\USB SHELL.par
+Placing USB SHELL.par:1
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\USB core.par
+Placing USB core.par:1
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\usb top contact.par
+Placing usb top contact.par:1
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\usb btm contact.par
+Placing usb btm contact.par:1
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\usb btm contact.par
+Placing usb btm contact.par:2
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\usb top contact.par
+Placing usb top contact.par:2
+
+End Assembly: 1
+
+Created SE Assembly File C:\Users\Mikael\Desktop\Arduino cad\USB type b.SLDPRT.asm
+Placing USB type b.SLDPRT.asm:1
+
+Begin Assembly: 2
+Total Parts: 29
+Assemblies: 0
+Solid Bodies: 29
+Sheet Bodies: 0
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\dip28.par
+Placing dip28.par:1
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:1
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:2
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:3
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:4
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:5
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:6
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:7
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:8
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:9
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:10
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:11
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:12
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:13
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:14
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:15
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:16
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:17
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:18
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:19
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:20
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:21
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:22
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:23
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:24
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:25
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:26
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:27
+
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\dip socket pin.par
+Placing dip socket pin.par:28
+
+End Assembly: 2
+
+Created SE Assembly File C:\Users\Mikael\Desktop\Arduino cad\dip28.asm
+Placing dip28.asm:1
+
+Begin Assembly: 3
+Total Parts: 3
+Assemblies: 0
+Solid Bodies: 3
+Sheet Bodies: 0
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\RESET CORE.par
+Placing RESET CORE.par:1
+
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\RESET.par
+Placing RESET.par:1
+
+End Assembly: 3
+
+Created SE Assembly File C:\Users\Mikael\Desktop\Arduino cad\RESET BUTTON.asm
+Placing RESET BUTTON.asm:1
+
+Processing Solid Body 1 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\unoboard blue.par
+Placing unoboard blue.par:1
+
+Processing Solid Body 2 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\47uf CAP Dcase.par
+Placing 47uf CAP Dcase.par:1
+
+Processing Solid Body 3 of 123
+Processing Solid Body 4 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\power jack.par
+Placing power jack.par:1
+
+Processing Solid Body 5 of 123
+Processing Solid Body 6 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\47uf CAP Dcase.par
+Placing 47uf CAP Dcase.par:2
+
+Processing Solid Body 7 of 123
+Processing Solid Body 8 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\crystal.par
+Placing crystal.par:1
+
+Processing Solid Body 9 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\2pin_header__02.par
+Placing 2pin_header__02.par:1
+
+Processing Solid Body 10 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\nano - reg.par
+Placing nano - reg.par:1
+
+Processing Solid Body 11 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\led.par
+Placing led.par:1
+
+Processing Solid Body 12 of 123
+Processing Solid Body 13 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\2pin_header__02.par
+Placing 2pin_header__02.par:2
+
+Processing Solid Body 14 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\2pin_header__02.par
+Placing 2pin_header__02.par:3
+
+Processing Solid Body 15 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\2pin_header__02.par
+Placing 2pin_header__02.par:4
+
+Processing Solid Body 16 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\2pin_header__02.par
+Placing 2pin_header__02.par:5
+
+Processing Solid Body 17 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\2pin_header__02.par
+Placing 2pin_header__02.par:6
+
+Processing Solid Body 18 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\atmega16u2.par
+Placing atmega16u2.par:1
+
+Processing Solid Body 19 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\led.par
+Placing led.par:2
+
+Processing Solid Body 20 of 123
+Processing Solid Body 21 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\led.par
+Placing led.par:3
+
+Processing Solid Body 22 of 123
+Processing Solid Body 23 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\led.par
+Placing led.par:4
+
+Processing Solid Body 24 of 123
+Processing Solid Body 25 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\8 PORT HEADER.par
+Placing 8 PORT HEADER.par:1
+
+Processing Solid Body 26 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\8 PORT HEADER.par
+Placing 8 PORT HEADER.par:2
+
+Processing Solid Body 27 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\6 PORT HEADER.par
+Placing 6 PORT HEADER.par:1
+
+Processing Solid Body 28 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\10 PORT HEADER.par
+Placing 10 PORT HEADER.par:1
+
+Processing Solid Body 29 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\ATMEL328P.par
+Placing ATMEL328P.par:1
+
+Processing Solid Body 30 of 123
+Processing Solid Body 31 of 123
+Processing Solid Body 32 of 123
+Processing Solid Body 33 of 123
+Processing Solid Body 34 of 123
+Processing Solid Body 35 of 123
+Processing Solid Body 36 of 123
+Processing Solid Body 37 of 123
+Processing Solid Body 38 of 123
+Processing Solid Body 39 of 123
+Processing Solid Body 40 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\102 RESISTOR PACK.par
+Placing 102 RESISTOR PACK.par:1
+
+Processing Solid Body 41 of 123
+Processing Solid Body 42 of 123
+Processing Solid Body 43 of 123
+Processing Solid Body 44 of 123
+Processing Solid Body 45 of 123
+Processing Solid Body 46 of 123
+Processing Solid Body 47 of 123
+Processing Solid Body 48 of 123
+Processing Solid Body 49 of 123
+Processing Solid Body 50 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\102 RESISTOR PACK.par
+Placing 102 RESISTOR PACK.par:2
+
+Processing Solid Body 51 of 123
+Processing Solid Body 52 of 123
+Processing Solid Body 53 of 123
+Processing Solid Body 54 of 123
+Processing Solid Body 55 of 123
+Processing Solid Body 56 of 123
+Processing Solid Body 57 of 123
+Processing Solid Body 58 of 123
+Processing Solid Body 59 of 123
+Processing Solid Body 60 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\103 RESISTOR PACK.par
+Placing 103 RESISTOR PACK.par:1
+
+Processing Solid Body 61 of 123
+Processing Solid Body 62 of 123
+Processing Solid Body 63 of 123
+Processing Solid Body 64 of 123
+Processing Solid Body 65 of 123
+Processing Solid Body 66 of 123
+Processing Solid Body 67 of 123
+Processing Solid Body 68 of 123
+Processing Solid Body 69 of 123
+Processing Solid Body 70 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\220 RESISTOR PACK.par
+Placing 220 RESISTOR PACK.par:1
+
+Processing Solid Body 71 of 123
+Processing Solid Body 72 of 123
+Processing Solid Body 73 of 123
+Processing Solid Body 74 of 123
+Processing Solid Body 75 of 123
+Processing Solid Body 76 of 123
+Processing Solid Body 77 of 123
+Processing Solid Body 78 of 123
+Processing Solid Body 79 of 123
+Processing Solid Body 80 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\16mhz crystal - measured.par
+Placing 16mhz crystal - measured.par:1
+
+Processing Solid Body 81 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\PADS001.par
+Placing PADS001.par:1
+
+Processing Solid Body 82 of 123
+Processing Solid Body 83 of 123
+Processing Solid Body 84 of 123
+Processing Solid Body 85 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:1
+
+Processing Solid Body 86 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\ssot3.par
+Placing ssot3.par:1
+
+Processing Solid Body 87 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\mf-msmf050-2.par
+Placing mf-msmf050-2.par:1
+
+Processing Solid Body 88 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:2
+
+Processing Solid Body 89 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:3
+
+Processing Solid Body 90 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\lmv358.par
+Placing lmv358.par:1
+
+Processing Solid Body 91 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:4
+
+Processing Solid Body 92 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:5
+
+Processing Solid Body 93 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:6
+
+Processing Solid Body 94 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:7
+
+Processing Solid Body 95 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\603 cap on pad.par
+Placing 603 cap on pad.par:8
+
+Processing Solid Body 96 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\lp2985dgkr.par
+Placing lp2985dgkr.par:1
+
+Processing Solid Body 97 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\cd1206 diode.par
+Placing cd1206 diode.par:1
+
+Processing Solid Body 98 of 123
+Processing Solid Body 99 of 123
+Processing Solid Body 100 of 123
+Processing Solid Body 101 of 123
+Processing Solid Body 102 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\cd1206 diode.par
+Placing cd1206 diode.par:2
+
+Processing Solid Body 103 of 123
+Processing Solid Body 104 of 123
+Processing Solid Body 105 of 123
+Processing Solid Body 106 of 123
+Processing Solid Body 107 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\603 resistor.par
+Placing 603 resistor.par:1
+
+Processing Solid Body 108 of 123
+Processing Solid Body 109 of 123
+Processing Solid Body 110 of 123
+Processing Solid Body 111 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\blm21.par
+Placing blm21.par:1
+
+Processing Solid Body 112 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\m7 diode.par
+Placing m7 diode.par:1
+
+Processing Solid Body 113 of 123
+Created SE Part File C:\Users\Mikael\Desktop\Arduino cad\MLC0603.par
+Placing MLC0603.par:1
+
+Processing Solid Body 114 of 123
+Processing Solid Body 115 of 123
+Processing Solid Body 116 of 123
+Processing Solid Body 117 of 123
+Reusing File C:\Users\Mikael\Desktop\Arduino cad\MLC0603.par
+Placing MLC0603.par:2
+
+Processing Solid Body 118 of 123
+Processing Solid Body 119 of 123
+Processing Solid Body 120 of 123
+
+
+

@@ -19,7 +19,7 @@ l = 0.17;               %Length of the cube frame [m]
 g = 9.82;               %Gravitation [Kg*m/s^2]
 nf = 7580;              %No load speed [rpm]
 V = 48;                 %Nominal voltage [V]
-K_emf = 1/158;          %Voltage constant [V/rpm]
+K_emf = 10/158;          %Voltage constant [V/rpm]
 eta = 0.9;              %Motor efficiency
 Rm = 1.16;              %Motor resistance [Ohm]
 rs = l/2-0.01;          %Radius flywheel [m]
@@ -28,7 +28,7 @@ Is = Ms*rs^2/2;         %Inertia flywheel [kgm^2]
 L = 0.329E-3;           %Motor inductance [H]
 J = 138E-7;             %Inertia rotor [kgm^2]
 
-%State space modelling
+%State space modelling of the dynamic system
 % Assembly of A matrix
 a11 = 0;
 a12 = 1;
@@ -75,9 +75,9 @@ states = {'theta' 'theta_dot' 'phi_dot'};
 inputs = {'u'};
 outputs = {'theta' 'theta_dot' 'phi_dot'};
 % Väljer godtyckliga poler
-p0 = -5+5i;
-p1 = -5-5i;
-p2 = -20;
+p0 = -2+2i;
+p1 = -2-2i;
+p2 = -8;
 
 K = place(A, B, [p0, p1, p2]);
 % p = 500;
@@ -98,7 +98,7 @@ min_current = Mtot*g*l*sin(theta_start*pi/180)/(sqrt(2)*Kt*eta*etaGear*Gear)
 %% Model validation
 close all
 Motorval = figure
-time = 5;
+time = 1;
 t=0:time/length(vel):time-time/length(vel);
 subplot(1,2,1)
 plot (t, vel)

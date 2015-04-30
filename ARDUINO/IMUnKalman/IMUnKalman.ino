@@ -70,12 +70,12 @@ int SENSOR_SIGN[9] = {1,1,1,-1,-1,-1,1,1,1}; //Correct directions x,y,z - gyro, 
 
 // LSM303 magnetometer calibration constants; use the Calibrate example from
 // the Pololu LSM303 library to find the right values for your board
-#define M_X_MIN -421
-#define M_Y_MIN -639
-#define M_Z_MIN -238
-#define M_X_MAX 424
-#define M_Y_MAX 295
-#define M_Z_MAX 472
+#define M_X_MIN 270//-421
+#define M_Y_MIN -236//-639
+#define M_Z_MIN -366//-238
+#define M_X_MAX 280//424
+#define M_Y_MAX -228//295
+#define M_Z_MAX -356//472
 
 #define Kp_ROLLPITCH 0.02
 #define Ki_ROLLPITCH 0.00002
@@ -91,7 +91,7 @@ int SENSOR_SIGN[9] = {1,1,1,-1,-1,-1,1,1,1}; //Correct directions x,y,z - gyro, 
 #define PRINT_ANALOGS 0 //Will print the analog raw data
 #define PRINT_EULER 1   //Will print the Euler angles Roll, Pitch and Yaw
 
-#define STATUS_LED 13 
+#define STATUS_LED 8 
 
 float G_Dt=0.02;    // Integration time (DCM algorithm)  We will run the integration loop at 50Hz if possible
 
@@ -100,6 +100,27 @@ long timer_old;
 long timer24=0; //Second timer used to print values 
 int AN[6]; //array that stores the gyro and accelerometer data
 int AN_OFFSET[6]={0,0,0,0,0,0}; //Array that stores the Offset of the sensors
+
+// OWN MODS
+
+volatile double test;
+volatile int8_t desired_voltage;
+
+// PWM things
+
+int desired_duty;
+int IN = 3;  // PWM out on pin
+int DIS = 10; // DIGITAL out//PWM out
+int INV = 12; // Digital out
+
+int SF  =2; // digital in
+int FB = A0;  // analog in pin A0
+
+int8_t previous_voltage;
+
+int duty;
+
+////
 
 int gyro_x;
 int gyro_y;
@@ -162,19 +183,25 @@ double gyroX = AN[0], gyroY = AN[1], gyroZ = AN[2];
 
 Kalman kalmanX; // Create the Kalman instances
 Kalman kalmanY;
-double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
+volatile double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
 //double roll  = atan2(accY, accZ) * RAD_TO_DEG;
 //double pitch = atan(-accX / sqrt(accY * accY + accZ * accZ)) * RAD_TO_DEG;
 //slut
 
+
 void setup()
 { 
-  Serial.begin(115200);
-  pinMode (STATUS_LED,OUTPUT);  // Status LED
+  
+  test = 6;
+  pwm_setup();
+  
+  
+  Serial.begin(9600);
+  //pinMode (STATUS_LED,OUTPUT);  // Status LED
   
   I2C_Init();
 
-  Serial.println("Pololu MinIMU-9 + Arduino AHRS");
+  // Serial.println("Pololu MinIMU-9 + Arduino AHRS");
 
   digitalWrite(STATUS_LED,LOW);
   delay(1500);
@@ -201,7 +228,7 @@ void setup()
   
   //Serial.println("Offset:");
   for(int y=0; y<6; y++)
-    Serial.println(AN_OFFSET[y]);
+    // Serial.println(AN_OFFSET[y]);
   
   delay(2000);
   digitalWrite(STATUS_LED,HIGH);
@@ -252,7 +279,7 @@ void loop() //Main Loop
     double dt = (double)(micros() - timer) / 1000000; // Calculate delta time
     //double dt = 1/50;
     double kroll = atan(accel_y/sqrt(accel_x*accel_x+accel_z*accel_z))*RAD_TO_DEG;
-    
+    kroll  = atan2(accel_y, accel_z) * RAD_TO_DEG;
     double gyroXrate = Gyro_Scaled_X(gyro_x)/131;
     if ((ToDeg(roll) < -90 && ToDeg(kalAngleX) > 90) || (ToDeg(roll) > 90 && ToDeg(kalAngleX) < -90)) 
     {
@@ -264,15 +291,36 @@ void loop() //Main Loop
     {
       kalAngleX = kalmanX.getAngle(ToDeg(roll), gyroXrate, G_Dt);
     } 
-    //kalAngleY = kalmanY.getAngle(pitch, AN[1], dt);
     
-    Serial.println(kalAngleX);
+    //kalAngleY = kalmanY.getAngle(pitch, AN[1], dt);
+    //Serial.write((const char*)&kalAngleX,4);
+    //Serial.write((const char*)&desired_voltage, 1);
+    Serial.println(ToDeg(roll)); // Kalman angle
     //Serial.print(",");
     //Serial.println(kalAngleY);
     //Serial.println(" klamansd");
     // Slut pa min kod
     
-    printdata();
-  }
-   
+    
+    //printdata();   //Prints output
+    // here starts the woop
+    
+    desired_voltage = (int8_t)Serial.read(); // Volt
+    if (desired_voltage ==-1)
+       {
+        desired_voltage = previous_voltage; 
+       }
+    previous_voltage = desired_voltage;
+    if (desired_voltage < 0) {
+     digitalWrite(INV, HIGH); // direction of motor
+     desired_duty = (desired_voltage * -1)*100/35;
+     pwm_write(desired_duty);
+    }
+    if (desired_voltage > 0 ) {
+   digitalWrite(INV, LOW); // direction of motor
+     desired_duty = (desired_voltage)*100/35;
+     pwm_write(desired_duty);
+    } 
+    
+    }
 }

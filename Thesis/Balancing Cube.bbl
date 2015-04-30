@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
@@ -7,6 +7,12 @@
   \providecommand{\doi}[1]{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\url{#1}\endgroup}\fi
 \providecommand{\bibinfo}[2]{#2}
+
+\bibitem[{Sjöstedt and Ramm(2015)}]{Github}
+\bibinfo{author}{M.~Sjöstedt}, \bibinfo{author}{A.~Ramm},
+  \bibinfo{title}{Balancing Cube},
+  \bibinfo{howpublished}{\url{https://github.com/Axram/CubeProject}},
+  \bibinfo{year}{2015}.
 
 \bibitem[{MATLAB(2014)}]{MATLAB:2014}
 \bibinfo{author}{MATLAB}, \bibinfo{title}{version 8.4.0 (R2014b)},
@@ -23,12 +29,13 @@
   \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Faculty for mathematics and
   physics, University of Ljubljana}, \bibinfo{year}{2008}.
 
-\bibitem[{Jaw-Kuen~Shiau and Chang(2012)}]{MEMSdrift}
-\bibinfo{author}{C.-X.~H. Jaw-Kuen~Shiau}, \bibinfo{author}{M.-Y. Chang},
-  \bibinfo{title}{Noise Characteristics of MEMS Gyro’s Null Drift and
-  Temperature Compensation}, \bibinfo{journal}{Journal of Applied Science and
-  Engineering} \bibinfo{volume}{15}~(\bibinfo{number}{3})
-  (\bibinfo{year}{2012}) \bibinfo{pages}{239--246}.
+\bibitem[{Shiau et~al.(2012)Shiau, Huang, and Chang}]{MEMSdrift}
+\bibinfo{author}{J.-K. Shiau}, \bibinfo{author}{C.-X. Huang},
+  \bibinfo{author}{M.-Y. Chang}, \bibinfo{title}{Noise Characteristics of MEMS
+  Gyro’s Null Drift and Temperature Compensation}, \bibinfo{journal}{Journal
+  of Applied Science and Engineering}
+  \bibinfo{volume}{15}~(\bibinfo{number}{3}) (\bibinfo{year}{2012})
+  \bibinfo{pages}{239--246}.
 
 \bibitem[{Simon(2001)}]{Simon2001}
 \bibinfo{author}{D.~Simon}, \bibinfo{title}{Kalman Filtering},
@@ -50,15 +57,28 @@
   Pendulum}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{School of
   electrial engineering , KTH}, \bibinfo{year}{2005}.
 
-\bibitem[{Daniel J.~Block(2007)}]{Lagrangeref}
-\bibinfo{author}{M.~W.~S. Daniel J.~Block, Karl J.~Åström},
-  \bibinfo{title}{The Reaction Wheel Pendulum}, \bibinfo{publisher}{Morgan \&
-  Claypool Publishers}, \bibinfo{year}{2007}.
+\bibitem[{Block et~al.(2007)Block, Åström, and Spong}]{Lagrangeref}
+\bibinfo{author}{D.~J. Block}, \bibinfo{author}{K.~J. Åström},
+  \bibinfo{author}{M.~W. Spong}, \bibinfo{title}{The Reaction Wheel Pendulum},
+  \bibinfo{publisher}{Morgan \& Claypool Publishers}, \bibinfo{year}{2007}.
 
 \bibitem[{Johansson(2003)}]{elektro}
 \bibinfo{author}{H.~Johansson}, \bibinfo{title}{Elektroteknik},
   \bibinfo{publisher}{Institutionen för Maskinkonstruktion, KTH},
   \bibinfo{year}{2003}.
+
+\bibitem[{Lauszus(2012)}]{TKJkalman}
+\bibinfo{author}{K.~Lauszus}, \bibinfo{title}{KalmanFilter},
+  \bibinfo{howpublished}{\url{https://github.com/TKJElectronics/KalmanFilter}},
+  \bibinfo{year}{2012}.
+
+\bibitem[{Han et~al.(2009)Han, Wang, and Knight}]{Allancalibration}
+\bibinfo{author}{S.~Han}, \bibinfo{author}{J.~Wang},
+  \bibinfo{author}{N.~Knight}, \bibinfo{title}{Using Allan Variance to
+  determine the calibration model of inertial sensors for GPS/INS integration},
+  \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{School of Optoelectronics
+  Science and Engineering, National University of Defense Technology, China},
+  \bibinfo{year}{2009}.
 
 \bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
   D'Andrea}]{cubliECC13}

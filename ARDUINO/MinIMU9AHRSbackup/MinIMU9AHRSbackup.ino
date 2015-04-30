@@ -251,27 +251,28 @@ void loop() //Main Loop
     // Alex klamanforsok- kod fram till ej med printdata()
     double dt = (double)(micros() - timer) / 1000000; // Calculate delta time
     //double dt = 1/50;
-    double kroll = atan(accel_y/sqrt(accel_x*accel_x+accel_z*accel_z))*RAD_TO_DEG;
+    double kroll = ToDeg(atan(accel_y/sqrt(accel_x*accel_x+accel_z*accel_z)));
     
-    double gyroXrate = Gyro_Scaled_X(gyro_x)/131;
-    if ((roll < -90 && kalAngleX > 90) || (roll > 90 && kalAngleX < -90)) 
+    double gyroYrate = Gyro_Scaled_Y(gyro_y)/131;
+    if ((ToDeg(pitch) < -90 && kalAngleY > 90) || (ToDeg(pitch) > 90 && kalAngleY < -90)) 
     {
-      kalmanX.setAngle(roll);
-      kalAngleX = roll;
+      kalmanY.setAngle(ToDeg(pitch));
+      kalAngleY = ToDeg(pitch);
     } 
     else
     {
-      kalAngleX = kalmanX.getAngle(roll, gyroXrate, G_Dt);
+      kalAngleY = kalmanY.getAngle(ToDeg(pitch), gyroYrate, G_Dt);
+      //kalAngleX = kalmanX.getAngle(ToDeg(roll), gyroXrate, G_Dt);
     } 
     //kalAngleY = kalmanY.getAngle(pitch, AN[1], dt);
     
-    Serial.println(kalAngleX);
+    Serial.println(kalAngleY);
     //Serial.print(",");
     //Serial.println(kalAngleY);
     //Serial.println(" klamansd");
     // Slut pa min kod
     
-    printdata();
+    //printdata();
   }
    
 }
