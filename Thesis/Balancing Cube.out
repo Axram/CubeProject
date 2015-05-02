@@ -16,7 +16,7 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{State Estimator}{section.2.2}% 16
 \BOOKMARK [2][-]{subsection.2.2.2}{The process}{section.2.2}% 17
 \BOOKMARK [1][-]{section.2.3}{Model dynamics}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.4}{Control theory}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.4}{Control theory and pole placement}{chapter.2}% 19
 \BOOKMARK [1][-]{section.2.5}{Pulse Width Modulation}{chapter.2}% 20
 \BOOKMARK [0][-]{chapter.3}{Demonstrator}{}% 21
 \BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 22
@@ -42,4 +42,5 @@
 \BOOKMARK [0][-]{section*.6}{Bibliography}{}% 42
 \BOOKMARK [0][-]{appendix.A}{Additional information}{}% 43
 \BOOKMARK [1][-]{section.A.1}{Kalman implementation, more elaborative}{appendix.A}% 44
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 45
+\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 45
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 46

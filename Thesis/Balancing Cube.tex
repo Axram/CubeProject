@@ -503,9 +503,12 @@ $\textbf{B} = \begin{bmatrix}
 \end{bmatrix} $
 \end{center}
  
-\section{Control theory}
-To create a state space feedback loop...
-Use Ackermann instead of place? Why ?
+\section{Control theory and pole placement}
+When using a state-space control system the poles of the controller is chosen by the engineer. But if a poor choice
+is made the response of the system will not satisfy the requirements of the regulator. If place to far away from the 
+openloop poles high input signals might be required \cite{regler}. The openloop poles can be calculated by solving the eigenvalues 
+for the A matrix. Also one must check that the system is controllable for the posed states. Then a gain matrix can 
+be computed and the system can be closed.
 
 \section{Pulse Width Modulation}
 Pulse Width Modulation:
@@ -625,10 +628,29 @@ How do we send data?
 \\ Motor control
 
 \subsection{PWM}
-skriv lite om PWM hax
+The PWM frequency were chosen to 20KHz, the maximum the motor controler can cope with [].
+ 
 
 \subsection{System Control}
-The choosen control method where state space. The problem in to linareise and discretise with good enough precition.
+The choosen control method where state space. The problem in to linareise and discretise with good enough precition.The poles for the control system were choosen for the openloop system and the system was simulated in 
+	simulink to assure that the respose was as expected. 
+	The gain matrix is calculated as the eigenvalues of A-BK ~= p, (p is the choosen poles), using matlab place
+	It uses a robust calculation algorithm formulated by Kautskyn for determining the gain matrix.
+
+
+To be able to use a microcontroler the controlsystem must be discrerte. When translating a analytical system to a 
+discrete system a few thing must be considerd. The method of samplig is crutial. If the sampling frequancy is to 
+low the system responce might not detct changes att all or aliasing can cause it to behave unexpectedly. Due to the 
+Nyquist critera the sampling frequency mus be: f>=2*t, twice as high as the smalles frequency you want to be able to
+detect. Then the signal must be low pass filterd with a cut off frequecny close to t to make sure that no unwanted
+frequencies is taken into the regulator.
+All non measured derivatives must be calculated. Simulink does this by calculatin an combination of tustin and 
+backward Euler[mathworks][bilaga]. This causes a numerical error depending on the step in time. And the time step
+in turn depends on the sampling frequency, too low frequency causes a big stem in time which leads to large numerical 
+errors.
+Most variables and states will in the microprocessor be handels as double or also know an Double-point floating-point
+format. This causes an trunctuation error in every calculation. The double is only the size of a float, 32-bit(?). This
+means that we unly reliably can use 6 decimal digits of precition[float].
 
 \section{Hardware}
 The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other components are mounted on the motor-body side of the cube.
@@ -821,6 +843,36 @@ P\textsubscript{11} & P\textsubscript{12} \\
 P\textsubscript{21} & P\textsubscript{22}
 \end{bmatrix}^-\textsubscript{k}
 \end{equation}
+
+\section{Arduino PWM implementation} \label{app: PWM}
+The arduino micro controler has a couple of different standard pulse with modulation (PWM) modes. But the standard frequacies is 490 an 980 Hz. "Having" a significantly higer 
+frequency has many advantages, espesaly for the controll system. The choosen motor controler could work in two modes, one of them ultra sonic. This is nice because the human ear 
+can not hear frequencies above ~ 18 KHz. The arduino uno's maximum PWM frequency is ~ 61 KHz, too much for the motor controller. A bit of register manipulation had to be 
+done to accomplish a acceptable PWM frequency.
+
+The arduino has 3 clocks that controls various pins and functions in the enviroment. The clocks, and their respective pins and bit size, are: Timer 0: controls digital pin 10
+works in 8 bits and also are the reference for the delay(), millis() and micros() built in functions. Ie messing with time0 might mess code up if the code is using these functions. 
+Timer1: The 16 bit timer. Controlls pin 5 and 6 and hase more modes of operation than the other two timers. Timer2 another 8 bit timer responsible for pin 3 and 11 on the 
+arduino uno. Each of these timers can be set the varions pmw modes individualy, more on this later. All timers have prescalers which devides the chips clock speed to vary the 
+frequency of the pwm signal in ruff discrete steps (the difference between the fastest and the next to fastes fequency on timer1 is 53 KHz)(see avr documentation for mor info). 
+
+When using pwm you set the pwm duty cycle (and optionally frequency). One the pwm is set this works parallel to the main program and does not affect the time the program takes (except 
+when changing the pwm parameters). For example this is useful when only one arduino is used for multipe tasks, and computing time becomes expensive. A non inverted mode where used, 
+meaning that 100% duty cyckle equals full power all the time. There are mulitple modes of pwm on the arduino. The main ones whe have to choose between are fast pwm and phase corret pwm. 
+When using the phase correct pwm (pcpwm) a counter counts up every clock cycle until the counter reaches a compare value, TOP. When TOP is reached the counter is reset or "set" acording to the avr 
+documentation, be aware that you must choose "set" not "clear" or "set bottom" for our method to work. Then you must set the duty cycle to a value between 0 and TOP. Choosing 
+duty to TOP//2 will yeild a 50% duty cycle. For modes where you can not set the TOP value it defaults to 0xFF or 255 in decimal.
+
+When using the pcpwm (on timer2 in our case), mode 5, the TOP value and duty cycle for ONE of timer2's pin's are the same variable. This means that one can not change the duty 
+cycle for a certain frequency. Because the frequency = clock/(2*prescaler*TOP). But the other pin (nr 3) is left unaffected. So if you set the pwm for 20 KHz by choosing 100 
+as TOP (OCR2A for timer2) and the prescaler value to 8 (TCCR2B = (1<<CS21) pin 11 will always have 50% duty cycle at 20 KHz. But you can choose another duty cycle for pin 3 
+(OCR2B) while maintaining 10 KHZ due to the TOP, OCR2A value is not changed. The con of this method is that it requires 2 pins, both 3 and 11 while we only use 1 (nr 3). But
+this was a price that we where willing to pay to achive the spesific frequency of 20 KHz to control the motor without having to cope with an headic from the noce from a 
+hearable pwm frecuency.
+
+To choose mode you must set the correct WGM vaues in the TCCR2A and TCCR2B registers, the "2" stands for timer2. Timer 2 is 8 bit so it has a maximum of 8 modes. If instead timer1 is 
+used more modes can be choosen allowing for a greater amount of operation modes. Other arduino boards might have a greater number of timers which allowes fore more than 3 
+different pwm's, with non defalut frequencis, being used at the same time.
 
 \chapter{Proofs} \label{appB}
 
