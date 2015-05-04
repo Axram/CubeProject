@@ -3,7 +3,7 @@ clear all
 close all
 %% Maxon 148877  DC
 max_voltage = 48;       %[V]
-max_current = 4;        %[A]       THIS IS THE PROBLEM
+max_current = 10;        %[A]       THIS IS THE PROBLEM
 Kt = 60.3E-3;           %[Nm/A]
 etaGear = 0.8;          %Gear efficiency
 Gear = 5.2;             %Gear ratio
@@ -27,7 +27,7 @@ Ik = 0.015; %0.004;     %Inertia cube [kgm^2]
 Is = Ms*rs^2/2;         %Inertia flywheel [kgm^2]
 L = 0.329E-3;           %Motor inductance [H]
 J = 138E-7;             %Inertia rotor [kgm^2]
-
+Ts = 1/0.001;
 %State space modelling of the dynamic system
 % Assembly of A matrix
 a11 = 0;

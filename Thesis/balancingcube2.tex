@@ -44,7 +44,7 @@ Approved: & TBA 2015-month-day
 
 \begin{document}
 
-\includepdf[pages={1}]{kth-cover.pdf}
+%\includepdf[pages={1}]{kth-cover.pdf}
 \clearpage
 
 \frontmatter
@@ -203,9 +203,9 @@ The last part will cover the theory of the mechanical system behaviour that is u
 
 \section{Inertial Measurement Unit} \label{section:IMU}
 The data collected for calculating the angle of the cube is gathered from an IMU. This is an unit that uses both an accelerometer and a gyroscope to track the orientation and position. An IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measures linear acceleration and angular velocity in each direction seperately. There are also units that are rated for additional degrees of freedom that usually includes features such as magnetometer or barometer sensors.   
-To understand the fundamentals of an inertial system a Cartesian coordinate system is defined in figure \ref{figure: cartesian coord}.  
+To understand the fundamentals of an inertial system a cartesian coordinate system is defined
 
-\begin{figure}[!hbt] \label{figure: cartesian coord}
+\begin{figure}[!hbt]
 \centering
 \tdplotsetmaincoords{60}{110}
 %
@@ -233,8 +233,6 @@ To understand the fundamentals of an inertial system a Cartesian coordinate syst
 \end{tikzpicture}
 \caption{Cartesian coordinate system}
 \end{figure}
- 
- --The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axis'es while the gyroscope measures the angular rate around these axes, ie if the gyroscope rotates along the $z$-axis it would output a yaw rate.-- 
  
 The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is more or less a very small unit that take use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy. \cite{IMUintro}
 \subsection{Accelerometer}
@@ -293,7 +291,9 @@ The force is then converted to an acceleration, this is done by measuring the ch
 \caption{Accelerometer \textsc{pic}}
 \end{figure}
 
-The capacitance is then usually measured between a conductive plate and the known mass, seen in figure \ref{Fig: Accelerometer}. This is typically used to determine the displacement of the mass and then calculate the force applied to it with the help of the known spring mass system. --- converted to a voltage that is sent to the microcontroller for further use. --- The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position with the help of an accelerometer.
+
+
+The change of capacitance is converted to a voltage that is sent to the microcontroller for further use. The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position with the help of an accelerometer.
 \cite{ref:accelerometero}
 
 \subsection{Gyroscope} \label{gyroscope}
@@ -363,11 +363,11 @@ Gyroscopes unlike accelerometers, does not measure linear acceleration. Gyroscop
 
 \end{figure}
 
-Consider figure \ref{Fig: Gyroscope} where a mass is vibrating along $y$-axis, with the momentary velocity $v$. When the mass is rotated along the $z$-axis, a secondary vibration perpendicular to the first is induced which is explained by the Coriolis force
+A mass is vibrating along an axis, with the momentary velocity $v$, and when the mass is rotated, a secondary perpendicular vibration is induced which is explained by the coriolis force
 \begin{equation}\label{eq:coriolis}
 \textbf{F}_c = -2m(\textbf{\textit{w}} \times \textbf{\textit{v}})
 \end{equation}
-The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. ---So for example if a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate.---
+The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. So for example if a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate.
 
 A micromechanical gyroscope is, like the accelerometer, effected by a constant bias. This is often due to friction caused by moving parts or production variations that induces stress on the construction resulting in an offset of the output. If a constant error is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.
 The constant bias introduced above is not entirely constant either. The small size and sensitivity of this device is making the bias wander due to flickering noise in the electronics. Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
@@ -914,46 +914,35 @@ P\textsubscript{21} & P\textsubscript{22}
 \end{bmatrix}^-\textsubscript{k}
 \end{equation}
 
-
-This is done during each loop of the microcontroller to ensure that the estimated ---
-
 \section{Arduino PWM implementation} \label{app: PWM}
-The arduino micro controler has a couple of different standard pulse width modulation (\textit{PWM} modes. But the standard frequencies are 490 and 980 Hz. "Having" a significantly higher 
-frequency have many advantages, especially for the control system. The chosen motor controller could work in two modes, one of them being ultrasonic the other below ultrasonic. Setting the PWM frequency above the standard frequency is preferably because the the motor becomes more efficient \textsc{SOURCE} and the human ear can not hear frequencies above ~ 18 KHz. The Arduino uno's maximum PWM frequency is ~ 61 KHz, which is too much for the motor controller \textsc{WHY}. A bit of register manipulation had to be 
-done to accomplish an acceptable PWM frequency.
+The arduino micro controler has a couple of different standard pulse with modulation (PWM) modes. But the standard frequacies is 490 an 980 Hz. "Having" a significantly higer 
+frequency has many advantages, espesaly for the controll system. The choosen motor controler could work in two modes, one of them ultra sonic. This is nice because the human ear 
+can not hear frequencies above ~ 18 KHz. The arduino uno's maximum PWM frequency is ~ 61 KHz, too much for the motor controller. A bit of register manipulation had to be 
+done to accomplish a acceptable PWM frequency.
 
-The Arduino has 3 clocks that controls various pins and functions in the environment. The clocks, and their respective pins and bit size, are:
-\begin{itemize}
-\item[\textbf{Timer 0}]
-controls digital pin 10 and
-works in 8-bits it also used as reference for the delay(), millis() and micros() built in functions. i.e. changing timer 0 might disturb the code up if the code is using these functions. 
-\item[\textbf{Timer 1}]
-The 16-bit timer. Controlls pin 5 and 6 and has more modes of operation than the other two timers
-\item[\textbf{Timer 2}]
-another 8-bit timer responsible for pin 3 and 11 on the 
-Arduino Uno.
-\end{itemize}
-Each of these timers can be set the various PWM modes individually, ---more on this later---. All timers have prescalers which divides the chips clock speed to vary the 
-frequency of the PWM signal in rough discrete steps (the difference between the fastest and the next to fastest fequency on timer1 is 53 KHz)(see avr documentation for mor info) \textbf{källa h'r eller ??}. 
+The arduino has 3 clocks that controls various pins and functions in the enviroment. The clocks, and their respective pins and bit size, are: Timer 0: controls digital pin 10
+works in 8 bits and also are the reference for the delay(), millis() and micros() built in functions. Ie messing with time0 might mess code up if the code is using these functions. 
+Timer1: The 16 bit timer. Controlls pin 5 and 6 and hase more modes of operation than the other two timers. Timer2 another 8 bit timer responsible for pin 3 and 11 on the 
+arduino uno. Each of these timers can be set the varions pmw modes individualy, more on this later. All timers have prescalers which devides the chips clock speed to vary the 
+frequency of the pwm signal in ruff discrete steps (the difference between the fastest and the next to fastes fequency on timer1 is 53 KHz)(see avr documentation for mor info). 
 
-When using PWM, the PWM duty cycle is used (and optionally frequency). Once the PWM duty cycle is set this works parallel to the main program and does not effect the main program but is rather run \textbf{annan tråd??}(except 
-when changing the PWM parameters). For example this is useful when only one Arduino is used for multiple tasks, and computing time becomes expensive. A non inverted mode where used, 
-meaning that 100\% duty cycle equals full power all the time. There are multiple modes of PWM on the Arduino. The main ones that can be choose from are fast - and phase corrected PWM. 
-When using the phase correct PWM (pcPWM) a counter counts up every clock cycle until the counter reaches a compare value, \textit{TOP}. When TOP is reached the counter is reset or "set" according to the AVR 
-documentation, be aware that for the method to work, the counter has to be adjusted to "set" not "clear" or "set bottom". Then the duty cycle has to be set to a value between 0 and TOP. Choosing duty to TOP/2 will yield a 50\% duty cycle. For modes where the TOP value is not specified it defaults to 0xFF or 255 in decimal.
+When using pwm you set the pwm duty cycle (and optionally frequency). One the pwm is set this works parallel to the main program and does not affect the time the program takes (except 
+when changing the pwm parameters). For example this is useful when only one arduino is used for multipe tasks, and computing time becomes expensive. A non inverted mode where used, 
+meaning that 100% duty cyckle equals full power all the time. There are mulitple modes of pwm on the arduino. The main ones whe have to choose between are fast pwm and phase corret pwm. 
+When using the phase correct pwm (pcpwm) a counter counts up every clock cycle until the counter reaches a compare value, TOP. When TOP is reached the counter is reset or "set" acording to the avr 
+documentation, be aware that you must choose "set" not "clear" or "set bottom" for our method to work. Then you must set the duty cycle to a value between 0 and TOP. Choosing 
+duty to TOP//2 will yeild a 50% duty cycle. For modes where you can not set the TOP value it defaults to 0xFF or 255 in decimal.
 
-When using the pcPWM (on timer2 in this case), mode 5, the TOP value and duty cycle for ONE of timer2's pin's are the same variable. This means that one can not change the duty 
-cycle for a certain frequency. The frequency can then be explained by equation \ref{eq: clock freq}
-\begin{equation} \label{eq: clock freq}
-frequency = \frac{clock}{2 \cdot prescaler \cdot TOP}
-\end{equation}
+When using the pcpwm (on timer2 in our case), mode 5, the TOP value and duty cycle for ONE of timer2's pin's are the same variable. This means that one can not change the duty 
+cycle for a certain frequency. Because the frequency = clock/(2*prescaler*TOP). But the other pin (nr 3) is left unaffected. So if you set the pwm for 20 KHz by choosing 100 
+as TOP (OCR2A for timer2) and the prescaler value to 8 (TCCR2B = (1<<CS21) pin 11 will always have 50% duty cycle at 20 KHz. But you can choose another duty cycle for pin 3 
+(OCR2B) while maintaining 10 KHZ due to the TOP, OCR2A value is not changed. The con of this method is that it requires 2 pins, both 3 and 11 while we only use 1 (nr 3). But
+this was a price that we where willing to pay to achive the spesific frequency of 20 KHz to control the motor without having to cope with an headic from the noce from a 
+hearable pwm frecuency.
 
-But the other pin (nr 3) is left uneffected. So if the desired PWM is 20 KHz it is done by choosing 100 
-as TOP (OCR2A for timer2) and the prescaler value to 8 (TCCR2B = (1<<CS21) pin 11 will always have 50\% duty cycle at 20 KHz. But the duty cycle for pin 3 can be set continiously.  you can choose another duty cycle for pin 3  \textbf{HÄR ÄR DET KNAS ?}
-(OCR2B) while maintaining 10 KHZ due to the TOP, OCR2A value is not changed. The disadvantage of this method is that it requires 2 pins, while only one is used. A minor price to pay for a specific frequency and reduced headache from the high pitched noise.
-
-To choose mode you must set the correct WGM vaues in the TCCR2A and TCCR2B registers. The fourth letter "2" represents timer 2. Timer 2 is 8-bit so it has a maximum of 8 modes. If instead timer 1 is 
-used more modes can be chosen allowing for a greater amount of operation modes. Other Arduino boards might have a greater number of timers which allows for more than three different PWM's, with non default frequencies, being used at the same time.
+To choose mode you must set the correct WGM vaues in the TCCR2A and TCCR2B registers, the "2" stands for timer2. Timer 2 is 8 bit so it has a maximum of 8 modes. If instead timer1 is 
+used more modes can be choosen allowing for a greater amount of operation modes. Other arduino boards might have a greater number of timers which allowes fore more than 3 
+different pwm's, with non defalut frequencis, being used at the same time.
 
 \chapter{Proofs} \label{appB}
 
