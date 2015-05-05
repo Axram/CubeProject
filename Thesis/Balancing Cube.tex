@@ -224,7 +224,7 @@ For every position the same parameters and constants were used in all systems an
 The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations were noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
 
 \chapter{Theory}
-\section{Introduction should we have this ?}
+\section{Introduction should we have this ? I think not, låt den vara o sub:ad kanske}
 This chapter cover some of the theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
 
 The first part is about the inertial reference unit that covers issues of sensor characteristics and why they are important to the system as a whole and the research question in particular.
@@ -791,7 +791,7 @@ How do we send data?
 
 \subsection{PWM}
 The PWM frequency were chosen to 20KHz, the maximum the motor controler can cope with [].
- 
+The duty cykle were only changed every 10:th loop to ensure that atleast a coublpe of periods of PWM was active before changing the duty cycle. If this is not considerd the dutu cycle might hange to fast and the average becomes skewed.  
 
 \subsection{System Control}
 The choosen control method where state space. The problem in to linareise and discretise with good enough precition.The poles for the control system were choosen for the openloop system and the system was simulated in 
@@ -815,10 +815,11 @@ format. This causes an trunctuation error in every calculation. The double is on
 means that we unly reliably can use 6 decimal digits of precition[float].
 
 \section{Hardware}
+(Flytta detta till design?)
 The motor is fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel is dicrectly mounted to the motor shaft. All other components are mounted on the motor-body side of the cube.
 \\ Basic construction
 
-\subsection{Construction}
+\subsection{Design}
 The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
 Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
  
@@ -827,9 +828,11 @@ The motors nominal and stall torque are very important for the system blaha. The
   
 \subsection{Sensor Reading}
 The IMU's parameters and filtering of the signals
+The IMU sends data att a much higer fequency than the main loop [] and the date were read once every loop run, so the sensor frew was not a limiting factor.
+
 
 \subsection{Final Assembly}
-When the subproblems above are solved and constructed, the final machine can be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
+When the subproblems above were solved and constructed, the final machine could be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
 The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
 
 
@@ -843,7 +846,9 @@ Beskriv resultatet.
 \emph{I detta kapitel diskuteras och sammanfattas de resultat som presenterats i föregående kapitel. Sammanfattningen baseras på en resultatanalys och syftar till att svara på den fråga eller de frågor som formuleras i kapitel i.}
 
 \section{Discussion}
+Bör kasnke ocksp vara relaterat till reaserach och stuff
 Motor choice osv
+I we had an encoder the state space model could have been used to a much greater extent.
 
 \section{Conclusions}
 Successful victory
