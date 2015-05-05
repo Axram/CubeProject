@@ -27,6 +27,7 @@
 \usetikzlibrary{calc,patterns,decorations.pathmorphing,decorations.markings}
 \usepackage{subcaption}
 \usepackage{tikz-cd}
+\usetikzlibrary{decorations.text}
 
 \tikzset{
     %Define standard arrow tip
@@ -412,24 +413,59 @@ The concepts of ARW, ARW and bias stability that has been introduced are more or
 \subsection{introduction}
 The signal from an IMU contains data of angular velocities and acceleration, but also a lot of noise, as explained earlier. A position estimated from an untreated signal from an IMU could work for short periods, but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs when measurements containing noise is integrated to acquire a position, the readings contain both white noise and often a bias which is making the  error to grow for every calulation.
 Integrating the angular motion from the gyro to estimate a position would result in an angular drift and an even worse drift for the accelerometer as it is integrated twice to estimate a position.
-By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.
+By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state. 
+
+One could say that the Kalman filter moves between \textsc{two phases (no good)} see Figure \ref{Fig: Kalman phases}. Firstly it estimates a state using a known process, which usually contains a noise. Then it adjusts the state to a measurement.
+
+\begin{figure}
+\centering
+
+\begin{tikzpicture}[ auto,]
+ \node[xshift = 3cm] (b) {\textbf{Measurement phase}}; 
+ \node[xshift = -3cm] (a) {\textbf{Update phase}};
+ \node[xshift = 4.5cm, yshift = 1.5cm] (dummy1) {Measurement};
+ \node[xshift = -4.5cm, yshift = -1.5cm] (dummy2) {State estimate};
+ \draw [->] (a) to [bend left = 45] (b);
+ \draw [->] (b) to [bend left = 45] (a);
+ \draw [->] (a) to (dummy2);
+ \draw [->] (dummy1) to (b);
+ 
+\end{tikzpicture}
+\caption{Kalman phases}
+\label{Fig: Kalman phases}
+\end{figure}
+
 Keep in mind that there are some regards that should be taken into consideration when choosing an estimator.
-A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. As well that the estimated state variance from the true state is as small as possible.\cite{Simon2001}
+A good estimator produces states that are non biased, \emph{values that have an average  of the true value}. As well that the estimated state variance from the true state is as small as possible\cite{Simon2001}.
 
 
 \subsection{State Estimator}
-The Kalman filter is, as stated above, a state based estimator. By using the last measurement and the one before that it can derive a better estimate of the current state. The true state and the measured value at a time \textit{k} would be
+The Kalman filter is, as stated above, is a state based estimator. By using the last measurement and the one before that it can derive a better estimate of the current state. The true state and the measured value at a time \textit{k} would be
 \begin{equation}\label{eq:kalmanstate}
 x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \end{equation}
 \begin{equation} \label{eq:kalmanmeas}
 z_k = Hx_k + v_k
 \end{equation}
-The true state $x$ is expressed with the the old state, an input $u$. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the process that cannot be mathematically predicted. When using a gyro this reflects the error characteristics mention in section\ref{gyroscope}. 
+The true state $x$ is expressed with the the old state and an input $u$. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the process that cannot be mathematically predicted. When using a gyroscope this reflects the error characteristics mention in section \ref{gyroscope}. 
 The measured value, $z$ seen in equation \eqref{eq:kalmanmeas} is an observed measurement. Ideally this would only be a function of $x$, but is distorted by the measurement noise $v$.
 The measurement noise, $v$, much like the process noise is common in any measurement and represents various fluctuations caused by the equipment.
 \\ \\
-As this recursive filter uses old and new values a \textit{a priori} and \textit{a posteriori} state is defined
+The Kalman filter estimates a reliable state $\hat{x}_k$
+\begin{equation}
+\hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
+\end{equation}
+where $hat{x}^-_k$ is an estimation of the state using the process, in this case the gyroscope. The second term $K_k\tilde{y}_k$ contains $tilde{y}_k$ which is a \textbf{parameter} that consider the measurement, the accelerometer. It also contains the Kalman gain, $K_k$ which indicates how reliable the measurement is and how much it should effect the new estimated state
+
+For further reading and explanation of how the Kalman filter works, see \ref{app: Kalman}.
+
+\textbf{Här bryter jag}
+
+
+
+
+
+To understand this recursive filter which use old and new values a \textit{a priori} and \textit{a posteriori} state is defined
 \begin{equation} \label{eq: priori state}
 \hat{x}^-_k
 \end{equation}
@@ -439,50 +475,10 @@ As this recursive filter uses old and new values a \textit{a priori} and \textit
 The \textit{a priori}  state in equation \eqref{eq: priori state} is defined as the estimate of the current state at the time $k$. The \textit{a posteriori} state \eqref{eq: posteriori state} is the new estimated state.
 For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the characteristics of Gaussian noise.
 
-\subsection{The process} 
-The Kalman filter loops two stages. The so called \textit{predict} and \textit{update} stages.
-\begin{figure}[!htb] 
-\centering
-\includegraphics[width = 0.7\textwidth]{Kalmanphasepic.jpg}
-\caption{Kalman phases.}
-\label{figure : Kalman phases}
-\end{figure}
 
-\begin{figure}[!htb] 
-\centering
 
-\begin{tikzcd}[column sep=huge]
-\textbf{Time update}
-  \arrow[bend left=50]{r}[name=U,label=above:]{} &
-  %\arrow[bend right=50]{r}[name=D,label=below:]{} &
-\textbf{Measurement Update}
-\arrow[bend right=50]{r}[name=D,label=below:]{} &
-naj
-  %\arrow[shorten <=10pt,shorten >=10pt,Rightarrow,to path={(U) -- node[label=right:$\det$] {} (D)}]{}
-\end{tikzcd}
-\caption{Kalman phases}
-\label{Fig:Kalman phases}
-\end{figure}
 
-\begin{figure}
-\centering
-
-\begin{tikzpicture}[node distance=1cm, auto,]
- % We make a dummy figure to make everything look nice.
- \node (dummy) {};
- \node[right=of dummy] (meas phase) {Measurement phase};
-   %edge[pil,bend left=45] (market.east) % edges are used to connect two nodes
-   %edge[pil, bend left=45] (formidler.east); % .east since we want
-                                             % consistent style
- \node[left=of dummy] (update phase) {Ultimate lender}
-   %edge[pil, bend right=45] (market.west)
-   %edge[pil, bend right=45] (formidler.west)
-   edge[pil,->, bend left=45] (meas phase.north west);
-\end{tikzpicture}
-\caption{tjul}
-\end{figure}
-
-During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the actual measurement, the accelerometer. See Figure \ref{figure : Kalman phases}.
+During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the actual measurement, the accelerometer. See Figure \ref{Fig: Kalman phases}.
 Consider the true state equation \eqref{eq:kalmanstate}, the Kalman filter is firstly estimating the first state by neglecting the process noise
 \begin{equation} \label{eq:Kalman first estimate}
 \hat{x}^-_k = A\hat{x}\textsubscript{k-1}+Bu\textsubscript{k-1}
@@ -521,7 +517,7 @@ A current state has been estimated and the Kalman filter and finally the \textit
 \begin{equation}
 P_k=(I-K_kH)P^-_k
 \end{equation} 
-The filter now returns to the measurement phase seen in figure \ref{figure : Kalman phases}.
+The filter now returns to the measurement phase seen in figure \ref{Fig: Kalman phases}.
 For further reading, and mathematical proof see \cite{Kalmanintro}.
 
 \section{Model dynamics} \label{chapter: state space}
@@ -704,32 +700,33 @@ For the implementation of Kalman filter a library made by Lauszus which is avail
 \centering
 \includegraphics[width = \textwidth]{Kalmancomparisonstat.eps}
 \caption{Comparison of Kalman filtered signal and original signal (TO BE UPDATED)}
-\label{fig:Kalman comparison}
+\label{Fig: Kalman comparison}
 \end{figure}
+
+Figure \ref{Fig: Kalman comparison} shows a comparison of the estimated angle at a stationary position using the gyroscope, accelerometer and the Kalman filtered signals separately. Plain to see is the gyroscope bias which is seen by the negative angle ramp \textsc{reforumlate..}. The accelerometer readings show that the signal contains a lot of white noise but still has a mean value around zero. 
+The Kalman filtered angle starts following the gyroscope readings but are then corrected when weighed against the accelerometer measurements which can be seen early in the plot. 
+This indicates that the Kalman filter works as it should but the estimated state should still not be considered \textit{true} as the reference is zero. 
+
 
 \begin{figure}
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{Kalmancomparisonturn.eps}
-  \caption{A subfigure}
-  \label{fig:sub1}
+  \caption{90 degree turn}
+  \label{Fig: Kalmanturn}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
   \centering
   \includegraphics[width=\linewidth]{Kalmancomparisonturnzoom.eps}
-  \caption{A subfigure}
-  \label{fig:sub2}
+  \caption{Zoomed view}
+  \label{Fig: Kalmanturnzoom}
 \end{subfigure}
 \caption{A figure with two subfigures}
-\label{fig:test}
+\label{Fig: Kalmanturnfull}
 \end{figure}
 
-
-
-
-The figure shows a comparison of the estimated angle when using the accelerometer and gyroscope separately and then  
-using the Kalman filter. Plain to see from the plot is that the data sent from the accelerometer contains a lot of noise while the gyroscope drifts.
+Figure \ref{Fig: Kalmanturnfull} illustrates the estimated angle during a 90 degree turn done by hand. Subfigure \ref{Fig: Kalmanturnzoom} shows a zoomed view of the plot where the gyroscope bias is obvious but the Kalman angle still follows the true value \textbf{Säger jag emot mig sj ? ,...} .
 
 
 
@@ -873,7 +870,65 @@ An extension of the project would be balancing the cube not only on it's edge bu
 
 
 \chapter{Additional information} \label{appA}
-\section{Kalman implementation, more elaborative} \label{app: Kalman}
+\section{Elaborative Kalman explanation (TTILE?)} \label{app: Kalman}
+\subsection{??}
+To understand this recursive filter which use old and new values a \textit{a priori} and \textit{a posteriori} state is defined
+\begin{equation} \label{eq: priori state}
+\hat{x}^-_k
+\end{equation}
+\begin{equation} \label{eq: posteriori state}
+\hat{x}_k
+\end{equation}
+The \textit{a priori}  state in equation \eqref{eq: priori state} is defined as the estimate of the current state at the time $k$. The \textit{a posteriori} state \eqref{eq: posteriori state} is the new estimated state.
+For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the characteristics of Gaussian noise.
+
+
+
+
+During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the actual measurement, the accelerometer. See Figure \ref{Fig: Kalman phases}.
+Consider the true state equation \eqref{eq:kalmanstate}, the Kalman filter is firstly estimating the first state by neglecting the process noise
+\begin{equation} \label{eq:Kalman first estimate}
+\hat{x}^-_k = A\hat{x}\textsubscript{k-1}+Bu\textsubscript{k-1}
+\end{equation}
+As stated above the Kalman filter uses readings from both the gyroscope and accelerometer to estimate a position closer to the true value. To determine how reliable the process and measurement readings are a noise covariance is defined as
+\begin{equation} \label{eq:covariance process noise}
+Q = E(w_k w_k \textsuperscript{T})
+\end{equation}
+\begin{equation} \label{eq:covariance measurement noise}
+R = E(v_k v_k \textsuperscript{T} )
+\end{equation}
+How to determine these covariances are further investigated in section  \ref{chapter:Allan Variance}
+From here the \textit{a priori} error covariance matrix is introduced to symbolize the noise in the process measurement
+\begin{equation}
+P^-_k = AP\textsubscript{k-1}A^T + Q_k
+\end{equation}
+During the \textit{update} the accelerometer measures are used. The measurement \textit{innovation} is calculated as
+\begin{equation} \label{eq: innovation}
+\tilde{y} = z_k - H\hat{x}^-_k
+\end{equation}
+The \textit{innovation} is a residual that reflects the relation between the predicted measurement and the actual measurement. A measurement \textit{innovation} of zero indicates a perfect agreement.
+The measurement \textit{innovation} covariance is calculated as
+\begin{equation} \label{eq:innovation cov}
+S_k = HP^-_kH^T + R
+\end{equation}
+The \textit{innovation} covariance is very similiar to the \textit{priori} error covariance but represents the measurement instead. From here the core of the Kalman filter can be calculated, the Kalman gain
+\begin{equation} \label{eq:Kalman gain}
+K_k = P^-_kH^TS\textsuperscript{-1}_k
+\end{equation}
+indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small and vice versa if the \textit{priori} error covariance is large.
+By now the \textit{posteriori} state can be estimated by
+\begin{equation}
+\hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
+\end{equation}
+A current state has been estimated and the Kalman filter and finally the \textit{priori} error covariance is updated
+\begin{equation}
+P_k=(I-K_kH)P^-_k
+\end{equation} 
+The filter now returns to the measurement phase seen in figure \ref{Fig: Kalman phases}.
+For further reading, and mathematical proof see \cite{Kalmanintro}.
+
+
+\subsection{Kalman implementation}
 \textsc{Kalman implementation goes here}
 The Kalman filter cycles two states, the \textit{predict} and \textit{update} phases. Kalman is using discretized steps making the filter implemented on a microprocessor fairly simple. 
 An implementation of the Kalman filter on the IMU would look something like this

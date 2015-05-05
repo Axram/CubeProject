@@ -21,7 +21,6 @@
 \contentsline {section}{\numberline {2.3}Kalman filter}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}introduction}{8}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}State Estimator}{9}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}The process}{9}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Model dynamics}{11}{section.2.4}
 \contentsline {section}{\numberline {2.5}Control theory and pole placement}{14}{section.2.5}
 \contentsline {section}{\numberline {2.6}Pulse Width Modulation}{14}{section.2.6}
@@ -30,15 +29,15 @@
 \contentsline {section}{\numberline {3.2}Model validation}{15}{section.3.2}
 \contentsline {section}{\numberline {3.3}Kalman implementation}{16}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Measurement and process noise}{17}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Software}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Electronics}{19}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}PWM}{20}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}System Control}{20}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Hardware}{21}{section.3.6}
+\contentsline {section}{\numberline {3.4}Software}{18}{section.3.4}
+\contentsline {section}{\numberline {3.5}Electronics}{18}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}PWM}{19}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}System Control}{19}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Hardware}{20}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Construction}{21}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}Motor and Motor Control}{21}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}Sensor Reading}{21}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Final Assembly}{21}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.4}Final Assembly}{22}{subsection.3.6.4}
 \contentsline {chapter}{\chapternumberline {4}Results}{23}{chapter.4}
 \contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion}{25}{section.5.1}
@@ -46,9 +45,11 @@
 \contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Recommendations}{27}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future work}{27}{section.6.2}
-\contentsline {chapter}{Bibliography}{29}{section*.20}
+\contentsline {chapter}{Bibliography}{29}{section*.18}
 \contentsline {part}{Appendices}{}{}
 \contentsline {chapter}{\chapternumberline {A}Additional information}{31}{appendix.A}
-\contentsline {section}{\numberline {A.1}Kalman implementation, more elaborative}{31}{section.A.1}
-\contentsline {section}{\numberline {A.2}Arduino PWM implementation}{32}{section.A.2}
-\contentsline {chapter}{\chapternumberline {B}Proofs}{35}{appendix.B}
+\contentsline {section}{\numberline {A.1}Elaborative Kalman explanation (TTILE?)}{31}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}??}{31}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Kalman implementation}{32}{subsection.A.1.2}
+\contentsline {section}{\numberline {A.2}Arduino PWM implementation}{33}{section.A.2}
+\contentsline {chapter}{\chapternumberline {B}Proofs}{37}{appendix.B}
