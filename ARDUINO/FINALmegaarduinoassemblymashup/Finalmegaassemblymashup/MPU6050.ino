@@ -64,6 +64,7 @@ void imu_setup() {
   gyroYangle = pitch;
   compAngleX = roll;
   compAngleY = pitch;
+  startXangle = roll;
 
   timer = micros();
 }

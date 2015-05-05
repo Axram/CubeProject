@@ -32,6 +32,8 @@ double gyroXangle, gyroYangle; // Angle calculate using the gyro only
 double compAngleX, compAngleY; // Calculated angle using a complementary filter
 double kalAngleX, kalAngleY; // Calculated angle using a Kalman filter
 
+double startXangle; // starting angle ...
+
 uint32_t timer;
 uint8_t i2cData[14]; // Buffer for I2C data
 
@@ -84,7 +86,7 @@ void setup() {
   gyroYangle = pitch;
   compAngleX = roll;
   compAngleY = pitch;
-
+  startXangle = roll;
   timer = micros();
 }
 
@@ -171,18 +173,18 @@ void loop() {
   Serial.print("\t");
 #endif
 
-  Serial.print(roll); Serial.print("\t");
-  Serial.print(gyroXangle); Serial.print("\t");
-  Serial.print(compAngleX); Serial.print("\t");
-  Serial.print(kalAngleX); Serial.print("\t");
+  Serial.println(roll-startXangle); //Serial.print("\t");
+  Serial.println(gyroXangle-startXangle); //Serial.print("\t");
+  //Serial.print(compAngleX); Serial.print("\t");
+  Serial.println(kalAngleX-startXangle);// Serial.print("\t");
 
-  Serial.print("\t");
-
+  //Serial.print("\t");
+/*
   Serial.print(pitch); Serial.print("\t");
   Serial.print(gyroYangle); Serial.print("\t");
   Serial.print(compAngleY); Serial.print("\t");
   Serial.print(kalAngleY); Serial.print("\t");
-
+*/
 #if 0 // Set to 1 to print the temperature
   Serial.print("\t");
 
@@ -190,6 +192,6 @@ void loop() {
   Serial.print(temperature); Serial.print("\t");
 #endif
 
-  Serial.print("\r\n");
+  //Serial.print("\r\n");
   delay(2);
 }

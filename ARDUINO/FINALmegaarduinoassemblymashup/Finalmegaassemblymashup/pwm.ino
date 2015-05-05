@@ -20,22 +20,22 @@ while(1) {
  OCR2B = 0;
  digitalWrite(DIS, HIGH); 
 }
-
 }
 */
 void pwm_setup(){
 //  delay(1000);
-
+noInterrupts();
   pinMode(13, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(DIS, OUTPUT);
   pinMode(INV, OUTPUT);
   pinMode(SF, INPUT);
 //  pinMode(11, OUTPUT);
-digitalWrite(INV, HIGH);
+  digitalWrite(INV, HIGH);
+  INVdir = HIGH;
   //analogWrite(IN, LOW);
   digitalWrite(DIS, LOW);
-  noInterrupts();
+  
   digitalWrite(2, LOW);
   TCCR2A = _BV(COM2B1) | _BV(WGM21) | _BV(WGM20);// pin 11 PWM Phase Correctrd mode 1 _BV(COM2A1) |
   TCCR2B = _BV(WGM22) | _BV(CS21);// prescaler == 1 och top fix
@@ -47,11 +47,26 @@ digitalWrite(INV, HIGH);
   //OCR2A =B01111111; // top
   OCR2B = 0;
   interrupts();
-//attachInterrupt(SF, stateFlagHigh, CHANGE);
+attachInterrupt(0, stateFlagHigh, LOW);
 sei();
 
 }
 void pwm_write(int duty)
 {
   OCR2B = duty;
+}
+void secureBrake()
+{
+  // För att bromsa inna man vänder
+  OCR2B = 0;
+  noInterrupts();
+  digitalWrite(DIS , HIGH);
+  int i = 0;
+  while (i<100) {
+  //delayMicroseconds(2000000); //Mycket otrevligt så hela mainloopen delayas
+  i+=1;
+  }
+  //Serial.println('brake');
+  digitalWrite(DIS, LOW);
+  interrupts();
 }

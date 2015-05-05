@@ -1,4 +1,4 @@
-/*int desired_duty;
+int desired_duty;
 int IN = 3;  // PWM out on pin
 int DIS = 10; // DIGITAL out//PWM out
 int INV = 12; // Digital out
@@ -6,12 +6,11 @@ int INV = 12; // Digital out
 int SF  =2; // digital in
 int FB = A0;  // analog in pin A0
 
-int8_t previous_voltage;
-double previous_voltage
+double previous_voltage;
 
 int duty;
-*/
-/*volatile int state = HIGH;
+
+volatile int state = HIGH;
 
 void stateFlagHigh() {
   //Serial.print ("STATUS ERROR");
@@ -22,8 +21,8 @@ while(1) {
 }
 
 }
-*/
-void pwm_setup(){
+
+void setup(){
 //  delay(1000);
 
   pinMode(13, OUTPUT);
@@ -34,6 +33,9 @@ void pwm_setup(){
 //  pinMode(11, OUTPUT);
 digitalWrite(INV, HIGH);
   //analogWrite(IN, LOW);
+  
+  digitalWrite(DIS, HIGH);
+  delay(500);
   digitalWrite(DIS, LOW);
   noInterrupts();
   digitalWrite(2, LOW);
@@ -47,11 +49,16 @@ digitalWrite(INV, HIGH);
   //OCR2A =B01111111; // top
   OCR2B = 0;
   interrupts();
-//attachInterrupt(SF, stateFlagHigh, CHANGE);
+attachInterrupt(0, stateFlagHigh, CHANGE);
 sei();
 
 }
 void pwm_write(int duty)
 {
   OCR2B = duty;
+}
+
+void loop() {
+  
+ pwm_write (30); 
 }

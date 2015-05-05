@@ -25,6 +25,29 @@
 \usetikzlibrary{positioning}
 \usepackage{circuitikz}
 \usetikzlibrary{calc,patterns,decorations.pathmorphing,decorations.markings}
+\usepackage{subcaption}
+\usepackage{tikz-cd}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+
 
 
 %\usepackage{appendix} 
@@ -36,8 +59,8 @@
 \blurb{ Bachelor's Thesis in Mechatronics \vspace{1em} \\
 \begin{tabular}{ll} 
 Supervisor: Daniel Frede &  \\
-Examiner:Martin Edin Grimheden \\ 
-Approved: & TBA 2015-month-day
+Examiner: Martin Edin Grimheden \\ 
+Approved: TBA 2015-month-day
 \end{tabular} }
 \trita{TRITA xxx yyyy-nn}
 
@@ -55,9 +78,11 @@ Approved: & TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-Robots that moves requires a high degree of precision from position tracking sensors. This paper studies how the 
-placement of these sensors affect the robots ability to determine its position. A robot with a cubical frame were 
-built, which were able to balance on a edge with help of a reaction wheel. The robot could determine its rotation using a sensor type called --inertial measurement unit--. Different sensor positions were evaluated empirically and...
+Robots that move require a high degree of precision from position tracking sensors. This paper studies how the 
+placement of these sensors effect the robots ability to determine its position. A robot with a cubical frame is
+built, which were able to balance on a edge with help of a reaction wheel. The robot determined its rotation using an inertial measurement unit. Different sensor positions were evaluated empirically and...
+
+\textbf{More selling from beginning. Dont miss results and conclusions}
  
 \end{abstract}
 \cleardoublepage
@@ -79,6 +104,7 @@ Here goes our thanks to sources of  help, cooperation, inspiration \\ To be fill
 % Here goes credits to Daniel Frede, Staffan, Assarna som tog sig tid, eventuella maskiner som inte strulat
 \begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
 
+% We would like to thank our supervisor Daniel Frede for his continous --- and could point us in the right direction. osv osv 
 
 %\clearpage
 
@@ -148,64 +174,73 @@ UAV			& Unmanned Aerial Vehicle\\
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH, Sweden. The work was carried out during the spring 2015.
 
 \section{Background}
-A reaction wheel is a wheel that is accelerated to apply torque to something. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Compared to most machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
+A reaction wheel is a wheel that is accelerated to apply torque. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Compared \textbf{to most} machines satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
 
 Balancing 1 \textit{degree of freedom} (DOF) inverted pendulum type structures using reaction wheels is no
 new concept, and became more accessible with the introduction of cheap microcontrollers.
-The use of automated control is growing in a rapid pace and is being implemented
+The use of automated control is growing at a rapid pace and is being implemented
 more and more in consumer related products.  This growth
-has made automated control together with sensors available more now than ever. It can be seen in the every-day life in product lines such as mobile phones, gaming controllers, cars and UAV’s such as quadrocopters.
+has made automated control together with sensors available more now than ever. It can be seen in the every-day life in product lines such as mobile phones, gaming controllers, cars and UAVs such as quadrocopters.
 
 One of the most basic systems that requires some control to become stable is the inverted pendulum. 
-Although it is simple to define controlling it is not a trivial task. A lot of work has been done on the topic
-but there are still no knowledge easily acquired by the public available. 
+Although it is simple to define, its control is not. A lot of work has been done on the topic
+but there are still no knowledge easily acquired by the \textbf{public available??}. 
 
 The method to achieve balance of the pendulum using reaction wheels is even more narrow. 
 In recent years prototypes of land based structures using reaction wheels have been a hot topic and some of these robots are truly remarkable. 
 
+\textbf{pretty shady part. Maybe to the authors it would be a great achievment. medel på det där med PHD }
 It would be a great achievement to contribute knowledge about how such a mechanism could be built and evaluate
 the capabilities and restrictions of such a machine, on a level that does not require a PhD.
 
 
 \section{Purpose}
-The goal of the project was to build a structure that in one degree of freedom that can maintain balance using a reaction wheel and examine the behaviours of the system.
-The behaviour (samma ord igen) is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
+The goal of the project was to build a structure with one degree of freedom that can maintain balance using a reaction wheel and examine the behaviours of the system. A concept idea of the robot can be seen in Figure \ref{Figure: concept idea}
+\begin{figure}[!htb] 
+\centering
+\includegraphics[width = \textwidth]{concept.pdf}
+\caption{Concept design}
+\label{Figure: concept idea}
+\end{figure}
+
+The dynamics is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
 This project will hopefully contribute to some development within the open-source community.
 All results are available online, open source (MIT license reference here), on GitHub \cite{Github}.
-As a mechatronical thesis, this paper can be divided into two parts. One engineering part which focus is to implement knowledge in mechanics, electronics and control theory to result in a functioning robot. And then a research part which topic could be concentrated to a question 
+As a thesis in mechatronics, this paper can be divided into two parts. One engineering part whose focus to implement knowledge in mechanics, electronics and control theory to result in a functioning robot. A research part whose topic could be concentrated to a question 
 
 \begin{italicquotes}
-How does the sensor placement effect the quality of the sensor data.
+How does the sensor placement effect the quality of the sensor data. --- what is quality ? how it effects system performance?
 \end{italicquotes}
-The only sensor that can be placed arbitrarily in the system is the \textit{Inertial Measurement Unit} (IMU). Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive devise and disturbances such as high current and fast oscillations in its vicinity might ruin the data entirely.[citation PLZ]. With quality defined as the usability of the data given by the sensor.
+The only sensor that can be placed arbitrarily in the system is the \textit{Inertial Measurement Unit} (IMU). Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive devise and disturbances such as high current and fast oscillations in its vicinity might ruin the data entirely.[citation PLZ]. With quality defined as the usability of the data given by the sensor. \textbf{somewhat vague}
 
 \section{Scope}
-The only sensor to be examined was the IMU. The encoder for the motor is fixed to the motor shaft and was not examined. Only a few key positions of the sensor were examined.
+The only sensor whose position is to be examined is the IMU, as the encoder for the motor is fixed to the motor shaft and was not examined. Only a few key positions of the sensor were examined.
 
-The effects that were looked at were the ones linked to the control system. Mainly the overshoot behaviour and the settling time of the system. Only data used for the specific control system were examined, other DOF measurements were not taken into consideration. I.e. the results may only be applicable in similar machines and not in general.
+The effects that were looked at were the ones related to the control system. Mainly the overshoot behaviour and the settling time of the system. Only data used for the specific control system were examined, \textbf{other DOF measurements were not taken into consideration ???}. I.e. \textbf{its a consquence} the results may only be applicable in similar machines and not in general.
 
-For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....). 
+For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....).  \textbf{this might belong to method?}
 
 \section{Method}
 The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations were noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
 
 \chapter{Theory}
-This chapter cover some theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
+\section{Introduction should we have this ?}
+This chapter cover some of the theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
 
 The first part is about the inertial reference unit that covers issues of sensor characteristics and why they are important to the system as a whole and the research question in particular.
 
 There is a part that discuss Kalman filter theory, a filter required for getting high quality data from the IMU. The filter interprets noisy data from the sensor and digitally filters the signal to a more trustworthy output. 
 
-The last part will cover the theory of the mechanical system behaviour that is used to develop the state space control system. The equations are responsible for the actual balance part and thus important. 
+The last part covers the theory of the mechanical system behaviour that is used to develop the state space control system. The equations are responsible for the actual balance part and thus important. 
 
 % When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Although the resolutions were not changed between measurements these settings could be important when comparing to another machine
 
 
 \section{Inertial Measurement Unit} \label{section:IMU}
-The data collected for calculating the angle of the cube is gathered from an IMU. This is an unit that uses both an accelerometer and a gyroscope to track the orientation and position. An IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measures linear acceleration and angular velocity in each direction seperately. There are also units that are rated for additional degrees of freedom that usually includes features such as magnetometer or barometer sensors.   
-To understand the fundamentals of an inertial system a Cartesian coordinate system is defined in figure \ref{figure: cartesian coord}.  
+The data collected for calculating the angle of the cube is gathered from an IMU, a unit that uses both an accelerometer and a gyroscope to track the orientation and position. A IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measure linear acceleration and angular velocity respectively. There are also units that are rated for additional degrees of freedom and usually include features such as magnetometer or barometer sensors.   
+To understand the fundamentals of an inertial system a Cartesian coordinate system is defined in Figure \ref{Figure: cartesian}
 
-\begin{figure}[!hbt] \label{figure: cartesian coord}
+\begin{figure}[!hbt] 
 \centering
 \tdplotsetmaincoords{60}{110}
 %
@@ -214,7 +249,7 @@ To understand the fundamentals of an inertial system a Cartesian coordinate syst
 \pgfmathsetmacro{\phivec}{60}
 %
 
-\begin{tikzpicture}[scale=5,tdplot_main_coords]
+\begin{tikzpicture}[scale=6,tdplot_main_coords]
     \coordinate (O) at (0,0,0);
     \draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
     \draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
@@ -232,21 +267,22 @@ To understand the fundamentals of an inertial system a Cartesian coordinate syst
 
 \end{tikzpicture}
 \caption{Cartesian coordinate system}
+\label{Figure: cartesian}
 \end{figure}
  
- --The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axis'es while the gyroscope measures the angular rate around these axes, ie if the gyroscope rotates along the $z$-axis it would output a yaw rate.-- 
+ --The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axes while the gyroscope measures the angular rate around these axes, ie if the gyroscope rotates along the $z$-axis it would output a yaw rate.-- 
  
-The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is more or less a very small unit that take use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but they still hold a disadvantage versus the optical units that is accuracy. \cite{IMUintro}
+The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is a very small unit that make use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but the raw output still contains significant noise \textsc{medel på denna mening}. \cite{IMUintro}
 \subsection{Accelerometer}
-Accelerometers are used to measure linear acceleration. Or rather, the device measure forces due to acceleration. These forces can be divided into two groups 
+Accelerometers are used to measure linear acceleration. Or rather, the device it measure forces due to acceleration. These forces can be divided into two groups 
 \begin{itemize}
 \item Static forces, such as gravity
 \item Dynamic forces, due to movement
 \end{itemize}
-The force is then converted to an acceleration, this is done by measuring the change in capacitance when a spring mass system is moving. The typical accelerometer consists of a movable mass that is attached via a mechanical spring or suspension system to a frame that is used as a reference. 
+The force is then converted into acceleration, this is done by measuring the change in capacitance when a spring mass system is moving. The typical accelerometer consists of a movable mass that is attached via a mechanical spring or suspension system to a frame that is used as a reference. 
+The capacitance is then usually measured between a conductive plate and the known mass, seen in figure \ref{Fig: Accelerometer}. This is typically used to determine the displacement of the mass and then calculate the force applied to it with the known spring mass system.
 
 \begin{figure} [!hbt]
-\label{Fig: Accelerometer} 
 \centering
 \begin{tikzpicture} [every node/.style={draw,outer sep=0pt,thick},]
 
@@ -290,14 +326,14 @@ The force is then converted to an acceleration, this is done by measuring the ch
 
 
 \end{tikzpicture}
-\caption{Accelerometer \textsc{pic}}
+\caption{Accelerometer capacitance }
+\label{Fig: Accelerometer} 
 \end{figure}
 
-The capacitance is then usually measured between a conductive plate and the known mass, seen in figure \ref{Fig: Accelerometer}. This is typically used to determine the displacement of the mass and then calculate the force applied to it with the help of the known spring mass system. --- converted to a voltage that is sent to the microcontroller for further use. --- The typical noise sources in an accelerometer is mechanical vibration of the springs, the circuitry and the measurement as well. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position with the help of an accelerometer.
-\cite{ref:accelerometero}
+Typical noise sources in accelerometers are mechanical vibration of the springs, circuitry and general equipment disturbances. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position otherwise the error would grow quadratic due to multiple integration of the measurements \cite{ref:accelerometero}.
 
 \subsection{Gyroscope} \label{gyroscope}
-Gyroscopes unlike accelerometers, does not measure linear acceleration. Gyroscopes, or gyros as they are referred as in everyday speech, measure the angular rate of velocity. This is done by making use of the Coriolis effect to measure the angular rate.
+Gyroscopes unlike accelerometers, do not measure linear acceleration. Gyroscopes measure the angular velocity. This is done by making use of the Coriolis effect to measure the angular rate.
 
 \begin{figure}[!hbt]
 
@@ -314,8 +350,6 @@ Gyroscopes unlike accelerometers, does not measure linear acceleration. Gyroscop
 \pgfmathsetmacro{\phivec}{60}
 
 %
-
-\label{Fig: Gyroscope}
 
 \begin{tikzpicture}[scale=8.5,tdplot_main_coords]
 
@@ -347,7 +381,7 @@ Gyroscopes unlike accelerometers, does not measure linear acceleration. Gyroscop
 
 
 
-\tdplotdrawarc[->,color=black]{(0,0,0.5)}{0.05}{0}{-330}{anchor=south west,color=black}{\textbf{$\omega$}}
+%\tdplotdrawarc[->,color=black]{(0,0,0.5)}{0.05}{0}{-330}{anchor=south west,color=black}{\textbf{$\omega$}}
 
 \tdplotsetthetaplanecoords{0}
 
@@ -360,22 +394,23 @@ Gyroscopes unlike accelerometers, does not measure linear acceleration. Gyroscop
 \end{tikzpicture}
 
 \caption{Gyroscope pic }
-
+\label{Fig: Gyroscope}
 \end{figure}
 
-Consider figure \ref{Fig: Gyroscope} where a mass is vibrating along $y$-axis, with the momentary velocity $v$. When the mass is rotated along the $z$-axis, a secondary vibration perpendicular to the first is induced which is explained by the Coriolis force
+Consider figure \ref{Fig: Gyroscope} where a mass is vibrating along the $y$-axis, with the momentary velocity $v$. When the mass is rotated along the $z$-axis, a secondary vibration perpendicular to the first is induced which is explained by the Coriolis force
 \begin{equation}\label{eq:coriolis}
 \textbf{F}_c = -2m(\textbf{\textit{w}} \times \textbf{\textit{v}})
 \end{equation}
-The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. ---So for example if a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate.---
+The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. ---If, for example a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate. \textbf{not necessary right?}---
 
-A micromechanical gyroscope is, like the accelerometer, effected by a constant bias. This is often due to friction caused by moving parts or production variations that induces stress on the construction resulting in an offset of the output. If a constant error is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.
-The constant bias introduced above is not entirely constant either. The small size and sensitivity of this device is making the bias wander due to flickering noise in the electronics. Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
-More troublesome errors that occur in MEMS gyroscopes thermo-mechanical white noise similiar to the accelerometer, a more or less uncorrelated error. This can be translated to a phenomena known as \textit{Angle Random Walk} or ARW that indicates how the integrated value is effected.
-The concepts of ARW, ARW and bias stability that has been introduced are more or less an indication of how precise the  are. \cite{IMUintro}  
+A micromechanical gyroscope is, like the accelerometer, effected by a bias. This is often due to friction caused by moving parts or production variations induce stress on the construction resulting in an offset of the output. If a constant error is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.
+This approach has a drawback. The small size and sensitivity of this device make the bias wander due to flickering noise in the electronics. \cite{IMUintro} Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
+More troublesome errors that occur in MEMS gyroscopes are thermo-mechanical white noise similiar to the accelerometer, a more or less uncorrelated error. This can be translated to a phenomena known as \textit{Angle Random Walk} or ARW that indicates how the integrated value is effected.
+The concepts of ARW, ARW and bias stability that has been introduced are more or less an indication of how precise the  are.
 
 \section{Kalman filter}
-The signal from an IMU contains data of angular velocities and acceleration, but also a lot of noise. An estimated position of an untreated signal from an IMU could work for short periods, but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs when measurements containing noise is integrated to acquire a position, the readings contain both white noise and often a bias which is making the  error to grow for every calulation.
+\subsection{introduction}
+The signal from an IMU contains data of angular velocities and acceleration, but also a lot of noise, as explained earlier. A position estimated from an untreated signal from an IMU could work for short periods, but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs when measurements containing noise is integrated to acquire a position, the readings contain both white noise and often a bias which is making the  error to grow for every calulation.
 Integrating the angular motion from the gyro to estimate a position would result in an angular drift and an even worse drift for the accelerometer as it is integrated twice to estimate a position.
 By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state.
 Keep in mind that there are some regards that should be taken into consideration when choosing an estimator.
@@ -390,29 +425,65 @@ x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \begin{equation} \label{eq:kalmanmeas}
 z_k = Hx_k + v_k
 \end{equation}
-The true state $x$ is expressed with the the old state, an input $u$, in this case data from the gyroscope. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the process that cannot be mathematically predicted. When using a gyro this reflects the error characteristics mention in section\ref{gyroscope}. 
-The measured value, $z$ (see \eqref{eq:kalmanmeas}) is an observed measurement, in this case the accelerometer. Ideally this would only be a function of $x$, but is distorted by the measurement noise $v$.
+The true state $x$ is expressed with the the old state, an input $u$. But the signal also contains a process noise $w$. The process noise $w$ in equation \eqref{eq:kalmanstate} is a representation of variances in the process that cannot be mathematically predicted. When using a gyro this reflects the error characteristics mention in section\ref{gyroscope}. 
+The measured value, $z$ seen in equation \eqref{eq:kalmanmeas} is an observed measurement. Ideally this would only be a function of $x$, but is distorted by the measurement noise $v$.
 The measurement noise, $v$, much like the process noise is common in any measurement and represents various fluctuations caused by the equipment.
 \\ \\
-As this recursive filter uses old and new values a \textit{priori} and \textit{posteriori} state is defined
+As this recursive filter uses old and new values a \textit{a priori} and \textit{a posteriori} state is defined
 \begin{equation} \label{eq: priori state}
 \hat{x}^-_k
 \end{equation}
 \begin{equation} \label{eq: posteriori state}
 \hat{x}_k
 \end{equation}
-The \textit{priori} \eqref{eq: priori state} state is defined as the estimate of the current state at the time $k$. The \textit{posteriori} state \eqref{eq: posteriori state} is the new estimated state.
-For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the charecteristics of gaussian noise.
+The \textit{a priori}  state in equation \eqref{eq: priori state} is defined as the estimate of the current state at the time $k$. The \textit{a posteriori} state \eqref{eq: posteriori state} is the new estimated state.
+For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the characteristics of Gaussian noise.
 
 \subsection{The process} 
-The Kalman filter loops two stages. The \textit{predict} and \textit{update} stages.
+The Kalman filter loops two stages. The so called \textit{predict} and \textit{update} stages.
 \begin{figure}[!htb] 
 \centering
 \includegraphics[width = 0.7\textwidth]{Kalmanphasepic.jpg}
 \caption{Kalman phases.}
 \label{figure : Kalman phases}
 \end{figure}
-\\ During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the measurement, the accelerometer. See figure \ref{figure : Kalman phases}
+
+\begin{figure}[!htb] 
+\centering
+
+\begin{tikzcd}[column sep=huge]
+\textbf{Time update}
+  \arrow[bend left=50]{r}[name=U,label=above:]{} &
+  %\arrow[bend right=50]{r}[name=D,label=below:]{} &
+\textbf{Measurement Update}
+\arrow[bend right=50]{r}[name=D,label=below:]{} &
+naj
+  %\arrow[shorten <=10pt,shorten >=10pt,Rightarrow,to path={(U) -- node[label=right:$\det$] {} (D)}]{}
+\end{tikzcd}
+\caption{Kalman phases}
+\label{Fig:Kalman phases}
+\end{figure}
+
+\begin{figure}
+\centering
+
+\begin{tikzpicture}[node distance=1cm, auto,]
+ % We make a dummy figure to make everything look nice.
+ \node (dummy) {};
+ \node[right=of dummy] (meas phase) {Measurement phase};
+   %edge[pil,bend left=45] (market.east) % edges are used to connect two nodes
+   %edge[pil, bend left=45] (formidler.east); % .east since we want
+                                             % consistent style
+ \node[left=of dummy] (update phase) {Ultimate lender}
+   %edge[pil, bend right=45] (market.west)
+   %edge[pil, bend right=45] (formidler.west)
+   edge[pil,->, bend left=45] (meas phase.north west);
+\end{tikzpicture}
+\caption{tjul}
+\end{figure}
+
+During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the actual measurement, the accelerometer. See Figure \ref{figure : Kalman phases}.
+Consider the true state equation \eqref{eq:kalmanstate}, the Kalman filter is firstly estimating the first state by neglecting the process noise
 \begin{equation} \label{eq:Kalman first estimate}
 \hat{x}^-_k = A\hat{x}\textsubscript{k-1}+Bu\textsubscript{k-1}
 \end{equation}
@@ -424,11 +495,11 @@ Q = E(w_k w_k \textsuperscript{T})
 R = E(v_k v_k \textsuperscript{T} )
 \end{equation}
 How to determine these covariances are further investigated in section  \ref{chapter:Allan Variance}
-From here a \textit{priori} error covariance matrix is introduced to symbolize the noise in the process measurement
+From here the \textit{a priori} error covariance matrix is introduced to symbolize the noise in the process measurement
 \begin{equation}
 P^-_k = AP\textsubscript{k-1}A^T + Q_k
 \end{equation}
-During the \textit{update} the accelerometer values are used. The measurement \textit{innovation} is calculated as
+During the \textit{update} the accelerometer measures are used. The measurement \textit{innovation} is calculated as
 \begin{equation} \label{eq: innovation}
 \tilde{y} = z_k - H\hat{x}^-_k
 \end{equation}
@@ -631,10 +702,31 @@ For the implementation of Kalman filter a library made by Lauszus which is avail
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width = \textwidth]{Kalmancomparisonplot.eps}
+\includegraphics[width = \textwidth]{Kalmancomparisonstat.eps}
 \caption{Comparison of Kalman filtered signal and original signal (TO BE UPDATED)}
 \label{fig:Kalman comparison}
 \end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{Kalmancomparisonturn.eps}
+  \caption{A subfigure}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{Kalmancomparisonturnzoom.eps}
+  \caption{A subfigure}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{fig:test}
+\end{figure}
+
+
+
 
 The figure shows a comparison of the estimated angle when using the accelerometer and gyroscope separately and then  
 using the Kalman filter. Plain to see from the plot is that the data sent from the accelerometer contains a lot of noise while the gyroscope drifts.
