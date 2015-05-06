@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  6 MAY 2015 00:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  6 MAY 2015 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,11 +944,6 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/cite/cite.sty
-LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 373.
-Package: cite 2010/09/10  v 5.3
-)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
@@ -1376,54 +1371,30 @@ brarydecorations.text.code.tex
 
 LaTeX Warning: Label `fig:voltageplot' multiply defined.
 
-
-LaTeX Warning: Label `eq: priori state' multiply defined.
-
-
-LaTeX Warning: Label `eq: posteriori state' multiply defined.
-
-
-LaTeX Warning: Label `eq:Kalman first estimate' multiply defined.
-
-
-LaTeX Warning: Label `eq:covariance process noise' multiply defined.
-
-
-LaTeX Warning: Label `eq:covariance measurement noise' multiply defined.
-
-
-LaTeX Warning: Label `eq: innovation' multiply defined.
-
-
-LaTeX Warning: Label `eq:innovation cov' multiply defined.
-
-
-LaTeX Warning: Label `eq:Kalman gain' multiply defined.
-
 )
 \openout1 = `"Balancing Cube.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 72.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 69.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 72.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1431,7 +1402,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \c@lofdepth=\count178
 \c@lotdepth=\count179
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 72.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1441,9 +1412,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (./Balancing Cube.out) (./Balancing Cube.out)
 \@outlinefile=\write5
@@ -1482,39 +1453,39 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<kth-cover.pdf, id=201, 597.51233pt x 845.03705pt>
+<kth-cover.pdf, id=210, 597.51233pt x 845.03705pt>
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf>
-Package pdftex.def Info: kth-cover.pdf used on input line 71.
+Package pdftex.def Info: kth-cover.pdf used on input line 74.
 (pdftex.def)             Requested size: 597.51086pt x 845.03497pt.
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf>
-Package pdftex.def Info: kth-cover.pdf used on input line 71.
+Package pdftex.def Info: kth-cover.pdf used on input line 74.
 (pdftex.def)             Requested size: 597.51086pt x 845.03497pt.
- <kth-cover.pdf, id=204, page=1, 597.51233pt x 845.03705pt>
+ <kth-cover.pdf, id=213, page=1, 597.51233pt x 845.03705pt>
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 1>
-Package pdftex.def Info: kth-cover.pdf, page1 used on input line 71.
+Package pdftex.def Info: kth-cover.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 597.51086pt x 845.03497pt.
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf, page 1>
-Package pdftex.def Info: kth-cover.pdf, page1 used on input line 71.
+Package pdftex.def Info: kth-cover.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 597.53821pt x 845.07365pt.
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 1>
-Package pdftex.def Info: kth-cover.pdf, page1 used on input line 71.
+Package pdftex.def Info: kth-cover.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 597.53821pt x 845.07365pt.
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf, page 1>
-Package pdftex.def Info: kth-cover.pdf, page1 used on input line 71.
+Package pdftex.def Info: kth-cover.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 597.53821pt x 845.07365pt.
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 1>
-Package pdftex.def Info: kth-cover.pdf, page1 used on input line 71.
+Package pdftex.def Info: kth-cover.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 597.53821pt x 845.07365pt.
  [1
 
@@ -1522,45 +1493,45 @@ Package pdftex.def Info: kth-cover.pdf, page1 used on input line 71.
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 79.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 82.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=221, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=229, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
-Package pdftex.def Info: KTH_Logotyp_PMS_2013.png used on input line 79.
+Package pdftex.def Info: KTH_Logotyp_PMS_2013.png used on input line 82.
 (pdftex.def)             Requested size: 597.73166pt x 845.40636pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 79.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 82.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 79.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 82.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 82.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 79.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 82.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 79.
+(Font)              <10.95> on input line 82.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 79.
+(Font)              <8> on input line 82.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 79.
+(Font)              <6> on input line 82.
  [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./KT
 H_Logotyp_PMS_2013.png>] [2
 
@@ -1568,17 +1539,17 @@ H_Logotyp_PMS_2013.png>] [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 90.
+(Font)              <10> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 90.
+(Font)              <7> on input line 93.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 90.
+(Font)              <5> on input line 93.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language append on input line 91.
+(babel)             in language append on input line 94.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language append on input line 91.
+(babel)             in language append on input line 94.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 95--99
 
  []
 
@@ -1586,7 +1557,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--96
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
  []
 
@@ -1596,12 +1567,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--106
 No file "Balancing Cube".ind.
 (./Balancing Cube.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 51.
 ) [10] [11
 
 
 ]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 154--154
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 157--157
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
 
@@ -1611,25 +1582,25 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 154--154
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 
+l.199 
        [1
 
 
 
-] <concept.pdf, id=343, 1357.07pt x 742.775pt>
+] <concept.pdf, id=353, 1357.07pt x 742.775pt>
 File: concept.pdf Graphic file (type pdf)
  <use concept.pdf>
-Package pdftex.def Info: concept.pdf used on input line 202.
+Package pdftex.def Info: concept.pdf used on input line 205.
 (pdftex.def)             Requested size: 396.0pt x 216.73662pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.216 
+l.220 
        [2 <./concept.pdf>] [3] [4
 
 ] [5]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 280.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 284.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
@@ -1638,22 +1609,24 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Underfull \vbox (badness 1412) has occurred while \output is active []
 
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 449--455
+Underfull \hbox (badness 10000) in paragraph at lines 453--459
 
  []
 
-[9] [10] <Lagrangeflywheel.pdf, id=444, 310.47572pt x 334.59073pt>
+<Lagrangeflywheel.pdf, id=422, 310.47572pt x 334.59073pt>
 File: Lagrangeflywheel.pdf Graphic file (type pdf)
 
 <use Lagrangeflywheel.pdf>
-Package pdftex.def Info: Lagrangeflywheel.pdf used on input line 527.
+Package pdftex.def Info: Lagrangeflywheel.pdf used on input line 535.
 (pdftex.def)             Requested size: 186.28687pt x 200.75598pt.
- [11 <./Lagrangeflywheel.pdf>] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 627--629
+ [9] [10 <./Lagrangeflywheel.pdf>] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 635--637
 
  []
 
-[13] [14]
+[12] [13] [14
+
+]
 Package epstopdf Info: Source file: <Motor_noload.eps>
 (epstopdf)                    date: 2015-04-22 16:11:42
 (epstopdf)                    size: 56274 bytes
@@ -1662,21 +1635,20 @@ Package epstopdf Info: Source file: <Motor_noload.eps>
 (epstopdf)                    size: 20082 bytes
 (epstopdf)             Command: <repstopdf --outfile=Motor_noload-eps-converted
 -to.pdf Motor_noload.eps>
-(epstopdf)             \includegraphics on input line 687.
+(epstopdf)             \includegraphics on input line 695.
 Package epstopdf Info: Output file is already uptodate.
- <Motor_noload-eps-converted-to.pdf, id=563, 729.72626pt x 421.575pt>
+
+<Motor_noload-eps-converted-to.pdf, id=547, 729.72626pt x 421.575pt>
 File: Motor_noload-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Motor_noload-eps-converted-to.pdf>
 Package pdftex.def Info: Motor_noload-eps-converted-to.pdf used on input line 6
-87.
+95.
 (pdftex.def)             Requested size: 396.0pt x 228.77283pt.
- [15
-
-]
+ [15]
 
 LaTeX Warning: Reference `fig:Kalman comparison' on page 16 undefined on input 
-line 697.
+line 705.
 
 Package epstopdf Info: Source file: <Kalmancomparisonstat.eps>
 (epstopdf)                    date: 2015-05-04 13:58:46
@@ -1687,14 +1659,14 @@ Package epstopdf Info: Source file: <Kalmancomparisonstat.eps>
 (epstopdf)                    size: 16046 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonstat-eps-c
 onverted-to.pdf Kalmancomparisonstat.eps>
-(epstopdf)             \includegraphics on input line 701.
+(epstopdf)             \includegraphics on input line 709.
 Package epstopdf Info: Output file is already uptodate.
-<Kalmancomparisonstat-eps-converted-to.pdf, id=571, 562.1pt x 421.575pt>
+<Kalmancomparisonstat-eps-converted-to.pdf, id=557, 562.1pt x 421.575pt>
 File: Kalmancomparisonstat-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonstat-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonstat-eps-converted-to.pdf used on inpu
-t line 701.
+t line 709.
 (pdftex.def)             Requested size: 396.0pt x 296.99812pt.
  [16 <./Motor_noload-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Kalmancomparisonturn.eps>
@@ -1706,15 +1678,15 @@ Package epstopdf Info: Source file: <Kalmancomparisonturn.eps>
 (epstopdf)                    size: 17512 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonturn-eps-c
 onverted-to.pdf Kalmancomparisonturn.eps>
-(epstopdf)             \includegraphics on input line 715.
+(epstopdf)             \includegraphics on input line 723.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonturn-eps-converted-to.pdf, id=589, 562.1pt x 421.575pt>
+<Kalmancomparisonturn-eps-converted-to.pdf, id=577, 562.1pt x 421.575pt>
 File: Kalmancomparisonturn-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonturn-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonturn-eps-converted-to.pdf used on inpu
-t line 715.
+t line 723.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <Kalmancomparisonturnzoom.eps>
 (epstopdf)                    date: 2015-05-04 14:01:35
@@ -1725,15 +1697,15 @@ pdf>
 (epstopdf)                    size: 10871 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonturnzoom-e
 ps-converted-to.pdf Kalmancomparisonturnzoom.eps>
-(epstopdf)             \includegraphics on input line 721.
+(epstopdf)             \includegraphics on input line 729.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonturnzoom-eps-converted-to.pdf, id=590, 562.1pt x 421.575pt>
+<Kalmancomparisonturnzoom-eps-converted-to.pdf, id=578, 562.1pt x 421.575pt>
 File: Kalmancomparisonturnzoom-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonturnzoom-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonturnzoom-eps-converted-to.pdf used on 
-input line 721.
+input line 729.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
  [17 <./Kalmancomparisonstat-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <gyroscopeallan.eps>
@@ -1744,19 +1716,19 @@ Package epstopdf Info: Source file: <gyroscopeallan.eps>
 (epstopdf)                    size: 23726 bytes
 (epstopdf)             Command: <repstopdf --outfile=gyroscopeallan-eps-convert
 ed-to.pdf gyroscopeallan.eps>
-(epstopdf)             \includegraphics on input line 742.
+(epstopdf)             \includegraphics on input line 750.
 Package epstopdf Info: Output file is already uptodate.
 
-<gyroscopeallan-eps-converted-to.pdf, id=610, 562.1pt x 421.575pt>
+<gyroscopeallan-eps-converted-to.pdf, id=599, 562.1pt x 421.575pt>
 File: gyroscopeallan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use gyroscopeallan-eps-converted-to.pdf>
 Package pdftex.def Info: gyroscopeallan-eps-converted-to.pdf used on input line
- 742.
+ 750.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 
 
-LaTeX Warning: Reference `fig:simmodel' on page 18 undefined on input line 760.
+LaTeX Warning: Reference `fig:simmodel' on page 18 undefined on input line 768.
 
 
 Package epstopdf Info: Source file: <voltageplot.eps>
@@ -1767,14 +1739,14 @@ Package epstopdf Info: Source file: <voltageplot.eps>
 (epstopdf)                    size: 10392 bytes
 (epstopdf)             Command: <repstopdf --outfile=voltageplot-eps-converted-
 to.pdf voltageplot.eps>
-(epstopdf)             \includegraphics on input line 764.
+(epstopdf)             \includegraphics on input line 772.
 Package epstopdf Info: Output file is already uptodate.
-<voltageplot-eps-converted-to.pdf, id=611, 562.1pt x 421.575pt>
+<voltageplot-eps-converted-to.pdf, id=600, 562.1pt x 421.575pt>
 File: voltageplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use voltageplot-eps-converted-to.pdf>
-Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 76
-4.
+Package pdftex.def Info: voltageplot-eps-converted-to.pdf used on input line 77
+2.
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
 Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    date: 2015-03-09 14:45:22
@@ -1784,14 +1756,14 @@ Package epstopdf Info: Source file: <angleplot.eps>
 (epstopdf)                    size: 10319 bytes
 (epstopdf)             Command: <repstopdf --outfile=angleplot-eps-converted-to
 .pdf angleplot.eps>
-(epstopdf)             \includegraphics on input line 773.
+(epstopdf)             \includegraphics on input line 781.
 Package epstopdf Info: Output file is already uptodate.
 
-<angleplot-eps-converted-to.pdf, id=612, 562.1pt x 421.575pt>
+<angleplot-eps-converted-to.pdf, id=601, 562.1pt x 421.575pt>
 File: angleplot-eps-converted-to.pdf Graphic file (type pdf)
 
 <use angleplot-eps-converted-to.pdf>
-Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 773.
+Package pdftex.def Info: angleplot-eps-converted-to.pdf used on input line 781.
 
 (pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
  [18 <./Kalmancomparisonturn-eps-converted-to.pdf> <./Kalmancomparisonturnzoom-
@@ -1812,33 +1784,28 @@ Underfull \vbox (badness 5077) has occurred while \output is active []
 ]
 (./Balancing Cube.bbl
 bibitemlist
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 14.
+
+Class memoir Warning: The \em font command is deprecated. 
+(memoir)              Use \emph{...} instead on input line 11.
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 37--40
+[]\T1/lmr/m/n/10.95 Johansson, H. (2003).  \T1/lmr/m/it/10.95 Elek-troteknik\T1
+/lmr/m/n/10.95 .  In-sti-tu-tio-nen för
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 44.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1231) in paragraph at lines 33--39
-[]\T1/lmr/m/n/10.95 J.-K. Shiau, C.-X. Huang, M.-Y.
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 54--59
-[]\T1/lmr/m/n/10.95 G. Chau-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
-[]\T1/lmr/m/n/10.95 K. Lauszus, Kalman-Fil-ter, []$\T1/lmtt/m/n/10.95 https : /
- / github . com /
+Underfull \hbox (badness 2245) in paragraph at lines 42--45
+[]\T1/lmr/m/n/10.95 Lauszus, K. (2012).  Kalman-fil-ter.  []$\T1/lmtt/m/n/10.95
+ https : / / github . com /
  []
 
 [29
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 91--96
-[]
- []
-
-) [30] [31
+]) [30] [31
 
 
 ] [32] [33] [34] [35] [36
@@ -1851,14 +1818,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--96
 \tf@toc=\write6
 \openout6 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1112.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1112.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1120.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1120.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1112.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1112.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1120.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1120.
 
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: 046F8D91335886C613ED7B16F25D8AB1;2970.
+(rerunfilecheck)             Checksum: D6628C7EA5DBB457E00132AE880709FE;3123.
 
 
 LaTeX Warning: There were undefined references.
@@ -1866,13 +1833,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1112.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1120.
  ) 
 Here is how much of TeX's memory you used:
- 28255 strings out of 493117
- 590814 string characters out of 6135434
- 730431 words of memory out of 5000000
- 31023 multiletter control sequences out of 15000+600000
+ 28155 strings out of 493117
+ 589564 string characters out of 6135434
+ 728400 words of memory out of 5000000
+ 30935 multiletter control sequences out of 15000+600000
  114679 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,18n,82p,772b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1897,10 +1864,10 @@ pe1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
 ic/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lm
 sy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Balancing Cube.pdf" (53 pages, 823240 bytes).
+Output written on "Balancing Cube.pdf" (53 pages, 821328 bytes).
 PDF statistics:
- 900 PDF objects out of 1000 (max. 8388607)
- 767 compressed objects within 8 object streams
- 182 named destinations out of 1000 (max. 500000)
- 479 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 889 PDF objects out of 1000 (max. 8388607)
+ 756 compressed objects within 8 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 495 words of extra memory for PDF output out of 10000 (max. 10000000)
 

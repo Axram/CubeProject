@@ -1,97 +1,78 @@
-\begin{thebibliography}{14}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\providecommand{\urlprefix}{URL }
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
-  \providecommand{\doi}[1]{doi:\discretionary{}{}{}\begingroup
-  \urlstyle{rm}\url{#1}\endgroup}\fi
-\providecommand{\bibinfo}[2]{#2}
+\begin{thebibliography}{}
 
-\bibitem[{Sjöstedt and Ramm(2015)}]{Github}
-\bibinfo{author}{M.~Sjöstedt}, \bibinfo{author}{A.~Ramm},
-  \bibinfo{title}{Balancing Cube},
-  \bibinfo{howpublished}{\url{https://github.com/Axram/CubeProject}},
-  \bibinfo{year}{2015}.
+\bibitem[Andrejasic, 2008]{ref:accelerometero}
+Andrejasic, M. (2008).
+\newblock Mems accelerometers.
+\newblock Technical report, Faculty for mathematics and physics, University of
+  Ljubljana.
 
-\bibitem[{MATLAB(2014)}]{MATLAB:2014}
-\bibinfo{author}{MATLAB}, \bibinfo{title}{version 8.4.0 (R2014b)},
-  \bibinfo{publisher}{The MathWorks Inc.}, \bibinfo{address}{Natick,
-  Massachusetts}, \bibinfo{year}{2014}.
+\bibitem[Block et~al., 2007]{Lagrangeref}
+Block, D.~J., Åström, K.~J., and Spong, M.~W. (2007).
+\newblock {\em The Reaction Wheel Pendulum}.
+\newblock Morgan \& Claypool Publishers.
 
-\bibitem[{Woodman(2007)}]{IMUintro}
-\bibinfo{author}{O.~J. Woodman}, \bibinfo{title}{An introduction to intertial
-  navigation}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Computer
-  Laboratory, University of Cambridge}, \bibinfo{year}{2007}.
+\bibitem[Chauveau et~al., 2005]{KTHpendulum}
+Chauveau, G., Chazal, D., Nakayama, D., Olsen, E., and Palm, S. (2005).
+\newblock Controlling the reaction wheel pendulum.
+\newblock Technical report, School of electrial engineering , KTH.
 
-\bibitem[{Andrejasic(2008)}]{ref:accelerometero}
-\bibinfo{author}{M.~Andrejasic}, \bibinfo{title}{MEMS Accelerometers},
-  \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{Faculty for mathematics and
-  physics, University of Ljubljana}, \bibinfo{year}{2008}.
+\bibitem[Gajamohan et~al., 2013]{cubliECC13}
+Gajamohan, M., Muehlebach, M., Widmer, T., and D'Andrea, R. (2013).
+\newblock The cubli: A reaction wheel based 3d inverted pendulum.
+\newblock In {\em proc. European Control Conference}, pages 268--274.
 
-\bibitem[{Shiau et~al.(2012)Shiau, Huang, and Chang}]{MEMSdrift}
-\bibinfo{author}{J.-K. Shiau}, \bibinfo{author}{C.-X. Huang},
-  \bibinfo{author}{M.-Y. Chang}, \bibinfo{title}{Noise Characteristics of MEMS
-  Gyro’s Null Drift and Temperature Compensation}, \bibinfo{journal}{Journal
-  of Applied Science and Engineering}
-  \bibinfo{volume}{15}~(\bibinfo{number}{3}) (\bibinfo{year}{2012})
-  \bibinfo{pages}{239--246}.
+\bibitem[Glad and Ljung, 2006]{regler}
+Glad, T. and Ljung, L. (2006).
+\newblock {\em Grundläggande teori}.
+\newblock Studentlitterarur.
 
-\bibitem[{Simon(2001)}]{Simon2001}
-\bibinfo{author}{D.~Simon}, \bibinfo{title}{Kalman Filtering},
-  \bibinfo{journal}{Embedded System Programming}
-  \bibinfo{volume}{1}~(\bibinfo{number}{6}) (\bibinfo{year}{2001})
-  \bibinfo{pages}{72--79}.
+\bibitem[Han et~al., 2009]{Allancalibration}
+Han, S., Wang, J., and Knight, N. (2009).
+\newblock Using allan variance to determine the calibration model of inertial
+  sensors for gps/ins integration.
+\newblock Technical report, School of Optoelectronics Science and Engineering,
+  National University of Defense Technology, China.
 
-\bibitem[{Welch and Bishop(2006)}]{Kalmanintro}
-\bibinfo{author}{G.~Welch}, \bibinfo{author}{G.~Bishop},
-  \bibinfo{title}{Introduction to the Kalman Filter}, \bibinfo{type}{Tech.
-  Rep.}, \bibinfo{institution}{Department of Computer Science, University of
-  North Carolina at Chapel Hill}, \bibinfo{year}{2006}.
+\bibitem[Johansson, 2003]{elektro}
+Johansson, H. (2003).
+\newblock {\em Elektroteknik}.
+\newblock Institutionen för Maskinkonstruktion, KTH.
 
-\bibitem[{Chauveau et~al.(2005)Chauveau, Chazal, Nakayama, Olsen, and
-  Palm}]{KTHpendulum}
-\bibinfo{author}{G.~Chauveau}, \bibinfo{author}{D.~Chazal},
-  \bibinfo{author}{D.~Nakayama}, \bibinfo{author}{E.~Olsen},
-  \bibinfo{author}{S.~Palm}, \bibinfo{title}{Controlling the Reaction Wheel
-  Pendulum}, \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{School of
-  electrial engineering , KTH}, \bibinfo{year}{2005}.
+\bibitem[Lauszus, 2012]{TKJkalman}
+Lauszus, K. (2012).
+\newblock Kalmanfilter.
+\newblock \url{https://github.com/TKJElectronics/KalmanFilter}.
 
-\bibitem[{Block et~al.(2007)Block, Åström, and Spong}]{Lagrangeref}
-\bibinfo{author}{D.~J. Block}, \bibinfo{author}{K.~J. Åström},
-  \bibinfo{author}{M.~W. Spong}, \bibinfo{title}{The Reaction Wheel Pendulum},
-  \bibinfo{publisher}{Morgan \& Claypool Publishers}, \bibinfo{year}{2007}.
+\bibitem[MATLAB, 2014]{MATLAB:2014}
+MATLAB (2014).
+\newblock {\em version 8.4.0 (R2014b)}.
+\newblock The MathWorks Inc., Natick, Massachusetts.
 
-\bibitem[{Glad and Ljung(2006)}]{regler}
-\bibinfo{author}{T.~Glad}, \bibinfo{author}{L.~Ljung},
-  \bibinfo{title}{Grundläggande teori},
-  \bibinfo{publisher}{Studentlitterarur}, ISBN
-  \bibinfo{isbn}{978-91-44-02275-8}, \bibinfo{year}{2006}.
+\bibitem[Shiau et~al., 2012]{MEMSdrift}
+Shiau, J.-K., Huang, C.-X., and Chang, M.-Y. (2012).
+\newblock Noise characteristics of mems gyro’s null drift and temperature
+  compensation.
+\newblock {\em Journal of Applied Science and Engineering}, 15(3):239--246.
 
-\bibitem[{Johansson(2003)}]{elektro}
-\bibinfo{author}{H.~Johansson}, \bibinfo{title}{Elektroteknik},
-  \bibinfo{publisher}{Institutionen för Maskinkonstruktion, KTH},
-  \bibinfo{year}{2003}.
+\bibitem[Simon, 2001]{Simon2001}
+Simon, D. (2001).
+\newblock Kalman filtering.
+\newblock {\em Embedded System Programming}, 1(6):72--79.
 
-\bibitem[{Lauszus(2012)}]{TKJkalman}
-\bibinfo{author}{K.~Lauszus}, \bibinfo{title}{KalmanFilter},
-  \bibinfo{howpublished}{\url{https://github.com/TKJElectronics/KalmanFilter}},
-  \bibinfo{year}{2012}.
+\bibitem[Sjöstedt and Ramm, 2015]{Github}
+Sjöstedt, M. and Ramm, A. (2015).
+\newblock Balancing cube.
+\newblock \url{https://github.com/Axram/CubeProject}.
 
-\bibitem[{Han et~al.(2009)Han, Wang, and Knight}]{Allancalibration}
-\bibinfo{author}{S.~Han}, \bibinfo{author}{J.~Wang},
-  \bibinfo{author}{N.~Knight}, \bibinfo{title}{Using Allan Variance to
-  determine the calibration model of inertial sensors for GPS/INS integration},
-  \bibinfo{type}{Tech. Rep.}, \bibinfo{institution}{School of Optoelectronics
-  Science and Engineering, National University of Defense Technology, China},
-  \bibinfo{year}{2009}.
+\bibitem[Welch and Bishop, 2006]{Kalmanintro}
+Welch, G. and Bishop, G. (2006).
+\newblock Introduction to the kalman filter.
+\newblock Technical report, Department of Computer Science, University of North
+  Carolina at Chapel Hill.
 
-\bibitem[{Gajamohan et~al.(2013)Gajamohan, Muehlebach, Widmer, and
-  D'Andrea}]{cubliECC13}
-\bibinfo{author}{M.~Gajamohan}, \bibinfo{author}{M.~Muehlebach},
-  \bibinfo{author}{T.~Widmer}, \bibinfo{author}{R.~D'Andrea},
-  \bibinfo{title}{The Cubli: A Reaction Wheel Based 3D Inverted Pendulum}, in:
-  \bibinfo{booktitle}{proc. European Control Conference},
-  \bibinfo{pages}{268--274}, \bibinfo{year}{2013}.
+\bibitem[Woodman, 2007]{IMUintro}
+Woodman, O.~J. (2007).
+\newblock An introduction to intertial navigation.
+\newblock Technical report, Computer Laboratory, University of Cambridge.
 
 \end{thebibliography}

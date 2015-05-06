@@ -9,41 +9,43 @@
 \BOOKMARK [1][-]{section.1.3}{Scope}{chapter.1}% 9
 \BOOKMARK [1][-]{section.1.4}{Method}{chapter.1}% 10
 \BOOKMARK [0][-]{chapter.2}{Theory}{}% 11
-\BOOKMARK [1][-]{section.2.1}{Introduction should we have this ?}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{Inertial Measurement Unit}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.1}{Accelerometer}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.2}{Gyroscope}{section.2.2}% 15
-\BOOKMARK [1][-]{section.2.3}{Kalman filter}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.3.1}{introduction}{section.2.3}% 17
-\BOOKMARK [2][-]{subsection.2.3.2}{State Estimator}{section.2.3}% 18
-\BOOKMARK [1][-]{section.2.4}{Model dynamics}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.5}{Control theory and pole placement}{chapter.2}% 20
-\BOOKMARK [1][-]{section.2.6}{Pulse Width Modulation}{chapter.2}% 21
-\BOOKMARK [0][-]{chapter.3}{Demonstrator}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.2}{Model validation}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{Kalman implementation}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.1}{Measurement and process noise}{section.3.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 28
-\BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 29
-\BOOKMARK [2][-]{subsection.3.5.2}{System Control}{section.3.5}% 30
-\BOOKMARK [1][-]{section.3.6}{Hardware}{chapter.3}% 31
-\BOOKMARK [2][-]{subsection.3.6.1}{Construction}{section.3.6}% 32
-\BOOKMARK [2][-]{subsection.3.6.2}{Motor and Motor Control}{section.3.6}% 33
-\BOOKMARK [2][-]{subsection.3.6.3}{Sensor Reading}{section.3.6}% 34
-\BOOKMARK [2][-]{subsection.3.6.4}{Final Assembly}{section.3.6}% 35
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 36
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 37
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 39
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 40
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 41
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 42
-\BOOKMARK [0][-]{section*.18}{Bibliography}{}% 43
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 44
-\BOOKMARK [1][-]{section.A.1}{Elaborative Kalman explanation \(TTILE?\)}{appendix.A}% 45
-\BOOKMARK [2][-]{subsection.A.1.1}{??}{section.A.1}% 46
-\BOOKMARK [2][-]{subsection.A.1.2}{Kalman implementation}{section.A.1}% 47
-\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 48
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 49
+\BOOKMARK [1][-]{section.2.1}{Inertial Measurement Unit}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{Background}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{Accelerometer}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.3}{Gyroscope}{section.2.1}% 15
+\BOOKMARK [1][-]{section.2.2}{Kalman filter}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.1}{introduction}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.2}{State Estimator}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Model dynamics}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.3.1}{Some introduction to the model}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.2}{Here comes k\366tt}{section.2.3}% 21
+\BOOKMARK [1][-]{section.2.4}{Control theory and pole placement}{chapter.2}% 22
+\BOOKMARK [1][-]{section.2.5}{Pulse Width Modulation}{chapter.2}% 23
+\BOOKMARK [0][-]{chapter.3}{Demonstrator}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{Model validation}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.3}{Kalman implementation}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.1}{Measurement and process noise}{section.3.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.5}{Electronics}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.5.1}{PWM}{section.3.5}% 31
+\BOOKMARK [2][-]{subsection.3.5.2}{System Control}{section.3.5}% 32
+\BOOKMARK [1][-]{section.3.6}{Hardware}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.6.1}{Construction}{section.3.6}% 34
+\BOOKMARK [2][-]{subsection.3.6.2}{Motor and Motor Control}{section.3.6}% 35
+\BOOKMARK [2][-]{subsection.3.6.3}{Sensor Reading}{section.3.6}% 36
+\BOOKMARK [2][-]{subsection.3.6.4}{Final Assembly}{section.3.6}% 37
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 38
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 41
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 42
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 44
+\BOOKMARK [0][-]{section*.18}{Bibliography}{}% 45
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 46
+\BOOKMARK [1][-]{section.A.1}{Elaborative Kalman explanation \(TITLE?\)}{appendix.A}% 47
+\BOOKMARK [2][-]{subsection.A.1.1}{Mathematical background}{section.A.1}% 48
+\BOOKMARK [2][-]{subsection.A.1.2}{Implementation}{section.A.1}% 49
+\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 50
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 51
