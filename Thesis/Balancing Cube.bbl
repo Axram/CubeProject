@@ -64,6 +64,11 @@ Sjöstedt, M. and Ramm, A. (2015).
 \newblock Balancing cube.
 \newblock \url{https://github.com/Axram/CubeProject}.
 
+\bibitem[Stockwell, 1997]{ARW}
+Stockwell, D.~W. (1997).
+\newblock Angle random walk.
+\newblock Technical report.
+
 \bibitem[Welch and Bishop, 2006]{Kalmanintro}
 Welch, G. and Bishop, G. (2006).
 \newblock Introduction to the kalman filter.

@@ -228,6 +228,8 @@ For every position the same parameters and constants were used in all systems an
 \section{Method}
 The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations were noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
 
+New TRY
+The cube was placed in a position close to its upper equlibriub point.
 \chapter{Theory}
 This chapter cover some of the theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
 
@@ -242,7 +244,7 @@ The last part covers the theory of the mechanical system behaviour that is used 
 
 \section{Inertial Measurement Unit} \label{section:IMU}
 \subsection{Background}
-The data collected for calculating the angle of the cube is gathered from an IMU, a unit that uses both an accelerometer and a gyroscope to track the orientation and position. A IMU is often rated for several degrees of freedom, a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measure linear acceleration and angular velocity respectively. There are also units that are rated for additional degrees of freedom and usually include features such as magnetometer or barometer sensors.   
+The data collected for calculating the angle of the cube is gathered from an IMU, a unit that uses both an accelerometer and a gyroscope to track the orientation and position. A IMU is often rated for several \textit{degrees of freedom} (DOF), a unit specified as 6-DOF uses three orthogonal accelerometers and gyroscopes. These measure linear acceleration and angular velocity respectively. There are also units that are rated for additional degrees of freedom and usually include features such as magnetometer or barometer sensors.   
 To understand the fundamentals of an inertial system a Cartesian coordinate system is defined in Figure \ref{Figure: cartesian}
 
 \begin{figure}[!hbt] 
@@ -275,17 +277,17 @@ To understand the fundamentals of an inertial system a Cartesian coordinate syst
 \label{Figure: cartesian}
 \end{figure}
  
- --The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axes while the gyroscope measures the angular rate around these axes, ie if the gyroscope rotates along the $z$-axis it would output a yaw rate.-- 
+ --The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axes while the gyroscope measures the angular rate around these axes, ie if the gyroscope rotates along the $z$-axis it would output a yaw rate.--  \textbf{Unnecessary ?}
  
-The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is a very small unit that make use of its mechanical properties to sense alteration in the environment \textsc{Source} . The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but the raw output still contains significant noise \textsc{medel på denna mening}. \cite{IMUintro}
-\subsection{Accelerometer}
-Accelerometers are used to measure linear acceleration. Or rather, the device it measure forces due to acceleration. These forces can be divided into two groups 
+The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is a very small unit that make use of its mechanical properties to sense alteration in the environment \cite{ref:accelerometero}. The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but the raw output still contains significant noise \textbf{medel på denna mening, raw output vafan kom på något innovativt}. \cite{IMUintro}
+\subsection{Accelerometer} \label{sec: accelerometer}
+Accelerometers are used to measure linear acceleration. Or rather, it measure forces due to acceleration. These forces can be divided into two groups
 \begin{itemize}
 \item Static forces, such as gravity
 \item Dynamic forces, due to movement
 \end{itemize}
-The force is then converted into acceleration, this is done by measuring the change in capacitance when a spring mass system is moving. The typical accelerometer consists of a movable mass that is attached via a mechanical spring or suspension system to a frame that is used as a reference. 
-The capacitance is then usually measured between a conductive plate and the known mass, seen in figure \ref{Fig: Accelerometer}. This is typically used to determine the displacement of the mass and then calculate the force applied to it with the known spring mass system.
+The force is then converted into acceleration, this is done by measuring the change in capacitance when a spring mass system is moving. The typical accelerometer consists of a movable mass that is attached via a mechanical spring or suspension system to a frame that is used as reference. 
+The capacitance is usually measured between a conductive plate and the known mass, seen in figure \ref{Fig: Accelerometer}. The capacitance is then used to determine the displacement of the mass and then calculate the force applied to it with the known spring mass system.
 
 \begin{figure} [!hbt]
 \centering
@@ -335,7 +337,9 @@ The capacitance is then usually measured between a conductive plate and the know
 \label{Fig: Accelerometer} 
 \end{figure}
 
-Typical noise sources in accelerometers are mechanical vibration of the springs, circuitry and general equipment disturbances. These noise terms can be characterized by a white noise. Relevant for this project is how this noise effects the integrated value which is represented by the \textit{velocity random walk} (VRW). The accelerometer also outputs a constant bias, it is essential to determine the bias when estimating a position otherwise the error would grow quadratic due to multiple integration of the measurements \cite{ref:accelerometero}.
+Typical noise sources in accelerometers are mechanical vibration of the springs, circuitry and general equipment disturbances. The accelerometer in this project is used to cross-check the perceived angle by the gyroscope, i.e. the signal has to be integrated to calculate an angle. \textbf{omskrivning?}-- A \textbf{measure} to specify how much the noise effects the integrated value is represented 
+by the \textit{velocity random walk} (VRW) \cite{ARW}. The signal from the accelerometer during a stationary position can be characterized as a white noise, and the integrated value is going to "walk" around the mean value, hence the name \textit{random walk}.
+The accelerometer also outputs a bias, it is essential to determine the bias when estimating a position otherwise the error would grow quadratic due to multiple integration of the measurements \cite{ref:accelerometero}.
 
 \subsection{Gyroscope} \label{gyroscope}
 Gyroscopes unlike accelerometers, do not measure linear acceleration. Gyroscopes measure the angular velocity. This is done by making use of the Coriolis effect to measure the angular rate.
@@ -402,21 +406,22 @@ Gyroscopes unlike accelerometers, do not measure linear acceleration. Gyroscopes
 \label{Fig: Gyroscope}
 \end{figure}
 
-Consider figure \ref{Fig: Gyroscope} where a mass is vibrating along the $y$-axis, with the momentary velocity $v$. When the mass is rotated along the $z$-axis, a secondary vibration perpendicular to the first is induced which is explained by the Coriolis force
+Consider figure \ref{Fig: Gyroscope} where a mass is vibrating along the $y$-axis, with the momentary velocity $v$. When the mass is rotated along the $z$-axis with the angular velocity $w$, a secondary vibration perpendicular to the first is induced which is explained by the Coriolis force
 \begin{equation}\label{eq:coriolis}
 \textbf{F}_c = -2m(\textbf{\textit{w}} \times \textbf{\textit{v}})
 \end{equation}
-The result is a physical displacement due to the Coriolis force and a capacitance is measured just like the accelerometer. ---If, for example a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate. \textbf{not necessary right?}---
+The result is a physical displacement and a capacitance is measured just like the accelerometer. ---If, for example a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate. \textbf{not necessary right?}---
 
 A micromechanical gyroscope is, like the accelerometer, effected by a bias. This is often due to friction caused by moving parts or production variations induce stress on the construction resulting in an offset of the output. If a constant error is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.
-This approach has a drawback. The small size and sensitivity of this device make the bias wander due to flickering noise in the electronics. \cite{IMUintro} Hence a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
-More troublesome errors that occur in MEMS gyroscopes are thermo-mechanical white noise similiar to the accelerometer, a more or less uncorrelated error. This can be translated to a phenomena known as \textit{Angle Random Walk} or ARW that indicates how the integrated value is effected.
-The concepts of ARW, ARW and bias stability that has been introduced are more or less an indication of how precise the  are.
+This approach has a drawback. The small size and sensitivity of this device make the bias wander due to flickering noise in the electronics \cite{IMUintro}. Thus a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
+Other troublesome errors that occur in MEMS gyroscopes are thermo-mechanical white noise similar to noise in an accelerometer. To indicate how this noise effects the integrated value an \textit{Angle Random Walk} (ARW) is introduced. The ARW is of the same significance as the VRW mentioned in section \ref{sec: accelerometer} but considers the angular velocity instead. \textbf{var kritisk} 
+
+The concepts of ARW, VRW and bias stability that has been introduced are more or less an indication of how precise the measurement devices are.
 
 \section{Kalman filter}
 \subsection{introduction}
 The signal from an IMU contains data of angular velocities and acceleration, but also a lot of noise, as explained earlier. A position estimated from an untreated signal from an IMU could work for short periods, but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs when measurements containing noise is integrated to acquire a position, the readings contain both white noise and often a bias which is making the  error to grow for every calulation.
-Integrating the angular motion from the gyro to estimate a position would result in an angular drift and an even worse drift for the accelerometer as it is integrated twice to estimate a position.
+Integrating the angular motion from the gyroscope to estimate a position would result in an angular drift and an even worse drift for the accelerometer as it is integrated twice to estimate a position.
 By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state. 
 
 One could say that the Kalman filter moves between \textsc{two phases (no good)} see Figure \ref{Fig: Kalman phases}. Firstly it estimates a state using a known process, which usually contains a noise. Then it adjusts the state to a measurement.
@@ -701,8 +706,10 @@ The graphs in figure \ref{fig:Motor noload} displays the speed and current of th
 
 The dynamics of the cube is simplified as an inverted pendulum. That means if there is no control input to the system it should behave as pendulum in free movement. That is, it should oscillate at a constant amplitude. As there is no torque applied to the flywheel rotor should be static at all times.
 
-\section{Kalman implementation}
-For the implementation of Kalman filter a library made by Lauszus which is available a the Github repository was used\cite{TKJkalman}. For an expanded explanation of the Kalman implementation, see appendix \ref{app: Kalman}. The results of the Kalman filtering can be seen in figure \ref{fig:Kalman comparison} 
+\section{Inertial navigation system}
+
+\subsection{Kalman implementation}
+For the implementation of Kalman filter a library made by Lauszus was used, which is available a the Github repository\cite{TKJkalman}. For an extended explanation of the Kalman implementation, see appendix \ref{app: Kalman imp}.
 
 \begin{figure}[!htb]
 \centering
@@ -711,7 +718,7 @@ For the implementation of Kalman filter a library made by Lauszus which is avail
 \label{Fig: Kalman comparison}
 \end{figure}
 
-Figure \ref{Fig: Kalman comparison} shows a comparison of the estimated angle at a stationary position using the gyroscope, accelerometer and the Kalman filtered signals separately. Plain to see is the gyroscope bias which is seen by the negative angle ramp \textsc{reforumlate..}. The accelerometer readings show that the signal contains a lot of white noise but still has a mean value around zero. 
+Figure \ref{Fig: Kalman comparison} shows a comparison of the estimated angle at a stationary position using the gyroscope, accelerometer and the Kalman filtered signals separately. The estimated angle using only the gyroscope can be seen by the negative angle ramp. This is due to the bias that is being integrated. The accelerometer readings show that the signal contains a lot of white noise but still has a mean value of zero. 
 The Kalman filtered angle starts following the gyroscope readings but are then corrected when weighed against the accelerometer measurements which can be seen early in the plot. 
 This indicates that the Kalman filter works as it should but the estimated state should still not be considered \textit{true} as the reference is zero. 
 
@@ -739,11 +746,11 @@ Figure \ref{Fig: Kalmanturnfull} illustrates the estimated angle during a 90 deg
 
 
 \subsection{Measurement and process noise} \label{chapter:Allan Variance}
-For the Kalman filter to properly work it is essential to know how reliable the process and measurement inputs are. A way of determining the process noise and measurement noise of the IMU is the Allan variance method \textsc{REF}.
-The gyro data is treated as an external input to the system, so the error and bias from the gyro readings are characterised as process noise. This is then compared to the measurement, the accelerometer which contains a measurement noise.
-By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated. The Allan variance is then used to determine the noise ans stability of the system. The interesting components of the variance for the IMU are the ARW, VRV and bias stability mentioned in section \ref{section:IMU}. The theory of Allan variance is out of the scope of this thesis but for reader reference is a time domain analysis technique commonly used to determine the characteristics of errors for inertial sensors\cite{Allancalibration}.
-Data from the gyro were collected during twelve hours to achieve/för att få a reliable estimate of the gyro bias. 
-The root Allan variance was calculated and can is described by figure \ref{fig:gyroscope allan} where the variance is a function of averaging time $tau$
+For the Kalman filter to properly work it is essential to know how reliable the process and measurement inputs are.  A way of determining the process noise and measurement noise of the IMU is the Allan variance method. The theory of Allan variance is outside the scope of this thesis but for reader reference is a time domain analysis technique commonly used to determine the characteristics of errors for inertial sensors\cite{Allancalibration}.
+The gyroscope data is treated as an external input to the system, so the error and bias from the readings are characterised as process noise. This is then compared to the measurement, the accelerometer, which contains a measurement noise.
+By gathering samples from the gyroscope and accelerometer at a stationary state the Allan variance can be calculated. The Allan variance is then used to determine the noise and stability of the system. The interesting components of the variance for the IMU are the ARW, VRV and bias stability mentioned in section \ref{section:IMU}.
+Data from the gyroscope were collected during twelve hours to \textbf{achieve, ordval?} a reliable estimate of the bias. 
+The root Allan variance was calculated and is shown in Figure \ref{fig:gyroscope allan} where the variance is a function of averaging time $\tau$
 
 \begin{figure}[!htb]
 \centering
@@ -752,7 +759,22 @@ The root Allan variance was calculated and can is described by figure \ref{fig:g
 \label{fig:gyroscope allan}
 \end{figure}
 
-The angle (velocity) random walk can be depicted from the plot at an angle of -0.5 while the bias instability is determined by looking at the lowest point of the plot.
+The angle (or velocity, concerning the accelerometer) random walk can be depicted from the plot at an angle of -0.5 while the bias instability is determined by looking at the lowest point of the plot. Allan variance for the accelerometer was \textbf{framtagen} in a similar manner.  The results can be seen in table \ref{Table: Allan variance}.
+
+\begin{table}[!hbt]
+\centering
+    \begin{tabular}{| l | l |} \hline
+    Noise term & Degrees/second \\ \hline
+    Angle random walk & ARW res \\ \hline
+    Bias stability & BS res \\ \hline
+    Velocity random walk & VRW res \\
+    \hline
+    \end{tabular}
+    \caption{Allan variance results}
+    \label{Table: Allan variance}
+\end{table}
+
+These values corresponds to the process and measurement noise covariance matrices used by the Kalman filter. \textbf{Dessa finns bara i appendix ??} 
 
 \section{Software}
 To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime, the model were simulated with Simulink\textsuperscript{\textregistered}. 
@@ -847,6 +869,8 @@ Beskriv resultatet.
 \chapter{Discussion and conclusions}
 \emph{I detta kapitel diskuteras och sammanfattas de resultat som presenterats i föregående kapitel. Sammanfattningen baseras på en resultatanalys och syftar till att svara på den fråga eller de frågor som formuleras i kapitel i.}
 
+The IMU measures very small voltage alterations when the capacitance varies in the mechanical system. Placing such a sensitive device near a motor which induces a flow of bla bla bla
+
 \section{Discussion}
 Motor choice osv
 
@@ -932,6 +956,7 @@ For further reading, and mathematical proof see \cite{Kalmanintro}.
 
 
 \subsection{Implementation}
+\label{app: Kalman imp}
 The Kalman filter cycles two states, the \textit{predict} and \textit{update} phases. Kalman is using discretized steps making the filter implemented on a microprocessor fairly simple. 
 An implementation of the Kalman filter on the IMU would look something like this
 

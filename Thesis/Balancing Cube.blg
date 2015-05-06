@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Balancing Cube.aux
 The style file: apalike-url.bst
 Database file #1: FiM_references.bib
-You've used 14 entries,
+Warning--empty institution in ARW
+You've used 15 entries,
             2301 wiz_defined-function locations,
-            625 strings with 6230 characters,
-and the built_in function-call counts, 5197 in all, are:
-= -- 584
-> -- 186
-< -- 10
-+ -- 66
-- -- 60
-* -- 347
-:= -- 949
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 101
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 186
-empty$ -- 341
-format.name$ -- 80
-if$ -- 1080
+            631 strings with 6305 characters,
+and the built_in function-call counts, 5494 in all, are:
+= -- 618
+> -- 193
+< -- 11
++ -- 68
+- -- 62
+* -- 365
+:= -- 1006
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 108
+chr.to.int$ -- 15
+cite$ -- 16
+duplicate$ -- 197
+empty$ -- 361
+format.name$ -- 83
+if$ -- 1140
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 11
-newline$ -- 73
-num.names$ -- 42
-pop$ -- 107
+newline$ -- 78
+num.names$ -- 45
+pop$ -- 113
 preamble$ -- 1
-purify$ -- 100
+purify$ -- 106
 quote$ -- 0
-skip$ -- 236
+skip$ -- 251
 stack$ -- 0
-substring$ -- 246
+substring$ -- 258
 swap$ -- 16
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
-warning$ -- 0
-while$ -- 34
+type$ -- 82
+warning$ -- 1
+while$ -- 36
 width$ -- 0
-write$ -- 179
+write$ -- 191
+(There was 1 warning)
