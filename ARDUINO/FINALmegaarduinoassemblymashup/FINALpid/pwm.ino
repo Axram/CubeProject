@@ -58,11 +58,12 @@ void pwm_write(int duty)
 void secureBrake()
 {
   // För att bromsa inna man vänder
-  OCR2B = 0;
+  //OCR2B = 0;
   noInterrupts();
   digitalWrite(DIS , HIGH);
+  OCR2B = 0;
   int i = 0;
-  while (i<100) {
+  while (i<2) {
   //delayMicroseconds(2000000); //Mycket otrevligt så hela mainloopen delayas
   i+=1;
   }

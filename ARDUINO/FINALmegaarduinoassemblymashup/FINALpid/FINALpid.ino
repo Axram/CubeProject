@@ -71,7 +71,7 @@ double startControlAngle;
   
   //Output
   
-  double reference;
+  double reference = 0;
 
 
 
@@ -81,6 +81,11 @@ float y;
 //input
 float u;
 
+// Pid stuff from some nisse
+unsigned long lastTime;
+double input, output, setpoint;
+double errSum, lastErr;
+double kp, ki, kd;
 
 
 
@@ -92,7 +97,7 @@ float phi=0;
 void setup() {
   imu_setup();
   pwm_setup();
-  
+  pid_set(3.5, 0 , 0);
   
 }
 
@@ -104,10 +109,10 @@ void loop() {
   //Serial.print(gyroXrate); Serial.print("\t");
   
   // Control loop
-  startControlAngle = kalAngleX-startXangle+47;
+  startControlAngle = kalAngleX-startXangle+46;
   Serial.println(startControlAngle); Serial.print("\t");
-  desired_voltage = control_loop();
-  
+  //desired_voltage = control_loop();
+  desired_voltage = pid_compute();
   
   // PWM THINGS
   
@@ -118,7 +123,7 @@ void loop() {
     pwmtimer=millis();
       
    //counter_i +=1;
-   if (startControlAngle <10 && startControlAngle > -10) {
+   if (startControlAngle < reference + 8 && startControlAngle > reference -8) {
     // För desired riktning
     if (desired_voltage < 0) {
       //Beroende på tidigare riktning
