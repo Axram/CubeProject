@@ -171,18 +171,18 @@ void loop() {
   Serial.print("\t");
 #endif
 
-  Serial.print(roll); Serial.print("\t");
-  Serial.print(gyroXangle); Serial.print("\t");
-  Serial.print(compAngleX); Serial.print("\t");
-  Serial.print(kalAngleX); Serial.print("\t");
+  //Serial.print(roll); Serial.print("\t");
+  Serial.println(gyroXrate); //Serial.print("\t");
+  //Serial.print(compAngleX); Serial.print("\t");
+  //Serial.print(kalAngleX); Serial.print("\t");
 
-  Serial.print("\t");
-
+  //Serial.print("\t");
+/*
   Serial.print(pitch); Serial.print("\t");
   Serial.print(gyroYangle); Serial.print("\t");
   Serial.print(compAngleY); Serial.print("\t");
   Serial.print(kalAngleY); Serial.print("\t");
-
+*/
 #if 0 // Set to 1 to print the temperature
   Serial.print("\t");
 
@@ -190,6 +190,6 @@ void loop() {
   Serial.print(temperature); Serial.print("\t");
 #endif
 
-  Serial.print("\r\n");
+  //Serial.print("\r\n");
   delay(2);
 }

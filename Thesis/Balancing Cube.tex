@@ -12,6 +12,7 @@
 \usepackage{breakcites}
 \usepackage{pdfpages}
 
+
 \newcommand{\textunderscript}[1]{$_{\text{#1}}$}
 \usepackage[utf8]{inputenc}
 %\usepackage{cite}
@@ -104,11 +105,11 @@ byggdes en robot, som med hjälp av ett motordrivet svänghjul kan applicera ett
 \clearpage
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
-Here goes our thanks to sources of  help, cooperation, inspiration \\ To be filled in \\
-% Here goes credits to Daniel Frede, Staffan, Assarna som tog sig tid, eventuella maskiner som inte strulat
-\begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
+We would like to thank Daniel Frede, our supervisor, always ready with his well filled beer glass, for his continuous support and German \textit{precision}. Staffan Qvarnström and Tomas Östberg for their mechanical and practical expertise. As well all the student assistants that have helped us throughout the course.
 
-% We would like to thank our supervisor Daniel Frede for his continous --- and could point us in the right direction. osv osv 
+
+\begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
+ 
 
 %\clearpage
 
@@ -152,7 +153,7 @@ $w$			& Process noise \\
 \end{tabular}
 \clearpage
 
-\section*{Abbreviations}
+\section*{Abbreviations - Alphabetical order}
 \noindent{}\begin{tabular}{@{}p{2.5cm}l}
 \textbf{Abbreviation} 	& \textbf{Description} \vspace{.5em} \\
 CAD			& Computer Aided Design \\
@@ -176,7 +177,13 @@ DC			& Direct Current
 \mainmatter
 \pagestyle{newchap}
 
+
+
+
 \chapter{Introduction}
+
+\epigraph{\textit{“Begin at the beginning," the King said, very gravely, "and go on till you come to the end: then stop.”}}{Lewis Carroll, Alice in Wonderland}
+
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH, Sweden. The work was carried out during the spring 2015.
 
 \section{Background}
@@ -225,10 +232,12 @@ The only sensor whose position is to be examined is the IMU, as the encoder for 
 
 The effects that were looked at were the ones related to the control system. Mainly the overshoot behaviour and the settling time of the system. Only data used for the specific control system were examined, \textbf{other DOF measurements were not taken into consideration ???}. I.e. \textbf{its a consquence} the results may only be applicable in similar machines and not in general.
 
-For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....).  \textbf{this might belong to method?}
+
 
 \section{Method}
 The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations were noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
+
+For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....).  \textbf{this might belong to method?}
 
 New TRY
 The cube was placed in a position close to its upper equlibriub point.
@@ -238,9 +247,9 @@ This chapter cover some of the theory that is required if one want to build a si
 
 The first part is about the inertial reference unit that covers issues of sensor characteristics and why they are important to the system as a whole and the research question in particular.
 
-There is a part that discuss Kalman filter theory, a filter required for getting high quality data from the IMU. The filter interprets noisy data from the sensor and digitally filters the signal to a more trustworthy output. 
+There is a part that discuss Kalman filter theory, a filter required for retrieving high quality data from the IMU. The filter interprets noisy data from the sensor and digitally filters the signal to a more trustworthy output. 
 
-The last part covers the theory of the mechanical system behaviour that is used to develop the state space control system. The equations are responsible for the actual balance part and thus important. 
+The \textbf{last part} covers the theory of the mechanical system behaviour that is used to develop the state space control system. The equations are responsible for the actual balance part and thus important. 
 
 % When using a sensor such as an IMU one can choose between different resolution settings, depending of the specific usage. Although the resolutions were not changed between measurements these settings could be important when comparing to another machine
 
@@ -280,9 +289,9 @@ To understand the fundamentals of an inertial system a Cartesian coordinate syst
 \label{Figure: cartesian}
 \end{figure}
  
- --The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axes while the gyroscope measures the angular rate around these axes, ie if the gyroscope rotates along the $z$-axis it would output a yaw rate.--  \textbf{Unnecessary ?}
+The accelerometer is used to measure the acceleration along the lines of $x,y,z$ axes while the gyroscope measures the angular rate around these axes.
  
-The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is a very small unit that make use of its mechanical properties to sense alteration in the environment \cite{ref:accelerometero}. The advantages of these small units are low production costs, small size and low power consumption. As the research of these fairly modern units continues the reliability increases but the raw output still contains significant noise \textbf{medel på denna mening, raw output vafan kom på något innovativt}. \cite{IMUintro}
+The inertial navigation system used in this project is a small \textit{microelectro-mechanical system} (MEMS). A micromechanical sensor is a very small unit that make use of its mechanical properties to sense alteration in the environment \cite{ref:accelerometero}. The advantages of these small units are low production costs, small size, low power consumption and good accuracy. But all these advantages comes at a price, which is signal noise \cite{IMUintro}.
 \subsection{Accelerometer} \label{sec: accelerometer}
 Accelerometers are used to measure linear acceleration. Or rather, it measure forces due to acceleration. These forces can be divided into two groups
 \begin{itemize}
@@ -340,7 +349,7 @@ The capacitance is usually measured between a conductive plate and the known mas
 \label{Fig: Accelerometer} 
 \end{figure}
 
-Typical noise sources in accelerometers are mechanical vibration of the springs, circuitry and general equipment disturbances. The accelerometer in this project is used to cross-check the perceived angle by the gyroscope, i.e. the signal has to be integrated to calculate an angle. \textbf{omskrivning?}-- A \textbf{measure} to specify how much the noise effects the integrated value is represented 
+Typical noise sources in accelerometers are mechanical vibration of the springs, circuitry and general equipment disturbances. The accelerometer in this project is used to cross-check the perceived angle by the gyroscope, i.e. the signal has to be integrated to compute the angle. To specify how much the noise effects the integrated value is represented 
 by the \textit{velocity random walk} (VRW) \cite{ARW}. The signal from the accelerometer during a stationary position can be characterized as a white noise, and the integrated value is going to "walk" around the mean value, hence the name \textit{random walk}.
 The accelerometer also outputs a bias, it is essential to determine the bias when estimating a position otherwise the error would grow quadratic due to multiple integration of the measurements \cite{ref:accelerometero}.
 
@@ -413,16 +422,16 @@ Consider figure \ref{Fig: Gyroscope} where a mass is vibrating along the $y$-axi
 \begin{equation}\label{eq:coriolis}
 \textbf{F}_c = -2m(\textbf{\textit{w}} \times \textbf{\textit{v}})
 \end{equation}
-The result is a physical displacement and a capacitance is measured just like the accelerometer. ---If, for example a rotation occurs along the x-axis the gyroscope would output a \textit{roll} rate. \textbf{not necessary right?}---
+The result is a physical displacement and a capacitance is measured just like the accelerometer.
 
 A micromechanical gyroscope is, like the accelerometer, effected by a bias. This is often due to friction caused by moving parts or production variations induce stress on the construction resulting in an offset of the output. If a constant error is integrated the angular error grows linearly with time. This is easily corrected by subtracting the bias from the output.
 This approach has a drawback. The small size and sensitivity of this device make the bias wander due to flickering noise in the electronics \cite{IMUintro}. Thus a \textit{bias stability} is introduced as a measurement of how the bias may change during a period of time.
-Other troublesome errors that occur in MEMS gyroscopes are thermo-mechanical white noise similar to noise in an accelerometer. To indicate how this noise effects the integrated value an \textit{Angle Random Walk} (ARW) is introduced. The ARW is of the same significance as the VRW mentioned in section \ref{sec: accelerometer} but considers the angular velocity instead. \textbf{var kritisk} 
+Other troublesome errors that occur in MEMS gyroscopes are thermo-mechanical white noise similar to noise in an accelerometer. To indicate how this noise effects the integrated value an \textit{Angle Random Walk} (ARW) is introduced. The ARW corresponds to the VRW mentioned in section \ref{sec: accelerometer} but considers the angular velocity instead.
 
 The concepts of ARW, VRW and bias stability that has been introduced are more or less an indication of how precise the measurement devices are.
 
-\section{Kalman filter}
-\subsection{introduction}
+\section{Kalman filter} \label{section: Kalman}
+\subsection{Introduction}
 The signal from an IMU contains data of angular velocities and acceleration, but also a lot of noise, as explained earlier. A position estimated from an untreated signal from an IMU could work for short periods, but over time the estimated position \textit{drifts} \cite{MEMSdrift}. This drift occurs when measurements containing noise is integrated to acquire a position, the readings contain both white noise and often a bias which is making the  error to grow for every calulation.
 Integrating the angular motion from the gyroscope to estimate a position would result in an angular drift and an even worse drift for the accelerometer as it is integrated twice to estimate a position.
 By using a Kalman filter the drift can effectively be minimized. If the readings from both the gyroscope and accelerometer is considered, and with some help of probablity theory the estimated state is not far from the true value.  A Kalman \textit{filter} is not what the name suggests, it is an estimator. Old and new measurements are processed real-time to calculate an estimation of the current state. 
@@ -452,7 +461,7 @@ A good estimator produces states that are non biased, \emph{values that have an 
 
 
 \subsection{State Estimator}
-The Kalman filter is, as stated above, is a state based estimator. By using the last measurement and the one before that it can derive a better estimate of the current state. The true state and the measured value at a time \textit{k} would be
+The Kalman filter is, as stated above, a state based estimator. By using the last measurement and the one before that it can derive a better estimate of the current state. The true state and the measured value at a time \textit{k} would be
 \begin{equation}\label{eq:kalmanstate}
 x_k = Ax\textsubscript{k-1}+Bu\textsubscript{k-1}+w\textsubscript{k-1}
 \end{equation}
@@ -463,16 +472,13 @@ The true state $x$ is expressed with the the old state and an input $u$. But the
 The measured value, $z$ seen in equation \eqref{eq:kalmanmeas} is an observed measurement. Ideally this would only be a function of $x$, but is distorted by the measurement noise $v$.
 The measurement noise, $v$, much like the process noise is common in any measurement and represents various fluctuations caused by the equipment.
 \\ \\
-The Kalman filter estimates a reliable state $\hat{x}_k$
+The Kalman filter takes into consideration how reliable the  process and measurement values are using the covariance error matrices described in \ref{app: Kalman}. These help the filter a reliable state $\hat{x}_k$
 \begin{equation}
 \hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
 \end{equation}
 where $\hat{x}^-_k$ is an estimation of the state using the process, in this case the gyroscope. The second term $K_k\tilde{y}_k$ contains $\tilde{y}_k$ which is a \textbf{parameter} that consider the measurement, the accelerometer. It also contains the Kalman gain, $K_k$ which indicates how reliable the measurement is and how much it should effect the new estimated state
 
-For further reading and explanation of how the Kalman filter works, see appendix \ref{app: Kalman}.
-
-\textbf{Här bryter jag}
-
+For further reading, and mathematical proof see \cite{Kalmanintro}.
 
 
 
@@ -532,24 +538,19 @@ For further reading and explanation of how the Kalman filter works, see appendix
 %The filter now returns to the measurement phase seen in figure \ref{Fig: Kalman phases}.
 %For further reading, and mathematical proof see \cite{Kalmanintro}.
 
-\section{Model dynamics} \label{chapter: state space}
-\subsection{Some introduction to the model}
-
-
-\subsection{Here comes kött}
-To create a control sytem the physical model has to be translated to a mathematical model \textbf{var detta rätt?}. The system can be estimated much like an inverted pendulum two-degree-of-freedom model \cite{KTHpendulum}.
+\section{Model dynamics} \label{section: model dynamics}
+To create a control system, the physical model has to be translated to a mathematical model. The system can be estimated much like a two-degree-of-freedom inverted pendulum model \cite{KTHpendulum}.
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=.6]{Lagrangeflywheel.pdf}
-\caption{Cube modelled as a reaction wheel pendulum Ska byta till rätt notation...}
+\includegraphics[trim=5cm 9cm 5cm 9cm, clip=true,scale=.6]{Lagrangeflywheel2.pdf}
+\caption{Cube modelled as a reaction wheel pendulum }
 \label{fig:Lagrangeflywheel}
 \end{figure}
 
-\emph{Lagrangian} Dynamics have been used to derive the systems behaviour. For a described mathematical walkthrough of how the model has been derived see appendix \ref{app: system dyn}. First of all cube's movement $\theta$ is expressed by the flywheel movement $\phi$. The Lagrangian  results in a torque equilibrium \textbf{moment kring jämviktspunkt är det jag ska skriva..}around the pivot point. 
+\emph{Lagrangian} Dynamics have been used to derive the systems behaviour. For a described mathematical walkthrough of how the model has been derived see appendix \ref{app: system dyn}. First of all cube's movement $\theta$ is expressed by the flywheel movement $\phi$. The Lagrangian  results in a torque \textbf{equation} around the pivot point
 \begin{equation} \label{eq:torque pivot}
-M_c \cdot g \cdot l \cdot \sin \theta - I_c \cdot \ddot{\theta} = I_f \ddot{\phi}
+M_{tot} \cdot g \cdot l \cdot \sin \theta - I_c \cdot \ddot{\theta} = I_f \ddot{\phi}
 \end{equation}
-\textbf{längden l ska skrivas om till l överallt inte roten ur 2}
 By making the assumption that the cube will balance with small deviations from the equilibrium point the angle can be expressed without the sinusodial term. By transforming equation \ref{eq:torque pivot} to the Laplace domain it is possible to express a transfer function for the flywheel angle
 \begin{equation} \label{transferfunc 1}
 \phi (s) = \frac{M_{tot} \cdot g \cdot l \cdot-I_c \cdot s^2}{I_f \cdot s^2}  \theta(s)
@@ -565,12 +566,9 @@ I_f \cdot \ddot{\phi} \cdot \eta_m \cdot \eta_g \cdot \Gamma = K_t \frac{U - \do
 \end{equation} 
 
 By transforming equation \ref{eq: laplace almost} to the laplace domain tand combining it with equation \ref{transferfunc 1} a complete transferfunction can be derived which express how the cube's angle depends on the input voltage in the Laplace domain
-\begin{equation}
+\begin{equation} \label{eq: laplace system}
 \theta(s) = \frac{K_t \cdot I_f \cdot \eta_m \cdot \eta_g \cdot \Gamma \cdot s^2}{R_a (M_{tot} \cdot g \cdot l - I_c \cdot s^2)(I_f \cdot s^2 + \frac{K_t \cdot K_e \cdot s}{R_a})} U(s)
 \end{equation}
-
-
-
 
  
 \section{Control theory and Pole placement}
@@ -579,6 +577,8 @@ is made the response of the system will not satisfy the requirements of the regu
 openloop poles high input signals might be required \cite{regler}. The openloop poles can be calculated by solving the eigenvalues 
 for the A matrix. Also one must check that the system is controllable for the posed states. Then a gain matrix can 
 be computed and the system can be closed.
+
+
 
 \section{Pulse Width Modulation}
 Pulse Width Modulation:
@@ -592,10 +592,10 @@ This allows for a DC voltage that is perceived as lower than the acual supply vo
 They duty cycle can be changed during operation unlike liner type voltage regulators. 
 
  
-\chapter{Demonstrator - Ny rubrik}
+\chapter{Design and what}
 
 \textsc{Kapitelintro?}
-This chapter covers the designing of the demonstrator and implementation of software and electronics is the cube.
+This chapter covers the designing of the demonstrator and implementation of software and electronics in the cube.
 
 \section{Problem Formulation}
 The construction of the cube can be seen as the engineering problem. The cube should be a robot that,
@@ -614,6 +614,37 @@ The main goal of this project was to build a structure which remain stable in an
 \item Final Assembly
 \end{itemize}
 All these individual system had to be implemented and joined in the final assembly.
+
+\section{System analysis}
+To analyse how the system behaves the transfer function obtained from equation \ref{eq: laplace system} is used
+\begin{equation}\label{eq: transfer function final}
+G(s) = \frac{K_t \cdot I_f \cdot \eta_m \cdot \eta_g \cdot \Gamma \cdot s^2}{R_a (M_{tot} \cdot g \cdot l - I_c \cdot s^2)(I_f \cdot s^2 + \frac{K_t \cdot K_e \cdot s}{R_a})} 
+\end{equation}
+
+Figure \ref{Fig: Pz & RootLocus} shows the Pole-Zero map and Root locus of the system indicating that the system is unstable in the open loop system. \cite{regler} To evaluate if the closed loop system is stable with a scalar gain $K$, Root Locus in Figure \ref{Fig: Root Locus} is used which indicates that the system is unstable with a loop gain $K$.
+
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{PzMap.eps}
+  \caption{Pole Zero map}
+  \label{Fig: PZmap}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{RootLocus.eps}
+  \caption{Root Locus}
+  \label{Fig: RootLocus}
+\end{subfigure}
+\caption{A figure with two subfigures}
+\label{Fig: PZ & RootLocus}
+\end{figure}
+
+The input signal $U$ i.e. voltage supplied to the motor is limited therefore a linear quadratic regulation is used. This is done with Matlab's \cite{MATLAB:2014} built in function using the \textit{recatti } MEEEDEL
+
+
 \section{Model validation}
 To synthesize a mathematical model from a real world problem it's often beneficial to simplify the reality. Examples of assumption made for this application would be that center of mass is located at the center of the cube, the friction in the motor is ignored and the frame is considered stiff etcetera. 
 To validate the model from chapter \ref{chapter: state space}, events with known results can be tested. To do so, Simulink \cite{MATLAB:2014} is used.
@@ -853,13 +884,14 @@ To understand this recursive filter which use old and new values a \textit{a pri
 \hat{x}_k
 \end{equation}
 The \textit{a priori}  state in equation \eqref{eq: priori state} is defined as the estimate of the current state at the time $k$. The \textit{a posteriori} state \eqref{eq: posteriori state} is the new estimated state.
-For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the characteristics of Gaussian noise.
+For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ earlier mentioned in section \ref{section: Kalman} has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the characteristics of Gaussian noise.
 
 
 
 
-During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope. It then moves on to the \textit{update} phase where it compares the state to the actual measurement, the accelerometer. See Figure \ref{Fig: Kalman phases}.
-Consider the true state equation \eqref{eq:kalmanstate}, the Kalman filter is firstly estimating the first state by neglecting the process noise
+During the \textit{predict} phase the filter estimates the states using the inputs from the process, i.e the gyroscope in this case. The filter then moves on to the \textit{update} phase where it compares the state to the actual measurement, the accelerometer, see Figure \ref{Fig: Kalman phases}.
+
+Consider the true state equation \eqref{eq:kalmanstate}, the Kalman filter first of all estimates a state by neglecting the process noise
 \begin{equation} \label{eq:Kalman first estimate}
 \hat{x}^-_k = A\hat{x}\textsubscript{k-1}+Bu\textsubscript{k-1}
 \end{equation}
@@ -870,12 +902,12 @@ Q = E(w_k w_k \textsuperscript{T})
 \begin{equation} \label{eq:covariance measurement noise}
 R = E(v_k v_k \textsuperscript{T} )
 \end{equation}
-How to determine these covariances are further investigated in section  \ref{chapter:Allan Variance}
+How to determine these covariances are further investigated in section  \ref{chapter:Allan Variance}.
 From here the \textit{a priori} error covariance matrix is introduced to symbolize the noise in the process measurement
 \begin{equation}
 P^-_k = AP\textsubscript{k-1}A^T + Q_k
 \end{equation}
-During the \textit{update} the accelerometer measures are used. The measurement \textit{innovation} is calculated as
+During the \textit{update} phase the accelerometer measures are used. The measurement \textit{innovation} is calculated as
 \begin{equation} \label{eq: innovation}
 \tilde{y} = z_k - H\hat{x}^-_k
 \end{equation}
@@ -888,22 +920,21 @@ The \textit{innovation} covariance is very similiar to the \textit{priori} error
 \begin{equation} \label{eq:Kalman gain}
 K_k = P^-_kH^TS\textsuperscript{-1}_k
 \end{equation}
-indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large the Kalman gain will be small and vice versa if the \textit{priori} error covariance is large.
-By now the \textit{posteriori} state can be estimated by
+This indicates how reliable the measurement is. Note that if the measurement covariance error \eqref{eq:covariance measurement noise} is large, the Kalman gain will be small and vice versa if the \textit{a priori} error covariance is large.
+By now the \textit{a posteriori} state can be estimated by
 \begin{equation}
 \hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
 \end{equation}
-A current state has been estimated and the Kalman filter and finally the \textit{priori} error covariance is updated
+A current state has been estimated, this would be the angle used for the control loop. Finally the \textit{priori} error is updated to be used for the next \textit{a priori} error.
 \begin{equation}
 P_k=(I-K_kH)P^-_k
 \end{equation} 
 The filter now returns to the measurement phase seen in figure \ref{Fig: Kalman phases}.
-For further reading, and mathematical proof see \cite{Kalmanintro}.
 
 
 \subsection{Implementation}
 \label{app: Kalman imp}
-The Kalman filter cycles two states, the \textit{predict} and \textit{update} phases. Kalman is using discretized steps making the filter implemented on a microprocessor fairly simple. 
+The Kalman filter cycles two states, the \textit{predict} and \textit{update} phases. The filter is using discretized steps making the filter implemented on a microprocessor \textbf{fairly simple}. 
 An implementation of the Kalman filter on the IMU would look something like this
 
 Consider the equation \eqref{eq:Kalman first estimate} from chapter \ref{app: Kalman} . At first the filter predicts the state
@@ -911,7 +942,7 @@ Consider the equation \eqref{eq:Kalman first estimate} from chapter \ref{app: Ka
 \hat{x}^-_k = A\hat{x}\textsubscript{k-1}+Bu\textsubscript{k-1}
 \end{equation}
 
-Where
+Where   \textbf{FETSTILTA MATRISNOATIONER}
 
 \begin{equation}
 \textbf{x}_k = \begin{bmatrix}
@@ -995,7 +1026,7 @@ P_{21} & P_{22}
 S^{-1}_k
 \end{equation}
 
-The predicted states are then updated with the \textsc{weighed} measures from the accelerometer
+The predicted states are then updated with the weighed measures from the accelerometer
 
 \begin{equation}
 \begin{bmatrix}
@@ -1044,8 +1075,7 @@ P\textsubscript{21} & P\textsubscript{22}
 This is done during each loop of the microcontroller to ensure that the estimated state is as near the true state as possible.
 
 \section{Arduino PWM implementation} \label{app: PWM}
-The arduino micro controler has a couple of different standard pulse width modulation (\textit{PWM} modes. But the standard frequencies are 490 and 980 Hz. "Having" a significantly higher 
-frequency have many advantages, especially for the control system. The chosen motor controller could work in two modes, one of them being ultrasonic the other below ultrasonic. Setting the PWM frequency above the arduino standard frequency is preferably because the the motor becomes more efficient \textsc{SOURCE} and the human ear can not hear frequencies above ~ 18 KHz. The Arduino uno's maximum PWM frequency is ~ 61 KHz, which is too much for the motor controller \textsc{WHY}. A bit of register manipulation had to be 
+The Arduino microcontroller has a couple of different standard \textit{pulse width modulation} (PWM) modes. But the standard frequencies are 490 and 980 Hz. Using a significantly higher frequency has many advantages, especially for the control system. The chosen motor controller could work in two modes, one of them being ultrasonic the other below ultrasonic. Setting the PWM frequency above the arduino standard frequency is preferably because the the motor becomes more efficient \textsc{SOURCE} and the human ear can not hear frequencies above ~ 18 KHz. The Arduino uno's maximum PWM frequency is ~ 61 KHz, which is too much for the motor controller \textsc{WHY}. A bit of register manipulation had to be 
 done to accomplish an acceptable PWM frequency.
 
 The Arduino has 3 clocks that controls various pins and functions in the environment. The clocks, and their respective pins and bit size, are:
