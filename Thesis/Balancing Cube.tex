@@ -108,7 +108,7 @@ byggdes en robot, som med hjälp av ett motordrivet svänghjul kan applicera ett
 We would like to thank Daniel Frede, our supervisor, for his continous support. Always ready with a well filled beer glass and pinpointing our faults with \textit{German precision}. Staffan Qvarnström and Tomas Östberg for their mechanical and practical expertise. As well all the student assistants that have helped us throughout the course.
 
 
-\begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
+\begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, may, 2015 \end{flushright}
  
 
 %\clearpage
@@ -170,7 +170,8 @@ $I^2C$		& Inter-Integrated circuit\\
 USB			& Universal Serial Bus \\
 UAV			& Unmanned Aerial Vehicle\\
 IDE 			& Integrated Development Interface \\
-DC			& Direct Current
+DC			& Direct Current \\
+dps			& Degrees per second
 \end{tabular}
 \cleardoublepage
 
@@ -604,8 +605,7 @@ The construction of the cube can be seen as the engineering problem. The cube sh
 using a reaction wheel can balance on its edge. All components were to be mounted in the robot, then only 
 requiring a power source. 
 
-The main components was a frame, reaction wheel. motor, motor controller, arduino, IMU, 
-and encoder.  
+The main components was a frame, reaction wheel. motor, motor controller, Arduino, and IMU
 
 The main goal of this project was to build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts. 
 \begin{itemize}
@@ -615,6 +615,35 @@ The main goal of this project was to build a structure which remain stable in an
 \item System Control
 \end{itemize}
 All these individual systems had to be implemented and joined in the final assembly.
+
+\section{Design}
+
+\subsection{Frame}
+The main construction problem was to decide the size of the cube and reaction wheel. A heavier construction with more inertia results in a pendulum which is simpler to stabilize. But also demands a larger torque and more powerful motor controller.
+The of the cube was constructed in aluminium consisting of 3 \textbf{symmetric} plates. By keeping the symmetric parts heavy considering the electrical components the subsystems could be placed arbitrarily and the center of gravity assumed to be in the center of the cube. By constructing the cube in such a way the mathematical model was easier to derive.  The final design is seen in Figure \ref{Fig: final design}. The motor was fixed through the middle wall, the shaft on one side and the body on the other. The motor controller and microcontroller fastened at the backplate whilst the sensor is placed on the front, to be moved during the research.
+
+
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[trim=5cm 10cm 5cm 9cm, clip=true,scale=.9]{Finaldesign.pdf}
+\caption{The final design of the cube}
+\label{Fig: final design}
+\end{figure}
+
+\subsection{Arduino}
+To run the control bal bla bla bla Arduino was used......
+
+
+\subsection{Motor controller}
+A factory made full H-bridge DC motor controller on a chip were used. The main criteria the controller had to meet was current and voltage capabilities suitable for the motor. The controller had to be able to deliver enough current to the motor when a load were applied. A motor controller from Pololu was used specified at 28V and able to handle continous currents of three ampere. The chosen controller also had a safety function that disabled the motor if an over current ran through the controller.
+
+It were connected to the arduino, with 4 cables each for a different functionality. PWM signal input, a brake function input, a direction switch input and an status flag output. A schematic diagram of all these connections can be seen in figure x.
+\textbf{in med fixbit bild här}
+
+
+\subsection{Motor}
+To apply torque to the flywheel a Maxon DC motor with a nominal voltage of 24V was used. \textbf{direkt kopplat lulul?} The torque excerted on the flywheel is straight connected to the ability to balance the cube at a larger deviation from the center-line. To gain a large torque but still maintaining a current that the motor controller could handle a spur gear with a ratio if \textbf{XX} was used. 
 
 \section{System analysis}
 To analyse how the system behaves the transfer function obtained from equation \ref{eq: laplace system} is used
@@ -666,6 +695,10 @@ The input signal $U$ i.e. voltage supplied to the motor is limited therefore a l
 All software was run on the arduino microcontroller and all code were written in the arduino enviroment. The arduino integrated development i (IDE) use the extension .ino butt the code is written in a combination of c and c++. The open source libraries used all were written in this environment so no fixes had to be made. 
 
 \section{Inertial navigation system}
+
+\subsection{Inertial measurement unit}
+The sensor used was the 9-DOF MPU-9150 from Sparkfun. As sensitivity was preferred and considering that the cube does not rotate around the pivot point at high speeds the gyroscope range was set to 250 deg/s and keeping a high sensitivity of 131 LSB's/dps
+
 
 \subsection{Kalman implementation}
 For the implementation of Kalman filter a library made by Lauszus was used, which is available a the Github repository\cite{TKJkalman}. For an extended explanation of the Kalman implementation, see appendix \ref{app: Kalman imp}.
@@ -748,25 +781,25 @@ To develop and improve a system such as this is an iterative process. To verify 
 
 
 
-The Simulinkmodel seen in figure \ref{fig:simmodel} describes the system
-\\ Something about the  optimizing of the feedback control
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=.7]{voltageplot.eps}
-\caption{Voltage across motor poles.}
-\label{fig:voltageplot}
-\end{figure}
+%The Simulinkmodel seen in figure \ref{fig:simmodel} describes the system
+%\\ Something about the  optimizing of the feedback control
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale=.7]{voltageplot.eps}
+%\caption{Voltage across motor poles.}
+%\label{fig:voltageplot}
+%\end{figure}
 
-The voltage supplied to the motor
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=.7]{angleplot.eps}
-\caption{Angle of the cube.}
-\label{fig:voltageplot}
-\end{figure}
-
-The angle of the cube. Very good such magic
+%The voltage supplied to the motor
+%
+%\begin{figure}[!htb]
+%\centering
+%\includegraphics[scale=.7]{angleplot.eps}
+%\caption{Angle of the cube.}
+%\label{fig:voltageplot}
+%\end{figure}
+%
+%The angle of the cube. Very good such magic
 
 \subsection{System Control}
 \textbf{Allt detta är skrivet för state-space behöver revideras}
@@ -813,9 +846,8 @@ A factory made full H-bridge DC motor controller on a chip were used. The main c
 
 It were connected to the arduino, with 4 cables each for a different functionality. PWM signal input, a brake function input, a direction switch input and an status flag output. A schematic diagram of all these connections can be seen in figure x.
 \textbf{in med fixbit bild här}
-\section{Interface?}
-Vad är detta? / ALEX
 \section{Hardware}
+\textbf{Detta tas upp i design. tas bort kanske}
 
 \subsection{Design}
 The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
@@ -940,7 +972,7 @@ An implementation of the Kalman filter on the IMU would look something like this
 
 Consider the equation \eqref{eq:Kalman first estimate} from chapter \ref{app: Kalman} . At first the filter predicts the state
 \begin{equation}
-\hat{x}^-_k = A\hat{x}\textsubscript{k-1}+Bu\textsubscript{k-1}
+\hat{\textbf{x}}^-_k = \textbf{A}\hat{x}\textsubscript{k-1}+\textbf{B}u\textsubscript{k-1}
 \end{equation}
 
 Where   \textbf{FETSTILTA MATRISNOATIONER}
@@ -966,7 +998,7 @@ u\textsubscript{k-1} = \dot{\theta}
 
 The states used here  are the angle as well as the bias. Next up is the \textit{priori} error covariance
 \begin{equation}
-P^-_k = AP\textsubscript{k-1}A^T + Q_k
+\textbf{P}^-_k = \textbf{A} \textbf{P}\textsubscript{k-1}\textbf{A}^T + \textbf{Q}_k
 \end{equation}
 
 \begin{equation}
@@ -997,7 +1029,7 @@ Q\textsubscript{ $\theta$ } & 0 \\
 The innovation covariance mentioned in \ref{eq:innovation cov}
 
 \begin{equation} 
-S_k=
+\textbf{S}_k=
 \begin{bmatrix}
 1 & 0
 \end{bmatrix}
@@ -1069,21 +1101,21 @@ K_1 \\ K_2
 \begin{bmatrix}
 P\textsubscript{11} & P\textsubscript{12} \\
 P\textsubscript{21} & P\textsubscript{22}
-\end{bmatrix}^-\textsubscript{k}
+\end{bmatrix}^-_k
 \end{equation}
 
 
 This is done during each loop of the microcontroller to ensure that the estimated state is as near the true state as possible.
 
 \section{Arduino PWM implementation} \label{app: PWM}
-The Arduino microcontroller has a couple of different standard \textit{pulse width modulation} (PWM) modes. But the standard frequencies are 490 and 980 Hz. Using a significantly higher frequency has many advantages, especially for the control system. The chosen motor controller could work in two modes, one of them being ultrasonic the other below ultrasonic. Setting the PWM frequency above the arduino standard frequency is preferably because the the motor becomes more efficient \textsc{SOURCE} and the human ear can not hear frequencies above ~ 18 KHz. The Arduino uno's maximum PWM frequency is ~ 61 KHz, which is too much for the motor controller \textsc{WHY}. A bit of register manipulation had to be 
+The Arduino microcontroller has a couple of different standard \textit{pulse width modulation} (PWM) modes. The standard frequencies are 490 and 980 Hz. Using a significantly higher frequency has many advantages, especially for the control system. The chosen motor controller could work in two modes, one of them being ultrasonic the other below ultrasonic. Setting the PWM frequency above the arduino standard frequency is preferably because the the motor becomes more efficient \textbf{SOURCE} and the human ear can not hear frequencies above \~ 20 KHz. The Arduino Uno's maximum PWM frequency is \~ 61 KHz, when set to high the motor controller consumes power so good setting is just above hearing range.\textsc{ which is too much for the motor controller \textsc{WHY}}. A bit of register manipulation had to be 
 done to accomplish an acceptable PWM frequency.
 
 The Arduino has 3 clocks that controls various pins and functions in the environment. The clocks, and their respective pins and bit size, are:
 \begin{itemize}
 \item[\textbf{Timer 0}]
 controls digital pin 10 and
-works in 8-bits it also used as reference for the delay(), millis() and micros() built in functions. i.e. changing timer 0 might disturb the code up if the code is using these functions. 
+works in 8-bits it also used as reference for the delay(), millis() and micros() built in functions. i.e. changing timer 0 could disturb the code if it is using these functions. 
 \item[\textbf{Timer 1}]
 The 16-bit timer. Controlls pin 5 and 6 and has more modes of operation than the other two timers
 \item[\textbf{Timer 2}]
@@ -1121,7 +1153,7 @@ The first equations of motion for the system is derived by using Lagrangian dyna
 \frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q_i}}\right)-\left(\frac{\partial \mathcal{L}}{\partial q_i}\right) = \tau_i
 \end{equation}
 
-Where $\tau$ is the generilzed force, in this case a torque. The $q$ operator is the generalized coordinate which now is an angle The cube's angular momentum is counteracted by the flywheel and the system can be divided into two parts, One considering the movement of the cube, the other the flywheel.
+Where $\tau$ is the generilzed force, in this case a torque. The $q$ operator is the generalized coordinate which now is an angle. The cube's angular momentum is counteracted by the flywheel and the system can be divided into two parts, One considering the movement of the cube, the other the flywheel.
 
 \begin{equation} \label{eq:positiveL}
 \tau_k=\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{\theta}}\right)-\left(\frac{\partial \mathcal{L}}{\partial \theta}\right)
@@ -1167,7 +1199,7 @@ Equation \ref{eq:negativeL2} together with \ref{eq:positiveL} express how the fl
 \begin{equation}
 I_c \cdot \ddot{\theta} - M_c \cdot g \cdot l \cdot \sin \theta   = -I_s \cdot \ddot{\phi}
 \end{equation}
-To use linear control methods the model has to be linearised. This is done at the instable equilibrium where the cube is balancing. Consider the sinus term at the equilibrium point where $\theta$ equals $0$. The term can then be expressed with taylor/macloaruin expansion
+To use linear control methods the model has to be linearised. This is done at the instable equilibrium where the cube is balancing. Consider the sinus term at the equilibrium point where $\theta$ equals $0$. The term can then be expressed with Maclaurin expansion
 
 \begin{equation} \label{eq: sinus taylor}
 sin \theta = \theta - \frac{\theta^3}{3!} +\frac{\theta^5}{5!}... \approx \theta 
