@@ -24,26 +24,25 @@
 \contentsline {section}{\numberline {2.3}Model dynamics}{10}{section.2.3}
 \contentsline {section}{\numberline {2.4}Control theory and Pole placement}{11}{section.2.4}
 \contentsline {section}{\numberline {2.5}Pulse Width Modulation}{11}{section.2.5}
-\contentsline {chapter}{\chapternumberline {3}Design and what}{13}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}Design and implementation}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Problem Formulation}{13}{section.3.1}
 \contentsline {section}{\numberline {3.2}System analysis}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Model validation}{14}{section.3.3}
-\contentsline {section}{\numberline {3.4}Software}{15}{section.3.4}
-\contentsline {section}{\numberline {3.5}Inertial navigation system}{15}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Kalman implementation}{15}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Measurement and process noise}{16}{subsection.3.5.2}
-\contentsline {section}{\numberline {3.6}Control implementation ish}{17}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Arduinothings?}{17}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}System Control}{17}{subsection.3.6.2}
-\contentsline {section}{\numberline {3.7}Electronics}{19}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Arduino}{19}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}PWM}{20}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Motor controller}{20}{subsection.3.7.3}
-\contentsline {section}{\numberline {3.8}Interface?}{21}{section.3.8}
-\contentsline {section}{\numberline {3.9}Hardware}{21}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Design}{21}{subsection.3.9.1}
-\contentsline {subsection}{\numberline {3.9.2}Motor}{22}{subsection.3.9.2}
-\contentsline {subsection}{\numberline {3.9.3}Final Assembly}{22}{subsection.3.9.3}
+\contentsline {section}{\numberline {3.3}Software}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}Inertial navigation system}{14}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Kalman implementation}{14}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Measurement and process noise}{15}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Control implementation ish}{16}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Arduinothings?}{16}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}System Control}{17}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Electronics}{19}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Arduino}{19}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}PWM}{19}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Motor controller}{20}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Interface?}{20}{section.3.7}
+\contentsline {section}{\numberline {3.8}Hardware}{21}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Design}{21}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Motor}{21}{subsection.3.8.2}
+\contentsline {subsection}{\numberline {3.8.3}Final Assembly}{21}{subsection.3.8.3}
 \contentsline {chapter}{\chapternumberline {4}Results}{23}{chapter.4}
 \contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion}{25}{section.5.1}
@@ -51,7 +50,7 @@
 \contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Recommendations}{27}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future work}{27}{section.6.2}
-\contentsline {chapter}{Bibliography}{29}{section*.21}
+\contentsline {chapter}{Bibliography}{29}{section*.20}
 \contentsline {part}{Appendices}{}{}
 \contentsline {chapter}{\chapternumberline {A}Additional information}{31}{appendix.A}
 \contentsline {section}{\numberline {A.1}Elaborative Kalman explanation (TITLE?)}{31}{section.A.1}

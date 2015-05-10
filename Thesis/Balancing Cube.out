@@ -19,38 +19,37 @@
 \BOOKMARK [1][-]{section.2.3}{Model dynamics}{chapter.2}% 19
 \BOOKMARK [1][-]{section.2.4}{Control theory and Pole placement}{chapter.2}% 20
 \BOOKMARK [1][-]{section.2.5}{Pulse Width Modulation}{chapter.2}% 21
-\BOOKMARK [0][-]{chapter.3}{Design and what}{}% 22
+\BOOKMARK [0][-]{chapter.3}{Design and implementation}{}% 22
 \BOOKMARK [1][-]{section.3.1}{Problem Formulation}{chapter.3}% 23
 \BOOKMARK [1][-]{section.3.2}{System analysis}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{Model validation}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.4}{Software}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.5}{Inertial navigation system}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.5.1}{Kalman implementation}{section.3.5}% 28
-\BOOKMARK [2][-]{subsection.3.5.2}{Measurement and process noise}{section.3.5}% 29
-\BOOKMARK [1][-]{section.3.6}{Control implementation ish}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.6.1}{Arduinothings?}{section.3.6}% 31
-\BOOKMARK [2][-]{subsection.3.6.2}{System Control}{section.3.6}% 32
-\BOOKMARK [1][-]{section.3.7}{Electronics}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.7.1}{Arduino}{section.3.7}% 34
-\BOOKMARK [2][-]{subsection.3.7.2}{PWM}{section.3.7}% 35
-\BOOKMARK [2][-]{subsection.3.7.3}{Motor controller}{section.3.7}% 36
-\BOOKMARK [1][-]{section.3.8}{Interface?}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.9}{Hardware}{chapter.3}% 38
-\BOOKMARK [2][-]{subsection.3.9.1}{Design}{section.3.9}% 39
-\BOOKMARK [2][-]{subsection.3.9.2}{Motor}{section.3.9}% 40
-\BOOKMARK [2][-]{subsection.3.9.3}{Final Assembly}{section.3.9}% 41
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 42
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 43
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 45
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 46
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 48
-\BOOKMARK [0][-]{section*.21}{Bibliography}{}% 49
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 50
-\BOOKMARK [1][-]{section.A.1}{Elaborative Kalman explanation \(TITLE?\)}{appendix.A}% 51
-\BOOKMARK [2][-]{subsection.A.1.1}{Mathematical background}{section.A.1}% 52
-\BOOKMARK [2][-]{subsection.A.1.2}{Implementation}{section.A.1}% 53
-\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 54
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 55
-\BOOKMARK [1][-]{section.B.1}{System dynamics}{appendix.B}% 56
+\BOOKMARK [1][-]{section.3.3}{Software}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.4}{Inertial navigation system}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.4.1}{Kalman implementation}{section.3.4}% 27
+\BOOKMARK [2][-]{subsection.3.4.2}{Measurement and process noise}{section.3.4}% 28
+\BOOKMARK [1][-]{section.3.5}{Control implementation ish}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.5.1}{Arduinothings?}{section.3.5}% 30
+\BOOKMARK [2][-]{subsection.3.5.2}{System Control}{section.3.5}% 31
+\BOOKMARK [1][-]{section.3.6}{Electronics}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.6.1}{Arduino}{section.3.6}% 33
+\BOOKMARK [2][-]{subsection.3.6.2}{PWM}{section.3.6}% 34
+\BOOKMARK [2][-]{subsection.3.6.3}{Motor controller}{section.3.6}% 35
+\BOOKMARK [1][-]{section.3.7}{Interface?}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.8}{Hardware}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.8.1}{Design}{section.3.8}% 38
+\BOOKMARK [2][-]{subsection.3.8.2}{Motor}{section.3.8}% 39
+\BOOKMARK [2][-]{subsection.3.8.3}{Final Assembly}{section.3.8}% 40
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 41
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 44
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 45
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 47
+\BOOKMARK [0][-]{section*.20}{Bibliography}{}% 48
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 49
+\BOOKMARK [1][-]{section.A.1}{Elaborative Kalman explanation \(TITLE?\)}{appendix.A}% 50
+\BOOKMARK [2][-]{subsection.A.1.1}{Mathematical background}{section.A.1}% 51
+\BOOKMARK [2][-]{subsection.A.1.2}{Implementation}{section.A.1}% 52
+\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 53
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 54
+\BOOKMARK [1][-]{section.B.1}{System dynamics}{appendix.B}% 55

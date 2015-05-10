@@ -105,7 +105,7 @@ byggdes en robot, som med hjälp av ett motordrivet svänghjul kan applicera ett
 \clearpage
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
-We would like to thank Daniel Frede, our supervisor, always ready with his well filled beer glass, for his continuous support and German \textit{precision}. Staffan Qvarnström and Tomas Östberg for their mechanical and practical expertise. As well all the student assistants that have helped us throughout the course.
+We would like to thank Daniel Frede, our supervisor, for his continous support. Always ready with a well filled beer glass and pinpointing our faults with \textit{German precision}. Staffan Qvarnström and Tomas Östberg for their mechanical and practical expertise. As well all the student assistants that have helped us throughout the course.
 
 
 \begin{flushright}Alexander Ramm \\Mikael Sjöstedt \\ KTH, månad, 2015 \end{flushright}
@@ -187,7 +187,7 @@ DC			& Direct Current
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH, Sweden. The work was carried out during the spring 2015.
 
 \section{Background}
-A reaction wheel is a wheel that is accelerated to apply torque. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Satellites are quite uncommon (there are ~1100 satellites currently in orbit [source]), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
+A reaction wheel is a wheel that is accelerated to apply torque. The most wide spread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Satellites are quite uncommon (there are just over thousand satellites currently in orbit), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
 
 Balancing 1 \textit{degree of freedom} (DOF) inverted pendulum type structures using reaction wheels is no
 new concept, and became more accessible with the introduction of cheap microcontrollers.
@@ -201,10 +201,9 @@ but there are still a limited amount of knowledge available to the public.
 
 The method to achieve balance of the pendulum using reaction wheels is even more narrow. 
 In recent years prototypes of land based structures using reaction wheels have been a hot topic and some of these robots are truly remarkable. 
-
-\textbf{pretty shady part. Maybe to the authors it would be a great achievment. medel på det där med PHD }
-It would be a great achievement to contribute knowledge about how such a mechanism could be built and evaluate
+It would be a great achievement for the authors to contribute knowledge about how such a mechanism could be built and evaluate
 the capabilities and restrictions of such a machine.
+\textbf{sista stycket ? }
 
 
 \section{Purpose}
@@ -218,31 +217,33 @@ The goal of the project was to build a structure with one degree of freedom that
 
 The dynamics is mostly effected by the control system, which is responsible for accelerating the motor in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
 This project will hopefully contribute to some development within the open-source community.
-All results are available online, open source (MIT license reference here), on GitHub \cite{Github}.
+All results are available online, open source on GitHub \cite{Github}.
 As a thesis in mechatronics, this paper can be divided into two parts. One engineering part whose focus to implement knowledge in mechanics, electronics and control theory to result in a functioning robot. A research part whose topic could be concentrated to a question 
 
 \begin{quote}
 \textit{
 How does the sensor placement effect the quality of the sensor data. --- what is quality ? how it effects system performance?}
 \end{quote}
-The only sensor that can be placed arbitrarily in the system is the \textit{Inertial Measurement Unit} (IMU). Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive devise and disturbances such as high current and fast oscillations in its vicinity might ruin the data entirely.[citation PLZ]. With quality defined as the usability of the data given by the sensor. \textbf{somewhat vague}
+With quality defined as the usability of the data given by the sensor. \textbf{somewhat vague}
+\\
+The sensors used for this project is an \textit{Inertial Measurement Unit} (IMU) which can be placed arbitrarily. Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive devise and disturbances such as high current and fast oscillations in its vicinity might effect the data, which is to be investigated. 
 
 \section{Scope}
-The only sensor whose position is to be examined is the IMU, as the encoder for the motor is fixed to the motor shaft and was not examined. Only a few key positions of the sensor were examined.
+The only sensor whose position is to be examined is the IMU. Only a few key positions of the sensor is going to be examined.
 
 The effects that were looked at were the ones related to the control system. Mainly the overshoot behaviour and the settling time of the system. Only data used for the specific control system were examined, \textbf{other DOF measurements were not taken into consideration ???}. I.e. \textbf{its a consquence} the results may only be applicable in similar machines and not in general.
 
 
 
 \section{Method}
-The sensor was placed in the upper corner, one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations were noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
+Initially the sensor was placed in the upper corner as far possible from other components, \textbf{ja det ska ju utvecklas...} one of the side corners, between the mentioned corners and in the center of the cube (insert figure reference). Both raw data and filtered data were collected and sent over serial to a computer. Using Matlab \cite{MATLAB:2014} the readings where analysed for stablization behaviour. Other obvious observations was noted. To have equal conditions, all measurements were made on the same horizontal space with the same external voltage supply.
 
 For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....).  \textbf{this might belong to method?}
 
 New TRY
 The cube was placed in a position close to its upper equlibriub point.
 
-\chapter{Theory}
+\chapter{Theory} \label{chapter: theory}
 This chapter cover some of the theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
 
 The first part is about the inertial reference unit that covers issues of sensor characteristics and why they are important to the system as a whole and the research question in particular.
@@ -570,6 +571,7 @@ By transforming equation \ref{eq: laplace almost} to the laplace domain tand com
 \theta(s) = \frac{K_t \cdot I_f \cdot \eta_m \cdot \eta_g \cdot \Gamma \cdot s^2}{R_a (M_{tot} \cdot g \cdot l - I_c \cdot s^2)(I_f \cdot s^2 + \frac{K_t \cdot K_e \cdot s}{R_a})} U(s)
 \end{equation}
 
+With the transferfunction from equation \ref{eq: laplace system} \textbf{ungefärliga pid värden?} proper PID-parameters can be derived for the demonstrator
  
 \section{Control theory and Pole placement}
 When using a state-space control system the poles of the controller is chosen by the engineer. But if a poor choice
@@ -581,6 +583,8 @@ be computed and the system can be closed.
 
 
 \section{Pulse Width Modulation}
+
+\textbf{Flytta till demonstrator?}
 Pulse Width Modulation:
 According to en.wikipedia.org: "Pulse-width modulation (PWM) [...] is a technique used to encode a message into a 
 pulsing signal."
@@ -592,10 +596,8 @@ This allows for a DC voltage that is perceived as lower than the acual supply vo
 They duty cycle can be changed during operation unlike liner type voltage regulators. 
 
  
-\chapter{Design and what}
-
-\textsc{Kapitelintro?}
-This chapter covers the designing of the demonstrator and implementation of software and electronics in the cube.
+\chapter{Design and implementation} \label{chapter: demonstrator}
+This part covers the design of the demonstrator, as well as how the theory introduced in chapter \ref{chapter: theory} was implemented.
 
 \section{Problem Formulation}
 The construction of the cube can be seen as the engineering problem. The cube should be a robot that,
@@ -607,13 +609,12 @@ and encoder.
 
 The main goal of this project was to build a structure which remain stable in an unstable condition. A process of this sort can be divided into several parts. 
 \begin{itemize}
-\item Construction
+\item Design
 \item Motor Control
 \item Sensor Reading
 \item System Control
-\item Final Assembly
 \end{itemize}
-All these individual system had to be implemented and joined in the final assembly.
+All these individual systems had to be implemented and joined in the final assembly.
 
 \section{System analysis}
 To analyse how the system behaves the transfer function obtained from equation \ref{eq: laplace system} is used
@@ -621,7 +622,7 @@ To analyse how the system behaves the transfer function obtained from equation \
 G(s) = \frac{K_t \cdot I_f \cdot \eta_m \cdot \eta_g \cdot \Gamma \cdot s^2}{R_a (M_{tot} \cdot g \cdot l - I_c \cdot s^2)(I_f \cdot s^2 + \frac{K_t \cdot K_e \cdot s}{R_a})} 
 \end{equation}
 
-Figure \ref{Fig: Pz & RootLocus} shows the Pole-Zero map and Root locus of the system indicating that the system is unstable in the open loop system. \cite{regler} To evaluate if the closed loop system is stable with a scalar gain $K$, Root Locus in Figure \ref{Fig: Root Locus} is used which indicates that the system is unstable with a loop gain $K$.
+Figure \ref{Fig: PZ & RootLocus} shows the Pole-Zero map and Root locus of the system indicating that the system is unstable in the open loop system. \cite{regler} To evaluate if the closed loop system is stable with a scalar gain $K$, Root Locus in Figure \ref{Fig: RootLocus} is used which indicates that the system is unstable with a loop gain $K$.
 
 
 \begin{figure}
@@ -645,21 +646,21 @@ Figure \ref{Fig: Pz & RootLocus} shows the Pole-Zero map and Root locus of the s
 The input signal $U$ i.e. voltage supplied to the motor is limited therefore a linear quadratic regulation is used. This is done with Matlab's \cite{MATLAB:2014} built in function using the \textit{recatti } MEEEDEL
 
 
-\section{Model validation}
-To synthesize a mathematical model from a real world problem it's often beneficial to simplify the reality. Examples of assumption made for this application would be that center of mass is located at the center of the cube, the friction in the motor is ignored and the frame is considered stiff etcetera. 
-To validate the model from chapter \ref{chapter: state space}, events with known results can be tested. To do so, Simulink \cite{MATLAB:2014} is used.
-First of all the DC-motor model is validated to known characteristics, such as no load speed and current. 
-
-\begin{figure}[!htb] 
-\centering
-\includegraphics[width = \textwidth]{Motor_noload.eps}
-\caption{Validation of motor model}
-\label{fig:Motor noload}
-\end{figure}
-
-The graphs in figure \ref{fig:Motor noload} displays the speed and current of the unloaded motor. Showing that the motor model correlates with the specified speed and current of an unloaded motor.
-
-The dynamics of the cube is simplified as an inverted pendulum. That means if there is no control input to the system it should behave as pendulum in free movement. That is, it should oscillate at a constant amplitude. As there is no torque applied to the flywheel rotor should be static at all times.
+%\section{Model validation}
+%To synthesize a mathematical model from a real world problem it's often beneficial to simplify the reality. Examples of assumption made for this application would be that center of mass is located at the center of the cube, the friction in the motor is ignored and the frame is considered stiff etcetera. 
+%To validate the model from chapter \ref{chapter: state space}, events with known results can be tested. To do so, Simulink \cite{MATLAB:2014} is used.
+%First of all the DC-motor model is validated to known characteristics, such as no load speed and current. 
+%
+%\begin{figure}[!htb] 
+%\centering
+%\includegraphics[width = \textwidth]{Motor_noload.eps}
+%\caption{Validation of motor model}
+%\label{fig:Motor noload}
+%\end{figure}
+%
+%The graphs in figure \ref{fig:Motor noload} displays the speed and current of the unloaded motor. Showing that the motor model correlates with the specified speed and current of an unloaded motor.
+%
+%The dynamics of the cube is simplified as an inverted pendulum. That means if there is no control input to the system it should behave as pendulum in free movement. That is, it should oscillate at a constant amplitude. As there is no torque applied to the flywheel rotor should be static at all times.
 
 \section{Software}
 All software was run on the arduino microcontroller and all code were written in the arduino enviroment. The arduino integrated development i (IDE) use the extension .ino butt the code is written in a combination of c and c++. The open source libraries used all were written in this environment so no fixes had to be made. 
@@ -797,10 +798,10 @@ The board run on 5 and 3.3 volts and has outputs for both. This was used to powe
 The arduino has 6 PWM ports, which can be implemented with a singe function call each.
 
 \subsection{PWM}
-The PWM frequency were chosen to 20KHz, the maximum the motor controler can cope with []. The duty cykcle was varied during the program and calculatid from the control system. A typical PWM signal, with 80 \%  duty cycle, can be seen a a yellow line in figure [PWMscope]. The green line is the signal applied the the motor.
+The PWM frequency were chosen to 20KHz, the maximum the motor controler can cope with []. The duty cykcle was varied during the program and calculatid from the control system. A typical PWM signal, with 80 \%  duty cycle, can be seen a a yellow line in Figure \ref{Fig: PWMscope}. The green line is the signal applied the the motor.
 
 A more in depth explanation of the arduino PWM implementation can be found in the appedix \ref{app: PWM}.
-\begin{figure}[!htb]
+\begin{figure}[!Hbt]
 \centering
 \includegraphics[width = \textwidth]{PWMpic.pdf}
 \caption{PWM pic}

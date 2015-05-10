@@ -1,0 +1,88 @@
+STEP translation to Solid Edge
+Date: Sunday,May 10,2015 12 :43PM
+Source File: Z:\GitHub\CubeProject\CAD\IMUcad\STEP_MPU-9150_(Assembly).STEP
+Author: '
+Organization: '
+Source System: SolidWorks 2014
+
+Hardware:
+Processor: Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz
+Operating System: Windows 7 Professional Service Pack 1
+Installed Memory: 11.99 GB
+
+Software Information
+Parasolid Version: 26.0.139
+PSBodyShop Version: 16.1.150
+Translator Version: 16.42.0
+Solid Edge Version: 106.00.00.100 x64
+
+Step Import Options
+Enable transfer of attributes: On
+Import Class II Wires: On
+Import Class III Wires: On
+Import Class IV Surfaces: On
+Import Class VI Solids: On
+Enable Stitch : On
+Import and Sew Class II Surfaces: On
+Translate Class IV Solids as Trimmed Surfaces then Stitch: Off
+Boolean Solid Bodies: On
+Make Base Feature: On
+Simplify Geometry: On
+Heal and Sewing Enabled: Off
+Enable Internal Healing: On
+Export Part Component Names As Unicode: On
+
+Phase 1 of 3 Translating to Parasolid data types...
+End of Translation to Parasolid Data Types
+Time required to translate:00 : 00 : 02
+
+Phase 2 of 3 Simplify Geometry...
+Geometry simplification process complete
+Time required to simplify: 00 : 00 : 05
+Stitching free surfaces...
+
+Phase 3 of 3 Creating Parasolid entities...
+Translation process completed
+Total time required to translate and post process:00 : 00 : 08
+
+Begin Assembly: 0
+Total Parts: 8
+Assemblies: 0
+Solid Bodies: 8
+Sheet Bodies: 0
+
+Processing Solid Body 1 of 8
+Created SE Part File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(CI_Board).par
+Placing MPU-9150_(CI_Board).par:1
+
+Processing Solid Body 2 of 8
+Created SE Part File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(Chip).par
+Placing MPU-9150_(Chip).par:1
+
+Processing Solid Body 3 of 8
+Created SE Part File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(0603_SMD1)_Valor predeterminado.par
+Placing MPU-9150_(0603_SMD1)_Valor predeterminado.par:1
+
+Processing Solid Body 4 of 8
+Reusing File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(0603_SMD1)_Valor predeterminado.par
+Placing MPU-9150_(0603_SMD1)_Valor predeterminado.par:2
+
+Processing Solid Body 5 of 8
+Created SE Part File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(0603_SMD2)_Valor predeterminado.par
+Placing MPU-9150_(0603_SMD2)_Valor predeterminado.par:1
+
+Processing Solid Body 6 of 8
+Reusing File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(0603_SMD2)_Valor predeterminado.par
+Placing MPU-9150_(0603_SMD2)_Valor predeterminado.par:2
+
+Processing Solid Body 7 of 8
+Reusing File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(0603_SMD2)_Valor predeterminado.par
+Placing MPU-9150_(0603_SMD2)_Valor predeterminado.par:3
+
+Processing Solid Body 8 of 8
+Reusing File Z:\GitHub\CubeProject\CAD\IMUcad\MPU-9150_(0603_SMD2)_Valor predeterminado.par
+Placing MPU-9150_(0603_SMD2)_Valor predeterminado.par:4
+
+
+
+

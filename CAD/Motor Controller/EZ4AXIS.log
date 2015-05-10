@@ -1,0 +1,156 @@
+STEP translation to Solid Edge
+Date: Sunday,May 10,2015 12 :56PM
+Source File: Z:\GitHub\CubeProject\CAD\Motor Controller\EZ4AXIS.STEP
+Author: 'SUNMAD'
+Organization: '
+Source System: SolidWorks 2011
+
+Hardware:
+Processor: Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz
+Operating System: Windows 7 Professional Service Pack 1
+Installed Memory: 11.99 GB
+
+Software Information
+Parasolid Version: 26.0.139
+PSBodyShop Version: 16.1.150
+Translator Version: 16.42.0
+Solid Edge Version: 106.00.00.100 x64
+
+Step Import Options
+Enable transfer of attributes: On
+Import Class II Wires: On
+Import Class III Wires: On
+Import Class IV Surfaces: On
+Import Class VI Solids: On
+Enable Stitch : On
+Import and Sew Class II Surfaces: On
+Translate Class IV Solids as Trimmed Surfaces then Stitch: Off
+Boolean Solid Bodies: On
+Make Base Feature: On
+Simplify Geometry: On
+Heal and Sewing Enabled: Off
+Enable Internal Healing: On
+Export Part Component Names As Unicode: On
+
+Phase 1 of 3 Translating to Parasolid data types...
+End of Translation to Parasolid Data Types
+Time required to translate:00 : 00 : 03
+
+Phase 2 of 3 Simplify Geometry...
+Geometry simplification process complete
+Time required to simplify: 00 : 00 : 00
+Stitching free surfaces...
+
+Phase 3 of 3 Creating Parasolid entities...
+Translation process completed
+Total time required to translate and post process:00 : 00 : 03
+
+Begin Assembly: 0
+Total Parts: 25
+Assemblies: 0
+Solid Bodies: 25
+Sheet Bodies: 0
+
+Processing Solid Body 1 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_8PIN.par
+Placing CONNECTOR_8PIN.par:1
+
+Processing Solid Body 2 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\IC_1_2.par
+Placing IC_1_2.par:1
+
+Processing Solid Body 3 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\POT_1.par
+Placing POT_1.par:1
+
+Processing Solid Body 4 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\PCB_2.par
+Placing PCB_2.par:1
+
+Processing Solid Body 5 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_4PIN_1.par
+Placing CONNECTOR_4PIN_1.par:1
+
+Processing Solid Body 6 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_6PIN_1.par
+Placing CONNECTOR_6PIN_1.par:1
+
+Processing Solid Body 7 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_6PIN_1.par
+Placing CONNECTOR_6PIN_1.par:2
+
+Processing Solid Body 8 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_5PIN.par
+Placing CONNECTOR_5PIN.par:1
+
+Processing Solid Body 9 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_6PIN_1.par
+Placing CONNECTOR_6PIN_1.par:3
+
+Processing Solid Body 10 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_4PIN.par
+Placing CONNECTOR_4PIN.par:1
+
+Processing Solid Body 11 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\USB-Mini-B.par
+Placing USB-Mini-B.par:1
+
+Processing Solid Body 12 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_5PIN.par
+Placing CONNECTOR_5PIN.par:2
+
+Processing Solid Body 13 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\COIL_6.par
+Placing COIL_6.par:1
+
+Processing Solid Body 14 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\IC_1_1.par
+Placing IC_1_1.par:1
+
+Processing Solid Body 15 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\IC_1_5.par
+Placing IC_1_5.par:1
+
+Processing Solid Body 16 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_4PIN.par
+Placing CONNECTOR_4PIN.par:2
+
+Processing Solid Body 17 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_4PIN_1.par
+Placing CONNECTOR_4PIN_1.par:2
+
+Processing Solid Body 18 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_4PIN_1.par
+Placing CONNECTOR_4PIN_1.par:3
+
+Processing Solid Body 19 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_4PIN_1.par
+Placing CONNECTOR_4PIN_1.par:4
+
+Processing Solid Body 20 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\COIL_3_2.par
+Placing COIL_3_2.par:1
+
+Processing Solid Body 21 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_6PIN_1.par
+Placing CONNECTOR_6PIN_1.par:4
+
+Processing Solid Body 22 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\COIL_3_2.par
+Placing COIL_3_2.par:2
+
+Processing Solid Body 23 of 25
+Reusing File Z:\GitHub\CubeProject\CAD\Motor Controller\COIL_3_2.par
+Placing COIL_3_2.par:3
+
+Processing Solid Body 24 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\CONNECTOR_2PIN.par
+Placing CONNECTOR_2PIN.par:1
+
+Processing Solid Body 25 of 25
+Created SE Part File Z:\GitHub\CubeProject\CAD\Motor Controller\IC_1.par
+Placing IC_1.par:1
+
+
+
+
