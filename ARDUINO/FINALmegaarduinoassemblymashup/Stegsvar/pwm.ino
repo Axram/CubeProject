@@ -48,7 +48,7 @@ noInterrupts();
   OCR2B = 0;
   interrupts();
 attachInterrupt(0, stateFlagHigh, LOW);
-sei();
+
 
 }
 void pwm_write(int duty)

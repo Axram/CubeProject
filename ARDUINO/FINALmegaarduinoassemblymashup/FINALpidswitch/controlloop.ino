@@ -10,17 +10,24 @@ void pid_set(double Kp, double Ki, double Kd)
 double pid_compute(){
   //
   unsigned long now = millis();
-  double timeChange = (double)(now-lastTime);
+  timeChange = (double)(now-lastTime);
   
   //
   //double error = setpoint - input;
-  double error = reference - startControlAngle;
+  error = reference - startControlAngle;
   errSum += (error* timeChange);
-  double dErr = (error - lastErr) / timeChange;
+  
+  dErr = (error - lastErr) / timeChange;
+  dErr = (dErr+ lastdErr)/2;
+  lastdErr = dErr;
+  //double dErr = (lastErr - error) / timeChange;
 
   //
   output = kp * error + ki * errSum + kd * dErr;
-
+  if (abs(output - lastOutput) > 2) {
+    output = output*0.5;
+  }
+  lastOutput = output;
   //
   lastErr = error;
   lastTime = now;

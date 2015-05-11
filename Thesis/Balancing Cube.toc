@@ -38,29 +38,22 @@
 \contentsline {subsection}{\numberline {3.5.2}Kalman implementation}{16}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Measurement and process noise}{16}{subsection.3.5.3}
 \contentsline {section}{\numberline {3.6}Control implementation ish}{19}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Arduinothings?}{19}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}System Control}{19}{subsection.3.6.2}
-\contentsline {section}{\numberline {3.7}Electronics}{20}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Arduino}{20}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}PWM}{20}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Motor controller}{21}{subsection.3.7.3}
-\contentsline {section}{\numberline {3.8}Hardware}{21}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Design}{21}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Motor}{21}{subsection.3.8.2}
-\contentsline {subsection}{\numberline {3.8.3}Final Assembly}{21}{subsection.3.8.3}
-\contentsline {chapter}{\chapternumberline {4}Results}{23}{chapter.4}
-\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discussion}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conclusions}{25}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Recommendations}{27}{section.6.1}
-\contentsline {section}{\numberline {6.2}Future work}{27}{section.6.2}
-\contentsline {chapter}{Bibliography}{29}{section*.19}
+\contentsline {subsection}{\numberline {3.6.1}System Control}{19}{subsection.3.6.1}
+\contentsline {section}{\numberline {3.7}Electronics}{19}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}PWM}{19}{subsection.3.7.1}
+\contentsline {chapter}{\chapternumberline {4}Results}{21}{chapter.4}
+\contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Discussion}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conclusions}{23}{section.5.2}
+\contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{25}{chapter.6}
+\contentsline {section}{\numberline {6.1}Recommendations}{25}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future work}{25}{section.6.2}
+\contentsline {chapter}{Bibliography}{27}{section*.19}
 \contentsline {part}{Appendices}{}{}
-\contentsline {chapter}{\chapternumberline {A}Additional information}{31}{appendix.A}
-\contentsline {section}{\numberline {A.1}Elaborative Kalman explanation (TITLE?)}{31}{section.A.1}
-\contentsline {subsection}{\numberline {A.1.1}Mathematical background}{31}{subsection.A.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Implementation}{32}{subsection.A.1.2}
-\contentsline {section}{\numberline {A.2}Arduino PWM implementation}{33}{section.A.2}
-\contentsline {chapter}{\chapternumberline {B}Proofs}{37}{appendix.B}
-\contentsline {section}{\numberline {B.1}System dynamics}{37}{section.B.1}
+\contentsline {chapter}{\chapternumberline {A}Additional information}{29}{appendix.A}
+\contentsline {section}{\numberline {A.1}Elaborative Kalman explanation (TITLE?)}{29}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Mathematical background}{29}{subsection.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Implementation}{30}{subsection.A.1.2}
+\contentsline {section}{\numberline {A.2}Arduino PWM implementation}{31}{section.A.2}
+\contentsline {chapter}{\chapternumberline {B}Proofs}{35}{appendix.B}
+\contentsline {section}{\numberline {B.1}System dynamics}{35}{section.B.1}

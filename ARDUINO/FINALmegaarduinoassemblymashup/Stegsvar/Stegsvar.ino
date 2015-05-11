@@ -40,6 +40,7 @@ double desired_voltage;
 int INVdir;
 
 
+
 int desired_duty;
 
 int counter_i=0;
@@ -63,7 +64,7 @@ while(1) {
 
 // Control variables
 
-double startControlAngle;
+volatile float startControlAngle;
  //Feedback
   double l1 = -3*27;
   double l2 = 0;
@@ -91,85 +92,39 @@ double kp, ki, kd;
 
 // Encoder
 float phi=0;
-
-
+int i;
+volatile float hej;
 
 void setup() {
   imu_setup();
   pwm_setup();
   pid_set(2.8, 0 , 0);  //Bästa K om broms används = 3.5
-
+  i = 0;
+  desired_voltage = 0;
+Serial.begin(9600);
 }
   
-
+//46.14
 void loop() {
+  hej = 5;
   imu_loop();        // IMU kalman loop
+  startControlAngle = kalAngleX-startXangle+46;
   //kalAngle = imu_loop();
   //Serial.println(kalAngleX); Serial.print("\t");
-  //Serial.print(gyroXrate); Serial.print("\t");
-  
-  // Control loop
-  startControlAngle = kalAngleX-startXangle+46;
-  Serial.println(startControlAngle); Serial.print("\t");
-  //desired_voltage = control_loop();
-  desired_voltage = pid_compute();
-  
-  
-  // PWM THINGS
-  
-  if((millis()-pwmtimer)>=20)  // Main loop runs at 50Hz
-  {
-    //counter++;
-    pwmtimer_old = pwmtimer;
-    pwmtimer=millis();
-      
-   //counter_i +=1;
-   if (startControlAngle < reference + 11 && startControlAngle > reference -11) {
-    // För desired riktning
-    if (desired_voltage < 0) {
-      //Beroende på tidigare riktning
-      if (INVdir == HIGH){
-       digitalWrite(INV, HIGH); // direction of motor
-       INVdir = HIGH;
-       desired_duty = (desired_voltage * -1)*100/24;
-       pwm_write(desired_duty);
-      }
-      else if (INVdir == LOW) {
-        secureBrake();
-        desired_duty = (desired_voltage * -1)*100/24;
-        pwm_write(desired_duty);
-        digitalWrite(INV,HIGH);
-        INVdir = HIGH;
-      }
+  //Serial.print(gyroXrate); Serial.print("\t")
+    Serial.write((const char*)&startControlAngle, 4);
+    
+    i +=1;
+    if(i>100){
+      desired_voltage = 6.5;
     }
-    if (desired_voltage > 0 ) {
-      if (INVdir == HIGH) {
-        secureBrake();
-        desired_duty = (desired_voltage)*100/24;
-        pwm_write(desired_duty);
-        digitalWrite(INV, LOW);
-        INVdir = LOW; 
-      }
-      else if (INVdir == LOW) {
-       digitalWrite(INV, LOW); // direction of motor
-       INVdir = LOW;
-       desired_duty = (desired_voltage)*100/24;
-       pwm_write(desired_duty);
-      }
-    }
-   //counter_i = 0;
-   //Serial.println("GOOOO");
-   }
-  else {
-  OCR2B = 0;
-  //Serial.println("NOOOT");
+    
+    digitalWrite(INV, HIGH); // direction of motor
+    INVdir = HIGH;
+    desired_duty = (desired_voltage * 1)*100/24;
+    pwm_write(desired_duty);
+    //Serial.println(desired_voltage);
+    delay(100);
+    
   }
-  }
-  Serial.print("desired "); Serial.print(desired_voltage); Serial.print("\t");
-  // Serial.print(DIS);
-  
-  
-  delay(10);
-  
-  
-}
+

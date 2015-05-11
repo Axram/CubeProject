@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  11 MAY 2015 00:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  11 MAY 2015 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1450,7 +1450,7 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<kth-cover.pdf, id=246, 597.23125pt x 845.1575pt>
+<kth-cover.pdf, id=218, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf>
 Package pdftex.def Info: kth-cover.pdf used on input line 75.
@@ -1460,7 +1460,7 @@ File: kth-cover.pdf Graphic file (type pdf)
 <use kth-cover.pdf>
 Package pdftex.def Info: kth-cover.pdf used on input line 75.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <kth-cover.pdf, id=249, page=1, 597.23125pt x 845.1575pt>
+ <kth-cover.pdf, id=221, page=1, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 1>
@@ -1495,7 +1495,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 83.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=291, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=263, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
@@ -1536,17 +1536,17 @@ H_Logotyp_PMS_2013.png>] [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 94.
+(Font)              <10> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 94.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 94.
+(Font)              <5> on input line 99.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language append on input line 95.
+(babel)             in language append on input line 100.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language append on input line 95.
+(babel)             in language append on input line 100.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--105
 
  []
 
@@ -1559,12 +1559,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
 No file "Balancing Cube".ind.
 (./Balancing Cube.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 59.
+(Font)              <12> on input line 52.
 ) [10] [11
 
 
 ]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 158--158
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 163--163
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
 
@@ -1574,53 +1574,54 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 158--158
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.202 
+l.207 
        [1
 
 
 
-] <concept.pdf, id=425, 1357.07pt x 742.775pt>
+] <concept.pdf, id=390, 1357.07pt x 742.775pt>
 File: concept.pdf Graphic file (type pdf)
  <use concept.pdf>
-Package pdftex.def Info: concept.pdf used on input line 214.
+Package pdftex.def Info: concept.pdf used on input line 219.
 (pdftex.def)             Requested size: 396.0pt x 216.73662pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.224 \begin{quote}
-                    [2 <./concept.pdf>] [3] [4
-
-] [5]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 300.
+l.229 \begin{quote}
+                    [2 <./concept.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 250.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 472--478
+) [3] [4] [5
+
+]
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 479--485
 
  []
 
-<Lagrangeflywheel2.pdf, id=505, 597.23125pt x 845.1575pt>
+<Lagrangeflywheel2.pdf, id=469, 597.23125pt x 845.1575pt>
 File: Lagrangeflywheel2.pdf Graphic file (type pdf)
 
 <use Lagrangeflywheel2.pdf>
-Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 547.
+Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 554.
 (pdftex.def)             Requested size: 187.62366pt x 199.80629pt.
  [9] [10 <./Lagrangeflywheel2.pdf>]
-Overfull \hbox (11.11617pt too wide) in paragraph at lines 588--598
+Overfull \hbox (11.11617pt too wide) in paragraph at lines 595--605
 \T1/lmr/bx/n/10.95 Flytta till demon-stra-tor? \T1/lmr/m/n/10.95 Pulse Width Mo
 d-u-la-tion: Ac-cord-ing to en.wikipedia.org:
  []
 
 [11] [12
 
-] [13] <Finaldesign.pdf, id=619, 597.23125pt x 845.1575pt>
+] [13] <Finaldesign.pdf, id=583, 597.23125pt x 845.1575pt>
 File: Finaldesign.pdf Graphic file (type pdf)
 
 <use Finaldesign.pdf>
-Package pdftex.def Info: Finaldesign.pdf used on input line 629.
+Package pdftex.def Info: Finaldesign.pdf used on input line 636.
 (pdftex.def)             Requested size: 281.43073pt x 274.0971pt.
  [14 <./Finaldesign.pdf>]
 Package epstopdf Info: Source file: <PzMap.eps>
@@ -1631,14 +1632,14 @@ Package epstopdf Info: Source file: <PzMap.eps>
 (epstopdf)                    size: 8223 bytes
 (epstopdf)             Command: <repstopdf --outfile=PzMap-eps-converted-to.pdf
  PzMap.eps>
-(epstopdf)             \includegraphics on input line 661.
+(epstopdf)             \includegraphics on input line 670.
 Package epstopdf Info: Output file is already uptodate.
 
-<PzMap-eps-converted-to.pdf, id=645, 562.1pt x 421.575pt>
+<PzMap-eps-converted-to.pdf, id=610, 562.1pt x 421.575pt>
 File: PzMap-eps-converted-to.pdf Graphic file (type pdf)
 
 <use PzMap-eps-converted-to.pdf>
-Package pdftex.def Info: PzMap-eps-converted-to.pdf used on input line 661.
+Package pdftex.def Info: PzMap-eps-converted-to.pdf used on input line 670.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <RootLocus.eps>
 (epstopdf)                    date: 2015-05-08 11:30:49
@@ -1648,14 +1649,14 @@ Package epstopdf Info: Source file: <RootLocus.eps>
 (epstopdf)                    size: 8913 bytes
 (epstopdf)             Command: <repstopdf --outfile=RootLocus-eps-converted-to
 .pdf RootLocus.eps>
-(epstopdf)             \includegraphics on input line 667.
+(epstopdf)             \includegraphics on input line 676.
 Package epstopdf Info: Output file is already uptodate.
 
-<RootLocus-eps-converted-to.pdf, id=646, 562.1pt x 421.575pt>
+<RootLocus-eps-converted-to.pdf, id=611, 562.1pt x 421.575pt>
 File: RootLocus-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RootLocus-eps-converted-to.pdf>
-Package pdftex.def Info: RootLocus-eps-converted-to.pdf used on input line 667.
+Package pdftex.def Info: RootLocus-eps-converted-to.pdf used on input line 676.
 
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
  [15 <./PzMap-eps-converted-to.pdf> <./RootLocus-eps-converted-to.pdf>]
@@ -1668,16 +1669,16 @@ Package epstopdf Info: Source file: <Kalmancomparisonstat.eps>
 (epstopdf)                    size: 16046 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonstat-eps-c
 onverted-to.pdf Kalmancomparisonstat.eps>
-(epstopdf)             \includegraphics on input line 708.
+(epstopdf)             \includegraphics on input line 717.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonstat-eps-converted-to.pdf, id=672, 562.1pt x 421.575pt>
+<Kalmancomparisonstat-eps-converted-to.pdf, id=637, 562.1pt x 421.575pt>
 File: Kalmancomparisonstat-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonstat-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonstat-eps-converted-to.pdf used on inpu
-t line 708.
-(pdftex.def)             Requested size: 396.0pt x 296.99812pt.
+t line 717.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
 Package epstopdf Info: Source file: <Kalmancomparisonturn.eps>
 (epstopdf)                    date: 2015-05-04 14:01:15
 (epstopdf)                    size: 42020 bytes
@@ -1687,15 +1688,15 @@ Package epstopdf Info: Source file: <Kalmancomparisonturn.eps>
 (epstopdf)                    size: 17512 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonturn-eps-c
 onverted-to.pdf Kalmancomparisonturn.eps>
-(epstopdf)             \includegraphics on input line 722.
+(epstopdf)             \includegraphics on input line 728.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonturn-eps-converted-to.pdf, id=674, 562.1pt x 421.575pt>
+<Kalmancomparisonturn-eps-converted-to.pdf, id=639, 562.1pt x 421.575pt>
 File: Kalmancomparisonturn-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonturn-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonturn-eps-converted-to.pdf used on inpu
-t line 722.
+t line 728.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <Kalmancomparisonturnzoom.eps>
 (epstopdf)                    date: 2015-05-04 14:01:35
@@ -1706,17 +1707,18 @@ pdf>
 (epstopdf)                    size: 10871 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonturnzoom-e
 ps-converted-to.pdf Kalmancomparisonturnzoom.eps>
-(epstopdf)             \includegraphics on input line 728.
+(epstopdf)             \includegraphics on input line 734.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonturnzoom-eps-converted-to.pdf, id=675, 562.1pt x 421.575pt>
+<Kalmancomparisonturnzoom-eps-converted-to.pdf, id=640, 562.1pt x 421.575pt>
 File: Kalmancomparisonturnzoom-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmancomparisonturnzoom-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmancomparisonturnzoom-eps-converted-to.pdf used on 
-input line 728.
+input line 734.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
- [16]
+ [16] [17 <./Kalmancomparisonstat-eps-converted-to.pdf> <./Kalmancomparisonturn
+-eps-converted-to.pdf> <./Kalmancomparisonturnzoom-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <gyroscopeallan.eps>
 (epstopdf)                    date: 2015-04-27 21:09:37
 (epstopdf)                    size: 76049 bytes
@@ -1725,42 +1727,30 @@ Package epstopdf Info: Source file: <gyroscopeallan.eps>
 (epstopdf)                    size: 23726 bytes
 (epstopdf)             Command: <repstopdf --outfile=gyroscopeallan-eps-convert
 ed-to.pdf gyroscopeallan.eps>
-(epstopdf)             \includegraphics on input line 749.
+(epstopdf)             \includegraphics on input line 755.
 Package epstopdf Info: Output file is already uptodate.
 
-<gyroscopeallan-eps-converted-to.pdf, id=689, 562.1pt x 421.575pt>
+<gyroscopeallan-eps-converted-to.pdf, id=683, 562.1pt x 421.575pt>
 File: gyroscopeallan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use gyroscopeallan-eps-converted-to.pdf>
 Package pdftex.def Info: gyroscopeallan-eps-converted-to.pdf used on input line
- 749.
-(pdftex.def)             Requested size: 393.46732pt x 295.10048pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17 <./Kalmancomparisonstat-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18 <./Kalmancomparisonturn-eps-converted-to.pdf> <./Kalmancomparisonturnzoom-
-eps-converted-to.pdf> <./gyroscopeallan-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-<PWMpic.pdf, id=742, 845.1575pt x 597.23125pt>
+ 755.
+(pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
+ [18 <./gyroscopeallan-eps-converted-to.pdf>] <PWMpic.pdf, id=702, 845.1575pt x
+ 597.23125pt>
 File: PWMpic.pdf Graphic file (type pdf)
  <use PWMpic.pdf>
-Package pdftex.def Info: PWMpic.pdf used on input line 839.
-(pdftex.def)             Requested size: 396.0pt x 279.8421pt.
+Package pdftex.def Info: PWMpic.pdf used on input line 812.
+(pdftex.def)             Requested size: 394.12505pt x 213.25684pt.
 
-Underfull \vbox (badness 6741) has occurred while \output is active []
+[19] [20 <./PWMpic.pdf>] [21
 
- [20 <./PWMpic.pdf>] [21] [22
+] [22
 
 ] [23] [24
 
 ] [25] [26
-
-] [27] [28
 
 ] (./Balancing Cube.bbl
 bibitemlist
@@ -1769,7 +1759,7 @@ Class memoir Warning: The \em font command is deprecated.
 (memoir)              Use \emph{...} instead on input line 11.
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 37--40
+Underfull \hbox (badness 2582) in paragraph at lines 30--33
 []\T1/lmr/m/n/10.95 Johansson, H. (2003).  \T1/lmr/m/it/10.95 Elek-troteknik\T1
 /lmr/m/n/10.95 .  In-sti-tu-tio-nen för
  []
@@ -1783,45 +1773,45 @@ Underfull \hbox (badness 2245) in paragraph at lines 42--45
  https : / / github . com /
  []
 
-[29
+[27
 
-]) [30] [31
+]) [28] [29
 
 
-] [32] [33] [34] [35] [36
+] [30] [31] [32] [33] [34
 
-] [37] [38] [39] [40
+] [35] [36] [37] [38
 
-] [41
+] [39
 
 ]
 \tf@toc=\write6
 \openout6 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1260.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1260.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1206.
 
 (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1260.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1260.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1206.
 
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: BF824B7D0CF9718B1AF16D0035A7E78E;3683.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1260.
+(rerunfilecheck)             Checksum: C778BDE28BACD1630C1A7A98C6945420;3242.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1206.
  ) 
 Here is how much of TeX's memory you used:
- 28210 strings out of 493117
- 590350 string characters out of 6135434
- 730227 words of memory out of 5000000
- 30970 multiletter control sequences out of 15000+600000
- 118942 words of font info for 70 fonts, out of 8000000 for 9000
+ 28194 strings out of 493117
+ 590108 string characters out of 6135434
+ 730270 words of memory out of 5000000
+ 30963 multiletter control sequences out of 15000+600000
+ 118570 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,18n,82p,855b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/lo
 cal/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
-14/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/texmf-dist
-/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc
-/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/
+14/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-d
+ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014/texmf-dist/fonts/
+enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/
 lm-rm.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive
@@ -1838,10 +1828,10 @@ pe1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
 ic/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lm
 sy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Balancing Cube.pdf" (55 pages, 1097392 bytes).
+Output written on "Balancing Cube.pdf" (53 pages, 1096704 bytes).
 PDF statistics:
- 1035 PDF objects out of 1200 (max. 8388607)
- 884 compressed objects within 9 object streams
- 192 named destinations out of 1000 (max. 500000)
- 584 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 994 PDF objects out of 1000 (max. 8388607)
+ 844 compressed objects within 9 object streams
+ 184 named destinations out of 1000 (max. 500000)
+ 534 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -26,17 +26,17 @@ Glad, T. and Ljung, L. (2006).
 \newblock {\em Grundläggande teori}.
 \newblock Studentlitterarur.
 
-\bibitem[Han et~al., 2009]{Allancalibration}
-Han, S., Wang, J., and Knight, N. (2009).
-\newblock Using allan variance to determine the calibration model of inertial
-  sensors for gps/ins integration.
-\newblock Technical report, School of Optoelectronics Science and Engineering,
-  National University of Defense Technology, China.
-
 \bibitem[Johansson, 2003]{elektro}
 Johansson, H. (2003).
 \newblock {\em Elektroteknik}.
 \newblock Institutionen för Maskinkonstruktion, KTH.
+
+\bibitem[Knight et~al., 2009]{Allancalibration}
+Knight, N., Han, S., and Wang, J. (2009).
+\newblock Using allan variance to determine the calibration model of inertial
+  sensors for gps/ins integration.
+\newblock Technical report, School of Optoelectronics Science and Engineering,
+  National University of Defense Technology, China.
 
 \bibitem[Lauszus, 2012]{TKJkalman}
 Lauszus, K. (2012).
@@ -47,6 +47,11 @@ Lauszus, K. (2012).
 MATLAB (2014).
 \newblock {\em version 8.4.0 (R2014b)}.
 \newblock The MathWorks Inc., Natick, Massachusetts.
+
+\bibitem[Pololu, 2014]{MC33926}
+Pololu (2014).
+\newblock Mc33926.
+\newblock Available from: \url{https://www.pololu.com/file/0J233/MC33926.pdf}.
 
 \bibitem[Shiau et~al., 2012]{MEMSdrift}
 Shiau, J.-K., Huang, C.-X., and Chang, M.-Y. (2012).

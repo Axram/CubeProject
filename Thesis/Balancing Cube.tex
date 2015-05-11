@@ -83,6 +83,11 @@ Approved: TBA 2015-month-day
 \selectlanguage{english}
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
+Some robots can do remarkable things. Balancing something unstable is one of those. This paper covers the design of such a robot and evaluates how sensor placement affects the ability to balance.
+
+From the result it was clear that some placements were bad and clearly affected the performance of the robot. The best placement was the farthest one from the motor, probable thus less affected by the induce currents in the motor windings.
+
+\textbf{OLD abstract}
 Robots that move require a high degree of precision from position tracking sensors. This paper studies how the 
 placement of these sensors effect the robots ability to determine its position. A robot with a cubical frame is
 built, which were able to balance on a edge with help of a reaction wheel. The robot determined its rotation using an inertial measurement unit. Different sensor positions were evaluated empirically and...
@@ -241,8 +246,10 @@ Initially the sensor was placed in the upper corner as far possible from other c
 
 For every position the same parameters and constants were used in all systems and software. The comparisons were made in between measurements while balance was maintained and no external disturbance is applied. All measurements where taken during a limited time frame (We dont know this yet....).  \textbf{this might belong to method?}
 
-New TRY
-The cube was placed in a position close to its upper equlibriub point.
+\textbf{New TRY}
+The cube was placed at rest close to the balance point. The support was removed and the constrol system enabled. The time taken for the c´ube to fall on its side were measured. If the cube did not fall within five seconds the position were called stable.
+
+Five different positions were examined, they can be seen in figure \textbf{In MEd ny bild här}. Ten measurement were taken for every position and the average falltime for the particular position was calculated.
 
 \chapter{Theory} \label{chapter: theory}
 This chapter cover some of the theory that is required if one want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
@@ -632,18 +639,20 @@ The of the cube was constructed in aluminium consisting of 3 \textbf{symmetric} 
 \end{figure}
 
 \subsection{Arduino}
-To run the control bal bla bla bla Arduino was used......
+The arduino is a open source, 8-bit microcontroller that was used in the robot. 
+The board run on 5 and 3.3 volts and has outputs for both. This was used to power both the IMU and the motor controller, external power only had to be used for the motor main supply. 
+The arduino has 6 PWM ports, which can be implemented with a singe function call each.
 
 
 \subsection{Motor controller}
 A factory made full H-bridge DC motor controller on a chip were used. The main criteria the controller had to meet was current and voltage capabilities suitable for the motor. The controller had to be able to deliver enough current to the motor when a load were applied. A motor controller from Pololu was used specified at 28V and able to handle continous currents of three ampere. The chosen controller also had a safety function that disabled the motor if an over current ran through the controller.
 
-It were connected to the arduino, with 4 cables each for a different functionality. PWM signal input, a brake function input, a direction switch input and an status flag output. A schematic diagram of all these connections can be seen in figure x.
+It was connected to the Arduino, with 4 cables each for a different functionality. PWM signal input, a brake function input, a direction switch input and an status flag output. A schematic diagram of all these connections can be seen in figure x.
 \textbf{in med fixbit bild här}
 
 
 \subsection{Motor}
-To apply torque to the flywheel a Maxon DC motor with a nominal voltage of 24V was used. \textbf{direkt kopplat lulul?} The torque excerted on the flywheel is straight connected to the ability to balance the cube at a larger deviation from the center-line. To gain a large torque but still maintaining a current that the motor controller could handle a spur gear with a ratio if \textbf{XX} was used. 
+To apply torque to the flywheel a Maxon DC motor with a nominal voltage of 24V was used. \textbf{direkt kopplat lulul?} The torque excerted on the flywheel is straight connected to the ability to balance the cube at a larger deviation from the center-line. To gain a large torque but still maintaining a current that the motor controller could handle a spur gear with a ratio of 10 was used. 
 
 \section{System analysis}
 To analyse how the system behaves the transfer function obtained from equation \ref{eq: laplace system} is used
@@ -705,17 +714,14 @@ For the implementation of Kalman filter a library made by Lauszus was used, whic
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width = \textwidth]{Kalmancomparisonstat.eps}
+\includegraphics[scale=0.6]{Kalmancomparisonstat.eps}
 \caption{Comparison of Kalman filtered signal and original signal (TO BE UPDATED)}
 \label{Fig: Kalman comparison}
 \end{figure}
-
 Figure \ref{Fig: Kalman comparison} shows a comparison of the estimated angle at a stationary position using the gyroscope, accelerometer and the Kalman filtered signals separately. The estimated angle using only the gyroscope can be seen by the negative angle ramp. This is due to the bias that is being integrated. The accelerometer readings show that the signal contains a lot of white noise but still has a mean value of zero. 
 The Kalman filtered angle starts following the gyroscope readings but are then corrected when weighed against the accelerometer measurements which can be seen early in the plot. 
 This indicates that the Kalman filter works as it should but the estimated state should still not be considered \textit{true} as the reference is zero. 
-
-
-\begin{figure}
+\begin{figure}[!htb]
 \centering
 \begin{subfigure}{.5\textwidth}
   \centering
@@ -746,7 +752,7 @@ The root Allan variance was calculated and is shown in Figure \ref{fig:gyroscope
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[scale=.7]{gyroscopeallan.eps}
+\includegraphics[scale=.6]{gyroscopeallan.eps}
 \caption{Gyroscope root Allan variance \textsc{fix pic}}
 \label{fig:gyroscope allan}
 \end{figure}
@@ -769,37 +775,7 @@ The angle (or velocity, concerning the accelerometer) random walk can be depicte
 These values corresponds to the process and measurement noise covariance matrices used by the Kalman filter. \textbf{Dessa finns bara i appendix ??} 
 
 \section{Control implementation ish}
-\subsection{Arduinothings?}
-\textbf{Oklart ved denna subsection kanse inte ska ha några alls}
-To develop and improve a system such as this is an iterative process. To verify changes and improvements in realtime, the model were simulated with Simulink\textsuperscript{\textregistered}. 
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[scale=.7]{simmodel.eps}
-%\caption{Simulink model.}
-%\label{fig:simmodel}
-%\end{figure}
 
-
-
-%The Simulinkmodel seen in figure \ref{fig:simmodel} describes the system
-%\\ Something about the  optimizing of the feedback control
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[scale=.7]{voltageplot.eps}
-%\caption{Voltage across motor poles.}
-%\label{fig:voltageplot}
-%\end{figure}
-
-%The voltage supplied to the motor
-%
-%\begin{figure}[!htb]
-%\centering
-%\includegraphics[scale=.7]{angleplot.eps}
-%\caption{Angle of the cube.}
-%\label{fig:voltageplot}
-%\end{figure}
-%
-%The angle of the cube. Very good such magic
 
 \subsection{System Control}
 \textbf{Allt detta är skrivet för state-space behöver revideras}
@@ -825,47 +801,18 @@ means that we only reliably can use 6 decimal digits of precision[float].
 
 \section{Electronics}
 
-\subsection{Arduino}
-The arduino is a open source, 8-bit microcontroller that was used in the robot. 
-The board run on 5 and 3.3 volts and has outputs for both. This was used to power both the IMU and the motor controller, external power only had to be used for the motor main supply. 
-The arduino has 6 PWM ports, which can be implemented with a singe function call each.
+
 
 \subsection{PWM}
-The PWM frequency were chosen to 20KHz, the maximum the motor controler can cope with []. The duty cykcle was varied during the program and calculatid from the control system. A typical PWM signal, with 80 \%  duty cycle, can be seen a a yellow line in Figure \ref{Fig: PWMscope}. The green line is the signal applied the the motor.
+The PWM frequency was set to 20KHz, the maximum the motor controller can cope with \cite{MC33926}. The duty cycle was varied during the program and calculated from the control system. A typical PWM signal, with 80 \%  duty cycle, can be seen as the yellow signal in Figure \ref{Fig: PWMscope}. The green line is the signal applied the the motor.
 
 A more in depth explanation of the arduino PWM implementation can be found in the appedix \ref{app: PWM}.
 \begin{figure}[!Hbt]
 \centering
-\includegraphics[width = \textwidth]{PWMpic.pdf}
+\includegraphics[trim=1cm 3cm 1cm 3cm, clip=true,scale=0.5]{PWMpic.pdf}
 \caption{PWM pic}
 \label{Fig: PWMscope}
 \end{figure} 
-
-\subsection{Motor controller}
-A factory made full H-bridge DC motor controller on a chip were used. The main criteria that the controller had to met were current capabilities. The controller had to be able to deliver enough current to the motor when a load were applied. The chosen controller also had a safty function that disabled the motor if an over current ran through the controller.
-
-It were connected to the arduino, with 4 cables each for a different functionality. PWM signal input, a brake function input, a direction switch input and an status flag output. A schematic diagram of all these connections can be seen in figure x.
-\textbf{in med fixbit bild här}
-\section{Hardware}
-\textbf{Detta tas upp i design. tas bort kanske}
-
-\subsection{Design}
-The main construction problem where deciding the size of the cube and reaction wheel. A too big reaction wheel for the motor has a large affect on the cubes ability to balance. The problem were (uppställt) with Newtonian mechanics.
-Also idealy the cube should be nice looking, easy to produce and simple to assemble. 
-
-A heavier cube results in more inertia and a pendulum which is simpler to stabilize.
-
-The motor were fixed through the middle wall in the cube, the shaft on one side and the body on the other. The flywheel was directly mounted to the motor shaft. All other components are mounted on the motor-body side of the cube.
- 
-\subsection{Motor}
-The motors nominal and stall torque are very important for the system. The limiting factor for the torque is the power of the motor. A motor capable of more power than the controller is specified for might damage the controller. The motor used were a direct current (DC) motor. 
-The motor used had a spur gear head which gave a unknown gear ratio.
-
-\subsection{Final Assembly}
-With the subproblems above solved and constructed, the final machine could be built. Here cabling and disturbances from other subsystems must be taken into consideration. 
-
-\textbf{SUPER OLD stuff here}
-The IMU placement would provisoricly be tried to se a placement were bad due to more disturbances form other compunents i.e. netsupply and motor lining.
 
 
 \chapter{Results}
@@ -882,8 +829,7 @@ hur keffa vi var-fstenbek
 The IMU measures very small voltage alterations when the capacitance varies in the mechanical system. Placing such a sensitive device near a motor which induces a flow of bla bla bla
 
 \section{Discussion}
-Motor choice osv
-
+In our case no positions were stable, problabne not because of the sensor placement but due to the control system as a whole. Still it is clear from the result that sensor placement is important and that some positions clearly are better than other
 \section{Conclusions}
 Successful victory
 

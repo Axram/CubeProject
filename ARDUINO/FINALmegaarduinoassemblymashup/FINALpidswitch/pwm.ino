@@ -60,14 +60,14 @@ void secureBrake()
   // För att bromsa inna man vänder
   //OCR2B = 0;
   noInterrupts();
-  //digitalWrite(DIS , HIGH);   
+  digitalWrite(DIS , HIGH);
   OCR2B = 0;
   int i = 0;
-  while (i<1) {
+  while (i<2) {
   //delayMicroseconds(2000000); //Mycket otrevligt så hela mainloopen delayas
   i+=1;
   }
   //Serial.println('brake');
-  //digitalWrite(DIS, LOW);
+  digitalWrite(DIS, LOW);
   interrupts();
 }

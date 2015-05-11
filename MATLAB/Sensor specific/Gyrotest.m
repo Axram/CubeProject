@@ -15,6 +15,7 @@ NumberSamples = Hz*60*min;
 for i = 1:NumberSamples   % 17100 samples, about 3 minutes
     %AccelData(i) = fscanf(s, '%f');
     GyroData(i) = fscanf(s, '%f');
+    Input(i) = fscanf(s, '%f');
     %Kalmandata(i) = fscanf(s, '%f');
 end
 time2 = toc

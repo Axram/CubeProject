@@ -33,28 +33,21 @@
 \BOOKMARK [2][-]{subsection.3.5.2}{Kalman implementation}{section.3.5}% 33
 \BOOKMARK [2][-]{subsection.3.5.3}{Measurement and process noise}{section.3.5}% 34
 \BOOKMARK [1][-]{section.3.6}{Control implementation ish}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.6.1}{Arduinothings?}{section.3.6}% 36
-\BOOKMARK [2][-]{subsection.3.6.2}{System Control}{section.3.6}% 37
-\BOOKMARK [1][-]{section.3.7}{Electronics}{chapter.3}% 38
-\BOOKMARK [2][-]{subsection.3.7.1}{Arduino}{section.3.7}% 39
-\BOOKMARK [2][-]{subsection.3.7.2}{PWM}{section.3.7}% 40
-\BOOKMARK [2][-]{subsection.3.7.3}{Motor controller}{section.3.7}% 41
-\BOOKMARK [1][-]{section.3.8}{Hardware}{chapter.3}% 42
-\BOOKMARK [2][-]{subsection.3.8.1}{Design}{section.3.8}% 43
-\BOOKMARK [2][-]{subsection.3.8.2}{Motor}{section.3.8}% 44
-\BOOKMARK [2][-]{subsection.3.8.3}{Final Assembly}{section.3.8}% 45
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 46
-\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 47
-\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 48
-\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 49
-\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 50
-\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 52
-\BOOKMARK [0][-]{section*.19}{Bibliography}{}% 53
-\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 54
-\BOOKMARK [1][-]{section.A.1}{Elaborative Kalman explanation \(TITLE?\)}{appendix.A}% 55
-\BOOKMARK [2][-]{subsection.A.1.1}{Mathematical background}{section.A.1}% 56
-\BOOKMARK [2][-]{subsection.A.1.2}{Implementation}{section.A.1}% 57
-\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 58
-\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 59
-\BOOKMARK [1][-]{section.B.1}{System dynamics}{appendix.B}% 60
+\BOOKMARK [2][-]{subsection.3.6.1}{System Control}{section.3.6}% 36
+\BOOKMARK [1][-]{section.3.7}{Electronics}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.7.1}{PWM}{section.3.7}% 38
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 39
+\BOOKMARK [0][-]{chapter.5}{Discussion and conclusions}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Discussion}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Conclusions}{chapter.5}% 42
+\BOOKMARK [0][-]{chapter.6}{Recommendations and future work}{}% 43
+\BOOKMARK [1][-]{section.6.1}{Recommendations}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.2}{Future work}{chapter.6}% 45
+\BOOKMARK [0][-]{section*.19}{Bibliography}{}% 46
+\BOOKMARK [0][-]{appendix.A}{Additional information}{}% 47
+\BOOKMARK [1][-]{section.A.1}{Elaborative Kalman explanation \(TITLE?\)}{appendix.A}% 48
+\BOOKMARK [2][-]{subsection.A.1.1}{Mathematical background}{section.A.1}% 49
+\BOOKMARK [2][-]{subsection.A.1.2}{Implementation}{section.A.1}% 50
+\BOOKMARK [1][-]{section.A.2}{Arduino PWM implementation}{appendix.A}% 51
+\BOOKMARK [0][-]{appendix.B}{Proofs}{}% 52
+\BOOKMARK [1][-]{section.B.1}{System dynamics}{appendix.B}% 53
