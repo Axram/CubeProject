@@ -21,7 +21,7 @@ end
 time2 = toc
 %timer = time2-time1;
 time = 0:1/Hz:(NumberSamples-1)/Hz;  %Time vector for the measurements. 95 Hz, 17099 readings.
-time =0:(time2)/NumberSamples:time2-(time2/NumberSamples);
+time =0:NumberSamples/time2:time2
 bias = mean(GyroData); % Unit counts
 biasdgs = bias * 0.00875;
 GyroDataNoBias = GyroData-bias;
@@ -30,7 +30,7 @@ fclose(s);
 delete(s);
 clear s
 %fclose(instrfind)
-plot(time, GyroData)
+plot(time, GyroData-GyroData(1))
 %% 
 figure
  plot(time, AccelData-AccelData(1))

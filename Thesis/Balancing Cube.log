@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  11 MAY 2015 21:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  15 MAY 2015 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -650,6 +650,26 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count154
 \AM@templatesizebox=\box29
 )
+(/usr/local/texlive/2014/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen147
+\lightrulewidth=\dimen148
+\cmidrulewidth=\dimen149
+\belowrulesep=\dimen150
+\belowbottomsep=\dimen151
+\aboverulesep=\dimen152
+\abovetopsep=\dimen153
+\cmidrulesep=\dimen154
+\cmidrulekern=\dimen155
+\defaultaddspace=\dimen156
+\@cmidla=\count155
+\@cmidlb=\count156
+\@aboverulesep=\dimen157
+\@belowrulesep=\dimen158
+\@thisruleclass=\count157
+\@lastruleclass=\count158
+\@thisrulewidth=\dimen159
+)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2014/04/30 v1.2b Input encoding file
 \inpenc@prehook=\toks29
@@ -950,8 +970,8 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks31
-\pgfutil@tempdima=\dimen147
-\pgfutil@tempdimb=\dimen148
+\pgfutil@tempdima=\dimen160
+\pgfutil@tempdimb=\dimen161
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
@@ -976,20 +996,20 @@ Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 ode.tex
 \pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen149
-\pgf@y=\dimen150
-\pgf@xa=\dimen151
-\pgf@ya=\dimen152
-\pgf@xb=\dimen153
-\pgf@yb=\dimen154
-\pgf@xc=\dimen155
-\pgf@yc=\dimen156
+\pgf@x=\dimen162
+\pgf@y=\dimen163
+\pgf@xa=\dimen164
+\pgf@ya=\dimen165
+\pgf@xb=\dimen166
+\pgf@yb=\dimen167
+\pgf@xc=\dimen168
+\pgf@yc=\dimen169
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count155
-\c@pgf@countb=\count156
-\c@pgf@countc=\count157
-\c@pgf@countd=\count158
+\c@pgf@counta=\count159
+\c@pgf@countb=\count160
+\c@pgf@countc=\count161
+\c@pgf@countd=\count162
 \t@pgf@toka=\toks35
 \t@pgf@tokb=\toks36
 \t@pgf@tokc=\toks37
@@ -1010,8 +1030,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count159
-\pgfsyssoftpath@bigbuffer@items=\count160
+\pgfsyssoftpath@smallbuffer@items=\count163
+\pgfsyssoftpath@bigbuffer@items=\count164
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -1023,8 +1043,8 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen157
-\pgfmath@count=\count161
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count165
 \pgfmath@box=\box31
 \pgfmath@toks=\toks38
 \pgfmath@stack@operand=\toks39
@@ -1049,37 +1069,37 @@ code.tex)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count162
+\c@pgfmathroundto@lastzeros=\count166
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen158
-\pgf@picmaxx=\dimen159
-\pgf@picminy=\dimen160
-\pgf@picmaxy=\dimen161
-\pgf@pathminx=\dimen162
-\pgf@pathmaxx=\dimen163
-\pgf@pathminy=\dimen164
-\pgf@pathmaxy=\dimen165
-\pgf@xx=\dimen166
-\pgf@xy=\dimen167
-\pgf@yx=\dimen168
-\pgf@yy=\dimen169
-\pgf@zx=\dimen170
-\pgf@zy=\dimen171
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen172
-\pgf@path@lasty=\dimen173
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
 File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen174
-\pgf@shorten@start@additional=\dimen175
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
@@ -1087,19 +1107,19 @@ File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box32
 \pgf@hbox=\box33
 \pgf@layerbox@main=\box34
-\pgf@picture@serial@count=\count163
+\pgf@picture@serial@count=\count167
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
 File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen176
+\pgflinewidth=\dimen189
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
 File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen177
-\pgf@pt@y=\dimen178
-\pgf@pt@temp=\dimen179
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -1116,13 +1136,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
 File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen180
+\pgfarrowsep=\dimen193
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen181
-\pgf@sys@shading@range@num=\count164
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count168
 )
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -1157,8 +1177,8 @@ File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen182
-\pgf@nodesepend=\dimen183
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -1173,8 +1193,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen184
-\pgffor@skip=\dimen185
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
 \pgffor@stack=\toks41
 \pgffor@toks=\toks42
 ))
@@ -1185,32 +1205,32 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count165
-\pgfplotmarksize=\dimen186
+\pgf@plot@mark@count=\count169
+\pgfplotmarksize=\dimen199
 )
-\tikz@lastx=\dimen187
-\tikz@lasty=\dimen188
-\tikz@lastxsaved=\dimen189
-\tikz@lastysaved=\dimen190
-\tikzleveldistance=\dimen191
-\tikzsiblingdistance=\dimen192
+\tikz@lastx=\dimen200
+\tikz@lasty=\dimen201
+\tikz@lastxsaved=\dimen202
+\tikz@lastysaved=\dimen203
+\tikzleveldistance=\dimen204
+\tikzsiblingdistance=\dimen205
 \tikz@figbox=\box37
 \tikz@figbox@bg=\box38
 \tikz@tempbox=\box39
 \tikz@tempbox@bg=\box40
-\tikztreelevel=\count166
-\tikznumberofchildren=\count167
-\tikznumberofcurrentchild=\count168
-\tikz@fig@count=\count169
+\tikztreelevel=\count170
+\tikznumberofchildren=\count171
+\tikznumberofcurrentchild=\count172
+\tikz@fig@count=\count173
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count170
-\pgfmatrixcurrentcolumn=\count171
-\pgf@matrix@numberofcolumns=\count172
+\pgfmatrixcurrentrow=\count174
+\pgfmatrixcurrentcolumn=\count175
+\pgf@matrix@numberofcolumns=\count176
 )
-\tikz@expandcount=\count173
+\tikz@expandcount=\count177
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1232,52 +1252,12 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
-\arrowsize=\dimen193
+\arrowsize=\dimen206
 )))
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/circuitikz.sty
-Package: circuitikz 2012/12/29 The CircuiTikz circuit drawing package version 0
-.3.0
-
-(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathmorphing.code.tex
-(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
-s.code.tex
-\pgfdecoratedcompleteddistance=\dimen194
-\pgfdecoratedremainingdistance=\dimen195
-\pgfdecoratedinputsegmentcompleteddistance=\dimen196
-\pgfdecoratedinputsegmentremainingdistance=\dimen197
-\pgf@decorate@distancetomove=\dimen198
-\pgf@decorate@repeatstate=\count174
-\pgfdecorationsegmentamplitude=\dimen199
-\pgfdecorationsegmentlength=\dimen200
-))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/circuitikz.code.tex
-\pgf@circ@Rlen=\dimen201
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircutils.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircmath.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircshapes.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircmonopoles.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircbipoles.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcirctripoles.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircquadpoles.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcirclabel.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcircvoltage.sty)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/pgfcirccurrent.sty))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/circuitikz/circuitikz1.code.tex
-\pgf@circ@res@up=\dimen202
-\pgf@circ@res@down=\dimen203
-\pgf@circ@res@zero=\dimen204
-\pgf@circ@res@left=\dimen205
-\pgf@circ@res@right=\dimen206
-\pgf@circ@res@other=\dimen207
-\pgf@circ@res@step=\dimen208
-\pgfstartlinewidth=\dimen209
-))
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.0 (rcs-revision 1.2)
@@ -1290,8 +1270,21 @@ File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.0 (rcs-revision 1.13)
 s/tikzlibrarydecorations.pathmorphing.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen207
+\pgfdecoratedremainingdistance=\dimen208
+\pgfdecoratedinputsegmentcompleteddistance=\dimen209
+\pgfdecoratedinputsegmentremainingdistance=\dimen210
+\pgf@decorate@distancetomove=\dimen211
+\pgf@decorate@repeatstate=\count178
+\pgfdecorationsegmentamplitude=\dimen212
+\pgfdecorationsegmentlength=\dimen213
+)
 \tikz@lib@dec@box=\box41
-))
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.markings.code.tex
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
@@ -1305,13 +1298,13 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen210
-\captionmargin@=\dimen211
-\captionwidth=\dimen212
-\caption@tempdima=\dimen213
-\caption@indent=\dimen214
-\caption@parindent=\dimen215
-\caption@hangindent=\dimen216
+\captionmargin=\dimen214
+\captionmargin@=\dimen215
+\captionwidth=\dimen216
+\caption@tempdima=\dimen217
+\caption@indent=\dimen218
+\caption@parindent=\dimen219
+\caption@hangindent=\dimen220
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 )
@@ -1335,11 +1328,11 @@ th \centering \fi \fi \if@conthang \sbox \@tempboxa {\@contnfont #1\@contdelim
 dim \wd \@tempboxa <\linewidth \@contcshortstyle \else \@contcstyle \fi \@contt
 font #2\par } \fi \fi \@contpost \if@contcw \par } \fi \vskip \belowcaptionskip
  .
-\c@ContinuedFloat=\count175
+\c@ContinuedFloat=\count179
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count176
-\c@subtable=\count177
+\c@subfigure=\count180
+\c@subtable=\count181
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2014/03/08 v0.9b Commutative diagrams with tikz
 
@@ -1355,10 +1348,10 @@ File: tikzlibraryquotes.code.tex 2013/08/28 v3.0.0 (rcs-revision 1.3)
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2013/12/13 v3.0.0 (rcs-revision 1.12)
-\pgfarrowinset=\dimen217
-\pgfarrowlength=\dimen218
-\pgfarrowwidth=\dimen219
-\pgfarrowlinewidth=\dimen220
+\pgfarrowinset=\dimen221
+\pgfarrowlength=\dimen222
+\pgfarrowwidth=\dimen223
+\pgfarrowlinewidth=\dimen224
 )))
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.text.code.tex
@@ -1396,8 +1389,8 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 73.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c@lofdepth=\count178
-\c@lotdepth=\count179
+\c@lofdepth=\count182
+\c@lotdepth=\count183
 \AtBeginShipoutBox=\box44
 Package hyperref Info: Link coloring OFF on input line 73.
 
@@ -1407,7 +1400,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count180
+\c@section@level=\count184
 )
 LaTeX Info: Redefining \ref on input line 73.
 LaTeX Info: Redefining \pageref on input line 73.
@@ -1420,16 +1413,16 @@ LaTeX Info: Redefining \nameref on input line 73.
 
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count181
-\scratchdimen=\dimen221
+\scratchcounter=\count185
+\scratchdimen=\dimen225
 \scratchbox=\box45
-\nofMPsegments=\count182
-\nofMParguments=\count183
+\nofMPsegments=\count186
+\nofMParguments=\count187
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count184
-\MPscratchDim=\dimen222
-\MPnumerator=\count185
-\makeMPintoPDFobject=\count186
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen226
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
 \everyMPtoPDFconversion=\toks44
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1450,7 +1443,7 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<kth-cover.pdf, id=218, 597.23125pt x 845.1575pt>
+<kth-cover.pdf, id=214, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf>
 Package pdftex.def Info: kth-cover.pdf used on input line 75.
@@ -1460,7 +1453,7 @@ File: kth-cover.pdf Graphic file (type pdf)
 <use kth-cover.pdf>
 Package pdftex.def Info: kth-cover.pdf used on input line 75.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <kth-cover.pdf, id=221, page=1, 597.23125pt x 845.1575pt>
+ <kth-cover.pdf, id=217, page=1, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 1>
@@ -1495,7 +1488,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 83.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=263, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=254, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
@@ -1536,17 +1529,17 @@ H_Logotyp_PMS_2013.png>] [2
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 99.
+(Font)              <10> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 99.
+(Font)              <5> on input line 92.
 Package babel Info: Redefining swedish shorthand "|
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 93.
 Package babel Info: Redefining swedish shorthand "~
-(babel)             in language append on input line 100.
+(babel)             in language append on input line 93.
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--105
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
 
@@ -1559,12 +1552,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--105
 No file "Balancing Cube".ind.
 (./Balancing Cube.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 52.
+(Font)              <12> on input line 49.
 ) [10] [11
 
 
 ]
-Overfull \hbox (1.33226pt too wide) in paragraph at lines 163--163
+Overfull \hbox (1.33226pt too wide) in paragraph at lines 159--159
 []|\T1/lmr/bx/n/10.95 Abbreviation| 
  []
 
@@ -1574,55 +1567,72 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 163--163
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.207 
+l.202 
        [1
 
 
 
-] <concept.pdf, id=390, 1357.07pt x 742.775pt>
+] <concept.pdf, id=380, 1357.07pt x 742.775pt>
 File: concept.pdf Graphic file (type pdf)
  <use concept.pdf>
-Package pdftex.def Info: concept.pdf used on input line 219.
+Package pdftex.def Info: concept.pdf used on input line 213.
 (pdftex.def)             Requested size: 396.0pt x 216.73662pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.229 \begin{quote}
-                    [2 <./concept.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 250.
-
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [3] [4] [5
-
-]
-[6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 479--485
+l.222 
+       [2 <./concept.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<Lagrangeflywheel2.pdf, id=469, 597.23125pt x 845.1575pt>
+<framsidaIMUpunkter.jpg, id=395, 85.5195pt x 46.79483pt>
+File: framsidaIMUpunkter.jpg Graphic file (type jpg)
+
+<use framsidaIMUpunkter.jpg>
+Package pdftex.def Info: framsidaIMUpunkter.jpg used on input line 252.
+(pdftex.def)             Requested size: 190.07831pt x 134.12611pt.
+
+<baksidaIMUpunkter.jpg, id=397, 85.5195pt x 46.79483pt>
+File: baksidaIMUpunkter.jpg Graphic file (type jpg)
+
+<use baksidaIMUpunkter.jpg>
+Package pdftex.def Info: baksidaIMUpunkter.jpg used on input line 258.
+(pdftex.def)             Requested size: 190.07831pt x 129.13992pt.
+ [3] [4 <./framsidaIMUpunkter.jpg> <./baksidaIMUpunkter.jpg>] [5
+
+]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 323.
+
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 499--505
+
+ []
+
+[9] <Lagrangeflywheel2.pdf, id=471, 597.23125pt x 845.1575pt>
 File: Lagrangeflywheel2.pdf Graphic file (type pdf)
 
 <use Lagrangeflywheel2.pdf>
-Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 554.
+Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 584.
 (pdftex.def)             Requested size: 187.62366pt x 199.80629pt.
- [9] [10 <./Lagrangeflywheel2.pdf>]
-Overfull \hbox (11.11617pt too wide) in paragraph at lines 595--605
-\T1/lmr/bx/n/10.95 Flytta till demon-stra-tor? \T1/lmr/m/n/10.95 Pulse Width Mo
-d-u-la-tion: Ac-cord-ing to en.wikipedia.org:
- []
+ [10 <./Lagrangeflywheel2.pdf>] [11] [12
 
-[11] [12
+]
+Underfull \vbox (badness 1052) has occurred while \output is active []
 
-] [13] <Finaldesign.pdf, id=583, 597.23125pt x 845.1575pt>
+ [13]
+<Finaldesign.pdf, id=572, 597.23125pt x 845.1575pt>
 File: Finaldesign.pdf Graphic file (type pdf)
-
-<use Finaldesign.pdf>
-Package pdftex.def Info: Finaldesign.pdf used on input line 636.
+ <use Finaldesign.pdf>
+Package pdftex.def Info: Finaldesign.pdf used on input line 652.
 (pdftex.def)             Requested size: 281.43073pt x 274.0971pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [14 <./Finaldesign.pdf>]
 Package epstopdf Info: Source file: <PzMap.eps>
 (epstopdf)                    date: 2015-05-08 11:30:33
@@ -1632,143 +1642,204 @@ Package epstopdf Info: Source file: <PzMap.eps>
 (epstopdf)                    size: 8223 bytes
 (epstopdf)             Command: <repstopdf --outfile=PzMap-eps-converted-to.pdf
  PzMap.eps>
-(epstopdf)             \includegraphics on input line 670.
+(epstopdf)             \includegraphics on input line 682.
 Package epstopdf Info: Output file is already uptodate.
-
-<PzMap-eps-converted-to.pdf, id=610, 562.1pt x 421.575pt>
+ <PzMap-eps-converted-to.pdf, id=599, 562.1pt x 421.575pt>
 File: PzMap-eps-converted-to.pdf Graphic file (type pdf)
 
 <use PzMap-eps-converted-to.pdf>
-Package pdftex.def Info: PzMap-eps-converted-to.pdf used on input line 670.
+Package pdftex.def Info: PzMap-eps-converted-to.pdf used on input line 682.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <RootLocus.eps>
-(epstopdf)                    date: 2015-05-08 11:30:49
-(epstopdf)                    size: 27806 bytes
+(epstopdf)                    date: 2015-05-13 10:50:10
+(epstopdf)                    size: 24072 bytes
 (epstopdf)             Output file: <RootLocus-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-05-08 11:36:15
-(epstopdf)                    size: 8913 bytes
+(epstopdf)                    date: 2015-05-13 11:03:42
+(epstopdf)                    size: 8740 bytes
 (epstopdf)             Command: <repstopdf --outfile=RootLocus-eps-converted-to
 .pdf RootLocus.eps>
-(epstopdf)             \includegraphics on input line 676.
+(epstopdf)             \includegraphics on input line 688.
 Package epstopdf Info: Output file is already uptodate.
 
-<RootLocus-eps-converted-to.pdf, id=611, 562.1pt x 421.575pt>
+<RootLocus-eps-converted-to.pdf, id=600, 562.1pt x 421.575pt>
 File: RootLocus-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RootLocus-eps-converted-to.pdf>
-Package pdftex.def Info: RootLocus-eps-converted-to.pdf used on input line 676.
+Package pdftex.def Info: RootLocus-eps-converted-to.pdf used on input line 688.
 
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
- [15 <./PzMap-eps-converted-to.pdf> <./RootLocus-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <Kalmancomparisonstat.eps>
-(epstopdf)                    date: 2015-05-04 13:58:46
-(epstopdf)                    size: 41090 bytes
-(epstopdf)             Output file: <Kalmancomparisonstat-eps-converted-to.pdf>
+ [15]
+Package epstopdf Info: Source file: <Stationarycomparison.eps>
+(epstopdf)                    date: 2015-05-12 22:58:08
+(epstopdf)                    size: 26725 bytes
+(epstopdf)             Output file: <Stationarycomparison-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2015-05-04 14:06:32
-(epstopdf)                    size: 16046 bytes
-(epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonstat-eps-c
-onverted-to.pdf Kalmancomparisonstat.eps>
-(epstopdf)             \includegraphics on input line 717.
+(epstopdf)                    date: 2015-05-12 23:06:07
+(epstopdf)                    size: 11982 bytes
+(epstopdf)             Command: <repstopdf --outfile=Stationarycomparison-eps-c
+onverted-to.pdf Stationarycomparison.eps>
+(epstopdf)             \includegraphics on input line 715.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonstat-eps-converted-to.pdf, id=637, 562.1pt x 421.575pt>
-File: Kalmancomparisonstat-eps-converted-to.pdf Graphic file (type pdf)
+<Stationarycomparison-eps-converted-to.pdf, id=611, 562.1pt x 421.575pt>
+File: Stationarycomparison-eps-converted-to.pdf Graphic file (type pdf)
 
-<use Kalmancomparisonstat-eps-converted-to.pdf>
-Package pdftex.def Info: Kalmancomparisonstat-eps-converted-to.pdf used on inpu
-t line 717.
+<use Stationarycomparison-eps-converted-to.pdf>
+Package pdftex.def Info: Stationarycomparison-eps-converted-to.pdf used on inpu
+t line 715.
 (pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
-Package epstopdf Info: Source file: <Kalmancomparisonturn.eps>
-(epstopdf)                    date: 2015-05-04 14:01:15
-(epstopdf)                    size: 42020 bytes
-(epstopdf)             Output file: <Kalmancomparisonturn-eps-converted-to.pdf>
-
-(epstopdf)                    date: 2015-05-04 14:08:41
-(epstopdf)                    size: 17512 bytes
-(epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonturn-eps-c
-onverted-to.pdf Kalmancomparisonturn.eps>
-(epstopdf)             \includegraphics on input line 728.
+Package epstopdf Info: Source file: <Kalmanturn.eps>
+(epstopdf)                    date: 2015-05-12 22:59:45
+(epstopdf)                    size: 27218 bytes
+(epstopdf)             Output file: <Kalmanturn-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-12 23:04:56
+(epstopdf)                    size: 13044 bytes
+(epstopdf)             Command: <repstopdf --outfile=Kalmanturn-eps-converted-t
+o.pdf Kalmanturn.eps>
+(epstopdf)             \includegraphics on input line 726.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonturn-eps-converted-to.pdf, id=639, 562.1pt x 421.575pt>
-File: Kalmancomparisonturn-eps-converted-to.pdf Graphic file (type pdf)
+<Kalmanturn-eps-converted-to.pdf, id=613, 562.1pt x 421.575pt>
+File: Kalmanturn-eps-converted-to.pdf Graphic file (type pdf)
 
-<use Kalmancomparisonturn-eps-converted-to.pdf>
-Package pdftex.def Info: Kalmancomparisonturn-eps-converted-to.pdf used on inpu
-t line 728.
+<use Kalmanturn-eps-converted-to.pdf>
+Package pdftex.def Info: Kalmanturn-eps-converted-to.pdf used on input line 726
+.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
-Package epstopdf Info: Source file: <Kalmancomparisonturnzoom.eps>
-(epstopdf)                    date: 2015-05-04 14:01:35
-(epstopdf)                    size: 22241 bytes
-(epstopdf)             Output file: <Kalmancomparisonturnzoom-eps-converted-to.
-pdf>
-(epstopdf)                    date: 2015-05-04 14:08:42
-(epstopdf)                    size: 10871 bytes
-(epstopdf)             Command: <repstopdf --outfile=Kalmancomparisonturnzoom-e
-ps-converted-to.pdf Kalmancomparisonturnzoom.eps>
-(epstopdf)             \includegraphics on input line 734.
+Package epstopdf Info: Source file: <Kalmanturnzoom.eps>
+(epstopdf)                    date: 2015-05-12 22:59:58
+(epstopdf)                    size: 15312 bytes
+(epstopdf)             Output file: <Kalmanturnzoom-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-12 23:04:58
+(epstopdf)                    size: 9434 bytes
+(epstopdf)             Command: <repstopdf --outfile=Kalmanturnzoom-eps-convert
+ed-to.pdf Kalmanturnzoom.eps>
+(epstopdf)             \includegraphics on input line 732.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmancomparisonturnzoom-eps-converted-to.pdf, id=640, 562.1pt x 421.575pt>
-File: Kalmancomparisonturnzoom-eps-converted-to.pdf Graphic file (type pdf)
+<Kalmanturnzoom-eps-converted-to.pdf, id=614, 562.1pt x 421.575pt>
+File: Kalmanturnzoom-eps-converted-to.pdf Graphic file (type pdf)
 
-<use Kalmancomparisonturnzoom-eps-converted-to.pdf>
-Package pdftex.def Info: Kalmancomparisonturnzoom-eps-converted-to.pdf used on 
-input line 734.
+<use Kalmanturnzoom-eps-converted-to.pdf>
+Package pdftex.def Info: Kalmanturnzoom-eps-converted-to.pdf used on input line
+ 732.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
- [16] [17 <./Kalmancomparisonstat-eps-converted-to.pdf> <./Kalmancomparisonturn
--eps-converted-to.pdf> <./Kalmancomparisonturnzoom-eps-converted-to.pdf>]
+ [16 <./PzMap-eps-converted-to.pdf> <./RootLocus-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <./Stationarycomparison-eps-converted-to.pdf> <./Kalmanturn-eps-converted-
+to.pdf> <./Kalmanturnzoom-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <gyroscopeallan.eps>
-(epstopdf)                    date: 2015-04-27 21:09:37
-(epstopdf)                    size: 76049 bytes
+(epstopdf)                    date: 2015-05-12 09:56:44
+(epstopdf)                    size: 78158 bytes
 (epstopdf)             Output file: <gyroscopeallan-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-04-27 21:09:48
-(epstopdf)                    size: 23726 bytes
+(epstopdf)                    date: 2015-05-12 09:59:02
+(epstopdf)                    size: 24897 bytes
 (epstopdf)             Command: <repstopdf --outfile=gyroscopeallan-eps-convert
 ed-to.pdf gyroscopeallan.eps>
-(epstopdf)             \includegraphics on input line 755.
+(epstopdf)             \includegraphics on input line 753.
 Package epstopdf Info: Output file is already uptodate.
 
-<gyroscopeallan-eps-converted-to.pdf, id=683, 562.1pt x 421.575pt>
+<gyroscopeallan-eps-converted-to.pdf, id=672, 562.1pt x 421.575pt>
 File: gyroscopeallan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use gyroscopeallan-eps-converted-to.pdf>
 Package pdftex.def Info: gyroscopeallan-eps-converted-to.pdf used on input line
- 755.
+ 753.
 (pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
- [18 <./gyroscopeallan-eps-converted-to.pdf>] <PWMpic.pdf, id=702, 845.1575pt x
- 597.23125pt>
-File: PWMpic.pdf Graphic file (type pdf)
- <use PWMpic.pdf>
-Package pdftex.def Info: PWMpic.pdf used on input line 812.
-(pdftex.def)             Requested size: 394.12505pt x 213.25684pt.
+ [18 <./gyroscopeallan-eps-converted-to.pdf>] <PWMpic1.jpg, id=694, 2346.7675pt
+ x 1658.195pt>
+File: PWMpic1.jpg Graphic file (type jpg)
+ <use PWMpic1.jpg>
+Package pdftex.def Info: PWMpic1.jpg used on input line 803.
+(pdftex.def)             Requested size: 309.32265pt x 203.90736pt.
 
-[19] [20 <./PWMpic.pdf>] [21
+[19 <./PWMpic1.jpg>] [20
 
-] [22
+]
+Package epstopdf Info: Source file: <result1.eps>
+(epstopdf)                    date: 2015-05-12 21:58:39
+(epstopdf)                    size: 52616 bytes
+(epstopdf)             Output file: <result1-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-12 21:59:33
+(epstopdf)                    size: 13245 bytes
+(epstopdf)             Command: <repstopdf --outfile=result1-eps-converted-to.p
+df result1.eps>
+(epstopdf)             \includegraphics on input line 836.
+Package epstopdf Info: Output file is already uptodate.
 
-] [23] [24
+<result1-eps-converted-to.pdf, id=712, 562.1pt x 421.575pt>
+File: result1-eps-converted-to.pdf Graphic file (type pdf)
 
-] [25] [26
+<use result1-eps-converted-to.pdf>
+Package pdftex.def Info: result1-eps-converted-to.pdf used on input line 836.
+(pdftex.def)             Requested size: 198.0pt x 148.49905pt.
+Package epstopdf Info: Source file: <result2.eps>
+(epstopdf)                    date: 2015-05-12 21:59:18
+(epstopdf)                    size: 52631 bytes
+(epstopdf)             Output file: <result2-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-05-12 21:59:34
+(epstopdf)                    size: 20442 bytes
+(epstopdf)             Command: <repstopdf --outfile=result2-eps-converted-to.p
+df result2.eps>
+(epstopdf)             \includegraphics on input line 842.
+Package epstopdf Info: Output file is already uptodate.
+
+<result2-eps-converted-to.pdf, id=713, 562.1pt x 421.575pt>
+File: result2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use result2-eps-converted-to.pdf>
+Package pdftex.def Info: result2-eps-converted-to.pdf used on input line 842.
+(pdftex.def)             Requested size: 198.0pt x 148.49905pt.
+ [21] [22 <./result1-eps-converted-to.pdf> <./result2-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 859--861
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+
+]
+[24] [25
+
+] [26
 
 ] (./Balancing Cube.bbl
 bibitemlist
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 13.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+[]\T1/lmr/m/n/10.95 Atmel (2010).  At-mega48a/pa/88a/pa/168a/pa/328/p.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+\T1/lmr/m/n/10.95 Avail-able from: []$\T1/lmtt/m/n/10.95 http : / / www . atmel
+ . com / images /
+ []
+
+
+Overfull \hbox (87.7057pt too wide) in paragraph at lines 10--14
+\T1/lmtt/m/n/10.95 Atmel-[]8271-[]8-[]bit-[]AVR-[]Microcontroller-[]ATmega48A-[
+]48PA-[]88A-[]88PA-[]168A-[]168PA-[]328-[]328P _
+ []
+
 
 Class memoir Warning: The \em font command is deprecated. 
-(memoir)              Use \emph{...} instead on input line 11.
+(memoir)              Use \emph{...} instead on input line 17.
 
 
-Underfull \hbox (badness 2582) in paragraph at lines 30--33
+Underfull \hbox (badness 2582) in paragraph at lines 36--39
 []\T1/lmr/m/n/10.95 Johansson, H. (2003).  \T1/lmr/m/it/10.95 Elek-troteknik\T1
 /lmr/m/n/10.95 .  In-sti-tu-tio-nen för
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 44.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 2245) in paragraph at lines 42--45
+
+Underfull \hbox (badness 2245) in paragraph at lines 48--51
 []\T1/lmr/m/n/10.95 Lauszus, K. (2012).  Kalman-fil-ter.  []$\T1/lmtt/m/n/10.95
  https : / / github . com /
  []
@@ -1782,31 +1853,73 @@ Underfull \hbox (badness 2245) in paragraph at lines 42--45
 
 ] [35] [36] [37] [38
 
-] [39
+]
+<total_schem.pdf, id=895, 597.23125pt x 845.1575pt>
+File: total_schem.pdf Graphic file (type pdf)
+ <use total_schem.pdf>
+Package pdftex.def Info: total_schem.pdf used on input line 1257.
+(pdftex.def)             Requested size: 238.88826pt x 338.057pt.
+
+[39 <./total_schem.pdf>] [40
+
+] [41
 
 ]
+File: kth-cover.pdf Graphic file (type pdf)
+ <use kth-cover.pdf>
+Package pdftex.def Info: kth-cover.pdf used on input line 1265.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: kth-cover.pdf Graphic file (type pdf)
+ <use kth-cover.pdf>
+Package pdftex.def Info: kth-cover.pdf used on input line 1265.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+
+<kth-cover.pdf, id=1267, page=2, 597.23125pt x 845.1575pt>
+File: kth-cover.pdf Graphic file (type pdf)
+
+<use kth-cover.pdf, page 2>
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: kth-cover.pdf Graphic file (type pdf)
+ <use kth-cover.pdf, page 2>
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: kth-cover.pdf Graphic file (type pdf)
+
+<use kth-cover.pdf, page 2>
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: kth-cover.pdf Graphic file (type pdf)
+ <use kth-cover.pdf, page 2>
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: kth-cover.pdf Graphic file (type pdf)
+
+<use kth-cover.pdf, page 2>
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [42 <./kth-cover.pdf>]
 \tf@toc=\write6
 \openout6 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1206.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1206.
-
-(./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1206.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1206.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1268.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1268.
+ (./Balancing Cube.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1268.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1268.
 
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: C778BDE28BACD1630C1A7A98C6945420;3242.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1206.
+(rerunfilecheck)             Checksum: C4B417569A09934BEF1A7E85CB2C592C;3110.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1268.
  ) 
 Here is how much of TeX's memory you used:
- 28194 strings out of 493117
- 590108 string characters out of 6135434
- 730270 words of memory out of 5000000
- 30963 multiletter control sequences out of 15000+600000
- 118570 words of font info for 69 fonts, out of 8000000 for 9000
+ 24180 strings out of 493117
+ 466118 string characters out of 6135434
+ 542165 words of memory out of 5000000
+ 26973 multiletter control sequences out of 15000+600000
+ 112780 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,18n,82p,855b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,18n,82p,867b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/lo
 cal/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
 14/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-d
@@ -1815,23 +1928,22 @@ enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/
 lm-rm.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/
-public/lm/lmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/l
-mmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2014/texmf-dis
-t/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
-pe1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
-ic/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lm
-sy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Balancing Cube.pdf" (53 pages, 1096704 bytes).
+/2014/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2014/texmf-dist/fon
+ts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pu
+blic/lm/lmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
+lic/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lms
+y8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "Balancing Cube.pdf" (56 pages, 2503423 bytes).
 PDF statistics:
- 994 PDF objects out of 1000 (max. 8388607)
- 844 compressed objects within 9 object streams
- 184 named destinations out of 1000 (max. 500000)
- 534 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1380 PDF objects out of 1440 (max. 8388607)
+ 1050 compressed objects within 11 object streams
+ 191 named destinations out of 1000 (max. 500000)
+ 578 words of extra memory for PDF output out of 10000 (max. 10000000)
 

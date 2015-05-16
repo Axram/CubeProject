@@ -40,7 +40,7 @@ double desired_voltage;
 //Ska va samma som INV sätts till
 int INVdir;
 
-
+double timer2 = 0;
 int desired_duty;
 
 int counter_i=0;
@@ -65,7 +65,7 @@ void stateFlagHigh() {
 // Control variables
 
 double startControlAngle;
-double calibrateAngle = 44.5;
+double calibrateAngle = 44;
  //Feedback
 double l1 = -3*27;
 double l2 = 0;
@@ -116,13 +116,16 @@ void loop() {
   switch (statecase) {
 
     case 1:
-    Serial.print("case 1 ");
+    //Serial.print("case 1 ");
+    //Serial.println(micros()-timer2);
+    //timer2 = micros();
     imu_loop();
     startControlAngle = kalAngleX-startXangle+calibrateAngle;
     errSum = 0;
     lastErr = 0;
     lastdErr = 0;
-    Serial.println(startControlAngle); Serial.print("\t");
+    //Serial.println(startControlAngle); Serial.print("\t");
+    Serial.println(startControlAngle);
     if (startControlAngle < (reference + 1) && startControlAngle > (reference - 1)){
       digitalWrite(DIS , LOW);
       statecase = 2;
@@ -130,28 +133,35 @@ void loop() {
     break;
     
     case 2:
-      kd = 20;
-      kp = 4;
+    //Serial.println(micros()-timer2);
+    //timer2 = micros();
+      kd = 5;
+      kp = 1;
       //ki = 0.02;
       pid_set(kp, ki , kd);
+      
+      // prints
       //Serial.print("Time "); Serial.print(timeChange); Serial.print("\t");
-      Serial.print("case 2 "); Serial.print("\t");
-      Serial.print("Kp volt "); Serial.print(kp * error); Serial.print("\t");
-      Serial.print("KD volt "); Serial.print(kd * dErr); Serial.print("\t");
+      //Serial.print("case 2 "); Serial.print("\t");
+      //Serial.print("Kp volt "); Serial.print(kp * error); Serial.print("\t");
+      //Serial.print("KD volt "); Serial.print(kd * dErr); Serial.print("\t");
+        
          imu_loop();        // IMU kalman loop
         // Control loop
          startControlAngle = kalAngleX-startXangle+calibrateAngle;
-         Serial.println(startControlAngle); Serial.print("\t");
+         
        //desired_voltage = control_loop();
          desired_voltage = pid_compute();
-         Serial.print("desired volt "); Serial.print(desired_voltage); Serial.print("\t");
+         Serial.println(startControlAngle);
+         //Serial.println(startControlAngle); Serial.print("\t");
+         //Serial.print("desired volt "); Serial.print(desired_voltage); Serial.print("\t");
 
     // PWM THINGS
 
     //if((millis()-pwmtimer)>=5)  // Main loop runs at 50Hz
     //{
    
-      if (startControlAngle < reference + 3 && startControlAngle > reference - 3) {
+      if (startControlAngle < reference + 4 && startControlAngle > reference - 4) {
       // För desired riktning
         if (desired_voltage < 0) {
         //Beroende på tidigare riktning
@@ -200,22 +210,28 @@ void loop() {
     break;
     
     case 3:
-      kd = 30; //kd = 20;
-      kp = 4; //kp = 2;
+    //Serial.println(micros()-timer2);
+    //timer2 = micros();
+      kd = 10; //kd = 20;
+      kp = 2; //kp = 2;
       //ki = 0.02;
       pid_set(kp, ki , kd);
+      
+      //prints
       //Serial.print("Time "); Serial.print(timeChange); Serial.print("\t");
-      Serial.print("case 3 "); Serial.print("\t");
-      Serial.print("Kp volt "); Serial.print(kp * error); Serial.print("\t");
-      Serial.print("KD volt "); Serial.print(kd * dErr); Serial.print("\t");
+      //Serial.print("case 3 "); Serial.print("\t");
+      //Serial.print("Kp volt "); Serial.print(kp * error); Serial.print("\t");
+      //Serial.print("KD volt "); Serial.print(kd * dErr); Serial.print("\t");
+        
          imu_loop();        // IMU kalman loop
         // Control loop
          startControlAngle = kalAngleX-startXangle+calibrateAngle;
-         Serial.println(startControlAngle); Serial.print("\t");
+         
        //desired_voltage = control_loop();
          desired_voltage = pid_compute();
-         Serial.print("desired volt "); Serial.print(desired_voltage); Serial.print("\t");
-
+         //Serial.println(startControlAngle); Serial.print("\t");
+         //Serial.print("desired volt "); Serial.print(desired_voltage); Serial.print("\t");
+    Serial.println(startControlAngle);
     // PWM THINGS
 
 

@@ -172,13 +172,14 @@ void loop() {
 
   Serial.print("\t");
 #endif
+//Serial.println(accX);
 // Kalman for x
-  Serial.print(roll); Serial.print("\t");
-  Serial.print(gyroXangle); Serial.print("\t");
+Serial.println(roll); //Serial.print("\t");
+Serial.println(gyroXangle); //Serial.print("\t");
   //Serial.print(compAngleX); Serial.print("\t");
-  Serial.print(kalAngleX); Serial.print("\t");
+  Serial.println(kalAngleX); //Serial.print("\t");
 
-  Serial.print("\t");
+  //Serial.print("\t");
 /*
   Serial.print(pitch); Serial.print("\t");
   Serial.print(gyroYangle); Serial.print("\t");
@@ -192,6 +193,6 @@ void loop() {
   Serial.print(temperature); Serial.print("\t");
 #endif
 
-  Serial.print("\r\n");
+  //Serial.print("\r\n");
   delay(2);
 }

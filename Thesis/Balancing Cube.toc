@@ -21,39 +21,38 @@
 \contentsline {section}{\numberline {2.2}Kalman filter}{8}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Introduction}{8}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}State Estimator}{9}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Model dynamics}{10}{section.2.3}
-\contentsline {section}{\numberline {2.4}Control theory and Pole placement}{11}{section.2.4}
-\contentsline {section}{\numberline {2.5}Pulse Width Modulation}{11}{section.2.5}
+\contentsline {section}{\numberline {2.3}Pulse Width Modulation}{10}{section.2.3}
+\contentsline {section}{\numberline {2.4}Model dynamics}{10}{section.2.4}
 \contentsline {chapter}{\chapternumberline {3}Design and implementation}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Problem Formulation}{13}{section.3.1}
-\contentsline {section}{\numberline {3.2}Design}{13}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Frame}{13}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Arduino}{14}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Motor controller}{14}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.2}Design}{14}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Frame}{14}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Arduino}{15}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Motor controller}{15}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Motor}{15}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}System analysis}{15}{section.3.3}
-\contentsline {section}{\numberline {3.4}Software}{16}{section.3.4}
+\contentsline {section}{\numberline {3.4}Software}{15}{section.3.4}
 \contentsline {section}{\numberline {3.5}Inertial navigation system}{16}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Inertial measurement unit}{16}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Kalman implementation}{16}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Measurement and process noise}{16}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Control implementation ish}{19}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}System Control}{19}{subsection.3.6.1}
-\contentsline {section}{\numberline {3.7}Electronics}{19}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}PWM}{19}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.5.3}Measurement and process noise}{18}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Electronics}{19}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}PWM}{19}{subsection.3.6.1}
 \contentsline {chapter}{\chapternumberline {4}Results}{21}{chapter.4}
 \contentsline {chapter}{\chapternumberline {5}Discussion and conclusions}{23}{chapter.5}
 \contentsline {section}{\numberline {5.1}Discussion}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conclusions}{23}{section.5.2}
+\contentsline {section}{\numberline {5.2}Conclusions}{24}{section.5.2}
 \contentsline {chapter}{\chapternumberline {6}Recommendations and future work}{25}{chapter.6}
 \contentsline {section}{\numberline {6.1}Recommendations}{25}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future work}{25}{section.6.2}
-\contentsline {chapter}{Bibliography}{27}{section*.19}
+\contentsline {chapter}{Bibliography}{27}{section*.22}
 \contentsline {part}{Appendices}{}{}
 \contentsline {chapter}{\chapternumberline {A}Additional information}{29}{appendix.A}
-\contentsline {section}{\numberline {A.1}Elaborative Kalman explanation (TITLE?)}{29}{section.A.1}
+\contentsline {section}{\numberline {A.1}The Kalman filter}{29}{section.A.1}
 \contentsline {subsection}{\numberline {A.1.1}Mathematical background}{29}{subsection.A.1.1}
 \contentsline {subsection}{\numberline {A.1.2}Implementation}{30}{subsection.A.1.2}
 \contentsline {section}{\numberline {A.2}Arduino PWM implementation}{31}{section.A.2}
 \contentsline {chapter}{\chapternumberline {B}Proofs}{35}{appendix.B}
 \contentsline {section}{\numberline {B.1}System dynamics}{35}{section.B.1}
+\contentsline {chapter}{\chapternumberline {C}Schematics}{39}{appendix.C}
+\contentsline {section}{\numberline {C.1}Electrical circuit}{39}{section.C.1}

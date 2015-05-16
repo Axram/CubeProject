@@ -6,6 +6,12 @@ Andrejasic, M. (2008).
 \newblock Technical report, Faculty for mathematics and physics, University of
   Ljubljana.
 
+\bibitem[Atmel, 2010]{AVR}
+Atmel (2010).
+\newblock Atmega48a/pa/88a/pa/168a/pa/328/p.
+\newblock Available from:
+  \url{http://www.atmel.com/images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Complete.pdf}.
+
 \bibitem[Block et~al., 2007]{Lagrangeref}
 Block, D.~J., Åström, K.~J., and Spong, M.~W. (2007).
 \newblock {\em The Reaction Wheel Pendulum}.
@@ -43,11 +49,6 @@ Lauszus, K. (2012).
 \newblock Kalmanfilter.
 \newblock \url{https://github.com/TKJElectronics/KalmanFilter}.
 
-\bibitem[MATLAB, 2014]{MATLAB:2014}
-MATLAB (2014).
-\newblock {\em version 8.4.0 (R2014b)}.
-\newblock The MathWorks Inc., Natick, Massachusetts.
-
 \bibitem[Pololu, 2014]{MC33926}
 Pololu (2014).
 \newblock Mc33926.
@@ -72,6 +73,11 @@ Sjöstedt, M. and Ramm, A. (2015).
 \bibitem[Stockwell, 1997]{ARW}
 Stockwell, D.~W. (1997).
 \newblock Angle random walk.
+\newblock Technical report.
+
+\bibitem[Tectronix, 2013]{pwmeff}
+Tectronix (2013).
+\newblock Power analysis of pwm motor drives.
 \newblock Technical report.
 
 \bibitem[Welch and Bishop, 2006]{Kalmanintro}

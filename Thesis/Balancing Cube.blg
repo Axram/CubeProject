@@ -4,45 +4,46 @@ The top-level auxiliary file: Balancing Cube.aux
 The style file: apalike-url.bst
 Database file #1: FiM_references.bib
 Warning--empty institution in ARW
-You've used 16 entries,
+Warning--empty institution in pwmeff
+You've used 17 entries,
             2301 wiz_defined-function locations,
-            635 strings with 6370 characters,
-and the built_in function-call counts, 5792 in all, are:
-= -- 654
-> -- 200
-< -- 12
-+ -- 70
-- -- 64
-* -- 383
-:= -- 1061
-add.period$ -- 48
-call.type$ -- 16
-change.case$ -- 114
-chr.to.int$ -- 16
-cite$ -- 17
-duplicate$ -- 209
-empty$ -- 382
-format.name$ -- 86
-if$ -- 1203
+            638 strings with 6509 characters,
+and the built_in function-call counts, 6068 in all, are:
+= -- 688
+> -- 207
+< -- 13
++ -- 72
+- -- 66
+* -- 401
+:= -- 1115
+add.period$ -- 51
+call.type$ -- 17
+change.case$ -- 122
+chr.to.int$ -- 17
+cite$ -- 19
+duplicate$ -- 218
+empty$ -- 398
+format.name$ -- 89
+if$ -- 1257
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 11
-newline$ -- 83
-num.names$ -- 48
-pop$ -- 119
+missing$ -- 9
+newline$ -- 88
+num.names$ -- 51
+pop$ -- 123
 preamble$ -- 1
-purify$ -- 112
+purify$ -- 118
 quote$ -- 0
-skip$ -- 265
+skip$ -- 277
 stack$ -- 0
-substring$ -- 270
-swap$ -- 16
+substring$ -- 282
+swap$ -- 15
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 1
-while$ -- 38
+type$ -- 96
+warning$ -- 2
+while$ -- 40
 width$ -- 0
-write$ -- 203
-(There was 1 warning)
+write$ -- 214
+(There were 2 warnings)

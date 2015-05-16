@@ -24,9 +24,11 @@ double pid_compute(){
 
   //
   output = kp * error + ki * errSum + kd * dErr;
+  /*
   if (abs(output - lastOutput) > 2) {
-    output = output*0.5;
+    output = output*0.4;
   }
+  */
   lastOutput = output;
   //
   lastErr = error;
