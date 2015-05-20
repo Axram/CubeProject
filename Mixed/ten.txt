@@ -1,0 +1,13 @@
+TEN1 Tentamen = 
+__Omtenta = 
+____t1 = E
+____t2 = E
+____t3 = E
+____t4 = E
+____t5 = E
+____t6 = E
+____t7 = D
+____t8 = C
+____t9 = F
+____t10 = 
+____ACE-bonus =412

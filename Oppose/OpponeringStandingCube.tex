@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[swedish,english]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{tabularx}
+\usepackage{placeins}
+%\usepackage[bw]{mcode}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\begin{document}
+
+\title{MF123x\\ Opposition on David Tennander \& Viktor Gjurovski's StandingCube \\}
+\author{Alexander Ramm \& Mikael Sjöstedt}
+
+\maketitle
+\clearpage
+
+\section{General content}
+The paper thoroughly investigates how state space poles effect a specific unstable system. The authors summarize the relevant parts making the paper pleasant to read. Enough instructions to create a similar demonstrator is supplied.
+
+There is a large focus on the mathematical model. The boundaries mentioned in discussion should probably be brought up earlier, in the scope section. Other than that, the introduction \textit{"introduce"} the reader to the project in a good manner.
+
+The theory chapter brings up the necessary parts that are used to construct the demonstrator. Tough the sensor section can be widened for some more in-depth reading otherwise it can be skipped.
+
+The demonstrator chapter dos not cover the used hardware at all and the information is never given. If only this chapter is read we doubt that a cube with similar capabilities could be built. But the parts that have made it in to the chapter contains good information. Tough the encoder could be treated as an individual sensor with its own subsection to ease understanding for the reader. 
+
+Some additional information of the plotted data in the result section is desirable. As for now the result section is a bit cluttered and hard to follow. 
+
+In the discussion it is said that the sample rate was held as high as possible, and that the main delay cause was the serial communication. How was the sample rate set as high as possible and were any measurements taken to verify that the communication was the source of the delay? No comparison made to a non-linear model. This could briefly be mentioned in the discussion maybe?
+
+The conclusion in general is quite vague and could be in need of some restructure. Can any general conclusions be drawn from the result, in that case, emphasise that.
+
+Recommendations and future work could easily be expanded, what kind of troubles does the author stumble upon during the project?
+\section{Notes}
+
+\begin{itemize}
+\item Why not include the encoder in the state space model?
+
+\item What do you mean with more consistent behaviour mentioned in the discussion chapter?
+
+\item What would you have done differently?
+
+\item Papernotes
+
+	
+\end{itemize}
+
+
+
+\end{document}

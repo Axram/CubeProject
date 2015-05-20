@@ -1,0 +1,33 @@
+Solid Edge Translation to STEP
+Date: Tuesday,April 07,2015 10 :44AM
+Source File: Z:\Desktop\diy_mini_quad_v3_right.stp
+Warn: No solid body found in the file during save operation for file \\psf\Home\Downloads\DIY_Mini_Quadcopter_Honeycomb_Edition\diy_mini_quad_v3_right_1.par
+Author: Unknown
+Organization: Unknown
+Source System: Unknown
+
+Hardware:
+Processor: Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz
+Operating System: Windows 7 Professional Service Pack 1
+Installed Memory: 11.99 GB
+
+Software Information
+Parasolid Version: 26.0.139
+PSBodyShop Version: 16.1.150
+Translator Version: 16.42.0
+Solid Edge Version: 106.00.00.100 x64
+
+STEP Export Options
+Export AP214: Off
+Export Construction Sheets: Off
+Export Construction Solids: Off
+Export Construction Wires: Off
+Export Displayed Parts Only: Off
+Translate solid bodies as Class VI Solid Bodies: On
+Export Units: Millimeters
+Mapped Item Assembly Format: On
+
+Phase 1 of 1 Translating Parasolid to foreign data types...
+Translation process completed
+Time required to translate:00 : 00 : 00
+Writing translated file...
