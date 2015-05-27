@@ -56,16 +56,16 @@
 
 
 %\usepackage{appendix} 
-\title{The Black Box}
-\subtitle{Control and design of reaction wheel inverted pendulum}
-\foreigntitle{Reglering och design av inverterad pendel med hjälp av svänghjul}
+\title{Reaction wheel balanced robot}
+\subtitle{Design and sensor analysis of inverted pendulum robot}
+\foreigntitle{Design och sensorutvärdering av inverterad pendel-robot}
 \author{Mikael Sjöstedt \\ Alexander Ramm}
 \date{May 2015}
-\blurb{ Bachelor's Thesis in Mechatronics \vspace{1em} \\
+\blurb{Bachelor's Thesis in Mechatronics \vspace{1em} \\
 \begin{tabular}{ll} 
 Supervisor: Daniel Frede &  \\
 Examiner: Martin Edin Grimheden \\ 
-Approved: TBA 2015-month-day
+Approved: 2015-05-20
 \end{tabular} }
 \trita{TRITA MMK 2015:18 MDAB071}
 
@@ -103,7 +103,7 @@ Från resultatet visade att sensorplaceringen var viktig. Den bästa placeringen
 \clearpage
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
-We would like to thank Daniel Frede, our supervisor, for his continuous support, always ready with a well filled beer glass and pinpointing our faults with \textit{German precision}.
+We would like to thank Daniel Frede, our supervisor, for his continuous support, pinpointing our faults with \textit{German precision}.
 
 Staffan Qvarnström and Tomas Östberg for their mechanical and practical expertise and counselling.
 
@@ -129,7 +129,7 @@ Furthermore Filip Stenbeck and Aron Nygren for their inspiration and enthusiasm.
 \section*{Symbols}
 \noindent{}\begin{tabular}{@{}p{2.5cm}l}
 \textbf{Symbol} 	& \textbf{Description} \vspace{.5em} \\
-$\mathcal{L}$			& Lagrangian \\
+$\mathcal{L}$			& Lagrangian operator \\
 $\theta$		& Cube angle (Rad)\\
 $\phi$		& Flywheel angle (Rad) \\
 $q$			& Lagrange operator \\
@@ -163,7 +163,7 @@ DC			& Direct Current \\
 DOF			& Degrees of freedom\\
 dps			& Degrees per second\\
 IC			& Integrated circuit\\
-$I^2C$		& Inter-Integrated circuit\\
+I\textsuperscript{2}C		& Inter-Integrated circuit\\
 IDE 			& Integrated Development Interface \\
 LSB			& Least significant bit \\
 MCU			& Microcontroller\\
@@ -188,13 +188,12 @@ USB			& Universal Serial Bus
 This chapter describes the background, purpose and scope of this project conducted at the mechatronics department at the Royal Institute of Technology, KTH, Sweden. The work was carried out during the spring 2015.
 
 \section{Background}
-A reaction wheel is a wheel that is accelerated to apply torque. The most widespread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Satellites are quite uncommon (there are just over thousand satellites currently in orbit), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
+A reaction wheel is a wheel that is accelerated to apply torque. The most widespread use of reaction wheels is in human made satellites. The  reaction wheels, usually three of them in the case of satellites, are used to change the attitude of the satellite by applying torque in a favourable manner. This is imperative to direct solar panels towards the sun or pointing antennas to assure maximum performance and connectivity to the satellite. Satellites are quite uncommon (there are just over one thousand satellites currently in orbit), and their technology can at times seem alien. But reaction wheels should not be alienated, they can be used in many contexts and this paper will cover one of them.  
 
-Balancing a one \textit{degree of freedom} (DOF) inverted pendulum type structure using a reaction wheel is no new concept, and became more accessible with the introduction of cheap microcontrollers.
+Balancing a one \textit{degree of freedom} (DOF) inverted pendulum type structure using a reaction wheel is no new concept, and became more accessible with the introduction of inexpensive microcontrollers.
 The use of automated control has been growing at a rapid pace the last decades and is being implemented
-more and more in consumer related products.  
+more and more in consumer related products. The range of available sensors for use in automated control is larger now than ever.
 
-This growth has made automated control together with sensors available more now than ever. It can be seen in the every-day life in product lines such as mobile phones, gaming controllers, cars and UAVs such as quadrocopters.
 
 One of the most basic systems that requires some control to become stable is the inverted pendulum. 
 Although it is simple to define, its control is not. A lot of work has been done on the topic
@@ -202,7 +201,7 @@ but there are still a limited amount of knowledge available to the public.
 
 The method to achieve balance of a pendulum using reaction wheels is even more narrow. 
 In recent years prototypes of land based structures using reaction wheels have been a hot topic and some of these robots are truly remarkable. 
-It would be a great achievement for the authors to contribute knowledge about how such a device could be built and evaluate some of
+It is the authors wish to contribute knowledge about how such a device could be built and evaluate some of
 the capabilities and restrictions of such a machine.
 
 
@@ -215,7 +214,7 @@ The goal of the project was to build a structure with one degree of freedom that
 \label{Figure: concept idea}
 \end{figure}
 
-The dynamics is mostly effected by the control system, which is responsible for accelerating the motor and thus the reaction wheel in the  correct angular direction, to maintain balance. The parameters in the control system effects response time, overshoot and sinusoidal settling time.
+The dynamics are mostly effected by the control system, which is responsible for accelerating the motor and thus the reaction wheel in the  correct angular direction, to maintain balance. The parameters in the control system effect response time, overshoot and sinusoidal settling time.
 This project will hopefully contribute to some development within the open-source community.
 All results are available online, open source on GitHub \cite{Github}.
 As a thesis in mechatronics, this paper can be divided into two parts. One engineering part whose focus is to implement knowledge in mechanics, electronics and control theory to result in a functioning robot. A research part whose topic was to investigate how the system was effected by sensor placement. This could be concentrated to a question 
@@ -225,19 +224,17 @@ As a thesis in mechatronics, this paper can be divided into two parts. One engin
 What sensor position is least inflicted by noise, when the cube is stationary?
 } \\
 
-\textit{How much does the best and worst position effect the system performance when balancing?
+\textit{How much does the best and worst position, with regards to the positions determined in the question above, effect the system performance when balancing?
 }
 \end{quote}
 
 
-The sensors used for this project is an \textit{Inertial Measurement Unit} (IMU) which can be placed arbitrarily. Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive devise and disturbances such as high current and fast oscillations in its vicinity might effect the data, which is to be investigated. 
+The sensor used for this project are an \textit{Inertial Measurement Unit} (IMU) which can be placed arbitrarily. Certain positions might have an advantage in terms of how usable the raw data is. The IMU is a sensitive device and disturbances such as high current and fast oscillations in its vicinity might effect the data, which is to be investigated. 
 
 \section{Scope}
 The sensor which position were to be examined was an IMU. Only a few key positions of the sensor was examined.
 
-The effects that were looked at was the ones related to the control system. Only data from the IMU axes used in the specific control system were examined, the placement effect on other axes was not taken into consideration.
-
-All control model dynamics was done non-discretely.
+The effects that were looked at was the ones related to the control system. Only data from the IMU axes used in the specific control system were examined, the placement effect on other axes was not taken into consideration. All control model dynamics was done non-discretely.
 
 \section{Method} \label{sec: method}
 At first, data from the IMU was collected at different positions during a stationary state where the frame was rigidly mounted. The motor was accelerated with a sinusoidal current to simulate the same conditions as during a balancing state. The IMU was then moved to a position closer to the motor with the hypothesis that the motor induce an electrical field that effects the measurement unit.
@@ -265,17 +262,16 @@ Six recordings were made for each placement and the variance was calculated ther
 
 Five different positions were examined. They can be seen in Figure \ref{Fig: IMU placement}. Six measurements were taken for every position. The expected value and standard deviation for the particular position was calculated.
 
-Then a comparative between the position with the least and most standard deviation were done
-to try how the system performance was effected. The cube was placed at rest close to the balance point with the help of a support. The support was removed with the control system enabled. The time taken for the cube to fall on its side was measured.
+%Then a comparative between the position with the least and most standard deviation were done to try how the system performance was effected. The cube was placed at rest close to the balance point with the help of a support. The support was removed with the control system enabled. The time taken for the cube to fall on its side was measured.
 
 
 \chapter{Theory} \label{chapter: theory}
 \epigraph{\textit{"Nothing is as easy as it looks."}}{Murphy's law}
-This chapter cover some of the theory that is required if one would want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
+This chapter covers some of the theory that is required if one would want to build a similar robot. It is assumed that the reader has some understanding of Newtonian mechanics, signal analysis and control theory. Basic understanding of DC motor operation is also an advantage.
 
 The first part is about the inertial reference unit that covers issues of sensor characteristics and why they are important to the system as a whole and the research question in particular.
 
-There is a part that discuss Kalman filter theory, a filter required for retrieving high quality data from the IMU. The filter interprets noisy data from the sensor and digitally filters the signal to a more trustworthy output. 
+There is a part that discusses Kalman filter theory, a filter required for retrieving high quality data from the IMU. The filter interprets noisy data from the sensor and digitally filters the signal to a more trustworthy output. 
 
 The last part covers the theory of the mechanical system behaviour that is used to develop the regulator. The equations are responsible for the actual balance part and thus important. 
 
@@ -505,9 +501,7 @@ The Kalman filter takes into consideration how reliable the  process and measure
 \begin{equation}
 \hat{x}_k = \hat{x}^-_k + K_k\tilde{y}_k
 \end{equation}
-where $\hat{x}^-_k$ is an estimation of the state using the process, in this case the gyroscope. The second term $K_k\tilde{y}_k$ contains $\tilde{y}_k$ which is a parameter that consider the measurement, the accelerometer. It also contains the Kalman gain, $K_k$ which indicates how reliable the measurement is and how much it should effect the new estimated state
-
-For further reading, and mathematical proof see \cite{Kalmanintro}.
+where $\hat{x}^-_k$ is an estimation of the state using the process, in this case the gyroscope. The second term $K_k\tilde{y}_k$ contains $\tilde{y}_k$ which is a parameter that consider the measurement, the accelerometer. It also contains the Kalman gain, $K_k$ which indicates how reliable the measurement is and how much it should effect the new estimated state. For further reading, and mathematical proof see \cite{Kalmanintro}.
 
 
 
@@ -567,18 +561,10 @@ For further reading, and mathematical proof see \cite{Kalmanintro}.
 %The filter now returns to the measurement phase seen in figure \ref{Fig: Kalman phases}.
 %For further reading, and mathematical proof see \cite{Kalmanintro}.
 
-\section{Pulse Width Modulation}
-
-Pulse-width modulation (PWM) is a technique used to make a stationary signal into a pulsing signal.
-This is useful in many power applications, from dimming LED's to motor control. The idea of 
-PWM is to alter the voltage over a device while still only having a set level voltage to supply. Simplified  
-the voltage is cut into a square wave. This is done by using two transistors\cite{elektro}. If these transistors are switched on and of fast 
-compared to the time constant of the motor, the \textit{root mean square} (RMS) voltage will be the acting voltage.
-This allows for a DC voltage that is perceived as lower than the actual supply voltage.
-They duty cycle can be changed during operation unlike liner type voltage regulators.
 
 \section{Model dynamics} \label{section: model dynamics}
 To help create a control system, the physical model has to be translated to a mathematical model. The system can be estimated much like a one-degree-of-freedom inverted pendulum model \cite{KTHpendulum}. See Figure \ref{fig:Lagrangeflywheel} of how the model can be simplified.
+
 \begin{figure}[!htb]
 \centering
 \includegraphics[trim=5cm 9cm 5cm 9cm, clip=true,scale=.6]{Lagrangeflywheel2.pdf}
@@ -667,7 +653,7 @@ The motor controller was connected to the Arduino, with 4 cables, each for a dif
 To apply torque to the flywheel, a Maxon DC motor with a nominal voltage of 24V was used. The torque excerted on the flywheel is correlated to the ability to balance the cube at a larger deviation from the center-line. To gain a large torque but still maintaining a current that the motor controller could handle a spur gear with a ratio of 10 was used. 
 
 \section{System analysis}
-To analyse how the system behaves the transfer function obtained from equation \ref{eq: laplace system} is used
+To analyse how the system behaves the transfer function obtained from eq. \ref{eq: laplace system} is used
 \begin{equation}\label{eq: transfer function final}
 G(s) = \frac{K_t \cdot I_f \cdot \eta_m \cdot \eta_g \cdot \Gamma \cdot s^2}{R_a (M_{tot} \cdot g \cdot l - I_c \cdot s^2)(I_f \cdot s^2 + \frac{K_t \cdot K_e \cdot s}{R_a})} 
 \end{equation}
@@ -693,7 +679,7 @@ Figure \ref{Fig: PZ & RootLocus} shows the Pole-Zero map and Root locus of the s
 \label{Fig: PZ & RootLocus}
 \end{figure}
 
-Matlab was then used to estimate rough proportions of the PID values. To be fine tuned during experiment.
+Matlab was then used to estimate rough proportions of the PID values. Which are to be fine tuned during experiment.
 
 
 \section{Software}
@@ -755,11 +741,11 @@ The root Allan variance was calculated and is shown in Figure \ref{fig:gyroscope
 \label{fig:gyroscope allan}
 \end{figure}
 
-The angle (or velocity, concerning the accelerometer) random walk can be depicted from the plot at an angle of -0.5 while the bias instability is determined by looking at the lowest point of the plot. Allan variance for the accelerometer was retrieved in a similar manner.  The results can be seen in table \ref{Table: Allan variance}.
+The angle (or velocity, concerning the accelerometer) random walk can be depicted from the plot where the averaging time equals a second while the bias instability is determined by looking at the lowest point of the plot. Allan variance for the accelerometer was retrieved in a similar manner.  The results can be seen in table \ref{Table: Allan variance}.
 
 \begin{table} [!hbt]
 \centering
-\begin{tabular}{@{}cc@{}} \toprule
+\begin{tabular}{@{}ll@{}} \toprule
 Noise term & Degrees/second\\ \midrule
 Angle random walk  	 & 0.00905\\
 Bias stability   & 0.00395\\
@@ -795,6 +781,14 @@ These values corresponds to the process and measurement noise covariance matrice
 
 
 \subsection{PWM}
+Pulse-width modulation (PWM) is a technique used to make a stationary signal into a pulsing signal.
+This is useful in many power applications, from dimming LED's to motor control. The idea of 
+PWM is to alter the voltage over a device while still only having a set level voltage to supply. Simplified  
+the voltage is cut into a square wave. This is done by using two transistors\cite{elektro}. If these transistors are switched on and of fast 
+compared to the time constant of the motor, the \textit{root mean square} (RMS) voltage will be the acting voltage.
+This allows for a DC voltage that is perceived as lower than the actual supply voltage.
+They duty cycle can be changed during operation unlike liner type voltage regulators.
+
 The PWM frequency was set to 20KHz, the maximum the motor controller can cope with \cite{MC33926}. The duty cycle was varied during the program and calculated from the control system. A typical PWM signal, with 80 \%  duty can be seen in Figure \ref{Fig: PWMscope} as the upper signal. The lower signal is the one applied to the motor.
 
 A more in depth explanation of the PWM implementation can be found in the appendix \ref{app: PWM}.
@@ -807,15 +801,15 @@ A more in depth explanation of the PWM implementation can be found in the append
 
 
 \chapter{Results}
-The first test was conducted during a stationary condition only moving the IMU to the different positions as specified in section \ref{sec: method}.
+The test, to determine the disturbances in various positions was conducted during a stationary condition. Only moving the IMU to the different positions as seen Figure \ref{Fig: IMU placement2}. For every position six measurements were made.
 
-The standard deviation and expected value of the IMU signal at the different placements are seen in table \ref{Table: Standard deviation}.
+The standard deviation and mean value of the IMU signal at the different placements are seen in table \ref{Table: Standard deviation}.
 
 \begin{table} [!hbt]
 \centering
 \begin{tabular}{@{}llcc@{}} \toprule
 \multicolumn{3}{r}{Angle} \\ \cmidrule(r){3-4}
-Position & Motor & Standard deviation & Expected value\\ \midrule
+Position & Motor & Standard deviation & Mean value\\ \midrule
 A  	 & Enabled 	& 0.92 & 44.19 \\
 B    & Enabled 	& 0.87 & 44.44 \\
 C  	 & Enabled 	& 0.59 & 44.26\\
@@ -828,6 +822,25 @@ E	 & Enabled 	& 0.42 & 44.15\\
 \end{table}
 
 A comparison of the worst case scenario and the best measurement from position D and E can be seen in Figure \ref{Fig: Result1}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[trim=0.3cm 0.1cm 0.8cm 0.2cm, clip=true, width=\textwidth]{framsidaIMUpunkter.jpg}
+  \caption{IMU placement, front}
+  \label{Fig: IMU placement front2}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+  \centering
+  \includegraphics[trim=0.6cm 0.15cm 0.5cm 0.2cm, clip=true, width=\textwidth]{baksidaIMUpunkter.jpg}
+  \caption{IMU placement, back}
+  \label{Fig: IMU placement back2}
+\end{subfigure}
+\caption{IMU placements}
+\label{Fig: IMU placement2}
+\end{figure}
+
 
 \begin{figure}[!htb]
 \centering
@@ -856,7 +869,7 @@ At first the sensor data was tested for different positions as described in sect
 
 Rather, for this setup, with a small motor, the quality of the sensor data was more inflicted by the vibrations in the structure. By placing the sensor closer to the center of the structure the standard deviation decreased. The center where the motor is mounted was more rigid and potentially dampens the vibrations.
 
-The variations in the expected value is interesting as well. There are no relationship between the values and their respective positions. No obvious conclusion can be drawn from the expected values. Nor can we measure the correct value or even comment on what it should be, other than close to 45 degrees. Still it is important that the value is close to the real world otherwise the IMU might perceive a displaced balance point and thus having troubles balancing.
+The variations in the mean value are interesting as well. There are no relationship between the values and their respective positions. No obvious conclusion can be drawn from the mean values. Nor can we measure the correct value or even comment on what it should be, other than close to 45 degrees. Still it is important that the value is close to the real world otherwise the IMU might perceive a displaced balance point and thus having troubles balancing.
 \\ 
 
 The worst position was position A, the one on the front of the cube. At that position the IMU was close to the rotating reaction wheel. The reaction wheel itself is made of steel, a conductive and magnetic metal. This might contribute to the noise experienced by the sensor. This and the fact that it is far from the centre is the reason that it performed worse than all other tested positions.
@@ -864,7 +877,7 @@ The worst position was position A, the one on the front of the cube. At that pos
 The cube could not balance and was unstable for every sensor position. Probably not because of the sensor placement but due to the control system and design as a whole. Still it is clear from the result that sensor placement is important and that some positions are better than others.
 
 
-If a bigger cube were built with a larger inertia the system would be slower and hence not require as fast control system. As for now, the gear used was a spur gear causing a slight delay when switching directions. This is something that implicates things as the system was not as responsive as required. 
+If a bigger cube was built with a larger inertia the system would be slower and hence not require as fast control system. As for now, the gear used was a spur gear causing a slight delay when switching directions. This is something that implicates things as the system was not as responsive as required. 
 
 
 \section{Conclusions}
@@ -880,9 +893,7 @@ Since the cube did not balance, a more powerful motor or efficient gearing would
 
 A larger motor with higher stall torque is better for the task, as long as a suitable motor controller is used. Also an encoder to measure motor RPM is an advantage if a better control system is to be devised. Although a larger motor might induce higher currents which could render the sensor placement results unfavourable.
 
-Regarding the microcontroller something faster than the Arduino is preferred to ease the implementation of the control system.
-
-Also if a more extensive project is desired, a research with non-linear control systems has been done at ETH, with the name Cubli\cite{cubliECC13}, which was the inspiration of this project.
+Also if a more extensive project is desired, a research with non-linear control systems has been done at ETH (Eidgenössische Technische Hochschule Zürich), with the name Cubli\cite{cubliECC13}, which was the inspiration of this project.
 
 \section{Future work}
 To get a preciser result regarding the IMU position, more parameters should be properly examined. Various motors and motor controllers that allow different amounts of induced currents should also be varied. If the current is measured separately its contribution could be determined independent from the vibration disturbance as well.
@@ -913,7 +924,7 @@ To understand this recursive filter which use old and new values a \textit{a pri
 \begin{equation} \label{eq: posteriori state}
 \hat{x}_k
 \end{equation}
-The \textit{a priori}  state in equation \eqref{eq: priori state} is defined as the estimate of the current state at the time $k$. The \textit{a posteriori} state \eqref{eq: posteriori state} is the new estimated state.
+The \textit{a priori}  state in eq.\eqref{eq: priori state} is defined as the estimate of the current state at the time $k$. The \textit{a posteriori} state \eqref{eq: posteriori state} is the new estimated state.
 For the Kalman filter to work properly some criteria has to be fulfilled. The average value of the measurement noise $z$ and process noise $w$ earlier mentioned in section \ref{section: Kalman} has to be zero, i.e. a Gaussian error. $z$ and $w$ also has to be independent of  each other. The noise and error in an IMU and many other devices have the characteristics of Gaussian noise.
 
 
@@ -1040,7 +1051,7 @@ P_{21} & P_{22}
 +
 R
 \end{equation}
-Kalman gain in equation \ref{eq:Kalman gain}
+Kalman gain in eq. \ref{eq:Kalman gain}
 \begin{equation}
 \begin{bmatrix}
 K_1 \\ K_2

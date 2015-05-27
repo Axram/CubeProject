@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  15 MAY 2015 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.9)  27 MAY 2015 14:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1443,7 +1443,7 @@ ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<kth-cover.pdf, id=214, 597.23125pt x 845.1575pt>
+<kth-cover.pdf, id=210, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf>
 Package pdftex.def Info: kth-cover.pdf used on input line 75.
@@ -1453,7 +1453,7 @@ File: kth-cover.pdf Graphic file (type pdf)
 <use kth-cover.pdf>
 Package pdftex.def Info: kth-cover.pdf used on input line 75.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <kth-cover.pdf, id=217, page=1, 597.23125pt x 845.1575pt>
+ <kth-cover.pdf, id=213, page=1, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 1>
@@ -1488,7 +1488,7 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 83.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<KTH_Logotyp_PMS_2013.png, id=254, 597.73312pt x 845.40843pt>
+<KTH_Logotyp_PMS_2013.png, id=250, 597.73312pt x 845.40843pt>
 File: KTH_Logotyp_PMS_2013.png Graphic file (type png)
 
 <use KTH_Logotyp_PMS_2013.png>
@@ -1552,7 +1552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
 No file "Balancing Cube".ind.
 (./Balancing Cube.toc [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 48.
 ) [10] [11
 
 
@@ -1567,57 +1567,59 @@ Overfull \hbox (1.33226pt too wide) in paragraph at lines 159--159
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.202 
-       [1
+l.202 T
+       he method to achieve balance of a pendulum using reaction wheels is e...
+[1
 
 
 
-] <concept.pdf, id=380, 1357.07pt x 742.775pt>
+] <concept.pdf, id=374, 1357.07pt x 742.775pt>
 File: concept.pdf Graphic file (type pdf)
  <use concept.pdf>
-Package pdftex.def Info: concept.pdf used on input line 213.
+Package pdftex.def Info: concept.pdf used on input line 212.
 (pdftex.def)             Requested size: 396.0pt x 216.73662pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.222 
+l.226 
        [2 <./concept.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
-
- []
-
-<framsidaIMUpunkter.jpg, id=395, 85.5195pt x 46.79483pt>
+<framsidaIMUpunkter.jpg, id=389, 85.5195pt x 46.79483pt>
 File: framsidaIMUpunkter.jpg Graphic file (type jpg)
 
 <use framsidaIMUpunkter.jpg>
-Package pdftex.def Info: framsidaIMUpunkter.jpg used on input line 252.
+Package pdftex.def Info: framsidaIMUpunkter.jpg used on input line 249.
 (pdftex.def)             Requested size: 190.07831pt x 134.12611pt.
 
-<baksidaIMUpunkter.jpg, id=397, 85.5195pt x 46.79483pt>
+<baksidaIMUpunkter.jpg, id=391, 85.5195pt x 46.79483pt>
 File: baksidaIMUpunkter.jpg Graphic file (type jpg)
 
 <use baksidaIMUpunkter.jpg>
-Package pdftex.def Info: baksidaIMUpunkter.jpg used on input line 258.
+Package pdftex.def Info: baksidaIMUpunkter.jpg used on input line 255.
 (pdftex.def)             Requested size: 190.07831pt x 129.13992pt.
  [3] [4 <./framsidaIMUpunkter.jpg> <./baksidaIMUpunkter.jpg>] [5
 
 ]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 323.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 319.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 499--505
+Underfull \hbox (badness 10000) in paragraph at lines 495--501
 
  []
 
-[9] <Lagrangeflywheel2.pdf, id=471, 597.23125pt x 845.1575pt>
+[9] <Lagrangeflywheel2.pdf, id=463, 597.23125pt x 845.1575pt>
 File: Lagrangeflywheel2.pdf Graphic file (type pdf)
 
 <use Lagrangeflywheel2.pdf>
-Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 584.
+Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 570.
 (pdftex.def)             Requested size: 187.62366pt x 199.80629pt.
  [10 <./Lagrangeflywheel2.pdf>] [11] [12
 
@@ -1625,10 +1627,10 @@ Package pdftex.def Info: Lagrangeflywheel2.pdf used on input line 584.
 Underfull \vbox (badness 1052) has occurred while \output is active []
 
  [13]
-<Finaldesign.pdf, id=572, 597.23125pt x 845.1575pt>
+<Finaldesign.pdf, id=565, 597.23125pt x 845.1575pt>
 File: Finaldesign.pdf Graphic file (type pdf)
  <use Finaldesign.pdf>
-Package pdftex.def Info: Finaldesign.pdf used on input line 652.
+Package pdftex.def Info: Finaldesign.pdf used on input line 638.
 (pdftex.def)             Requested size: 281.43073pt x 274.0971pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1642,13 +1644,13 @@ Package epstopdf Info: Source file: <PzMap.eps>
 (epstopdf)                    size: 8223 bytes
 (epstopdf)             Command: <repstopdf --outfile=PzMap-eps-converted-to.pdf
  PzMap.eps>
-(epstopdf)             \includegraphics on input line 682.
+(epstopdf)             \includegraphics on input line 668.
 Package epstopdf Info: Output file is already uptodate.
- <PzMap-eps-converted-to.pdf, id=599, 562.1pt x 421.575pt>
+ <PzMap-eps-converted-to.pdf, id=592, 562.1pt x 421.575pt>
 File: PzMap-eps-converted-to.pdf Graphic file (type pdf)
 
 <use PzMap-eps-converted-to.pdf>
-Package pdftex.def Info: PzMap-eps-converted-to.pdf used on input line 682.
+Package pdftex.def Info: PzMap-eps-converted-to.pdf used on input line 668.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <RootLocus.eps>
 (epstopdf)                    date: 2015-05-13 10:50:10
@@ -1658,14 +1660,14 @@ Package epstopdf Info: Source file: <RootLocus.eps>
 (epstopdf)                    size: 8740 bytes
 (epstopdf)             Command: <repstopdf --outfile=RootLocus-eps-converted-to
 .pdf RootLocus.eps>
-(epstopdf)             \includegraphics on input line 688.
+(epstopdf)             \includegraphics on input line 674.
 Package epstopdf Info: Output file is already uptodate.
 
-<RootLocus-eps-converted-to.pdf, id=600, 562.1pt x 421.575pt>
+<RootLocus-eps-converted-to.pdf, id=593, 562.1pt x 421.575pt>
 File: RootLocus-eps-converted-to.pdf Graphic file (type pdf)
 
 <use RootLocus-eps-converted-to.pdf>
-Package pdftex.def Info: RootLocus-eps-converted-to.pdf used on input line 688.
+Package pdftex.def Info: RootLocus-eps-converted-to.pdf used on input line 674.
 
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
  [15]
@@ -1678,15 +1680,15 @@ Package epstopdf Info: Source file: <Stationarycomparison.eps>
 (epstopdf)                    size: 11982 bytes
 (epstopdf)             Command: <repstopdf --outfile=Stationarycomparison-eps-c
 onverted-to.pdf Stationarycomparison.eps>
-(epstopdf)             \includegraphics on input line 715.
+(epstopdf)             \includegraphics on input line 701.
 Package epstopdf Info: Output file is already uptodate.
 
-<Stationarycomparison-eps-converted-to.pdf, id=611, 562.1pt x 421.575pt>
+<Stationarycomparison-eps-converted-to.pdf, id=604, 562.1pt x 421.575pt>
 File: Stationarycomparison-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Stationarycomparison-eps-converted-to.pdf>
 Package pdftex.def Info: Stationarycomparison-eps-converted-to.pdf used on inpu
-t line 715.
+t line 701.
 (pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
 Package epstopdf Info: Source file: <Kalmanturn.eps>
 (epstopdf)                    date: 2015-05-12 22:59:45
@@ -1696,14 +1698,14 @@ Package epstopdf Info: Source file: <Kalmanturn.eps>
 (epstopdf)                    size: 13044 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmanturn-eps-converted-t
 o.pdf Kalmanturn.eps>
-(epstopdf)             \includegraphics on input line 726.
+(epstopdf)             \includegraphics on input line 712.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmanturn-eps-converted-to.pdf, id=613, 562.1pt x 421.575pt>
+<Kalmanturn-eps-converted-to.pdf, id=606, 562.1pt x 421.575pt>
 File: Kalmanturn-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmanturn-eps-converted-to.pdf>
-Package pdftex.def Info: Kalmanturn-eps-converted-to.pdf used on input line 726
+Package pdftex.def Info: Kalmanturn-eps-converted-to.pdf used on input line 712
 .
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <Kalmanturnzoom.eps>
@@ -1714,15 +1716,15 @@ Package epstopdf Info: Source file: <Kalmanturnzoom.eps>
 (epstopdf)                    size: 9434 bytes
 (epstopdf)             Command: <repstopdf --outfile=Kalmanturnzoom-eps-convert
 ed-to.pdf Kalmanturnzoom.eps>
-(epstopdf)             \includegraphics on input line 732.
+(epstopdf)             \includegraphics on input line 718.
 Package epstopdf Info: Output file is already uptodate.
 
-<Kalmanturnzoom-eps-converted-to.pdf, id=614, 562.1pt x 421.575pt>
+<Kalmanturnzoom-eps-converted-to.pdf, id=607, 562.1pt x 421.575pt>
 File: Kalmanturnzoom-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Kalmanturnzoom-eps-converted-to.pdf>
 Package pdftex.def Info: Kalmanturnzoom-eps-converted-to.pdf used on input line
- 732.
+ 718.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
  [16 <./PzMap-eps-converted-to.pdf> <./RootLocus-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1737,26 +1739,33 @@ Package epstopdf Info: Source file: <gyroscopeallan.eps>
 (epstopdf)                    size: 24897 bytes
 (epstopdf)             Command: <repstopdf --outfile=gyroscopeallan-eps-convert
 ed-to.pdf gyroscopeallan.eps>
-(epstopdf)             \includegraphics on input line 753.
+(epstopdf)             \includegraphics on input line 739.
 Package epstopdf Info: Output file is already uptodate.
 
-<gyroscopeallan-eps-converted-to.pdf, id=672, 562.1pt x 421.575pt>
+<gyroscopeallan-eps-converted-to.pdf, id=665, 562.1pt x 421.575pt>
 File: gyroscopeallan-eps-converted-to.pdf Graphic file (type pdf)
 
 <use gyroscopeallan-eps-converted-to.pdf>
 Package pdftex.def Info: gyroscopeallan-eps-converted-to.pdf used on input line
- 753.
+ 739.
 (pdftex.def)             Requested size: 337.2626pt x 252.94695pt.
- [18 <./gyroscopeallan-eps-converted-to.pdf>] <PWMpic1.jpg, id=694, 2346.7675pt
+ [18 <./gyroscopeallan-eps-converted-to.pdf>] <PWMpic1.jpg, id=687, 2346.7675pt
  x 1658.195pt>
 File: PWMpic1.jpg Graphic file (type jpg)
  <use PWMpic1.jpg>
-Package pdftex.def Info: PWMpic1.jpg used on input line 803.
+Package pdftex.def Info: PWMpic1.jpg used on input line 797.
 (pdftex.def)             Requested size: 309.32265pt x 203.90736pt.
 
-[19 <./PWMpic1.jpg>] [20
+[19] [20 <./PWMpic1.jpg>]
+File: framsidaIMUpunkter.jpg Graphic file (type jpg)
+ <use framsidaIMUpunkter.jpg>
+Package pdftex.def Info: framsidaIMUpunkter.jpg used on input line 830.
+(pdftex.def)             Requested size: 190.07831pt x 134.12611pt.
+File: baksidaIMUpunkter.jpg Graphic file (type jpg)
 
-]
+<use baksidaIMUpunkter.jpg>
+Package pdftex.def Info: baksidaIMUpunkter.jpg used on input line 836.
+(pdftex.def)             Requested size: 190.07831pt x 129.13992pt.
 Package epstopdf Info: Source file: <result1.eps>
 (epstopdf)                    date: 2015-05-12 21:58:39
 (epstopdf)                    size: 52616 bytes
@@ -1765,14 +1774,14 @@ Package epstopdf Info: Source file: <result1.eps>
 (epstopdf)                    size: 13245 bytes
 (epstopdf)             Command: <repstopdf --outfile=result1-eps-converted-to.p
 df result1.eps>
-(epstopdf)             \includegraphics on input line 836.
+(epstopdf)             \includegraphics on input line 849.
 Package epstopdf Info: Output file is already uptodate.
 
-<result1-eps-converted-to.pdf, id=712, 562.1pt x 421.575pt>
+<result1-eps-converted-to.pdf, id=709, 562.1pt x 421.575pt>
 File: result1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use result1-eps-converted-to.pdf>
-Package pdftex.def Info: result1-eps-converted-to.pdf used on input line 836.
+Package pdftex.def Info: result1-eps-converted-to.pdf used on input line 849.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
 Package epstopdf Info: Source file: <result2.eps>
 (epstopdf)                    date: 2015-05-12 21:59:18
@@ -1782,17 +1791,19 @@ Package epstopdf Info: Source file: <result2.eps>
 (epstopdf)                    size: 20442 bytes
 (epstopdf)             Command: <repstopdf --outfile=result2-eps-converted-to.p
 df result2.eps>
-(epstopdf)             \includegraphics on input line 842.
+(epstopdf)             \includegraphics on input line 855.
 Package epstopdf Info: Output file is already uptodate.
 
-<result2-eps-converted-to.pdf, id=713, 562.1pt x 421.575pt>
+<result2-eps-converted-to.pdf, id=710, 562.1pt x 421.575pt>
 File: result2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use result2-eps-converted-to.pdf>
-Package pdftex.def Info: result2-eps-converted-to.pdf used on input line 842.
+Package pdftex.def Info: result2-eps-converted-to.pdf used on input line 855.
 (pdftex.def)             Requested size: 198.0pt x 148.49905pt.
- [21] [22 <./result1-eps-converted-to.pdf> <./result2-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 859--861
+ [21
+
+] [22 <./result1-eps-converted-to.pdf> <./result2-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 872--874
 
  []
 
@@ -1857,7 +1868,7 @@ Underfull \hbox (badness 2245) in paragraph at lines 48--51
 <total_schem.pdf, id=895, 597.23125pt x 845.1575pt>
 File: total_schem.pdf Graphic file (type pdf)
  <use total_schem.pdf>
-Package pdftex.def Info: total_schem.pdf used on input line 1257.
+Package pdftex.def Info: total_schem.pdf used on input line 1268.
 (pdftex.def)             Requested size: 238.88826pt x 338.057pt.
 
 [39 <./total_schem.pdf>] [40
@@ -1867,65 +1878,65 @@ Package pdftex.def Info: total_schem.pdf used on input line 1257.
 ]
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf>
-Package pdftex.def Info: kth-cover.pdf used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf used on input line 1276.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf>
-Package pdftex.def Info: kth-cover.pdf used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf used on input line 1276.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 <kth-cover.pdf, id=1267, page=2, 597.23125pt x 845.1575pt>
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 2>
-Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1276.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf, page 2>
-Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1276.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 2>
-Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1276.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: kth-cover.pdf Graphic file (type pdf)
  <use kth-cover.pdf, page 2>
-Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1276.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: kth-cover.pdf Graphic file (type pdf)
 
 <use kth-cover.pdf, page 2>
-Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1265.
+Package pdftex.def Info: kth-cover.pdf, page2 used on input line 1276.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [42 <./kth-cover.pdf>]
 \tf@toc=\write6
 \openout6 = `"Balancing Cube.toc"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1268.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1268.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1279.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1279.
  (./Balancing Cube.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1268.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1268.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1279.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1279.
 
 Package rerunfilecheck Info: File `"Balancing Cube".out' has not changed.
-(rerunfilecheck)             Checksum: C4B417569A09934BEF1A7E85CB2C592C;3110.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1268.
+(rerunfilecheck)             Checksum: F5B6C49327F19B54AAF2F0EEC3161FAE;3041.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1279.
  ) 
 Here is how much of TeX's memory you used:
- 24180 strings out of 493117
- 466118 string characters out of 6135434
- 542165 words of memory out of 5000000
- 26973 multiletter control sequences out of 15000+600000
+ 24184 strings out of 493117
+ 466246 string characters out of 6135434
+ 542442 words of memory out of 5000000
+ 26977 multiletter control sequences out of 15000+600000
  112780 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,18n,82p,867b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/lo
 cal/texlive/2014/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
 14/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2014/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014/texmf-dist/fonts/
-enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/
-lm-rm.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
+ist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/
+dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/lm/l
+m-ts1.enc}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx10.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/loca
 l/texlive/2014/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2014/texm
@@ -1940,10 +1951,10 @@ texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2014/texmf-dist
 ype1/public/lm/lmssdc10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/pub
 lic/lm/lmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lms
 y8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Balancing Cube.pdf" (56 pages, 2503423 bytes).
+Output written on "Balancing Cube.pdf" (56 pages, 2504470 bytes).
 PDF statistics:
  1380 PDF objects out of 1440 (max. 8388607)
- 1050 compressed objects within 11 object streams
+ 1048 compressed objects within 11 object streams
  191 named destinations out of 1000 (max. 500000)
- 578 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 582 words of extra memory for PDF output out of 10000 (max. 10000000)
 
